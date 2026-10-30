@@ -1,0 +1,2028 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ensenyar a nedar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Tècnica dels quatre estils, progressions i jocs per ensenyar a nedar a infants de 3 a 12 anys.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap">
+<style>
+/* Layout: una piscina vista des de dalt. Les seccions avancen com carrers separats per surades; a l'inici, una piscina de quatre carrers, un per estil. */
+:root{
+  --bg:#F1F6F7; --surface:#FFFFFF; --surface-2:#E6EFF2; --ink:#12303F; --muted:#4F6C7B; --line:#C9DAE0;
+  --water:#1F7398; --water-strong:#155A78; --water-soft:#D4E9F1; --on-water:#FFFFFF;
+  --rope:#E0A126; --rope-soft:#F6E5BC; --rope-ink:#33250A;
+  --ok:#23775B; --ok-soft:#DBEEE6; --bad:#B0432C; --bad-soft:#F5E1DB;
+  --hot:#C2562B; --hot-soft:#F7E0D4; --cold:#2F6FB3; --cold-soft:#DCE8F6;
+  --e1:#2E8C78; --e1-soft:#D8EEE8; --e2:#2272A3; --e2-soft:#D6E8F3; --e3:#4A4F9C; --e3-soft:#E1E2F3;
+  --pool:#BFE1EC; --tile:#FFFFFF; --tile-op:.45; --lane-mark:#1C4558; --deck:#E2EBEE;
+  --fig:#1D4458; --fig-far:#86A8B7;
+  --shadow:0 1px 2px rgba(18,48,63,.06), 0 6px 20px rgba(18,48,63,.06);
+  --font-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --font-body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-data:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1A21; --surface:#122631; --surface-2:#18323F; --ink:#E2EDF1; --muted:#9AB3BF; --line:#27424F;
+    --water:#5DB0D4; --water-strong:#8CCAE5; --water-soft:#163B4B; --on-water:#06202B;
+    --rope:#E8B24A; --rope-soft:#3B3017; --rope-ink:#1E1503;
+    --ok:#6CCBA6; --ok-soft:#173A2E; --bad:#EE8F77; --bad-soft:#3A2019;
+    --hot:#F09A73; --hot-soft:#3D2418; --cold:#7FB4EA; --cold-soft:#18304A;
+    --e1:#5EC2AA; --e1-soft:#173C34; --e2:#5DAAD8; --e2-soft:#163447; --e3:#A3A7EC; --e3-soft:#26294B;
+    --pool:#154559; --tile:#FFFFFF; --tile-op:.07; --lane-mark:#06161D; --deck:#18323F;
+    --fig:#D8E9F0; --fig-far:#6D91A2;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1A21; --surface:#122631; --surface-2:#18323F; --ink:#E2EDF1; --muted:#9AB3BF; --line:#27424F;
+  --water:#5DB0D4; --water-strong:#8CCAE5; --water-soft:#163B4B; --on-water:#06202B;
+  --rope:#E8B24A; --rope-soft:#3B3017; --rope-ink:#1E1503;
+  --ok:#6CCBA6; --ok-soft:#173A2E; --bad:#EE8F77; --bad-soft:#3A2019;
+  --hot:#F09A73; --hot-soft:#3D2418; --cold:#7FB4EA; --cold-soft:#18304A;
+  --e1:#5EC2AA; --e1-soft:#173C34; --e2:#5DAAD8; --e2-soft:#163447; --e3:#A3A7EC; --e3-soft:#26294B;
+  --pool:#154559; --tile:#FFFFFF; --tile-op:.07; --lane-mark:#06161D; --deck:#18323F;
+  --fig:#D8E9F0; --fig-far:#6D91A2;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--water)}
+a:hover{color:var(--water-strong)}
+:focus-visible{outline:3px solid var(--rope);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;text-wrap:balance;margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.82rem;color:var(--muted)}
+.prose{max-width:68ch}
+.prose p+p{margin-top:.8em}
+.muted{color:var(--muted)}
+.comp-grid>*,.sess-grid>*,.fig-row>*,.cols>*,.hero .wrap>*{min-width:0}
+.src{font-size:.85rem;color:var(--muted);margin-top:.9rem}
+.num{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+
+/* Capçalera */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:58px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:9px}
+.brand svg{flex:none}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0;margin-left:auto;padding-block:8px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--font-data);font-weight:600;font-size:.95rem;letter-spacing:.03em;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav a.on{color:var(--ink);background:var(--water-soft)}
+@media (max-width:720px){.top .wrap{flex-wrap:wrap;gap:0;padding-block:6px}.brand{padding-top:4px}.nav{margin-left:0;width:100%;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:40px}}
+
+/* Surada (separador) */
+.rope{height:6px;border-radius:3px;margin:0;border:0;
+  background:
+    linear-gradient(90deg,var(--rope) 0 12%,transparent 12% 88%,var(--rope) 88%),
+    repeating-linear-gradient(90deg,var(--water) 0 14px,var(--surface) 14px 28px);}
+
+/* Inici */
+.hero{padding-block:48px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.4rem);letter-spacing:-.025em;margin-top:.4rem}
+.hero .lede{font-size:1.2rem;margin-top:1.1rem;max-width:34ch}
+.hero .meta{margin-top:1rem;font-size:.95rem;color:var(--muted);max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:1rem;padding:11px 18px;border-radius:999px;text-decoration:none;border:1.5px solid var(--water);color:var(--water);background:transparent}
+.btn.primary{background:var(--water);color:var(--on-water)}
+.btn:hover{background:var(--water-strong);border-color:var(--water-strong);color:var(--on-water)}
+.pool-box{min-width:0}
+.pool{width:100%;height:auto;display:block}
+.pool .lane-hit{fill:var(--water);opacity:0;transition:opacity .2s}
+.pool a:hover .lane-hit,.pool a:focus-visible .lane-hit{opacity:.16}
+.pool a{outline:none}
+.pool a:focus-visible .lane-label{text-decoration:underline}
+.pool .lane-label{font-family:var(--font-display);font-weight:700;font-size:17px;fill:var(--ink)}
+.pool .blk text,.pool .tick{font-family:var(--font-data);font-weight:600;font-size:13px}
+.pool .blk text{fill:var(--ink);text-anchor:middle}
+.pool .tick{fill:var(--muted);text-anchor:middle}
+.pool .glyph path,.pool .glyph line,.pool .glyph polyline{stroke:var(--fig);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.pool .glyph ellipse{fill:var(--fig)}
+.pool .glyph circle{fill:var(--rope)}
+.pool .sw{animation:drift 7s ease-in-out infinite alternate}
+.pool .sw.b{animation-duration:9s;animation-delay:-3s}
+.pool .sw.c{animation-duration:11s;animation-delay:-5s}
+.pool .sw.d{animation-duration:8s;animation-delay:-1s}
+@keyframes drift{from{transform:translateX(-28px)}to{transform:translateX(46px)}}
+@media (prefers-reduced-motion: reduce){.pool .sw{animation:none}}
+.pool-cap{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:28px}.hero{padding-block:32px 40px}}
+
+/* Seccions */
+section{scroll-margin-top:78px}
+.sec{padding-block:64px}
+.sec-head{display:grid;gap:.55rem;margin-bottom:2rem}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.55rem)}
+.sec-head p{max-width:66ch;color:var(--muted);font-size:1.08rem}
+.alt{background:var(--surface)}
+@media (max-width:600px){.sec{padding-block:44px}}
+
+/* Competència */
+.comp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}
+@media (max-width:860px){.comp-grid{grid-template-columns:1fr}}
+.callout{border-radius:var(--radius);background:var(--water-soft);padding:20px 22px;margin-top:1.4rem}
+.callout h3{font-size:1.1rem;margin-bottom:.4rem}
+.comp-groups{display:grid;gap:18px}
+.comp-group h3{font-family:var(--font-data);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:.55rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.95rem}
+.alt .chips li{background:var(--bg)}
+
+/* Etapes */
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:960px){.stages{grid-template-columns:1fr}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 24px;display:grid;gap:14px;align-content:start;position:relative;overflow:hidden}
+.stage::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--c)}
+.stage.s1{--c:var(--e1)} .stage.s2{--c:var(--e2)} .stage.s3{--c:var(--e3)}
+.stage-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.stage-age{font-family:var(--font-data);font-weight:600;font-size:2.6rem;line-height:1;color:var(--c);font-variant-numeric:tabular-nums}
+.stage-age small{font-size:1rem;margin-left:4px;color:var(--muted)}
+.stage h3{font-size:1.25rem}
+.stage h4{font-family:var(--font-data);font-weight:600;font-size:.86rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:.3rem}
+.stage ul{margin:0;padding-left:1.1rem;display:grid;gap:4px;font-size:.98rem}
+.stage .goal{font-size:1rem}
+.checks{list-style:none;padding:0!important}
+.checks li{position:relative;padding-left:24px}
+.checks li::before{content:"";position:absolute;left:2px;top:.42em;width:12px;height:12px;border-radius:3px;border:2px solid var(--c)}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 26px;margin-top:2.4rem;list-style:none;padding:0}
+@media (max-width:860px){.principles{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.principles{grid-template-columns:1fr}}
+.principles li{border-top:2px solid var(--line);padding-top:12px}
+.principles b{display:block;font-family:var(--font-display);font-size:1.05rem;margin-bottom:.25rem}
+.principles span{font-size:.97rem;color:var(--muted)}
+
+/* Estils */
+.order{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0 0 2rem}
+@media (max-width:700px){.order{grid-template-columns:1fr 1fr}}
+.order li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.order .num{font-size:1.5rem;font-weight:600;color:var(--water);line-height:1}
+.order b{display:block;font-family:var(--font-display);margin-top:4px}
+.order span{font-size:.9rem;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+thead th{font-family:var(--font-display);font-size:1rem;background:var(--surface-2)}
+thead th a{color:var(--ink);text-decoration-color:var(--water);text-underline-offset:3px}
+tbody th{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted);white-space:nowrap}
+.cmp{min-width:760px}
+.cmp td{min-width:150px}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:2.6rem;padding:6px;background:var(--surface-2);border-radius:16px;width:fit-content;max-width:100%}
+.tab{appearance:none;border:0;background:transparent;color:var(--ink);font-family:var(--font-display);font-weight:700;font-size:1.05rem;padding:10px 18px;border-radius:11px;cursor:pointer;display:grid;text-align:left;line-height:1.15}
+.tab small{font-family:var(--font-data);font-weight:500;font-size:.8rem;letter-spacing:.04em;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--surface);box-shadow:var(--shadow)}
+.tab[aria-selected="true"] small{color:var(--water)}
+@media (max-width:560px){.tabs{display:grid;grid-template-columns:1fr 1fr;width:100%}}
+.panel{margin-top:22px;scroll-margin-top:84px}
+.panel-head{display:grid;gap:.5rem;margin-bottom:1.4rem}
+.panel-head h3{font-size:clamp(1.7rem,3.2vw,2.2rem)}
+.tagline{font-family:var(--font-data);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--water);font-size:.92rem}
+.fig-row{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+@media (max-width:900px){.fig-row{grid-template-columns:1fr}}
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px;min-width:0}
+.figure svg{display:block;width:100%;height:auto}
+.figcap{font-size:.85rem;color:var(--muted);padding:6px 6px 2px}
+.fig .limb{fill:none;stroke:var(--fig);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.fig .limb.far{stroke:var(--fig-far)}
+.fig .torso{fill:none;stroke:var(--fig);stroke-width:19;stroke-linecap:round}
+.fig .head{fill:var(--fig)}
+.fig .cap{fill:var(--rope)}
+.fig .wbg{fill:var(--water-soft)}
+.fig .wover{fill:var(--water);opacity:.14}
+.fig .surface{fill:none;stroke:var(--water);stroke-width:2.5}
+.fig .guide{fill:none;stroke:var(--water);stroke-width:2;stroke-dasharray:4 6;opacity:.8}
+.fig .sep{stroke:var(--line);stroke-width:1.5;stroke-dasharray:3 5}
+.mk circle{fill:var(--rope)}
+.mk text{fill:var(--rope-ink);font-family:var(--font-data);font-weight:600;font-size:15px;text-anchor:middle;dominant-baseline:central}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.legend li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:.98rem}
+.mk-n{width:24px;height:24px;border-radius:50%;background:var(--rope);color:var(--rope-ink);font-family:var(--font-data);font-weight:600;display:grid;place-items:center;font-size:.9rem;margin-top:1px}
+.kick-caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:4px 6px 2px;font-size:.82rem;color:var(--muted);text-align:center}
+.kick-caps b{display:block;font-family:var(--font-data);color:var(--ink);font-size:.9rem}
+
+.phases{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:ph;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.phases li{padding:14px 16px;border-right:1px solid var(--line);counter-increment:ph;font-size:.93rem}
+.phases li:last-child{border-right:0}
+.phases li b{display:block;font-family:var(--font-display);font-size:1rem;margin-bottom:.25rem}
+.phases li b::before{content:counter(ph);font-family:var(--font-data);color:var(--water);margin-right:8px;font-size:1.05rem}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.phases li{border-right:0;border-bottom:1px solid var(--line)}.phases li:last-child{border-bottom:0}}
+.phase-note{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.block h4{font-size:1.1rem;margin-bottom:.45rem}
+.block p{font-size:.98rem}
+
+.rules{background:var(--rope-soft);border-radius:var(--radius);padding:18px 20px;margin-top:22px}
+.rules h4{font-size:1.1rem}
+.rules .label{color:var(--ink);opacity:.8}
+.rules ul{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:8px}
+.rules li{display:grid;grid-template-columns:76px 1fr;gap:10px;font-size:.96rem}
+.art{font-family:var(--font-data);font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.new{display:inline-block;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;background:var(--water);color:var(--on-water);border-radius:4px;padding:0 6px;margin-right:4px}
+@media (max-width:480px){.rules li{grid-template-columns:1fr;gap:0}}
+
+.sub{font-size:1.25rem;margin:34px 0 12px}
+.errors{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.errors li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px;padding:13px 18px;border-bottom:1px solid var(--line)}
+.errors li:last-child{border-bottom:0}
+.errors .what b{display:block;font-weight:700}
+.errors .what span{font-size:.9rem;color:var(--muted)}
+.errors .fix{font-size:.96rem;padding-left:16px;border-left:3px solid var(--ok)}
+.errors .head{background:var(--surface-2);padding-block:8px}
+.errors .head span{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--muted)}
+@media (max-width:640px){.errors li{grid-template-columns:1fr;gap:6px}.errors .head{display:none}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);counter-increment:st;align-items:start}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(st);font-family:var(--font-data);font-weight:600;font-size:1.35rem;color:var(--water);line-height:1.2;text-align:right;font-variant-numeric:tabular-nums}
+.steps .stg{margin-right:8px}
+
+.stg{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-data);font-weight:600;font-size:.82rem;letter-spacing:.03em;padding:1px 9px 1px 7px;border-radius:999px;color:var(--ink);background:var(--c-soft);white-space:nowrap;vertical-align:1px;font-variant-numeric:tabular-nums}
+.stg::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.stg.s1{--c:var(--e1);--c-soft:var(--e1-soft)} .stg.s2{--c:var(--e2);--c-soft:var(--e2-soft)} .stg.s3{--c:var(--e3);--c-soft:var(--e3-soft)}
+
+/* Jocs */
+.filters{display:grid;gap:12px;margin-bottom:22px}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.frow .label{min-width:72px}
+.fchip{appearance:none;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--font-body);font-size:.93rem;padding:6px 13px;border-radius:999px;cursor:pointer}
+.fchip:hover{border-color:var(--water)}
+.fchip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.count{font-size:.92rem;color:var(--muted)}
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.game{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 20px;display:grid;gap:9px;align-content:start}
+.game h3{font-size:1.2rem}
+.game-tags{display:flex;flex-wrap:wrap;gap:6px}
+.obj{font-family:var(--font-data);font-weight:500;font-size:.82rem;letter-spacing:.03em;padding:1px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.game p{font-size:.95rem}
+.game .lbl{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--muted);margin-right:6px}
+.game .key{border-top:1px dashed var(--line);padding-top:9px}
+.empty{padding:28px;border:1.5px dashed var(--line);border-radius:var(--radius);text-align:center;color:var(--muted)}
+
+/* Sessió */
+.sess-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:30px;align-items:start}
+@media (max-width:900px){.sess-grid{grid-template-columns:minmax(0,1fr)}}
+.parts{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:pt}
+.parts li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;counter-increment:pt}
+.alt .parts li{background:var(--bg)}
+.parts b{font-family:var(--font-display);font-size:1.05rem}
+.parts b::before{content:counter(pt) ".";font-family:var(--font-data);color:var(--water);margin-right:8px}
+.parts p{font-size:.95rem;margin-top:.2rem}
+.tips{margin:22px 0 0;padding-left:1.1rem;display:grid;gap:6px;font-size:.97rem}
+.ex-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-bottom:10px}
+.ex-head h3{font-size:1.25rem}
+.sess td:first-child{white-space:nowrap;font-family:var(--font-data);font-weight:600;font-variant-numeric:tabular-nums;color:var(--water)}
+.sess td:last-child{color:var(--muted);font-size:.9rem}
+.sess{min-width:560px}
+
+/* Seguretat */
+.safe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}
+@media (max-width:900px){.safe{grid-template-columns:1fr 1fr}}
+@media (max-width:580px){.safe{grid-template-columns:1fr}}
+.safe li{border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 20px;background:var(--surface)}
+.alt .safe li{background:var(--bg)}
+.safe h3{font-size:1.1rem;margin-bottom:.35rem}
+.safe p{font-size:.96rem}
+
+/* Vocabulari */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;margin:0}
+@media (max-width:760px){.gloss{grid-template-columns:1fr}}
+.gloss div{padding:12px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.gloss dt{font-family:var(--font-display);font-weight:700;font-size:1.05rem}
+.gloss dt span{font-family:var(--font-data);font-weight:500;font-size:.9rem;color:var(--muted);margin-left:8px;letter-spacing:.02em}
+.gloss dd{margin:.15rem 0 0;font-size:.96rem}
+
+/* Fonts */
+.refs{margin:0;padding-left:1.3rem;display:grid;gap:9px;font-size:.95rem;max-width:90ch}
+.refs li::marker{font-family:var(--font-data);color:var(--muted)}
+.refs a{overflow-wrap:anywhere}
+.refs .note{color:var(--muted)}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+
+/* Propietats de l'aigua */
+.aq-facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 30px}
+@media (max-width:860px){.aq-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.aq-facts{grid-template-columns:1fr}}
+.aq-facts li{border-top:2px solid var(--water);padding-top:12px;display:grid;gap:4px;align-content:start}
+.aq-n{font-family:var(--font-data);font-weight:600;font-size:2.1rem;line-height:1;color:var(--water);font-variant-numeric:tabular-nums}
+.aq-facts b{font-family:var(--font-display);font-size:1.05rem}
+.aq-facts li>span:last-child{font-size:.95rem;color:var(--muted)}
+.aq-h3{font-size:clamp(1.45rem,2.8vw,1.85rem);margin:3.2rem 0 1rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.aq-h4{font-size:1.15rem;margin:0 0 .65rem}
+.aq-first{margin-top:0}
+.aq-mt{margin-top:1.8rem}
+.aq-quote{margin:0 0 1.2rem;padding:4px 0 4px 18px;border-left:4px solid var(--water);max-width:64ch}
+.aq-quote p{font-size:1.1rem;font-style:italic}
+.aq-quote cite{display:block;margin-top:.35rem;font-style:normal;font-family:var(--font-data);font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-size:.82rem;color:var(--muted)}
+.aq-fig{max-width:640px;margin:1.4rem 0 0}
+.caps3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.aq-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start;margin-top:1.8rem}
+@media (max-width:900px){.aq-split{grid-template-columns:minmax(0,1fr)}}
+.aq-list{margin:0;padding-left:1.1rem;display:grid;gap:7px;font-size:.98rem}
+.aq-list.pro li::marker{color:var(--ok)}
+.aq-list.con li::marker{color:var(--bad)}
+.aq-legend{margin-top:14px}
+.aq-types{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.aq-types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.aq-types{grid-template-columns:1fr}}
+.aq-types li{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--surface);display:grid;gap:3px;align-content:start;font-size:.93rem}
+.aq-types b{font-family:var(--font-display);font-size:1rem}
+.aq-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin-top:1.2rem}
+@media (max-width:760px){.aq-two{grid-template-columns:1fr}}
+.aq-vel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px 20px;display:grid;gap:12px;align-content:start}
+.aq-vel p{font-size:.95rem}
+.aq-vel input[type="range"]{width:100%;accent-color:var(--water);margin:0}
+.aq-out{display:flex;flex-wrap:wrap;gap:30px}
+.aq-out .num{display:block;font-size:2.2rem;font-weight:600;line-height:1;color:var(--ink)}
+.aq-out small{font-family:var(--font-data);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--muted)}
+.aq-bars{display:grid;gap:8px}
+.aq-bar{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px;align-items:center;font-size:.85rem;color:var(--muted)}
+.aq-bar .trk{display:block;height:14px;border-radius:7px;background:var(--surface-2);overflow:hidden}
+.aq-bar i{display:block;height:100%;border-radius:7px;background:var(--water);transition:width .2s ease}
+.aq-bar.r i{background:var(--hot)}
+@media (prefers-reduced-motion: reduce){.aq-bar i{transition:none}}
+.aq-note{font-size:.85rem;color:var(--muted)}
+.tscale{display:grid;gap:10px;margin-top:1.6rem}
+.trow{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:18px;align-items:center}
+.tlab b{display:block;font-size:.96rem}
+.tlab span{font-size:.84rem;color:var(--muted)}
+.ttrack{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,var(--cold-soft),var(--surface-2) 55%,var(--hot-soft))}
+.ttrack::after{content:"";position:absolute;top:-5px;bottom:-5px;left:calc((37 - 10) / 32 * 100%);border-left:2px dotted var(--ink);opacity:.45}
+.tbar{position:absolute;top:4px;bottom:4px;border-radius:7px;left:calc((var(--a) - 10) / 32 * 100%);width:calc((var(--b) - var(--a)) / 32 * 100%);background:var(--water)}
+.tbar.cold{background:var(--cold)}
+.tbar.hot{background:var(--hot)}
+.tmax{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--water);border:3px solid var(--surface);left:calc((var(--a) - 10) / 32 * 100%)}
+.tmax::before{content:"";position:absolute;right:100%;top:50%;width:46px;height:4px;margin-top:-2px;background:linear-gradient(90deg,transparent,var(--water))}
+.taxis{position:relative;height:18px}
+.taxis span{position:absolute;left:calc((var(--a) - 10) / 32 * 100%);transform:translateX(-50%);font-family:var(--font-data);font-weight:600;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:640px){.trow{grid-template-columns:minmax(0,1fr);gap:4px}.taxis-row>div:first-child{display:none}}
+.aq-tc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:1.8rem}
+@media (max-width:760px){.aq-tc{grid-template-columns:1fr}}
+.aq-t{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:var(--radius);padding:18px 20px 20px;display:grid;gap:8px;align-content:start}
+.aq-t.hot{--c:var(--hot)}
+.aq-t.cold{--c:var(--cold)}
+.aq-t h4{font-size:1.25rem}
+.aq-sub{font-family:var(--font-data);font-weight:600;font-size:.98rem;color:var(--c)}
+.aq-t .lbl{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--muted);margin-top:6px}
+.aq-norm li{grid-template-columns:136px minmax(0,1fr)}
+@media (max-width:480px){.aq-norm li{grid-template-columns:1fr}}
+.aq-ben{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.aq-ben{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.aq-ben{grid-template-columns:1fr}}
+.aq-ben li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+.aq-ben h4{font-size:1.12rem}
+.aq-ben p{font-size:.95rem}
+.aq-ben .ev{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:.86rem;color:var(--muted)}
+.aq-ben .ev b{font-family:var(--font-data);font-weight:600;font-size:1.06rem;color:var(--water);font-variant-numeric:tabular-nums}
+.fig .floor{stroke:var(--muted);stroke-width:2}
+.fig .pct{font-family:var(--font-data);font-weight:600;font-size:24px;fill:var(--ink);text-anchor:middle}
+.fig .arl{fill:none;stroke-width:3.5;stroke-linecap:round}
+.fig .arl.up{stroke:var(--water)}
+.fig .arl.dn{stroke:var(--hot)}
+.fig .arh.up{fill:var(--water)}
+.fig .arh.dn{fill:var(--hot)}
+.fig .pt{fill:var(--surface);stroke-width:3}
+.fig .pt.up{stroke:var(--water)}
+.fig .pt.dn{stroke:var(--hot)}
+.fig .rot{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-dasharray:5 5}
+.fig .rot-h{fill:var(--muted)}
+.fig .dim{fill:none;stroke:var(--ink);stroke-width:1.8}
+.fig .dimx{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:3 4;opacity:.6}
+
+/* Botó de tema */
+.theme-btn{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.theme-btn:hover{border-color:var(--water);color:var(--water)}
+.theme-btn span{display:grid}
+.theme-btn svg{width:20px;height:20px;display:block}
+@media (max-width:720px){.theme-btn{order:2;margin-left:auto;width:36px;height:36px}.nav{order:3}}
+
+/* ===== Estructura d'app: vistes, menú lateral, barra inferior i cercador ===== */
+.top .wrap{max-width:1400px}
+main > hr.rope{display:none}
+.shell{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1400px;margin:0 auto}
+main{min-width:0}
+.side{position:sticky;top:calc(58px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 58px - env(safe-area-inset-top,0px));overflow-y:auto;padding:22px 14px 32px max(16px,env(safe-area-inset-left,0px));border-right:1px solid var(--line);display:grid;gap:16px;align-content:start}
+.side a{display:block;padding:7px 12px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:.97rem;line-height:1.3}
+.side a:hover{background:var(--surface-2)}
+.side a[aria-current="page"]{background:var(--water-soft);font-weight:700}
+.side a.side-sub{padding-left:24px;font-size:.93rem}
+.side-home{font-family:var(--font-display);font-weight:700}
+.side a.side-mod{font-family:var(--font-data);font-weight:600;font-size:.9rem;letter-spacing:.03em;color:var(--muted);border-bottom:1px solid var(--line);border-radius:9px 9px 0 0;padding-bottom:10px}
+.side a.side-mod:hover{color:var(--water)}
+.side-g{display:grid;gap:2px}
+.side-h{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;color:var(--muted);padding:0 12px 4px}
+.scrim{position:fixed;inset:0;z-index:35;background:rgba(6,20,27,.45)}
+.q-trigger{flex:1;max-width:440px;margin-left:auto;display:flex;align-items:center;gap:10px;height:40px;padding:0 8px 0 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);font:inherit;font-size:.95rem;cursor:pointer;text-align:left}
+.q-trigger:hover{border-color:var(--water)}
+.q-trigger span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.q-trigger svg,.hs-field svg,.sbox svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.q-trigger kbd{font-family:var(--font-data);font-size:.8rem;border:1px solid var(--line);border-radius:6px;padding:0 7px;color:var(--muted)}
+.tabbar{display:none}
+@media (max-width:999px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .side{position:fixed;inset:0 auto 0 0;z-index:40;width:min(320px,86vw);max-height:none;background:var(--bg);border-right:1px solid var(--line);padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-105%);transition:transform .22s ease;box-shadow:var(--shadow)}
+  .side.open{transform:none}
+  .q-trigger{display:none}
+  .theme-btn{margin-left:auto}
+  .tabbar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding:4px max(8px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+  .tabbar a,.tabbar button{appearance:none;border:0;background:none;display:grid;justify-items:center;gap:2px;padding:6px 2px;border-radius:10px;color:var(--muted);text-decoration:none;font:inherit;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.03em;cursor:pointer}
+  .tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tabbar .on{color:var(--water)}
+  body{padding-bottom:calc(62px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion: reduce){.side{transition:none}}
+
+/* Inici */
+.hsearch{margin-top:1.6rem;display:grid;gap:8px;max-width:520px}
+.hs-field{display:flex;align-items:center;gap:10px;height:52px;padding:0 16px;border:2px solid var(--water);border-radius:14px;background:var(--surface);color:var(--muted)}
+.hs-field:focus-within{box-shadow:0 0 0 4px var(--water-soft)}
+.hs-field input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1.05rem;outline:none}
+.tiles-h{font-size:1.4rem;margin:8px 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.tiles{grid-template-columns:1fr}}
+.tile{display:grid;gap:5px;align-content:start;padding:16px 18px 18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink);text-decoration:none}
+.tile:hover{border-color:var(--water);box-shadow:var(--shadow)}
+.tile b{font-family:var(--font-display);font-size:1.15rem;line-height:1.2}
+.tile>span:last-child{font-size:.92rem;color:var(--muted)}
+.hero{padding-block:40px 48px}
+.hero > .wrap + .wrap{margin-top:36px}
+.hero .wrap.tiles-wrap{display:block}
+
+/* Resultats de cerca */
+.res{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.res:empty{display:none}
+.res a,.res button.more{display:block;width:100%;text-align:left;padding:10px 12px;border-radius:10px;color:var(--ink);text-decoration:none;border:0;background:none;font:inherit;cursor:pointer}
+.res a:hover,.res a.on{background:var(--surface-2)}
+.rp{display:block;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--water)}
+.rt{display:block;font-weight:700}
+.rs{display:block;font-size:.9rem;color:var(--muted)}
+.res mark{background:var(--rope-soft);color:inherit;border-radius:3px;padding:0 1px}
+.res button.more{color:var(--water);font-weight:700}
+.hsearch .res{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:var(--shadow)}
+.sov{position:fixed;inset:0;z-index:50;background:rgba(6,20,27,.5);display:grid;justify-items:center;align-items:start;padding:calc(8vh + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+.sov-panel{width:min(720px,100%);max-height:80vh;display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden}
+.sbox{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);color:var(--muted)}
+.sbox input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1.1rem;outline:none}
+.sclose{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;font:inherit;font-size:.88rem;cursor:pointer}
+.sres-wrap{overflow-y:auto;padding:8px}
+.scount{font-size:.88rem;color:var(--muted);padding:4px 12px 8px}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px}
+@media (max-width:600px){.sov{padding:0}.sov-panel{width:100%;height:100%;max-height:none;border-radius:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}
+.flash{animation:flash 1.8s ease-out}
+@keyframes flash{0%,35%{box-shadow:0 0 0 4px var(--rope)}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion: reduce){.flash{animation:none;outline:3px solid var(--rope);outline-offset:3px}}
+
+/* Pestanyes internes de cada estil */
+.subtabs{display:flex;gap:2px;border-bottom:2px solid var(--line);margin:4px 0 22px;overflow-x:auto;scrollbar-width:none}
+.subtabs::-webkit-scrollbar{display:none}
+.subtab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 14px;font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--muted);cursor:pointer;white-space:nowrap}
+.subtab small{font-family:var(--font-data);font-weight:600;font-size:.82rem;margin-left:6px;color:var(--muted)}
+.subtab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--water)}
+.subpanel > h4.sub{display:none}
+.subpanel > .rules{margin-top:0}
+
+/* Apartats i navegació entre vistes */
+.jump{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-.6rem 0 2rem}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:3.2rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.pg{display:grid;gap:2px;max-width:48%;padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none}
+.pg:hover{border-color:var(--water)}
+.pg small{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--muted)}
+.pg b{font-family:var(--font-display)}
+.pg.next{margin-left:auto;text-align:right}
+</style>
+<script>
+(function(){ try { var t = localStorage.getItem("ensenyar-tema"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+</script>
+<!--BODY-->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inici">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="var(--water)"/><path d="M3 12.5q2-2 4 0t4 0t4 0t4 0" fill="none" stroke="var(--surface)" stroke-width="2" stroke-linecap="round"/></svg>
+      Ensenyar a nedar
+    </a>
+    <button type="button" class="q-trigger" id="q-trigger" aria-label="Cerca a la web">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      <span>Cerca jocs, errors, termes…</span><kbd>/</kbd>
+    </button>
+    <button type="button" class="theme-btn" id="theme-btn" aria-label="Canvia al tema fosc" title="Canvia al tema fosc">
+      <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"/></svg></span>
+      <span class="i-sun" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="shell">
+<aside class="side" id="side" aria-label="Seccions">
+  <a class="side-mod" href="../index.html">← Esports Individuals</a>
+  <a class="side-home" href="#inici">Inici</a>
+  <div class="side-g">
+    <div class="side-h">Fonaments</div>
+    <a href="#competencia">Competència aquàtica</a>
+    <a href="#aigua">Propietats de l’aigua</a>
+    <a href="#etapes">Etapes, 3–12 anys</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">Els estils</div>
+    <a href="#estils">Visió general</a>
+    <a href="#crol" class="side-sub">Crol</a>
+    <a href="#esquena" class="side-sub">Esquena</a>
+    <a href="#braca" class="side-sub">Braça</a>
+    <a href="#papallona" class="side-sub">Papallona</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">A la piscina</div>
+    <a href="#jocs">Banc de jocs</a>
+    <a href="#sessio">Organitzar una sessió</a>
+    <a href="#seguretat">Seguretat</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">Consulta</div>
+    <a href="#vocabulari">Vocabulari</a>
+    <a href="#fonts">Fonts</a>
+  </div>
+</aside>
+<main id="main">
+<section id="inici" class="hero">
+  <div class="wrap">
+    <div>
+      <div class="label">Medi aquàtic · Material per a l’alumnat de CFGS EAS</div>
+      <h1>Ensenyar a nedar</h1>
+      <p class="lede">Tècnica dels quatre estils, progressions d’aprenentatge i un banc de jocs per acompanyar infants de 3 a 12 anys, de la primera bombolla a la primera llargada de papallona.</p>
+      <p class="meta">Basat en el reglament de World Aquatics vigent (febrer de 2026) i en bibliografia d’educació aquàtica i de prevenció d’ofegaments.</p>
+      <div class="hsearch">
+        <label class="label" for="qh">Cerca a la web</label>
+        <div class="hs-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+          <input id="qh" type="search" placeholder="Per exemple: patada de braça, flotació, taurons" autocomplete="off" spellcheck="false">
+        </div>
+        <ul class="res" id="qh-res" aria-live="polite"></ul>
+      </div>
+    </div>
+    <div class="pool-box">
+      <svg class="pool" viewBox="0 0 560 334" role="group" aria-label="Piscina de 25 metres amb quatre carrers, un per estil">
+        <defs>
+          <pattern id="tiles" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="var(--tile)" stroke-width="1.2"/></pattern>
+        </defs>
+        <rect x="0" y="0" width="560" height="334" rx="18" fill="var(--deck)"/>
+        <rect x="30" y="24" width="500" height="280" rx="3" fill="var(--pool)"/>
+        <rect x="30" y="24" width="500" height="280" fill="url(#tiles)" style="opacity:var(--tile-op)"/>
+        <g id="lanes"></g>
+        <text class="tick" x="30" y="324">0</text>
+        <text class="tick" x="130" y="324">5 m</text>
+        <text class="tick" x="330" y="324">15 m</text>
+        <text class="tick" x="430" y="324">20 m</text>
+        <text class="tick" x="526" y="324">25 m</text>
+      </svg>
+      <p class="pool-cap">Toca un carrer per obrir la fitxa de l’estil. Les línies de punts marquen les banderes d’esquena, a 5 m de cada paret; la marca a les surades indica els 15 m.</p>
+    </div>
+  </div>
+  <div class="wrap tiles-wrap">
+    <h2 class="tiles-h">Què vols consultar?</h2>
+    <div class="tiles">
+      <a class="tile" href="#estils"><span class="label">Els estils</span><b>Els quatre estils</b><span>Tècnica, progressió, errors i reglament de crol, esquena, braça i papallona.</span></a>
+      <a class="tile" href="#jocs"><span class="label">A la piscina</span><b>Banc de jocs</b><span id="tile-jocs">Jocs filtrables per edat i per objectiu.</span></a>
+      <a class="tile" href="#etapes"><span class="label">Fonaments</span><b>Etapes, 3–12 anys</b><span>Objectius, habilitats i indicadors per passar d’etapa.</span></a>
+      <a class="tile" href="#aigua"><span class="label">Fonaments</span><b>Propietats de l’aigua</b><span>Flotació, pressió, resistència, temperatura i beneficis.</span></a>
+      <a class="tile" href="#sessio"><span class="label">A la piscina</span><b>Organitzar una sessió</b><span>Parts de la sessió, consells i una sessió d’exemple.</span></a>
+      <a class="tile" href="#seguretat"><span class="label">A la piscina</span><b>Seguretat</b><span>Vigilància, profunditat, apnees i com ajudar sense entrar a l’aigua.</span></a>
+      <a class="tile" href="#competencia"><span class="label">Fonaments</span><b>Competència aquàtica</b><span>Les quinze competències que van més enllà de saber nedar.</span></a>
+      <a class="tile" href="#vocabulari"><span class="label">Consulta</span><b>Vocabulari</b><span>Termes tècnics en català amb l’equivalent castellà.</span></a>
+    </div>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="competencia" class="sec alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments</div>
+      <h2>Més que nedar: la competència aquàtica</h2>
+    </div>
+    <div class="comp-grid">
+      <div class="prose">
+        <p>Saber nedar un estil no garanteix estar segur a l’aigua. Langendorfer i Bruya (1995) van proposar el concepte de <b>competència aquàtica</b>, i Stallman i col·laboradors (2017) el van concretar en quinze competències que combinen habilitats motrius, coneixements i actituds.</p>
+        <p>Moreno-Murcia i Ruiz (2021) la defineixen com el conjunt de coneixements, procediments, actituds i afectes que permeten resoldre problemes i gaudir en entorns aquàtics diferents. Per això, a més dels estils, cal ensenyar a entrar i sortir de l’aigua, flotar, orientar-se, nedar vestit o demanar ajuda.</p>
+        <p>Les habilitats aquàtiques fonamentals s’adquireixen aproximadament entre els 2 i els 7 anys; a partir dels 7, els infants comencen a desenvolupar habilitats específiques com la tècnica dels estils.</p>
+        <div class="callout">
+          <h3>Prioritat a les primeres etapes</h3>
+          <p>L’OMS recomana ensenyar habilitats bàsiques de natació i de seguretat a l’aigua als infants d’edat escolar i posar respirar, flotar i avançar per davant del perfeccionament dels estils, sempre amb instructors formats, instal·lacions adequades i supervisió.</p>
+        </div>
+        <p class="src">Fonts: Langendorfer i Bruya (1995); Stallman et al. (2017); Moreno-Murcia i Ruiz (2021); OMS (2021, 2022).</p>
+      </div>
+      <div class="comp-groups">
+        <div class="comp-group">
+          <h3>A l’aigua</h3>
+          <ul class="chips">
+            <li>Entrar a l’aigua amb seguretat</li><li>Controlar la respiració</li><li>Flotar i mantenir-se a la superfície</li><li>Orientar-se i canviar de posició</li><li>Desplaçar-se nedant</li><li>Moure’s sota l’aigua</li><li>Sortir de l’aigua amb seguretat</li><li>Fer servir l’armilla salvavides</li><li>Nedar vestit</li><li>Nedar en aigües obertes</li>
+          </ul>
+        </div>
+        <div class="comp-group">
+          <h3>Coneixement i judici</h3>
+          <ul class="chips"><li>Conèixer els perills de l’entorn</li><li>Afrontar el risc</li><li>Valorar la pròpia competència</li></ul>
+        </div>
+        <div class="comp-group">
+          <h3>Ajuda i actituds</h3>
+          <ul class="chips"><li>Reconèixer i ajudar algú que s’ofega</li><li>Actituds i valors de seguretat</li></ul>
+        </div>
+        <p class="src">Les quinze competències de Stallman et al. (2017), segons l’adaptació de Drowning Prevention Auckland. La piscina és només un entorn: al mar o al riu hi ha onades, corrents i fred.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="aigua" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments · El medi aquàtic</div>
+      <h2>Propietats de l’aigua</h2>
+      <p>L’aigua no és l’entorn habitual de l’ésser humà: és molt més densa que l’aire, ens fa surar, ens pressiona i ens refreda de pressa. Entendre aquestes propietats explica per què surem, per què costa avançar i per què la temperatura de l’aigua canvia una sessió.</p>
+    </div>
+
+    <ul class="aq-facts">
+      <li><span class="aq-n">≈ 800×</span><b>Més densa que l’aire</b><span>Un litre d’aigua pesa 1 kg i un litre d’aire, 1,2 g. Qualsevol moviment ha d’apartar molta massa: per això l’aigua frena i alhora fa de suport.</span></li>
+      <li><span class="aq-n">≈ 50×</span><b>Més viscosa</b><span>L’aigua frega amb el cos i alenteix els moviments. Els girs, les caigudes i els salts són més lents i segurs que a terra.</span></li>
+      <li><span class="aq-n">≈ 25×</span><b>Treu la calor més de pressa</b><span>L’aigua condueix la calor unes 25 vegades més que l’aire. A 28 °C l’aire és calorós, però l’aigua ens refreda.</span></li>
+      <li><span class="aq-n">+0,1 bar</span><b>Pressió per cada metre</b><span>Cada metre de profunditat afegeix uns 74 mmHg sobre el cos. Es nota al tòrax en respirar i a les orelles en baixar.</span></li>
+      <li><span class="aq-n">≈ 4×</span><b>El so viatja més ràpid</b><span>Sota l’aigua el so va a uns 1.500 m/s, però costa saber d’on ve i les paraules no s’entenen. Amb el cap sota l’aigua, fes servir senyals visuals.</span></li>
+      <li><span class="aq-n">≈ ¾</span><b>El fons sembla més a prop</b><span>Per la refracció de la llum, la profunditat aparent és d’uns tres quarts de la real. Un infant pot creure que hi fa peu quan no és així.</span></li>
+    </ul>
+    <p class="src">Fonts: Becker (2009) i valors físics de referència de l’aigua dolça a 20–25 °C.</p>
+
+    <h3 class="aq-h3">Què canvia per al cos</h3>
+    <ul class="principles aq-first">
+      <li><b>Sensacions amplificades</b><span>L’aigua estimula més la pell, els ulls i les orelles, i el sistema propioceptiu rep informació nova sobre la posició i el moviment del cos.</span></li>
+      <li><b>Destreses noves</b><span>El cos es mou en horitzontal dins un fluid dens i viscós que s’oposa a l’avanç. Per desplaçar-se calen altres moviments i s’ha de respirar d’una altra manera.</span></li>
+      <li><b>Ingravidesa</b><span>Es perd el contacte amb el terra o amb un punt fix on agafar-se. En canvi, els girs i els voltejos són més fàcils i segurs perquè el cos sura.</span></li>
+    </ul>
+    <p class="src">Font: Prat Riba, apunts del mòdul M5 (IEB).</p>
+
+    <h3 class="aq-h3">Gravetat i flotació</h3>
+    <blockquote class="aq-quote"><p>«Un cos submergit totalment o parcialment en un fluid en repòs rep una força de baix cap a dalt igual al pes del volum de fluid que desallotja.»</p><cite>Principi d’Arquimedes</cite></blockquote>
+    <div class="prose">
+      <p>Sobre un cos a l’aigua actuen dues forces contràries: el <b>pes</b>, que l’atrau cap al fons i s’aplica al centre de gravetat (CG), i l’<b>empenta</b>, que l’impulsa cap amunt i s’aplica al centre de flotació (CF). La densitat mitjana del cos humà és d’uns 0,97 kg/L, una mica menys que la de l’aigua: amb els pulmons plens, la majoria de persones sura; en buidar-los, moltes s’enfonsen a poc a poc.</p>
+      <p>L’empenta també descarrega les articulacions. Com més aigua cobreix el cos, menys pes suporten els peus. Per això l’aigua permet fer exercici a persones grans, amb sobrepès o que es recuperen d’una lesió, i per això als infants els costa caminar, frenar i mantenir l’equilibri dins l’aigua.</p>
+    </div>
+    <figure class="figure aq-fig">
+      <div class="fig" data-fig="descarrega"></div>
+      <div class="kick-caps caps3"><span><b>1 · Aigua al coll</b>Setena vèrtebra cervical</span><span><b>2 · Aigua a l’estèrnum</b>Apèndix xifoide</span><span><b>3 · Aigua al maluc</b>Espina ilíaca anterosuperior</span></div>
+      <figcaption class="figcap">Percentatge del pes corporal que suporten els peus, dempeus, segons Harrison i Bulstrode (1987). Els valors varien amb la composició corporal i la postura: inclinar el cos endavant redueix encara més la càrrega (Adegoke et al., 2014).</figcaption>
+    </figure>
+
+    <div class="aq-split">
+      <div>
+        <figure class="figure" style="margin:0"><div class="fig" data-fig="cgcf"></div><figcaption class="figcap">Flotació dorsal. A l’esquerra, amb els braços al costat del cos; a la dreta, amb els braços per sobre del cap.</figcaption></figure>
+        <ol class="legend aq-legend">
+          <li><span class="mk-n">1</span><span><b>Empenta</b>, aplicada al centre de flotació (CF). Queda a l’altura del tòrax per l’aire dels pulmons.</span></li>
+          <li><span class="mk-n">2</span><span><b>Pes</b>, aplicat al centre de gravetat (CG). Queda més a prop del maluc.</span></li>
+          <li><span class="mk-n">3</span><span>Si el CG i el CF no són en la mateixa vertical, el cos gira: les cames baixen fins que s’alineen.</span></li>
+          <li><span class="mk-n">4</span><span>Amb els braços per sobre del cap, el CG s’acosta al CF i les cames s’enfonsen menys.</span></li>
+        </ol>
+      </div>
+      <div>
+        <h4 class="aq-h4">Factors que determinen la flotació</h4>
+        <ul class="aq-list">
+          <li><b>Densitat de l’aigua.</b> La sal l’augmenta: l’aigua de mar fa uns 1.025 kg/m³ i la d’una piscina, uns 997. Per això se sura més al mar. La temperatura també hi influeix, però poc: entre 10 i 30 °C la densitat canvia menys d’un 0,5 %.</li>
+          <li><b>Densitat del cos.</b> El múscul i l’os la fan pujar; el greix, l’aigua corporal i l’aire dels pulmons la fan baixar. Per això influeixen l’edat, el sexe i el somatotip. A partir de l’adolescència la massa muscular augmenta i la flotabilitat sol baixar; les dones solen surar més fàcilment que els homes.</li>
+          <li><b>Moment respiratori.</b> Amb els pulmons plens se sura més. Amb pànic, la respiració és curta i entretallada, s’agafa menys aire i costa més surar.</li>
+          <li><b>Contracció muscular.</b> La tensió, l’ansietat i la por dificulten la flotació. Ajudar l’infant a relaxar-se també és ensenyar-lo a surar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="aq-h4 aq-mt">Tipus de flotació</h4>
+    <ul class="aq-types">
+      <li><b>Directa estàtica</b><span>El cos es manté a la superfície sense moure’s, com en l’estrella de mar.</span></li>
+      <li><b>Dinàmica amb desplaçament</b><span>El cos sura gràcies a la propulsió mentre neda.</span></li>
+      <li><b>Dinàmica sense desplaçament</b><span>Mans i peus mantenen el cos vertical en un lloc, com fan els porters de waterpolo.</span></li>
+      <li><b>Indirecta</b><span>Amb material que augmenta la superfície de sustentació: xurros, planxes o cinturons.</span></li>
+    </ul>
+    <p class="src">Fonts: Prat Riba (apunts de M5); Becker (2009); Harrison i Bulstrode (1987), citats per Adegoke et al. (2014).</p>
+
+    <h3 class="aq-h3">Pressió hidrostàtica</h3>
+    <p class="prose">L’aigua pressiona el cos per tots costats, i com més profund, més: uns 74 mmHg per cada metre. Amb el cos dret dins l’aigua, la pressió és més gran als peus que al pit.</p>
+    <div class="aq-two">
+      <div class="block">
+        <h4>Efectes sobre el cos</h4>
+        <ul class="aq-list">
+          <li>Afavoreix el retorn de la sang al cor: amb l’aigua al coll, uns 700 mL es desplacen cap al tòrax.</li>
+          <li>El cor impulsa un 35 % més de sang a cada batec i, per al mateix esforç, el pols és unes 10 pulsacions per minut més baix que a terra.</li>
+          <li>Comprimeix el tòrax: la capacitat vital baixa un 6–9 % i respirar costa un 60 % més d’esforç amb l’aigua al coll.</li>
+          <li>Redueix la inflamació de les cames i fa augmentar la producció d’orina.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4>Com és la respiració a l’aigua</h4>
+        <ul class="aq-list">
+          <li><b>Voluntària:</b> es decideix quan s’inspira i quan s’expira.</li>
+          <li><b>De mecànica contrària a la de terra:</b> s’inspira ràpid per la boca amb la cara fora i s’expira lentament pel nas i la boca amb la cara dins.</li>
+          <li><b>Forçada:</b> cal vèncer la pressió de l’aigua sobre el tòrax.</li>
+          <li><b>De cadència variable:</b> s’ajusta al ritme dels braços i les cames.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <h3>A la pràctica</h3>
+      <ul class="aq-list">
+        <li>El pols a l’aigua és més baix per al mateix esforç: no apliquis tal qual les zones de freqüència cardíaca calculades a terra.</li>
+        <li>Que els infants passin pel lavabo abans d’entrar a l’aigua.</li>
+        <li>Ensenya la respiració de manera progressiva: primer estàtica, després expiració contínua i explosiva i, finalment, en desplaçament.</li>
+      </ul>
+    </div>
+    <p class="src">Fonts: Becker (2009); Prat Riba (apunts de M5).</p>
+
+    <h3 class="aq-h3">Resistència i posició hidrodinàmica</h3>
+    <p class="prose">Per avançar, la propulsió dels braços i les cames ha de superar la resistència de l’aigua. Com que la densitat de l’aigua no es pot canviar, es pot nedar més ràpid propulsant més, oposant menys resistència o, millor, fent les dues coses.</p>
+    <div class="aq-split">
+      <div>
+        <h4 class="aq-h4">Tipus de resistència</h4>
+        <ul class="aq-list">
+          <li><b>Frontal o de forma.</b> Depèn de la superfície que el cos presenta de cara. Com més vertical o desalineat va el cos, més gran és.</li>
+          <li><b>De deixant o succió posterior.</b> L’aigua no omple prou de pressa l’espai que deixa el cos en avançar; es forma una zona turbulenta que l’estira enrere.</li>
+          <li><b>De fricció.</b> El frec de l’aigua amb la pell, el banyador i el cabell. En un lliscament és només un 8–14 % de la resistència total.</li>
+          <li><b>D’onada.</b> A la superfície, el cos fa onades que s’emporten energia. Quan es neda ràpid pot arribar a ser la meitat de la resistència total. Per això el lliscament després de la paret es fa sota l’aigua.</li>
+        </ul>
+      </div>
+      <div class="aq-vel">
+        <label class="label" for="aq-vel">Resistència i velocitat</label>
+        <p>La resistència creix amb el quadrat de la velocitat: si vas el doble de ràpid, l’aigua t’oposa unes quatre vegades més força. Mou el control per veure-ho.</p>
+        <input type="range" id="aq-vel" min="50" max="200" step="10" value="150">
+        <div class="aq-out"><div><span class="num" id="aq-v">×1,5</span><small>Velocitat</small></div><div><span class="num" id="aq-r">×2,25</span><small>Resistència</small></div></div>
+        <div class="aq-bars">
+          <div class="aq-bar"><span>Velocitat</span><span class="trk"><i id="aq-bv"></i></span></div>
+          <div class="aq-bar r"><span>Resistència</span><span class="trk"><i id="aq-br"></i></span></div>
+        </div>
+        <p class="aq-note">Les dues barres tenen la mateixa escala: una barra plena equival a ×4.</p>
+      </div>
+    </div>
+
+    <h4 class="aq-h4 aq-mt">La posició hidrodinàmica òptima: la fletxa</h4>
+    <div class="fig-row">
+      <figure class="figure" style="margin:0"><div class="fig" data-fig="fletxa"></div><figcaption class="figcap">Lliscament en fletxa després d’impulsar-se a la paret, vist de costat. Profunditat aproximadament a escala.</figcaption></figure>
+      <ol class="legend">
+        <li><span class="mk-n">1</span><span>Mans una sobre l’altra i dits junts.</span></li>
+        <li><span class="mk-n">2</span><span>Braços estirats i junts, amb les orelles entre els braços.</span></li>
+        <li><span class="mk-n">3</span><span>Cap neutre i mirada al fons. Aixecar el cap fa augmentar la resistència al voltant d’un 10 %.</span></li>
+        <li><span class="mk-n">4</span><span>Cos recte i ferm: espatlles, maluc i cames en línia.</span></li>
+        <li><span class="mk-n">5</span><span>Cames juntes i esteses, amb els peus en punta.</span></li>
+        <li><span class="mk-n">6</span><span>Lliscar a uns 0,4 m de profunditat: entre un 15 i un 18 % menys resistència que a la superfície a velocitat de sortida.</span></li>
+      </ol>
+    </div>
+    <ul class="principles aq-mt">
+      <li><b>Postura hidrodinàmica</b><span>En posició horitzontal només el cap i les espatlles s’oposen a l’aigua, amb les cames prou enfonsades per propulsar bé.</span></li>
+      <li><b>Propulsió uniforme</b><span>Cada aturada de la propulsió és temps en què no s’avança: millor un impuls continu que cops forts amb pauses.</span></li>
+      <li><b>Velocitat compassada</b><span>Com més precipitat és el gest, més resistència crea. Primer amplitud i control, després velocitat.</span></li>
+    </ul>
+    <p class="src">Fonts: Prat Riba (apunts de M5); Toussaint (2002); Vennell, Pease i Wilson (2006); Marinho et al. (2011); Cortesi i Gatta (2015); Lyttle et al. (1999).</p>
+
+    <h3 class="aq-h3">Temperatura de l’aigua</h3>
+    <div class="prose">
+      <p>Com que l’aigua treu la calor unes 25 vegades més de pressa que l’aire, la temperatura condiciona tota la sessió. Els infants es refreden abans que els adults perquè tenen més pell en relació amb el pes (un infant de 8 anys en té uns 380 cm² per quilo i un adult, uns 280) i menys greix sota la pell. En un estudi clàssic, els nedadors més petits havien de sortir d’una piscina a 20,3 °C al cap de 18–20 minuts, mentre que els més grans aguantaven uns 30.</p>
+    </div>
+    <div class="tscale" role="group" aria-label="Temperatures de l’aigua de referència, de 10 a 42 °C">
+      <div class="trow"><div class="tlab"><b>Immersió de recuperació</b><span>10–15 °C · Per sota de 15 °C, risc de xoc pel fred</span></div><div class="ttrack"><span class="tbar cold" style="--a:10;--b:15"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Piscines climatitzades</b><span>24–30 °C · Decret 95/2000 i RD 742/2013</span></div><div class="ttrack"><span class="tbar" style="--a:24;--b:30"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Competició</b><span>25–28 °C · World Aquatics</span></div><div class="ttrack"><span class="tbar" style="--a:25;--b:28"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Classes per a infants</b><span>Màxim recomanat: 31 °C · PWTAG</span></div><div class="ttrack"><span class="tmax" style="--a:31"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Nadons i infants petits</b><span>Màxim recomanat: 32 °C · PWTAG</span></div><div class="ttrack"><span class="tmax" style="--a:32"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Hidroteràpia</b><span>33,5–35,5 °C</span></div><div class="ttrack"><span class="tbar hot" style="--a:33.5;--b:35.5"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Spa i jacuzzi</b><span>37,5–41 °C · Màxim recomanat: 40 °C</span></div><div class="ttrack"><span class="tbar hot" style="--a:37.5;--b:41"></span></div></div>
+      <div class="trow taxis-row" aria-hidden="true"><div></div><div class="taxis"><span style="--a:10">10</span><span style="--a:15">15</span><span style="--a:20">20</span><span style="--a:25">25</span><span style="--a:30">30</span><span style="--a:35">35</span><span style="--a:40">40 °C</span></div></div>
+    </div>
+    <p class="aq-note" style="margin-top:.8rem">Barres: intervals de referència. Punts: valors màxims. Línia de punts vertical: 37 °C, la temperatura corporal.</p>
+
+    <div class="aq-tc">
+      <div class="aq-t hot">
+        <h4>Aigua calenta</h4>
+        <p class="aq-sub">Aproximadament de 30 a 36 °C</p>
+        <p class="lbl">Per a què serveix</p>
+        <ul class="aq-list"><li>Familiarització de nadons i infants petits, que passen molta estona quiets.</li><li>Hidroteràpia i rehabilitació.</li><li>Activitats suaus per a gent gran o persones amb mobilitat reduïda.</li></ul>
+        <p class="lbl">Avantatges</p>
+        <ul class="aq-list pro"><li>Relaxa la musculatura i, amb menys tensió, és més fàcil surar.</li><li>Alleuja el dolor i facilita l’amplitud de moviment.</li><li>És còmoda: els infants aguanten més estona sense fred i estan més atents.</li></ul>
+        <p class="lbl">Inconvenients</p>
+        <ul class="aq-list con"><li>Limita la intensitat: el cos dissipa malament la calor i la temperatura central i el pols pugen.</li><li>Fatiga i deshidratació: se sua sense adonar-se’n.</li><li>La vasodilatació pot provocar marejos en sortir de l’aigua.</li><li>La instal·lació gasta més energia i hi ha més evaporació a l’ambient.</li></ul>
+      </div>
+      <div class="aq-t cold">
+        <h4>Aigua fresca i freda</h4>
+        <p class="aq-sub">De 25 a 28 °C per entrenar; de 10 a 15 °C en immersions de recuperació</p>
+        <p class="lbl">Per a què serveix</p>
+        <ul class="aq-list"><li>Entrenament i competició.</li><li>Immersions curtes de recuperació d’esportistes.</li><li>Adaptació a aigües obertes: mar, rius i llacs.</li></ul>
+        <p class="lbl">Avantatges</p>
+        <ul class="aq-list pro"><li>Permet esforços llargs i intensos sense sobreescalfament.</li><li>Té un efecte estimulant i, en immersions breus, ajuda a recuperar-se.</li><li>Acostuma el cos a les condicions reals del medi natural.</li></ul>
+        <p class="lbl">Inconvenients</p>
+        <ul class="aq-list con"><li>Els infants perden calor de pressa, tremolen i es despisten.</li><li>La musculatura s’encarcara i la coordinació empitjora.</li><li>Per sota de 15 °C, xoc pel fred: durant el primer minut es boqueja i s’hiperventila sense voler, i es pot empassar aigua.</li><li>Amb estades llargues, risc d’hipotèrmia.</li></ul>
+      </div>
+    </div>
+
+    <div class="rules aq-norm">
+      <div class="label">Normativa i recomanacions</div>
+      <h4>Temperatura i ambient de la instal·lació</h4>
+      <ul>
+        <li><span class="art">Decret 95/2000</span><span>Catalunya, art. 20: aigua entre 24 i 30 °C en piscines climatitzades; aire 2–4 °C per sobre de l’aigua; humitat relativa del 60–70 %.</span></li>
+        <li><span class="art">RD 742/2013</span><span>Estat: aigua entre 24 i 30 °C en vasos climatitzats (fins a 36 °C en hidromassatge); aire 1–2 °C per sobre de l’aigua; humitat relativa inferior al 65 %.</span></li>
+        <li><span class="art">World Aquatics</span><span>Competició: aigua entre 25 i 28 °C.</span></li>
+        <li><span class="art">PWTAG</span><span>Màxims recomanats: 28 °C en competició i entrenament, 29 °C en activitat recreativa, 31 °C en classes per a infants, 32 °C per a nadons, infants petits i persones amb discapacitat, i 35 °C en hidroteràpia.</span></li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Senyals de fred en infants</h3>
+      <p>Tremolor, llavis o ungles morats, dents que piquen, moviments lents o despistats. Si els veus, fes sortir l’infant, eixuga’l i abriga’l. Amb aigua fresca, programa tasques actives i deixa sortir els infants cada 15–20 minuts. Com a referència, l’aigua per a infants ha d’estar 1–2 °C més calenta que per a adults.</p>
+    </div>
+    <p class="src">Fonts: Bar-Or (1994); Becker (2009); RNLI; Swim England i PWTAG (2017); World Aquatics; Decret 95/2000; RD 742/2013.</p>
+
+    <h3 class="aq-h3">Beneficis de l’activitat aquàtica</h3>
+    <ul class="aq-ben">
+      <li><h4>Cor i pulmons</h4><p>Nedar millora la condició cardiorespiratòria i la composició corporal en persones de totes les edats.</p><p class="ev"><b>+6,3</b> mL/kg/min de VO₂ màx. i <b>−1,9 %</b> de greix corporal respecte de grups control (Lahart i Metsios, 2018).</p></li>
+      <li><h4>Més anys de vida</h4><p>Les persones que neden tenen menys risc de morir prematurament, sobretot per malalties del cor.</p><p class="ev"><b>−28 %</b> de mortalitat per qualsevol causa i <b>−41 %</b> per malaltia cardiovascular en 80.306 adults (Oja et al., 2017). Estudi observacional.</p></li>
+      <li><h4>Articulacions protegides</h4><p>L’empenta descarrega el pes i l’aigua ofereix una resistència suau, proporcional a la força que s’hi fa. Es pot treballar força i mobilitat sense impactes.</p><p class="ev">Indicada per a gent gran, sobrepès, embaràs i recuperació de lesions (Becker, 2009).</p></li>
+      <li><h4>Circulació</h4><p>La pressió hidrostàtica afavoreix el retorn venós i redueix la inflamació de les cames. El cor treballa a menys pulsacions per al mateix esforç.</p><p class="ev">Unes <b>10</b> pulsacions per minut menys que a terra per al mateix consum d’oxigen (Becker, 2009).</p></li>
+      <li><h4>Asma infantil</h4><p>La natació és ben tolerada pels infants i adolescents amb asma estable i en millora la capacitat d’exercici.</p><p class="ev">Revisió Cochrane de <b>8</b> assajos amb <b>262</b> infants, sense efectes adversos sobre el control de l’asma (Beggs et al., 2021).</p></li>
+      <li><h4>Desenvolupament motor</h4><p>L’aigua amplifica les sensacions i obliga a controlar l’equilibri, la respiració i la coordinació en posicions noves.</p><p class="ev">Els infants que fan classes regulars desenvolupen habilitats físiques, cognitives i socials més ràpidament (Swim England, 2017).</p></li>
+      <li><h4>Benestar emocional</h4><p>Relaxa, ajuda a gestionar la por i dona confiança quan l’infant supera reptes a l’aigua.</p><p class="ev">Swim England (2017) recull beneficis per a la salut mental, però demana més recerca en aquest àmbit.</p></li>
+      <li><h4>Seguretat i autonomia</h4><p>Saber moure’s a l’aigua és una competència de prevenció d’ofegaments, sempre acompanyada de supervisió.</p><p class="ev"><b>−88 %</b> de risc d’ofegament en infants d’1 a 4 anys amb classes formals (Brenner et al., 2009). Els autors adverteixen que saber nedar no basta per protegir un infant.</p></li>
+      <li><h4>Per a tota la vida</h4><p>És una activitat per a totes les edats i capacitats, individual o en grup, que obre la porta al mar, als rius i a altres esports aquàtics.</p><p class="ev">L’OMS recomana ensenyar natació bàsica i seguretat aquàtica als infants en edat escolar (OMS, 2021).</p></li>
+    </ul>
+    <p class="src">Fonts: Lahart i Metsios (2018); Oja et al. (2017); Becker (2009); Beggs et al. (2021); Swim England (2017); Brenner et al. (2009); OMS (2021).</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="etapes" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Progressió general</div>
+      <h2>Tres etapes, dels 3 als 12 anys</h2>
+      <p>Les edats són orientatives. Es passa d’etapa quan l’infant assoleix els indicadors, no quan fa anys. Cada etapa conserva i amplia les habilitats de l’anterior.</p>
+    </div>
+    <div class="stages">
+      <article class="stage s1">
+        <div class="stage-top"><span class="stage-age">3–5<small>anys</small></span></div>
+        <h3>Familiarització i autonomia</h3>
+        <p class="goal">Que l’infant se senti segur i content a l’aigua, hi entri i en surti sol, posi la cara, bufi i suri amb ajuda.</p>
+        <div><h4>Habilitats clau</h4>
+          <ul><li>Entrades i sortides per l’escala i pel bord</li><li>Cara a l’aigua i bombolles</li><li>Immersions breus i obrir els ulls</li><li>Flotació dorsal i ventral amb ajuda</li><li>Girs i posar-se dret des de la flotació</li><li>Desplaçaments amb xurro o planxa</li><li>Salts de peus a les mans del tècnic</li></ul></div>
+        <div><h4>Com treballar</h4>
+          <ul><li>Joc simbòlic, cançons i rutines d’entrada i sortida</li><li>Tècnic dins l’aigua i consignes molt curtes</li><li>Material de flotació com a ajuda temporal</li></ul></div>
+        <div><h4>Indicadors per avançar</h4>
+          <ul class="checks"><li>Entra i surt de l’aigua sol</li><li>Bufa bombolles amb la cara a l’aigua</li><li>Es submergeix del tot i torna a respirar tranquil</li><li>Es posa dret sol des de la flotació dorsal</li><li>Salta de peus i torna a la paret amb poca ajuda</li></ul></div>
+      </article>
+      <article class="stage s2">
+        <div class="stage-top"><span class="stage-age">6–8<small>anys</small></span></div>
+        <h3>Domini del medi i bases dels estils</h3>
+        <p class="goal">Autonomia sense material: respirar amb ritme, lliscar, flotar i desplaçar-se de panxa avall i de panxa amunt. Iniciació global al crol i a l’esquena.</p>
+        <div><h4>Habilitats clau</h4>
+          <ul><li>Respiració rítmica: bufar a l’aigua, inspirar fora</li><li>Lliscaments ventral i dorsal en fletxa</li><li>Batuda alternativa</li><li>Flotació vertical i canvis de posició</li><li>Immersions per recollir objectes</li><li>Salts amb immersió i orientació</li><li>Primers trams de crol i d’esquena</li></ul></div>
+        <div><h4>Com treballar</h4>
+          <ul><li>Joc reglat i reptes cooperatius</li><li>Tasques globals amb exercicis analítics curts</li><li>Retirada progressiva del material</li></ul></div>
+        <div><h4>Indicadors per avançar</h4>
+          <ul class="checks"><li>Llisca en fletxa 3–5 m</li><li>Flota panxa amunt sense ajuda</li><li>Fa 10 respiracions rítmiques seguides</li><li>Neda 10–15 m sense material</li><li>Salta a aigua fonda, surt a la superfície i arriba a la paret</li></ul></div>
+      </article>
+      <article class="stage s3">
+        <div class="stage-top"><span class="stage-age">9–12<small>anys</small></span></div>
+        <h3>Iniciació als estils</h3>
+        <p class="goal">Tècnica dels quatre estils, sortides i viratges senzills, i habilitats de seguretat com nedar vestit o ajudar sense entrar a l’aigua.</p>
+        <div><h4>Habilitats clau</h4>
+          <ul><li>Crol amb respiració lateral, unilateral i bilateral</li><li>Esquena amb braç flexionat</li><li>Braça amb patada correcta i coordinada</li><li>Papallona en trams curts</li><li>Viratge obert i sortida des del bord</li><li>Supervivència i ajuda segura</li></ul></div>
+        <div><h4>Com treballar</h4>
+          <ul><li>Progressions per estil (vegeu cada fitxa)</li><li>Comptar braçades i autoavaluar-se</li><li>Correcció individual amb una sola idea clau</li></ul></div>
+        <div><h4>Indicadors per avançar</h4>
+          <ul class="checks"><li>Neda 25 m de crol i 25 m d’esquena amb tècnica correcta</li><li>Neda 25 m de braça amb patada reglamentària</li><li>Fa 10 m de papallona coordinada</li><li>Flota un minut i neda vestit fins al bord</li></ul></div>
+      </article>
+    </div>
+
+    <h3 class="sub">Principis metodològics</h3>
+    <ul class="principles">
+      <li><b>Jugar per aprendre</b><span>El joc és el mitjà principal, sobretot a les primeres etapes. Swim England proposa un enfocament basat en jocs i Moreno-Murcia, el Mètode Aquàtic Comprensiu.</span></li>
+      <li><b>Plantejar problemes</b><span>«Com pots arribar a l’altra banda sense tocar el fons?» L’infant explora solucions abans de rebre el model.</span></li>
+      <li><b>Global, analític, global</b><span>Provar l’acció completa, aïllar una part (cames, braços o respiració) i tornar-la a integrar.</span></li>
+      <li><b>El material és un pont</b><span>Xurros, planxes i aletes ajuden, però s’han de retirar de manera progressiva per evitar que en depenguin.</span></li>
+      <li><b>Variar contextos</b><span>Profunditats, entrades, posicions i roba diferents: el que s’aprèn a la piscina no es transfereix sol al mar o al riu.</span></li>
+      <li><b>Una consigna, una idea</b><span>Demostració, consigna curta, pràctica abundant i retroalimentació concreta i positiva.</span></li>
+    </ul>
+    <p class="src">Fonts: Moreno-Murcia i Ruiz (2021); Moreno i Gutiérrez (1998); Swim England, Learn to Swim Framework.</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="estils" class="sec alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Tècnica i reglament</div>
+      <h2>Els quatre estils</h2>
+      <p>Ordre d’ensenyament recomanat: primer els estils alternatius, que comparteixen la batuda; després la braça, que té la patada més difícil de dominar; i al final la papallona, que demana una bona coordinació.</p>
+    </div>
+    <ol class="order">
+      <li><span class="num">1</span><b>Esquena</b><span>Cara fora i respiració lliure</span></li>
+      <li><span class="num">2</span><b>Crol</b><span>Coordinar la respiració lateral</span></li>
+      <li><span class="num">3</span><b>Braça</b><span>Patada amb els peus enfora</span></li>
+      <li><span class="num">4</span><b>Papallona</b><span>Ondulació i coordinació</span></li>
+    </ol>
+
+    <div class="tbl-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col"><span class="label">Comparativa</span></th><th scope="col"><a href="#crol">Crol</a></th><th scope="col"><a href="#esquena">Esquena</a></th><th scope="col"><a href="#braca">Braça</a></th><th scope="col"><a href="#papallona">Papallona</a></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Posició</th><td>Ventral</td><td>Dorsal</td><td>Ventral</td><td>Ventral</td></tr>
+          <tr><th scope="row">Braços</th><td>Alternatius, recuperació aèria</td><td>Alternatius, recuperació aèria amb el braç estès</td><td>Simultanis, recuperació sota l’aigua o arran</td><td>Simultanis, recuperació aèria</td></tr>
+          <tr><th scope="row">Cames</th><td>Batuda alternativa</td><td>Batuda alternativa</td><td>Patada simultània, peus girats enfora</td><td>Batuda simultània ondulatòria, 2 per cicle</td></tr>
+          <tr><th scope="row">Respiració</th><td>Lateral</td><td>Lliure</td><td>Frontal, a cada cicle</td><td>Frontal</td></tr>
+          <tr><th scope="row">Sortida</th><td>Salt</td><td>Des de l’aigua</td><td>Salt</td><td>Salt</td></tr>
+          <tr><th scope="row">Fase submarina</th><td>Fins a 15 m</td><td>Fins a 15 m</td><td>1 braçada fins a les cames, 1 batuda de papallona i 1 patada de braça</td><td>Fins a 15 m, amb 1 sola braçada</td></tr>
+          <tr><th scope="row">Toc</th><td>Qualsevol part del cos</td><td>A l’arribada, d’esquena</td><td>Dues mans separades i alhora</td><td>Dues mans separades i alhora</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Proves d’estils: en els estils individuals l’ordre és papallona, esquena, braça i crol (art. 9.1); en el relleu d’estils, esquena, braça, papallona i crol (art. 9.2). Reglament de World Aquatics, febrer de 2026. Els articles es van renumerar: la normativa de la RFEN 2023-2025 encara fa servir la numeració anterior.</p>
+
+    <div class="tabs" role="tablist" aria-label="Estils" id="estils-tabs">
+      <button class="tab" role="tab" id="tab-crol" data-target="crol" aria-controls="crol" aria-selected="true">Crol<small>Ventral alternatiu</small></button>
+      <button class="tab" role="tab" id="tab-esquena" data-target="esquena" aria-controls="esquena" aria-selected="false" tabindex="-1">Esquena<small>Dorsal alternatiu</small></button>
+      <button class="tab" role="tab" id="tab-braca" data-target="braca" aria-controls="braca" aria-selected="false" tabindex="-1">Braça<small>Ventral simultani</small></button>
+      <button class="tab" role="tab" id="tab-papallona" data-target="papallona" aria-controls="papallona" aria-selected="false" tabindex="-1">Papallona<small>Ventral ondulatori</small></button>
+    </div>
+
+    <!-- CROL -->
+    <div class="panel" role="tabpanel" id="crol" aria-labelledby="tab-crol">
+      <div class="panel-head">
+        <div class="tagline">Ventral · alternatiu · recuperació aèria</div>
+        <h3>Crol</h3>
+        <p class="prose">És l’estil més ràpid i el que gairebé tothom neda a les proves d’estil lliure. Juntament amb l’esquena és el primer que s’ensenya: el moviment de cames és senzill i el repte principal és coordinar la respiració lateral.</p>
+      </div>
+      <div class="fig-row">
+        <figure class="figure" style="margin:0"><div class="fig" data-fig="crol"></div><figcaption class="figcap">Vista lateral. La zona blava és sota l’aigua; els membres més clars són els del costat llunyà.</figcaption></figure>
+        <ol class="legend">
+          <li><span class="mk-n">1</span><span>Cap neutre i alineat amb l’esquena: l’aigua arriba a la línia del cabell i la mirada va al fons.</span></li>
+          <li><span class="mk-n">2</span><span>Recuperació relaxada amb el colze alt; la mà passa a prop del cos.</span></li>
+          <li><span class="mk-n">3</span><span>La mà entra davant de l’espatlla, s’allarga i fa l’agafada amb el colze alt.</span></li>
+          <li><span class="mk-n">4</span><span>Cos allargat i gairebé horitzontal, amb el maluc a prop de la superfície.</span></li>
+          <li><span class="mk-n">5</span><span>Batuda alternativa des del maluc: genolls poc flexionats i turmells relaxats.</span></li>
+        </ol>
+      </div>
+      <ol class="phases">
+        <li><b>Entrada</b>Dits primer, davant de l’espatlla, sense creuar l’eix del cos.</li>
+        <li><b>Agafada</b>El braç s’allarga i l’avantbraç s’orienta cap enrere amb el colze alt.</li>
+        <li><b>Tracció</b>La mà va cap enrere per sota del cos; el colze arriba a uns 90°.</li>
+        <li><b>Empenta</b>El braç s’estén cap enrere fins a la cuixa i la mà accelera.</li>
+        <li><b>Recuperació</b>Surt primer el colze i el braç torna endavant, relaxat, per sobre l’aigua.</li>
+      </ol>
+      <p class="phase-note">Fases segons la descripció de Maglischo (2003) i la terminologia catalana de la revista Apunts.</p>
+      <div class="cols">
+        <div class="block"><h4>Cames</h4><p>Batuda alternativa i contínua que neix al maluc. Cames llargues, genolls lleugerament flexionats i turmells relaxats; els peus treballen just sota la superfície i esquitxen poc. Es poden fer 2, 4 o 6 batudes per cicle; en iniciació es busca la de 6.</p></div>
+        <div class="block"><h4>Respiració i coordinació</h4><p>El cap gira, no s’aixeca, aprofitant la rotació del cos, i una ulla queda dins l’aigua. L’aire s’expulsa sota l’aigua i s’inspira ràpid quan la mà del costat de respirar acaba l’empenta. Respiració unilateral cada 2 braçades o bilateral cada 3. Els braços treballen en oposició.</p></div>
+      </div>
+      <div class="rules">
+        <div class="label">World Aquatics · Reglament de competició, febrer de 2026</div>
+        <h4>Reglament essencial</h4>
+        <ul>
+          <li><span class="art">art. 5.1</span><span>A les proves d’estil lliure es pot nedar qualsevol estil; en estils i relleus d’estils, qualsevol que no sigui esquena, braça ni papallona.</span></li>
+          <li><span class="art">art. 5.2</span><span>Cal tocar la paret amb alguna part del cos a cada llargada i a l’arribada.</span></li>
+          <li><span class="art">art. 5.3</span><span>Alguna part del cos ha de trencar la superfície. Es pot anar submergit durant el viratge i fins a 15 m després de la sortida i de cada viratge; a la marca dels 15 m el cap ja ha d’haver sortit.</span></li>
+          <li><span class="art">art. 5.4</span><span><span class="new">2026</span>A l’arribada es pot anar totalment submergit un cop el cap ha passat la marca dels 5 m.</span></li>
+          <li><span class="art">art. 10.2.4</span><span>En estil lliure es pot estar dret al fons, però no caminar.</span></li>
+        </ul>
+      </div>
+      <h4 class="sub">Errors freqüents</h4>
+      <ul class="errors">
+        <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+        <li><div class="what"><b>Aixeca el cap per respirar</b><span>Les cames s’enfonsen i entra aigua al nas.</span></div><div class="fix">Respirar girant el cap amb la rotació, amb una ulla a l’aigua. Batuda lateral amb un braç estès i el cap recolzat sobre l’espatlla.</div></li>
+        <li><div class="what"><b>Aguanta l’aire sota l’aigua</b><span>Arriba a respirar amb pressa i s’angoixa.</span></div><div class="fix">Bombolles contínues: «bufa a l’aigua, agafa aire fora». Respiració rítmica agafat al bord.</div></li>
+        <li><div class="what"><b>Batuda des del genoll</b><span>Fa «bicicleta», frena i no propulsa.</span></div><div class="fix">Batuda assegut al bord i amb planxa amb les cames llargues. Aletes curtes per sentir el moviment des del maluc.</div></li>
+        <li><div class="what"><b>La mà creua l’eix en entrar</b><span>El cos fa ziga-zaga.</span></div><div class="fix">Entrar a la línia de l’espatlla. Crol d’un braç portant la mà a la cantonada de la planxa.</div></li>
+        <li><div class="what"><b>Braçada curta</b><span>La mà surt a l’altura del pit i es perd l’empenta.</span></div><div class="fix">Tocar la cuixa amb el polze abans de recuperar.</div></li>
+        <li><div class="what"><b>Colze baix a la recuperació</b><span>Braç rígid i espatlla tensa.</span></div><div class="fix">Recuperació «cremallera»: arrossegar la punta dels dits per la superfície, a prop del cos.</div></li>
+      </ul>
+      <h4 class="sub">Progressió d’ensenyament</h4>
+      <ol class="steps">
+        <li><span><span class="stg s1">3–5</span>Cara a l’aigua i bombolles, agafats al bord o a l’escala.</span></li>
+        <li><span><span class="stg s2">6–8</span>Batuda agafats al bord: primer amb el cap fora i després amb la cara a l’aigua bufant.</span></li>
+        <li><span><span class="stg s2">6–8</span>Lliscament en fletxa des de la paret i, al final del lliscament, batuda.</span></li>
+        <li><span><span class="stg s2">6–8</span>Batuda amb planxa: cap fora, cara a l’aigua amb respiració frontal i, després, lateral.</span></li>
+        <li><span><span class="stg s2">6–8</span>Batuda lateral: un braç estès endavant i l’altre al costat; girar el cap per respirar.</span></li>
+        <li><span><span class="stg s3">9–12</span>Crol d’un braç amb l’altra mà sobre la planxa; respirar pel costat del braç que treballa.</span></li>
+        <li><span><span class="stg s3">9–12</span>Crol d’alcanç: una mà espera l’altra davant abans de començar la braçada.</span></li>
+        <li><span><span class="stg s3">9–12</span>Crol complet: 3–5 braçades sense respirar, després respiració cada 2 i, finalment, cada 3.</span></li>
+        <li><span><span class="stg s3">9–12</span>Allargar la distància de 10 a 25 m i introduir el viratge obert i, més endavant, la tombarella.</span></li>
+      </ol>
+    </div>
+
+    <!-- ESQUENA -->
+    <div class="panel" role="tabpanel" id="esquena" aria-labelledby="tab-esquena" hidden>
+      <div class="panel-head">
+        <div class="tagline">Dorsal · alternatiu · recuperació aèria</div>
+        <h3>Esquena</h3>
+        <p class="prose">Amb la cara fora de l’aigua i la respiració lliure, sovint és l’estil més fàcil per començar. Abans, però, l’infant ha de saber flotar panxa amunt i posar-se dret sol: és la base de la seva confiança. És l’únic estil que surt des de dins l’aigua.</p>
+      </div>
+      <div class="fig-row">
+        <figure class="figure" style="margin:0"><div class="fig" data-fig="esquena"></div><figcaption class="figcap">Vista lateral. El nedador avança cap a la dreta, panxa amunt.</figcaption></figure>
+        <ol class="legend">
+          <li><span class="mk-n">1</span><span>Cap quiet i alineat; les orelles just sota l’aigua i la mirada amunt.</span></li>
+          <li><span class="mk-n">2</span><span>Recuperació amb el braç estès: surt el polze primer i entra el dit petit, a la línia de l’espatlla.</span></li>
+          <li><span class="mk-n">3</span><span>Tracció amb el colze flexionat (uns 90°) i empenta fins a la cuixa.</span></li>
+          <li><span class="mk-n">4</span><span>Maluc amunt, a prop de la superfície: no «seure» a l’aigua.</span></li>
+          <li><span class="mk-n">5</span><span>Batuda des del maluc, amb els genolls sota la superfície i els peus que fan bombolles.</span></li>
+        </ol>
+      </div>
+      <ol class="phases">
+        <li><b>Entrada</b>Braç estès a la línia de l’espatlla («les 11 i la 1»); entra el dit petit primer.</li>
+        <li><b>Agafada</b>La mà baixa i s’obre cap enfora, ajudada per la rotació de l’espatlla.</li>
+        <li><b>Tracció</b>El colze es flexiona fins a uns 90° i la mà avança cap als peus a prop del cos.</li>
+        <li><b>Empenta</b>La mà empeny cap avall fins passat el maluc i acaba a tocar la cuixa.</li>
+        <li><b>Recuperació</b>El braç surt estès, el polze primer, i gira per tornar a entrar amb el dit petit.</li>
+      </ol>
+      <p class="phase-note">En iniciació es pot acceptar una braçada amb el braç estès; la flexió del colze arriba més endavant.</p>
+      <div class="cols">
+        <div class="block"><h4>Cames</h4><p>Batuda alternativa des del maluc, amb les cames gairebé esteses i els genolls sempre sota la superfície. Els turmells relaxats fan que els peus «facin bombolles» a la superfície sense trencar-la gaire. La batuda manté el cos horitzontal.</p></div>
+        <div class="block"><h4>Respiració i coordinació</h4><p>La respiració és lliure, però convé marcar-ne el ritme: inspirar en la recuperació d’un braç i expirar en la de l’altre. Els braços van en oposició contínua, normalment amb 6 batudes per cicle. Les espatlles i el maluc giren amb cada braçada; el cap no es mou.</p></div>
+      </div>
+      <div class="rules">
+        <div class="label">World Aquatics · Reglament de competició, febrer de 2026</div>
+        <h4>Reglament essencial</h4>
+        <ul>
+          <li><span class="art">art. 6.1</span><span>La sortida es fa des de l’aigua, mirant la paret i amb les dues mans als agafadors. No es poden posar els peus dins ni damunt del sobreeixidor.</span></li>
+          <li><span class="art">art. 6.2</span><span>Cal nedar d’esquena tot el recorregut. Es permet una rotació del cos fins a 90° sense arribar-hi; la posició del cap és lliure.</span></li>
+          <li><span class="art">art. 6.3</span><span>Es pot anar submergit, com a màxim, 15 m després de la sortida i de cada viratge.</span></li>
+          <li><span class="art">art. 6.4</span><span>Al viratge es pot girar a ventral i fer immediatament una braçada (o dues simultànies) per iniciar el gir. Cal tocar la paret i sortir-ne d’esquena.</span></li>
+          <li><span class="art">art. 6.5</span><span>A l’arribada cal tocar la paret d’esquena. Es pot anar submergit un cop el cap ha passat la marca dels 5 m.</span></li>
+          <li><span class="art">art. 2.9.4</span><span>Les banderes d’esquena es col·loquen a 5 m de cada paret.</span></li>
+        </ul>
+      </div>
+      <h4 class="sub">Errors freqüents</h4>
+      <ul class="errors">
+        <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+        <li><div class="what"><b>Maluc enfonsat</b><span>«Assegut a l’aigua»: les cames frenen.</span></div><div class="fix">Orelles a l’aigua i panxa amunt. Batuda amb la planxa abraçada al pit o estesa sobre els genolls.</div></li>
+        <li><div class="what"><b>Cap aixecat mirant els peus</b><span>El maluc baixa.</span></div><div class="fix">Mirar el sostre. Repte: nedar amb un got de plàstic o una planxa petita damunt del front sense que caigui.</div></li>
+        <li><div class="what"><b>Els genolls surten de l’aigua</b><span>Batuda de bicicleta i poca propulsió.</span></div><div class="fix">Batuda amb la planxa estesa damunt dels genolls: no l’han de tocar.</div></li>
+        <li><div class="what"><b>Entrada per darrere del cap</b><span>El cos serpenteja.</span></div><div class="fix">Entrar «a les 11 i a la 1». Exagerar una entrada més oberta.</div></li>
+        <li><div class="what"><b>Entra el dors de la mà o esquitxa molt</b><span>La mà no troba suport.</span></div><div class="fix">Exercici d’un braç: «surt el polze, entra el dit petit».</div></li>
+        <li><div class="what"><b>Pausa amb els braços al costat</b><span>Es perd la velocitat i el ritme.</span></div><div class="fix">Braços com un molí de vent: quan un entra, l’altre surt.</div></li>
+      </ul>
+      <h4 class="sub">Progressió d’ensenyament</h4>
+      <ol class="steps">
+        <li><span><span class="stg s1">3–5</span>Flotació panxa amunt amb ajuda (mans del tècnic al clatell o xurro sota les aixelles) i aprendre a posar-se dret.</span></li>
+        <li><span><span class="stg s1">3–5</span>Flotació en estrella sense ajuda, comptant fins a 5.</span></li>
+        <li><span><span class="stg s2">6–8</span>Lliscament dorsal des de la paret amb els braços al costat.</span></li>
+        <li><span><span class="stg s2">6–8</span>Batuda dorsal amb la planxa al pit; després, sobre els genolls; després, sense planxa i amb petites remades.</span></li>
+        <li><span><span class="stg s2">6–8</span>Batuda en fletxa amb els braços estesos per damunt del cap.</span></li>
+        <li><span><span class="stg s3">9–12</span>Batuda lateral: 6 batudes de costat, mitja rotació i 6 batudes de l’altre costat.</span></li>
+        <li><span><span class="stg s3">9–12</span>Esquena d’un braç, amb l’altre al costat del cos.</span></li>
+        <li><span><span class="stg s3">9–12</span>Esquena completa comptant braçades; amb aletes si cal mantenir el maluc amunt.</span></li>
+        <li><span><span class="stg s3">9–12</span>Arribada i viratge: comptar les braçades des de les banderes fins a la paret.</span></li>
+      </ol>
+    </div>
+
+    <!-- BRAÇA -->
+    <div class="panel" role="tabpanel" id="braca" aria-labelledby="tab-braca" hidden>
+      <div class="panel-head">
+        <div class="tagline">Ventral · simultani · recuperació sota l’aigua</div>
+        <h3>Braça</h3>
+        <p class="prose">És l’estil més lent de competició però el que té més valor utilitari: permet mirar endavant i respirar a cada cicle. La patada és la part més difícil d’aprendre i la que més propulsa en iniciació, i el reglament la vigila de prop: els peus s’han de girar cap enfora.</p>
+      </div>
+      <div class="fig-row">
+        <figure class="figure" style="margin:0"><div class="fig" data-fig="braca"></div><figcaption class="figcap">Vista lateral en el moment de la respiració: final de la tracció i recollida de cames.</figcaption></figure>
+        <ol class="legend">
+          <li><span class="mk-n">1</span><span>Respiració frontal: la barbeta avança i la boca surt al final de l’escombrada cap endins.</span></li>
+          <li><span class="mk-n">2</span><span>Escombrada cap endins amb els colzes alts davant de les espatlles; les mans no passen del pit.</span></li>
+          <li><span class="mk-n">3</span><span>Recollida: talons cap als glutis, sense portar els genolls sota la panxa.</span></li>
+          <li><span class="mk-n">4</span><span>Peus flexionats i girats cap enfora («peus d’ànec») abans de l’empenta.</span></li>
+          <li><span class="mk-n">5</span><span>Després, mans endavant juntes, patada i lliscament en fletxa.</span></li>
+        </ol>
+      </div>
+      <figure class="figure" style="margin:16px 0 0"><div class="fig" data-fig="kick"></div>
+        <div class="kick-caps"><span><b>1 · Lliscament</b>Cames juntes i esteses</span><span><b>2 · Recollida</b>Talons als glutis</span><span><b>3 · Peus en V</b>Comença l’empenta</span><span><b>4 · Empenta</b>Cercle i tancament</span></div>
+        <figcaption class="figcap">La patada vista des de dalt, en quatre moments.</figcaption>
+      </figure>
+      <ol class="phases">
+        <li><b>Lliscament</b>Braços estesos i junts davant; cos en fletxa.</li>
+        <li><b>Escombrada enfora</b>Les mans s’obren una mica més enllà de les espatlles. No propulsa: es fa suau.</li>
+        <li><b>Agafada</b>Els colzes es mantenen alts i les mans s’orienten cap enrere.</li>
+        <li><b>Escombrada endins</b>Les mans s’acosten sota el pit accelerant: és la fase propulsiva.</li>
+        <li><b>Recuperació</b>Mans juntes endavant, per sota o arran d’aigua, fins a la fletxa.</li>
+      </ol>
+      <div class="cols">
+        <div class="block"><h4>Cames</h4><p>Recollida: els talons s’acosten als glutis amb els genolls separats aproximadament l’amplada dels malucs, sense portar-los sota la panxa. Els peus es flexionen i giren cap enfora. Empenta: les cames s’estenen cap enrere i enfora en un moviment circular i es tanquen fins a quedar juntes i esteses.</p></div>
+        <div class="block"><h4>Respiració i coordinació</h4><p>Respiració frontal a cada cicle: la barbeta avança i la boca surt al final de l’escombrada cap endins; el cap torna a entrar quan els braços van endavant. L’ordre és sempre braços, cames i lliscament: «tira i respira, xuta i llisca».</p></div>
+      </div>
+      <div class="rules">
+        <div class="label">World Aquatics · Reglament de competició, febrer de 2026</div>
+        <h4>Reglament essencial</h4>
+        <ul>
+          <li><span class="art">art. 7.1</span><span>Després de la sortida i de cada viratge es permet una braçada completa fins a les cames sota l’aigua i una sola batuda de papallona abans de la primera patada de braça. El cap ha de sortir abans que les mans girin cap endins a la segona braçada.</span></li>
+          <li><span class="art">art. 7.2–7.3</span><span>El cos va sempre sobre el pit. Cada cicle és una braçada i una patada, en aquest ordre, i els braços es mouen simultàniament.</span></li>
+          <li><span class="art">art. 7.4</span><span>Les mans van endavant juntes des del pit i no passen de la línia del maluc (excepte a la primera braçada després de la sortida i dels viratges). Els colzes, sota l’aigua.</span></li>
+          <li><span class="art">art. 7.5</span><span>En cada cicle, alguna part del cap ha de trencar la superfície. Les cames es mouen simultàniament.</span></li>
+          <li><span class="art">art. 7.6</span><span>Els peus han d’estar girats cap enfora a la fase propulsiva. No es permeten batudes de papallona cap avall.</span></li>
+          <li><span class="art">art. 7.7</span><span>Als viratges i a l’arribada, toc amb les dues mans separades i alhora.</span></li>
+        </ul>
+      </div>
+      <h4 class="sub">Errors freqüents</h4>
+      <ul class="errors">
+        <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+        <li><div class="what"><b>Peus en punta</b><span>La patada no propulsa i és antireglamentària.</span></div><div class="fix">«Peus d’ànec»: practicar assegut al bord amb els talons a la paret i, a l’aigua, amb el tècnic guiant els peus.</div></li>
+        <li><div class="what"><b>Patada de tisora</b><span>Les cames fan moviments diferents i el cos es torça.</span></div><div class="fix">Patada de panxa amunt mirant-se els genolls; patada amb la planxa abraçada al pit.</div></li>
+        <li><div class="what"><b>Genolls sota la panxa</b><span>Frena com un paracaigudes.</span></div><div class="fix">Portar els talons als glutis, no els genolls al pit. Practicar estirat de bocaterrosa fora de l’aigua.</div></li>
+        <li><div class="what"><b>Braçada fins a les cuixes</b><span>La respiració i les cames arriben tard.</span></div><div class="fix">Les mans no passen de les espatlles: «dibuixa un cor petit» davant del pit.</div></li>
+        <li><div class="what"><b>Braços i cames alhora</b><span>Una acció anul·la l’altra.</span></div><div class="fix">Primer braços, després cames. Exercici d’una braçada i dues patades.</div></li>
+        <li><div class="what"><b>Sense lliscament</b><span>Cicle precipitat i cansament.</span></div><div class="fix">Comptar «un, dos» en fletxa després de cada patada i fer menys cicles per llargada.</div></li>
+      </ul>
+      <h4 class="sub">Progressió d’ensenyament</h4>
+      <ol class="steps">
+        <li><span><span class="stg s2">6–8</span>Fora de l’aigua: patada estirat de bocaterrosa o assegut al bord, a poc a poc i amb els peus en V.</span></li>
+        <li><span><span class="stg s2">6–8</span>Agafats al bord: patada ventral amb el tècnic guiant els peus.</span></li>
+        <li><span><span class="stg s2">6–8</span>Patada amb planxa: cap fora i, després, cara a l’aigua respirant a cada patada.</span></li>
+        <li><span><span class="stg s2">6–8</span>Patada de panxa amunt amb les mans al costat: l’infant es veu els genolls.</span></li>
+        <li><span><span class="stg s3">9–12</span>Patada en fletxa sense material: 2 o 3 patades i posar-se dret.</span></li>
+        <li><span><span class="stg s3">9–12</span>Braços dempeus amb l’aigua al pit, després caminant i després amb pull-buoy.</span></li>
+        <li><span><span class="stg s3">9–12</span>Braços amb respiració: «tira i respira, estira i bufa».</span></li>
+        <li><span><span class="stg s3">9–12</span>Coordinació d’una braçada i dues patades; després, una i una amb lliscament.</span></li>
+        <li><span><span class="stg s3">9–12</span>Viratge i arribada tocant amb les dues mans.</span></li>
+      </ol>
+    </div>
+
+    <!-- PAPALLONA -->
+    <div class="panel" role="tabpanel" id="papallona" aria-labelledby="tab-papallona" hidden>
+      <div class="panel-head">
+        <div class="tagline">Ventral · simultani · ondulatori</div>
+        <h3>Papallona</h3>
+        <p class="prose">És l’estil més exigent de coordinació i el darrer que s’ensenya, quan els altres tres ja són estables. La seva base, l’ondulació o batuda de dofí, es pot començar molt abans com a joc i també es fa servir a les sortides i als viratges.</p>
+      </div>
+      <div class="fig-row">
+        <figure class="figure" style="margin:0"><div class="fig" data-fig="papallona"></div><figcaption class="figcap">Vista lateral en el moment de l’entrada de les mans. La línia de punts mostra el recorregut ondulatori del cos.</figcaption></figure>
+        <ol class="legend">
+          <li><span class="mk-n">1</span><span>El cap entra abans que les mans, amb la mirada al fons.</span></li>
+          <li><span class="mk-n">2</span><span>Entrada simultània de les mans a l’amplada de les espatlles.</span></li>
+          <li><span class="mk-n">3</span><span>Maluc amunt: l’ondulació neix al pit i passa al maluc i als peus.</span></li>
+          <li><span class="mk-n">4</span><span>Primera batuda, forta, quan les mans entren. La segona arriba quan les mans surten pel maluc.</span></li>
+        </ol>
+      </div>
+      <ol class="phases">
+        <li><b>Entrada</b>Les dues mans entren alhora a l’amplada de les espatlles, dits primer.</li>
+        <li><b>Agafada</b>Les mans s’obren lleugerament i el colze queda alt.</li>
+        <li><b>Tracció</b>Les mans es tornen a acostar sota el ventre: dibuixen un rellotge de sorra o un forat de pany.</li>
+        <li><b>Empenta</b>Les mans acceleren cap enrere fins passat el maluc.</li>
+        <li><b>Recuperació</b>Els braços surten «explotant» de l’empenta i tornen endavant, baixos i relaxats, per sobre l’aigua.</li>
+      </ol>
+      <div class="cols">
+        <div class="block"><h4>Cames</h4><p>Batuda simultània amb les cames juntes. L’ondulació comença al pit, passa pel maluc i acaba als peus, amb una pujada relaxada i una baixada forta. Es fan dues batudes per cada cicle de braços.</p></div>
+        <div class="block"><h4>Respiració i coordinació</h4><p>La barbeta avança arran d’aigua durant l’empenta i el cap torna a entrar abans que les mans. En iniciació es respira cada dues braçades. Ritme: «mans dins, cop de peu; mans fora, cop de peu».</p></div>
+      </div>
+      <div class="rules">
+        <div class="label">World Aquatics · Reglament de competició, febrer de 2026</div>
+        <h4>Reglament essencial</h4>
+        <ul>
+          <li><span class="art">art. 8.1–8.2</span><span>El cos va sempre sobre el pit des de la primera braçada. Al viratge es pot girar de qualsevol manera, però s’ha de sortir sobre el pit.</span></li>
+          <li><span class="art">art. 8.3</span><span>Els braços van endavant alhora per sobre l’aigua i enrere alhora per sota.</span></li>
+          <li><span class="art">art. 8.4</span><span>Les cames es mouen amunt i avall simultàniament i no poden alternar. No es permet la patada de braça.</span></li>
+          <li><span class="art">art. 8.5</span><span>Als viratges i a l’arribada, toc amb les dues mans separades i alhora.</span></li>
+          <li><span class="art">art. 8.6</span><span>Es pot anar submergit fins a 15 m, amb una sola braçada sota l’aigua. <span class="new">2026</span>A l’arribada es pot anar submergit un cop el cap passa la marca dels 5 m.</span></li>
+        </ul>
+      </div>
+      <h4 class="sub">Errors freqüents</h4>
+      <ul class="errors">
+        <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+        <li><div class="what"><b>Només doblega els genolls</b><span>Batuda de bicicleta: no avança.</span></div><div class="fix">Ondulació des del pit, com un dofí. Ondulació subaquàtica en fletxa, amb aletes si n’hi ha.</div></li>
+        <li><div class="what"><b>Cos massa vertical</b><span>Braçades curtes i ràpides; cansament immediat.</span></div><div class="fix">Empenta fins a la cuixa, dues batudes per cicle i trams curts de 5 a 10 m.</div></li>
+        <li><div class="what"><b>Aixeca molt el cap per respirar</b><span>El maluc s’enfonsa.</span></div><div class="fix">Barbeta endavant arran d’aigua i cap dins abans que les mans.</div></li>
+        <li><div class="what"><b>Arrossega els braços per l’aigua</b><span>La recuperació frena.</span></div><div class="fix">«Explotar» l’empenta passat el maluc. Practicar papallona d’un braç.</div></li>
+        <li><div class="what"><b>Batudes sense ritme</b><span>La coordinació es trenca.</span></div><div class="fix">Comptar en veu alta «dins, fora». Fer 3 braçades amb el braç dret, 3 amb l’esquerre i 3 completes.</div></li>
+      </ul>
+      <h4 class="sub">Progressió d’ensenyament</h4>
+      <ol class="steps">
+        <li><span><span class="stg s2">6–8</span>Salts de dofí amb l’aigua al pit: impuls des del fons, entrada de cap suau i sortida ondulant. Comprovar que hi ha prou profunditat.</span></li>
+        <li><span><span class="stg s2">6–8</span>Ondulació en fletxa sota l’aigua des de la paret.</span></li>
+        <li><span><span class="stg s3">9–12</span>Batuda de dofí de panxa avall amb els braços estesos; després de panxa amunt i de costat.</span></li>
+        <li><span><span class="stg s3">9–12</span>Braços fora de l’aigua o dempeus: rellotge de sorra i sortida «explotant» pel maluc.</span></li>
+        <li><span><span class="stg s3">9–12</span>Papallona d’un braç amb l’altre estès endavant: dues batudes per braçada.</span></li>
+        <li><span><span class="stg s3">9–12</span>Tres braçades amb el braç dret, tres amb l’esquerre i tres completes.</span></li>
+        <li><span><span class="stg s3">9–12</span>Papallona completa en trams curts (5–10 m) respirant cada dues braçades.</span></li>
+        <li><span><span class="stg s3">9–12</span>Arribada i viratge tocant amb les dues mans.</span></li>
+      </ol>
+    </div>
+    <p class="src">Fonts de tècnica i progressions: Maglischo (2003); Special Olympics, Guies d’entrenament: desenvolupament de l’estil; Apunts. Educació Física i Esports (terminologia de fases). Reglament: World Aquatics, Competition Regulations (febrer de 2026) i Swimming Rule Quick Reference (març de 2026).</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="jocs" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Pràctica</div>
+      <h2>Banc de jocs</h2>
+      <p>Jocs clàssics de les activitats aquàtiques educatives, ordenats per edat i per objectiu. Filtra’ls per preparar una sessió. Cada joc indica el material i el punt clau de seguretat o d’aprenentatge.</p>
+    </div>
+    <div class="filters" id="filters">
+      <div class="frow" role="group" aria-label="Filtra per edat"><span class="label">Edat</span></div>
+      <div class="frow" role="group" aria-label="Filtra per objectiu"><span class="label">Objectiu</span></div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+    <div class="games" id="games"></div>
+    <p class="src">Recull basat en l’aprenentatge aquàtic a través del joc de Moreno Murcia (2001) i en l’enfocament basat en jocs de Swim England. Els jocs de seguretat segueixen les competències de Stallman et al. (2017).</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="sessio" class="sec alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Planificació</div>
+      <h2>Com organitzar una sessió</h2>
+    </div>
+    <div class="sess-grid">
+      <div>
+        <ol class="parts">
+          <li><b>Entrada i escalfament</b><p>Ritual d’arribada (comptar el grup i recordar les normes), entrada a l’aigua i activació amb un joc conegut.</p></li>
+          <li><b>Part principal</b><p>Dues o tres tasques del contingut del dia, del global a l’analític, i un joc que l’apliqui.</p></li>
+          <li><b>Tornada a la calma</b><p>Activitat tranquil·la (flotacions o estàtues), recordar què s’ha après i sortida comptant el grup.</p></li>
+        </ol>
+        <ul class="tips">
+          <li>Explica poc i demostra: una consigna curta i una sola idea clau per tasca.</li>
+          <li>Situa’t on vegis tothom; amb els més petits, entra a l’aigua.</li>
+          <li>Organitza en onades o per carrers perquè hi hagi molta pràctica i poques esperes.</li>
+          <li>Dona retroalimentació concreta i positiva: què ha anat bé i què cal canviar.</li>
+          <li>Adapta la tasca: més material o menys distància a qui ho necessita; més repte a qui ja ho domina.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="ex-head"><h3>Sessió d’exemple</h3><span class="stg s2">6–8 anys</span><span class="muted">40 min · respiració rítmica i batuda de crol</span></div>
+        <div class="tbl-wrap">
+          <table class="sess">
+            <thead><tr><th scope="col">Minuts</th><th scope="col">Activitat</th><th scope="col">Per a què</th></tr></thead>
+            <tbody>
+              <tr><td>0–5</td><td>Entrada asseguts pel bord i joc «Fem la sopa»</td><td>Expulsar l’aire per la boca i el nas</td></tr>
+              <tr><td>5–10</td><td>Batuda agafats al bord amb la cara a l’aigua, tres sèries</td><td>Batuda des del maluc i bombolles</td></tr>
+              <tr><td>10–15</td><td>Joc «Torpedos»</td><td>Posició hidrodinàmica i lliscament</td></tr>
+              <tr><td>15–25</td><td>Batuda amb planxa: respiració frontal i després lateral, en format de relleus</td><td>Coordinar batuda i respiració</td></tr>
+              <tr><td>25–35</td><td>Joc «Taurons i peixets» amb refugi en bolet</td><td>Aplicar-ho en situació de joc</td></tr>
+              <tr><td>35–40</td><td>«L’estrella de mar» i sortida per l’escala</td><td>Tornada a la calma i control del grup</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="seguretat" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Prevenció</div>
+      <h2>Seguretat a la piscina</h2>
+      <p>Segons l’OMS, els infants petits tenen un risc d’ofegament especialment alt perquè encara no saben valorar el perill i no tenen prou habilitats de natació i de seguretat a l’aigua. La primera responsabilitat del tècnic és la vigilància.</p>
+    </div>
+    <ul class="safe">
+      <li><h3>Comptar sempre</h3><p>Compta el grup en entrar, durant la sessió i en sortir. Situa’t de cara a l’aigua i no donis mai l’esquena al grup.</p></li>
+      <li><h3>Profunditat i salts</h3><p>Salts de peus fins que l’entrada sigui segura. Els salts de cap, només amb aigua prou fonda i sense obstacles: la guia de Special Olympics demana com a mínim 1,2 m per a la sortida des del bord i 1,8 m des del bloc.</p></li>
+      <li><h3>Apnees curtes, sense concursos</h3><p>No facis hiperventilar ni proposis jocs de qui aguanta més sota l’aigua: poden provocar una pèrdua de consciència sense avís (síncope hipòxica).</p></li>
+      <li><h3>El material no vigila</h3><p>Xurros, manguitos i cinturons faciliten l’aprenentatge, però no substitueixen la supervisió. Retira’ls de manera progressiva.</p></li>
+      <li><h3>Llança, no hi vagis</h3><p>Davant d’algú en dificultats, demana ajuda i allarga o llança un objecte que suri. Les 4R del rescat: reconèixer, respondre, rescatar i reanimar.</p></li>
+      <li><h3>Normes de la instal·lació</h3><p>Dutxa abans d’entrar, xancletes fora de l’aigua i no córrer per la vora. Comprova on són el socorrista i el material de rescat.</p></li>
+    </ul>
+    <p class="src">Fonts: OMS (2021, fitxa d’ofegament); Special Olympics, Guies d’entrenament; Pearn, Franklin i Peden (2015); Drowning Prevention Auckland.</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="vocabulari" class="sec alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Terminologia</div>
+      <h2>Vocabulari tècnic</h2>
+      <p>Termes en català amb l’equivalent castellà, per llegir bibliografia en les dues llengües.</p>
+    </div>
+    <dl class="gloss">
+      <div><dt>Agafada <span>agarre</span></dt><dd>Moment en què la mà i l’avantbraç s’orienten cap enrere per començar a propulsar.</dd></div>
+      <div><dt>Banderes d’esquena <span>banderines</span></dt><dd>Indicadors situats a 5 m de cada paret per calcular el viratge i l’arribada d’esquena.</dd></div>
+      <div><dt>Batuda <span>batido, patada</span></dt><dd>Moviment de cames del crol i de l’esquena (alternatiu) i de la papallona (simultani).</dd></div>
+      <div><dt>Braçada <span>brazada</span></dt><dd>Acció completa d’un braç, o dels dos alhora en braça i papallona.</dd></div>
+      <div><dt>Carrer <span>calle</span></dt><dd>Cadascuna de les divisions longitudinals de la piscina.</dd></div>
+      <div><dt>Cicle <span>ciclo</span></dt><dd>Conjunt d’accions que es repeteix; en crol i esquena, dues braçades.</dd></div>
+      <div><dt>Empenta <span>empuje</span></dt><dd>Part final de la fase propulsiva de la braçada, cap al maluc.</dd></div>
+      <div><dt>Fletxa <span>posición hidrodinámica</span></dt><dd>Cos allargat amb les mans una sobre l’altra i les orelles entre els braços.</dd></div>
+      <div><dt>Lliscament <span>deslizamiento</span></dt><dd>Avançar sense moviments propulsius aprofitant un impuls.</dd></div>
+      <div><dt>Planxa <span>tabla</span></dt><dd>Suro pla que es fa servir per als exercicis de cames.</dd></div>
+      <div><dt>Recuperació <span>recobro</span></dt><dd>Tornada del braç o de les cames a la posició inicial sense propulsar.</dd></div>
+      <div><dt>Remada <span>remada, sculling</span></dt><dd>Moviments de mans en forma de vuit per sostenir-se o desplaçar-se.</dd></div>
+      <div><dt>Rotació <span>rolido</span></dt><dd>Gir del cos sobre l’eix longitudinal en crol i esquena.</dd></div>
+      <div><dt>Sobreeixidor <span>rebosadero</span></dt><dd>Canal del perímetre de la piscina per on desguassa l’aigua.</dd></div>
+      <div><dt>Surada <span>corchera</span></dt><dd>Corda flotant que separa els carrers.</dd></div>
+      <div><dt>Tombarella <span>voltereta</span></dt><dd>Gir endavant que es fa als viratges de crol i d’esquena.</dd></div>
+      <div><dt>Tracció <span>tracción</span></dt><dd>Fase propulsiva principal de la braçada, de l’agafada a l’empenta.</dd></div>
+      <div><dt>Viratge <span>viraje</span></dt><dd>Canvi de sentit a la paret: obert, amb les mans, o de tombarella.</dd></div>
+      <div><dt>Xurro <span>churro</span></dt><dd>Flotador cilíndric, llarg i flexible.</dd></div>
+    </dl>
+    <p class="src">Terminologia de referència: TERMCAT, Diccionari dels esports aquàtics; Apunts. Educació Física i Esports.</p>
+  </div>
+</section>
+
+<hr class="rope" aria-hidden="true">
+
+<section id="fonts" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Bibliografia</div>
+      <h2>Fonts</h2>
+    </div>
+    <ol class="refs">
+      <li>World Aquatics (2026). <i>Competition Regulations. Part Two: Swimming</i> (en vigor des del febrer de 2026). Extracte publicat per Svøm Danmark: <a href="https://www.svoem.org/_files/_database/database105/WORLDAQUATICS2026.pdf" target="_blank" rel="noopener">svoem.org</a></li>
+      <li>World Aquatics (2026). <i>Swimming Rule Quick Reference Infraction Sheet</i> (en vigor des del 13 de març de 2026). <a href="https://resources.fina.org/fina/document/2026/03/16/5140bd13-c39f-4159-a896-3ff2350a33f2/Swimming-Reference-Card-13.03.2026.pdf" target="_blank" rel="noopener">resources.fina.org</a></li>
+      <li>World Aquatics (2026). <i>Commentary on the World Aquatics Competition Regulations</i>. <a href="https://resources.fina.org/fina/document/2026/08/10/869f46eb-cde1-4c11-8a5f-3d78735a21cf/Commentary-on-the-World-Aquatics-Competition-Regulations.pdf" target="_blank" rel="noopener">resources.fina.org</a></li>
+      <li>Real Federación Española de Natación (2023). <i>Reglamento de Natación 2023-2025</i> (ES/EN). <span class="note">Numeració anterior a la de 2026.</span> <a href="https://fenacyl.com/wp-content/uploads/2023/03/Reglamento_SW_RFEN_ESP_ENG_06032023.pdf" target="_blank" rel="noopener">fenacyl.com</a></li>
+      <li>Stallman, R. K., Moran, K., Quan, L. i Langendorfer, S. (2017). From swimming skill to water competence: Towards a more inclusive drowning prevention future. <i>International Journal of Aquatic Research and Education, 10</i>(2). <a href="https://scholarworks.bgsu.edu/ijare/vol10/iss2/3" target="_blank" rel="noopener">scholarworks.bgsu.edu</a></li>
+      <li>Drowning Prevention Auckland. <i>Water Competencies</i>. <a href="https://www.dpanz.org.nz/research/water-competencies/" target="_blank" rel="noopener">dpanz.org.nz</a></li>
+      <li>Langendorfer, S. J. i Bruya, L. D. (1995). <i>Aquatic readiness: Developing water competence in young children</i>. Human Kinetics.</li>
+      <li>Moreno-Murcia, J. A. i Ruiz, L. M. (2021). <i>Aprender a nadar en la infancia: ¿para qué?, ¿cuándo?, ¿qué?, ¿dónde?, ¿cómo?</i> <a href="https://jamorenomurcia.umh.es/files/2014/09/04.-Aprendar-a-nadar-en-la-infancia-JAMM-y-LRP-marzo-2021.pdf" target="_blank" rel="noopener">jamorenomurcia.umh.es</a></li>
+      <li>Moreno Murcia, J. A. (2001). <i>Juegos acuáticos educativos: hacia una competencia motriz acuática (6-12 años)</i>. INDE.</li>
+      <li>Moreno, J. A. i Gutiérrez, M. (1998). <i>Bases metodológicas para el aprendizaje de las actividades acuáticas educativas</i>. INDE.</li>
+      <li>Maglischo, E. W. (2003). <i>Swimming fastest</i>. Human Kinetics.</li>
+      <li>Special Olympics. <i>Guías de entrenamiento. Deportes acuáticos: desarrollo de estilo</i>. <a href="https://media.specialolympics.org/soi/files/sports/Spanish_Aquatics/Stroke_Development.pdf" target="_blank" rel="noopener">specialolympics.org</a></li>
+      <li>Swim England. <i>The Learn to Swim Framework</i>. <a href="https://www.swimming.org/swimengland/learn-to-swim-framework/" target="_blank" rel="noopener">swimming.org</a></li>
+      <li>Organització Mundial de la Salut (2021). <i>WHO guideline on the prevention of drowning through provision of day-care and basic swimming and water safety skills</i>. <a href="https://www.who.int/publications/i/item/9789240030008" target="_blank" rel="noopener">who.int</a></li>
+      <li>Organització Mundial de la Salut. <i>Drowning</i> (fitxa descriptiva). <a href="https://who.int/news-room/fact-sheets/detail/drowning" target="_blank" rel="noopener">who.int</a></li>
+      <li>Pearn, J. H., Franklin, R. i Peden, A. E. (2015). Hypoxic blackout: Diagnosis, risks, prevention. <i>International Journal of Aquatic Research and Education, 9</i>(3). <a href="https://scholarworks.bgsu.edu/ijare/vol9/iss3/9" target="_blank" rel="noopener">scholarworks.bgsu.edu</a></li>
+      <li>TERMCAT (2012). <i>Diccionari dels esports aquàtics</i>. <a href="https://esports.termcat.cat/ca/diccionaris-portal/155/presentacio/en" target="_blank" rel="noopener">esports.termcat.cat</a></li>
+      <li>Apunts. Educació Física i Esports (2023), núm. 154: estudi de coordinació en natació amb les fases de braçada en català. <a href="https://revista-apunts.com/wp-content/uploads/2023/06/44-51-154-CAT.pdf" target="_blank" rel="noopener">revista-apunts.com</a></li>
+      <li>Prat Riba, J. <i>El medi aquàtic</i>. Apunts del mòdul M5, CFGS EAS. Institut de l’Esport de Barcelona.</li>
+      <li>Becker, B. E. (2009). Aquatic therapy: Scientific foundations and clinical rehabilitation applications. <i>PM&amp;R, 1</i>(9), 859–872. <a href="https://www.ewacmedical.com/wp-content/uploads/2017/08/Becker-B-2009-Aquatic-Therapy-scientific-foundations-and-clinical-rehabilitation-applications-PM-1.pdf" target="_blank" rel="noopener">ewacmedical.com</a></li>
+      <li>Harrison, R. i Bulstrode, S. (1987). Percentage weight-bearing during partial immersion in the hydrotherapy pool. <i>Physiotherapy Practice, 3</i>(2), 60–63. Valors citats per Adegoke, B. O. A., Bello, A. I. i Abass, A. O. (2014). <i>BMC Musculoskeletal Disorders, 15</i>, 261. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4236649" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov</a></li>
+      <li>Toussaint, H. M. (2002). Biomechanics of propulsion and drag in front crawl swimming. <i>ISBS Conference Proceedings</i>. <a href="https://ojs.ub.uni-konstanz.de/cpa/article/view/613" target="_blank" rel="noopener">ojs.ub.uni-konstanz.de</a></li>
+      <li>Vennell, R., Pease, D. i Wilson, B. (2006). Wave drag on human swimmers. <i>Journal of Biomechanics, 39</i>(4), 664–671. Vegeu també Pease, D. (2012). Wave drag in human swimming. <i>ISBS Conference Proceedings</i>. <a href="https://ojs.ub.uni-konstanz.de/cpa/article/view/5167" target="_blank" rel="noopener">ojs.ub.uni-konstanz.de</a></li>
+      <li>Marinho, D. A., Barbosa, T. M., Rouboa, A. I. i Silva, A. J. (2011). The hydrodynamic study of the swimming gliding: a two-dimensional computational fluid dynamics (CFD) analysis. <i>Journal of Human Kinetics, 29</i>, 49–57. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3588622" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov</a></li>
+      <li>Cortesi, M. i Gatta, G. (2015). Effect of the swimmer’s head position on passive drag. <i>Journal of Human Kinetics, 49</i>, 37–45. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4723180" target="_blank" rel="noopener">pmc.ncbi.nlm.nih.gov</a></li>
+      <li>Lyttle, A., Blanksby, B., Elliott, B. i Lloyd, D. (1999). <i>Optimal depth for streamlined gliding</i>. The University of Western Australia. <a href="https://rtk.schwimmen.sport-iat.de/fileadmin/user_upload/DSV-Schwimmen/Lyttle_et_al.__1999_._Optimal_depth_for_streamlined_gliding.pdf" target="_blank" rel="noopener">sport-iat.de</a></li>
+      <li>Bar-Or, O. (1994). Children’s responses to exercise in cold climates: health implications. <i>Sports Science Exchange, 7</i>(4), núm. 51. <a href="https://gssiweb.org/en-ca/Article/sse-51-children's-responses-to-exercise-in-cold-climates-health-implications" target="_blank" rel="noopener">gssiweb.org</a></li>
+      <li>Swim England (2017). <i>Swimming pool temperatures</i>, basat en les recomanacions del Pool Water Treatment Advisory Group (PWTAG). <a href="https://studylib.net/doc/25369442/swimming-pools-temperature-advice" target="_blank" rel="noopener">studylib.net</a></li>
+      <li>RNLI. <i>Cold water shock</i>. <a href="https://rnli.org/safety/know-the-risks/cold-water-shock" target="_blank" rel="noopener">rnli.org</a></li>
+      <li>World Aquatics (2025). <i>Pool Certification – Swimming</i>, art. 16.2.13.1. <a href="https://resources.fina.org/fina/document/2025/11/04/ea5e650d-44a0-4619-a705-c7354a367995/WA-Pool-Certification-Swimming.pdf" target="_blank" rel="noopener">resources.fina.org</a></li>
+      <li>Generalitat de Catalunya. Decret 95/2000, de 22 de febrer, pel qual s’estableixen les normes sanitàries aplicables a les piscines d’ús públic, art. 20. <a href="https://cido.diba.cat/legislacio/14201/decret-952000-de-22-de-febrer-pel-qual-sestableixen-les-normes-sanitaries-aplicables-a-les-piscines-dus-public-departament-de-sanitat-i-seguretat-social" target="_blank" rel="noopener">cido.diba.cat</a></li>
+      <li>Reial decret 742/2013, de 27 de setembre, pel qual s’estableixen els criteris tecnicosanitaris de les piscines (annexos I i II).</li>
+      <li>Lahart, I. M. i Metsios, G. S. (2018). Chronic physiological effects of swim training interventions in non-elite swimmers: a systematic review and meta-analysis. <i>Sports Medicine, 48</i>(2). <a href="https://www.springermedicine.com/chronic-physiological-effects-of-swim-training-interventions-in-/22255268" target="_blank" rel="noopener">springermedicine.com</a></li>
+      <li>Oja, P., Kelly, P., Pedisic, Z. et al. (2017). Associations of specific types of sports and exercise with all-cause and cardiovascular-disease mortality: a cohort study of 80 306 British adults. <i>British Journal of Sports Medicine, 51</i>(10), 812–817. <a href="https://bjsm.bmj.com/content/51/10/812" target="_blank" rel="noopener">bjsm.bmj.com</a></li>
+      <li>Beggs, S., Foong, Y. C., Le, H. C. T. et al. (2021). Swimming training for asthma in children and adolescents aged 18 years and under. <i>Cochrane Database of Systematic Reviews</i>, CD009607. <a href="https://www.cochrane.org/evidence/CD009607_swimming-training-asthma-children-and-adolescents-aged-18-years-and-under" target="_blank" rel="noopener">cochrane.org</a></li>
+      <li>Brenner, R. A., Taneja, G. S., Haynie, D. L. et al. (2009). Association between swimming lessons and drowning in childhood: a case-control study. <i>Archives of Pediatrics &amp; Adolescent Medicine, 163</i>(3), 203–210. <a href="https://pubmed.ncbi.nlm.nih.gov/19255386" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov</a></li>
+      <li>Swim England (2017). <i>Health and wellbeing benefits of swimming</i>. Swimming and Health Commission. <a href="https://swimming.org/swimengland/new-report-shows-health-benefits-swimming" target="_blank" rel="noopener">swimming.org</a></li>
+    </ol>
+  </div>
+</section>
+</main>
+</div>
+
+<nav class="tabbar" aria-label="Navegació principal">
+  <a href="#inici" data-k="inici"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg><span>Inici</span></a>
+  <a href="#estils" data-k="estils"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="17" cy="6.5" r="2.2"/><path d="M4 12.5 9 9l3 2.5 3-2"/><path d="M2.5 17c1.6 0 1.6-1.3 3.2-1.3s1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3 1.6-1.3 3.2-1.3 1.6 1.3 3.2 1.3"/></svg><span>Estils</span></a>
+  <a href="#jocs" data-k="jocs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span>Jocs</span></a>
+  <button type="button" id="tb-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>Cerca</span></button>
+  <button type="button" id="tb-menu" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menú</span></button>
+</nav>
+
+<div class="sov" id="sov" hidden>
+  <div class="sov-panel" role="dialog" aria-modal="true" aria-label="Cerca a la web">
+    <div class="sbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      <input id="q" type="search" placeholder="Cerca jocs, errors, termes, reglament…" autocomplete="off" spellcheck="false" aria-label="Text de la cerca">
+      <button type="button" class="sclose" id="sclose">Tanca</button>
+    </div>
+    <div class="sres-wrap"><p class="scount" id="q-count" aria-live="polite"></p><ul class="res" id="q-res"></ul></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><a href="../index.html">Esports Individuals</a> · Ensenyar a nedar · Material docent de suport per al medi aquàtic · Revisat el 30 d’octubre de 2026.</div>
+</footer>
+
+<script>
+(function(){
+  document.documentElement.lang = "ca";
+
+  /* ---------- Tema clar / fosc ---------- */
+  var root = document.documentElement, themeBtn = document.getElementById("theme-btn");
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function curTheme(){
+    var a = root.getAttribute("data-theme");
+    if (a === "dark" || a === "light") return a;
+    return mq && mq.matches ? "dark" : "light";
+  }
+  function paintThemeBtn(){
+    var dark = curTheme() === "dark", label = dark ? "Canvia al tema clar" : "Canvia al tema fosc";
+    themeBtn.setAttribute("aria-label", label);
+    themeBtn.title = label;
+    themeBtn.querySelector(".i-sun").hidden = !dark;
+    themeBtn.querySelector(".i-moon").hidden = dark;
+  }
+  themeBtn.addEventListener("click", function(){
+    var next = curTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("ensenyar-tema", next); } catch (e) {}
+    paintThemeBtn();
+  });
+  if (mq && mq.addEventListener) mq.addEventListener("change", paintThemeBtn);
+  if ("MutationObserver" in window) new MutationObserver(paintThemeBtn).observe(root, {attributes:true, attributeFilter:["data-theme"]});
+  paintThemeBtn();
+  var NS = "http://www.w3.org/2000/svg";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Piscina de l'inici ---------- */
+  var lanes = [
+    {id:"crol", name:"Crol", x:250, cls:"a"},
+    {id:"esquena", name:"Esquena", x:330, cls:"b"},
+    {id:"braca", name:"Braça", x:230, cls:"c"},
+    {id:"papallona", name:"Papallona", x:300, cls:"d"}
+  ];
+  var glyphs = {
+    crol: '<line x1="-14" y1="-3" x2="-40" y2="-5"/><line x1="-14" y1="3" x2="-40" y2="6"/><ellipse cx="0" cy="0" rx="17" ry="7"/><line x1="8" y1="-5" x2="42" y2="-7"/><line x1="8" y1="5" x2="-14" y2="12"/><circle cx="22" cy="0" r="6"/>',
+    esquena: '<line x1="-14" y1="-3" x2="-40" y2="-6"/><line x1="-14" y1="3" x2="-40" y2="4"/><ellipse cx="0" cy="0" rx="17" ry="7"/><line x1="8" y1="5" x2="40" y2="9"/><line x1="8" y1="-5" x2="-16" y2="-11"/><circle cx="22" cy="0" r="6"/>',
+    braca: '<polyline points="-14,-3 -28,-15 -22,-24"/><polyline points="-14,3 -28,15 -22,24"/><ellipse cx="0" cy="0" rx="17" ry="7"/><polyline points="8,-5 22,-17 36,-5"/><polyline points="8,5 22,17 36,5"/><circle cx="22" cy="0" r="6"/>',
+    papallona: '<line x1="-14" y1="-2" x2="-42" y2="-2"/><line x1="-14" y1="2" x2="-42" y2="2"/><ellipse cx="0" cy="0" rx="17" ry="7"/><line x1="6" y1="-6" x2="16" y2="-36"/><line x1="6" y1="6" x2="16" y2="36"/><circle cx="22" cy="0" r="6"/>'
+  };
+  var g = "";
+  lanes.forEach(function(l, i){
+    var top = 24 + i*70, cy = top + 35;
+    g += '<a href="#' + l.id + '" aria-label="' + l.name + ': obre la fitxa de l’estil">' +
+      '<rect class="lane-hit" x="30" y="' + top + '" width="500" height="70"/>' +
+      '<line x1="70" y1="' + cy + '" x2="490" y2="' + cy + '" stroke="var(--lane-mark)" stroke-width="6" opacity=".5"/>' +
+      '<line x1="70" y1="' + (cy-11) + '" x2="70" y2="' + (cy+11) + '" stroke="var(--lane-mark)" stroke-width="6" opacity=".5"/>' +
+      '<line x1="490" y1="' + (cy-11) + '" x2="490" y2="' + (cy+11) + '" stroke="var(--lane-mark)" stroke-width="6" opacity=".5"/>' +
+      '<text class="lane-label" x="82" y="' + (cy-16) + '">' + l.name + '</text>' +
+      '<g transform="translate(' + l.x + ' ' + cy + ')"><g class="sw ' + l.cls + '"><g class="glyph">' + glyphs[l.id] + '</g></g></g>' +
+      '<g class="blk"><rect x="4" y="' + (cy-15) + '" width="24" height="30" rx="4" fill="var(--surface)" stroke="var(--line)"/><text x="16" y="' + (cy+5) + '">' + (i+1) + '</text></g>' +
+      '</a>';
+  });
+  [94,164,234].forEach(function(y){
+    g += '<line x1="30" y1="'+y+'" x2="530" y2="'+y+'" stroke="var(--surface)" stroke-width="6"/>';
+    g += '<line x1="30" y1="'+y+'" x2="130" y2="'+y+'" stroke="var(--rope)" stroke-width="6" stroke-dasharray="7 5"/>';
+    g += '<line x1="130" y1="'+y+'" x2="430" y2="'+y+'" stroke="var(--water)" stroke-width="6" stroke-dasharray="7 7"/>';
+    g += '<line x1="430" y1="'+y+'" x2="530" y2="'+y+'" stroke="var(--rope)" stroke-width="6" stroke-dasharray="7 5"/>';
+    g += '<rect x="326" y="'+(y-5)+'" width="8" height="10" rx="2" fill="var(--ink)"/>';
+  });
+  [130,430].forEach(function(x){
+    g += '<line x1="'+x+'" y1="14" x2="'+x+'" y2="314" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="2 5" opacity=".45"/>';
+    for (var k=0;k<4;k++){ var yy = 52 + k*70; g += '<path d="M'+(x-5)+' '+yy+' L'+(x+5)+' '+yy+' L'+x+' '+(yy+9)+' Z" fill="'+(k%2?'var(--water)':'var(--rope)')+'"/>'; }
+  });
+  document.getElementById("lanes").innerHTML = g;
+
+  /* ---------- Figures dels estils ---------- */
+  var L = {torso:92, neck:26, head:13, ua:44, fa:40, hand:12, th:56, sh:52, ft:15};
+  var R = Math.PI/180;
+  function pt(o,len,deg){ return {x:o.x+len*Math.cos(deg*R), y:o.y+len*Math.sin(deg*R)}; }
+  function f(n){ return n.toFixed(1); }
+  function path(pts, cls){ return '<path class="'+cls+'" d="M'+pts.map(function(p){return f(p.x)+' '+f(p.y);}).join(' L')+'"/>'; }
+  function chain(o, segs){ var pts=[o], c=o; segs.forEach(function(s){ c=pt(c,s[0],s[1]); pts.push(c); }); return pts; }
+  function swimmer(s){
+    var hip=s.hip, sh=pt(hip,L.torso,s.torso), hc=pt(sh,L.neck,s.torso+(s.neck||0));
+    function arm(a){ return chain(sh,[[L.ua,a[0]],[L.fa,a[1]],[L.hand,a[2]]]); }
+    function leg(l){ return chain(hip,[[L.th,l[0]],[L.sh,l[1]],[L.ft,l[2]]]); }
+    var o="";
+    (s.farArms||[]).forEach(function(a){ o+=path(arm(a),"limb far"); });
+    (s.farLegs||[]).forEach(function(l){ o+=path(leg(l),"limb far"); });
+    o+=path([hip,sh],"torso");
+    (s.legs||[]).forEach(function(l){ o+=path(leg(l),"limb"); });
+    o+='<circle class="head" cx="'+f(hc.x)+'" cy="'+f(hc.y)+'" r="'+L.head+'"/>';
+    var cc = s.torso+(s.neck||0)+(s.face==="up"?60:-60), r=L.head+0.6;
+    var a1=pt(hc,r,cc-100), a2=pt(hc,r,cc+100);
+    o+='<path class="cap" d="M'+f(a1.x)+' '+f(a1.y)+' A'+r+' '+r+' 0 1 1 '+f(a2.x)+' '+f(a2.y)+' Z"/>';
+    (s.arms||[]).forEach(function(a){ o+=path(arm(a),"limb"); });
+    return o;
+  }
+  function mk(x,y,n){ return '<g class="mk"><circle cx="'+x+'" cy="'+y+'" r="12"/><text x="'+x+'" y="'+(y+0.5)+'">'+n+'</text></g>'; }
+  function scene(label, body, markers, guide){
+    var wy=110, W=560, H=230, wave="M0 "+wy+" q10 -3 20 0";
+    for (var x=20;x<W;x+=20) wave+=" t20 0";
+    return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+label+'">' +
+      '<rect class="wbg" x="0" y="'+wy+'" width="'+W+'" height="'+(H-wy)+'"/>' + (guide||"") + body +
+      '<rect class="wover" x="0" y="'+wy+'" width="'+W+'" height="'+(H-wy)+'"/>' +
+      '<path class="surface" d="'+wave+'"/>' + markers + '</svg>';
+  }
+  var figs = {
+    crol: scene("Nedador de crol en vista lateral",
+      swimmer({hip:{x:230,y:116}, torso:-3, neck:4, face:"down",
+        arms:[[-115,40,40]], farArms:[[8,14,20]],
+        legs:[[176,184,190]], farLegs:[[168,164,172]]}),
+      mk(350,80,1)+mk(290,52,2)+mk(438,146,3)+mk(262,146,4)+mk(96,170,5)),
+    esquena: scene("Nedador d’esquena en vista lateral",
+      swimmer({hip:{x:220,y:118}, torso:-3, neck:0, face:"up",
+        arms:[[-92,-92,-92]], farArms:[[140,190,190]],
+        legs:[[183,186,188]], farLegs:[[172,168,172]]}),
+      mk(366,84,1)+mk(332,26,2)+mk(286,170,3)+mk(246,90,4)+mk(90,166,5)),
+    braca: scene("Nedador de braça en vista lateral en el moment de respirar",
+      swimmer({hip:{x:262,y:128}, torso:-14, neck:-4, face:"down",
+        arms:[[108,-35,-35]], farArms:[[104,-30,-28]],
+        legs:[[150,285,125]], farLegs:[[144,288,125]]}),
+      mk(402,76,1)+mk(320,182,2)+mk(186,188,3)+mk(204,84,4)+mk(440,122,5)),
+    papallona: scene("Nedador de papallona en vista lateral en l’entrada de les mans",
+      swimmer({hip:{x:236,y:106}, torso:9, neck:12, face:"down",
+        arms:[[-6,-4,-2]], farArms:[[-9,-7,-4]],
+        legs:[[162,146,156]], farLegs:[[160,143,153]]}),
+      mk(360,156,1)+mk(446,88,2)+mk(250,78,3)+mk(108,190,4),
+      '<path class="guide" d="M40 168 C90 176 130 150 170 128 S236 96 290 116 S380 140 430 116 S500 104 540 110"/>')
+  };
+  /* Patada de braça des de dalt */
+  (function(){
+    var o='<svg viewBox="0 0 560 150" role="img" aria-label="Patada de braça vista des de dalt en quatre moments"><rect class="wbg" x="0" y="0" width="560" height="150"/>';
+    /* side -1 = cama de dalt, +1 = cama de baix; [llargada, obertura respecte de l'eix] o [llargada, null, angle absolut de la cama de baix] */
+    function legF(hip, side, segs){ var pts=[hip], c=hip; segs.forEach(function(s){ var a = s[2]!=null ? side*s[2] : 180 - side*s[1]; c=pt(c,s[0],a); pts.push(c); }); return pts; }
+    var frames = [
+      [[56,1],[52,0],[14,0]],
+      [[30,28],[20,null,10],[13,null,125]],
+      [[34,32],[32,55],[12,null,105]],
+      [[56,8],[52,-4],[14,-3]]
+    ];
+    frames.forEach(function(fr, i){
+      var x0 = i*140 + 124, y0 = 78;
+      if (i>0) o+='<line class="sep" x1="'+(i*140)+'" y1="10" x2="'+(i*140)+'" y2="140"/>';
+      [-1,1].forEach(function(side){
+        var hip = {x:x0, y:y0 + side*9};
+        o += path(legF(hip, side, fr), "limb");
+      });
+      o += '<path class="torso" d="M'+x0+' '+(y0-9)+' L'+x0+' '+(y0+9)+'"/>';
+      o += '<path class="torso" d="M'+x0+' '+y0+' L'+(x0+14)+' '+y0+'"/>';
+    });
+    o += '</svg>';
+    figs.kick = o;
+  })();
+
+  /* ---------- Figures de propietats de l'aigua ---------- */
+  function waveD(x0, x1, y, n){
+    var s = (x1 - x0) / n, d = "M" + f(x0) + " " + y + " q" + f(s/2) + " -3 " + f(s) + " 0";
+    for (var i = 1; i < n; i++) d += " t" + f(s) + " 0";
+    return d;
+  }
+  function head(x2, y2, a, cls){
+    var s = 11, w = 6, bx = x2 - s*Math.cos(a), by = y2 - s*Math.sin(a);
+    return '<path class="'+cls+'" d="M'+f(x2)+' '+f(y2)+' L'+f(bx + w*Math.sin(a))+' '+f(by - w*Math.cos(a))+' L'+f(bx - w*Math.sin(a))+' '+f(by + w*Math.cos(a))+' Z"/>';
+  }
+  function arrow(x1, y1, x2, y2, dir){
+    var a = Math.atan2(y2 - y1, x2 - x1), bx = x2 - 10*Math.cos(a), by = y2 - 10*Math.sin(a);
+    return '<line class="arl '+dir+'" x1="'+f(x1)+'" y1="'+f(y1)+'" x2="'+f(bx)+'" y2="'+f(by)+'"/>' + head(x2, y2, a, "arh " + dir);
+  }
+  function dot(p, dir){ return '<circle class="pt '+dir+'" cx="'+f(p.x)+'" cy="'+f(p.y)+'" r="6"/>'; }
+
+  /* Descàrrega segons el nivell de l'aigua */
+  (function(){
+    var o = '<svg viewBox="0 0 570 300" role="img" aria-label="Pes que suporten els peus segons el nivell de l’aigua: al coll, entre el 6 i el 10 %; a l’estèrnum, entre el 25 i el 37 %; al maluc, entre el 40 i el 56 %">';
+    [{y:56, p:"6–10 %"}, {y:100, p:"25–37 %"}, {y:145, p:"40–56 %"}].forEach(function(l, i){
+      var x0 = i*190, a = x0 + 8, b = x0 + 182, cx = x0 + 95, floor = 258;
+      var hip = {x:cx, y:150}, sh = {x:cx, y:58};
+      o += '<rect class="wbg" x="'+a+'" y="'+l.y+'" width="'+(b-a)+'" height="'+(floor-l.y)+'"/>';
+      o += path(chain(sh, [[L.ua,76],[L.fa,82],[L.hand,88]]), "limb far");
+      o += path(chain(hip, [[L.th,86],[L.sh,90],[L.ft,0]]), "limb far");
+      o += path([hip, sh], "torso");
+      o += path(chain(hip, [[L.th,94],[L.sh,90],[L.ft,0]]), "limb");
+      o += '<circle class="head" cx="'+cx+'" cy="32" r="'+L.head+'"/>';
+      o += path(chain(sh, [[L.ua,104],[L.fa,98],[L.hand,92]]), "limb");
+      o += '<rect class="wover" x="'+a+'" y="'+l.y+'" width="'+(b-a)+'" height="'+(floor-l.y)+'"/>';
+      o += '<path class="surface" d="'+waveD(a, b, l.y, 12)+'"/>';
+      o += '<line class="floor" x1="'+a+'" y1="'+floor+'" x2="'+b+'" y2="'+floor+'"/>';
+      o += '<text class="pct" x="'+cx+'" y="290">'+l.p+'</text>';
+      o += mk(b - 18, l.y - 18, i + 1);
+    });
+    figs.descarrega = o + '</svg>';
+  })();
+
+  /* Centre de gravetat i centre de flotació */
+  (function(){
+    var W = 660, H = 200, wy = 96;
+    var o = '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Flotació dorsal: l’empenta actua al centre de flotació, al tòrax, i el pes al centre de gravetat, a prop del maluc. Les cames baixen; amb els braços per sobre del cap, els dos centres s’acosten">';
+    o += '<rect class="wbg" x="0" y="'+wy+'" width="'+W+'" height="'+(H-wy)+'"/>';
+    var p1 = {hip:{x:160,y:104}, torso:-4, neck:0, face:"up", arms:[[176,178,178]], farArms:[[174,176,176]], legs:[[166,163,170]], farLegs:[[168,165,172]]};
+    var p2 = {hip:{x:463,y:102}, torso:-3, neck:0, face:"up", arms:[[-4,-2,-2]], farArms:[[-6,-3,-3]], legs:[[172,170,176]], farLegs:[[174,172,178]]};
+    o += swimmer(p1) + swimmer(p2);
+    o += '<rect class="wover" x="0" y="'+wy+'" width="'+W+'" height="'+(H-wy)+'"/>';
+    o += '<path class="surface" d="'+waveD(0, W, wy, 33)+'"/>';
+    o += '<line class="sep" x1="320" y1="12" x2="320" y2="'+(H-12)+'"/>';
+    function onT(s, k){ return pt(s.hip, L.torso*k, s.torso); }
+    var cf1 = onT(p1, .55), cg1 = onT(p1, .12), cf2 = onT(p2, .55), cg2 = onT(p2, .32);
+    o += arrow(cf1.x, cf1.y, cf1.x, cf1.y - 56, "up") + arrow(cg1.x, cg1.y, cg1.x, cg1.y + 56, "dn");
+    o += arrow(cf2.x, cf2.y, cf2.x, cf2.y - 56, "up") + arrow(cg2.x, cg2.y, cg2.x, cg2.y + 56, "dn");
+    o += dot(cf1, "up") + dot(cg1, "dn") + dot(cf2, "up") + dot(cg2, "dn");
+    o += '<path class="rot" d="M108 66 Q60 62 50 104"/>' + head(50, 104, Math.atan2(104-62, 50-60), "rot-h");
+    o += mk(cf1.x + 22, cf1.y - 46, 1) + mk(cg1.x - 22, cg1.y + 44, 2) + mk(130, 58, 3) + mk(cg2.x - 22, cg2.y + 44, 4);
+    figs.cgcf = o + '</svg>';
+  })();
+
+  /* Posició hidrodinàmica: la fletxa */
+  (function(){
+    var y = 184, body = swimmer({hip:{x:150,y:y}, torso:0, neck:0, face:"down",
+      arms:[[-5,2,0]], farArms:[[-7,3,0]], legs:[[180,180,184]], farLegs:[[180,181,185]]});
+    var dim = '<line class="dimx" x1="350" y1="'+y+'" x2="438" y2="'+y+'"/>' +
+      '<path class="dim" d="M430 110 L430 '+y+' M420 110 L440 110 M420 '+y+' L440 '+y+'"/>';
+    figs.fletxa = scene("Nedador en posició de fletxa lliscant a uns 0,4 metres sota la superfície",
+      body + dim,
+      mk(356,160,1) + mk(304,158,2) + mk(268,212,3) + mk(196,210,4) + mk(64,208,5) + mk(456,147,6));
+  })();
+  document.querySelectorAll("[data-fig]").forEach(function(el){ el.innerHTML = figs[el.getAttribute("data-fig")] || ""; });
+
+  /* ---------- Pestanyes dels estils ---------- */
+  var strokes = ["crol","esquena","braca","papallona"];
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function selectStroke(id, focus){
+    tabs.forEach(function(t){
+      var on = t.getAttribute("data-target")===id;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("data-target")).hidden = !on;
+      if (on && focus) t.focus();
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener("click", function(){ goStroke(t.getAttribute("data-target")); });
+    t.addEventListener("keydown", function(e){
+      var n = null;
+      if (e.key==="ArrowRight") n = (i+1)%tabs.length;
+      if (e.key==="ArrowLeft") n = (i-1+tabs.length)%tabs.length;
+      if (e.key==="Home") n = 0;
+      if (e.key==="End") n = tabs.length-1;
+      if (n!==null){ e.preventDefault(); selectStroke(tabs[n].getAttribute("data-target"), true); goStroke(tabs[n].getAttribute("data-target")); }
+    });
+  });
+  var fromTab = false;
+  function goStroke(id){
+    fromTab = true;
+    if (location.hash.slice(1) === id){ fromTab = false; return; }
+    location.hash = id;
+  }
+
+  /* ---------- Banc de jocs ---------- */
+  var STAGES = {s1:"3–5", s2:"6–8", s3:"9–12"};
+  var OBJ = {fam:"Familiarització", resp:"Respiració", flot:"Flotació i equilibri", prop:"Propulsió i lliscament", imm:"Immersió", salt:"Salts i entrades", estil:"Estils", seg:"Seguretat"};
+  var GAMES = [
+    {n:"La pluja", s:["s1"], o:["fam","resp"], m:"Regadores o gots de plàstic.", c:"Amb el grup assegut al bord o a l’escala, el tècnic «fa ploure» sobre les mans, les espatlles i, finalment, el cap de cada infant. Després són ells qui es fan ploure a si mateixos i a un company que ho vulgui.", v:"Pluja fluixa o forta; tancar i obrir els ulls sota la pluja.", k:"Ningú no es mulla per sorpresa: s’avisa i se celebra."},
+    {n:"Fem la sopa", s:["s1"], o:["resp"], m:"Cap.", c:"En rotllana, amb l’aigua a la cintura o agafats al bord, fem bullir la sopa bufant bombolles amb la boca a l’aigua: bombolles petites bufant suau i grans bufant fort. Després hi afegim ingredients: el nas, les galtes i tota la cara.", v:"Bombolles llargues comptant fins a 3; brunzir com una abella sota l’aigua.", k:"Expulsar l’aire per la boca i el nas, no aguantar-lo."},
+    {n:"Bufa la pilota", s:["s1","s2"], o:["resp","prop"], m:"Pilotes de ping-pong.", c:"Cada infant porta la seva pilota fins a l’altra banda només bufant-la, amb la barbeta arran d’aigua.", v:"Per parelles, passar-se la pilota bufant; empènyer-la bufant amb la boca dins l’aigua; cursa caminant o lliscant.", k:"Bufar llarg i constant, com en la respiració de crol."},
+    {n:"El zoo aquàtic", s:["s1"], o:["fam","prop"], m:"Cap.", c:"El tècnic diu un animal i tothom s’hi desplaça: el cranc (de costat), la granota (a salts), el cocodril (estirat amb les mans al fons i les cames bategant) o el pingüí (passes curtes amb els braços enganxats al cos).", v:"Animals que fan bombolles; l’infant proposa l’animal i els altres l’imiten.", k:"Zona on tots facin peu."},
+    {n:"Pescar tresors", s:["s1","s2"], o:["imm"], m:"Anelles, peixos o objectes que s’enfonsin.", c:"S’escampen objectes pel fons i els infants els recullen per portar-los al cofre, un cubell al bord. Primer agafant-los sense posar la cara, després posant-la i obrint els ulls i, finalment, submergint-se del tot.", v:"Recollir només un color; comptar els dits que mostra el tècnic sota l’aigua.", k:"Pujar a respirar entre objecte i objecte. Sense concursos de durada."},
+    {n:"L’estrella de mar", s:["s1","s2"], o:["flot"], m:"Xurros (opcional).", c:"Els infants fan l’estrella panxa amunt, amb braços i cames oberts, primer amb ajuda (mans del tècnic al clatell o xurro sota les aixelles) i després sols, comptant junts fins a 5. Després l’estrella es tanca i es posen drets.", v:"Estrella panxa avall amb la cara a l’aigua; passar d’estrella a fletxa.", k:"Ensenyar abans a posar-se dret des de la flotació."},
+    {n:"El tren", s:["s1"], o:["prop","flot"], m:"Xurros.", c:"En files de quatre o cinc, cada infant s’agafa al xurro o a les espatlles del company i el tren avança bategant cames. A cada estació el tècnic diu una posició: panxa avall, panxa amunt o cara a l’aigua.", v:"Passar per túnels fets amb els braços del tècnic; canviar de maquinista.", k:"Desplaçaments curts i molta participació de tots."},
+    {n:"Saltar al riu", s:["s1","s2"], o:["salt"], m:"Catifa flotant o anelles (opcional).", c:"Asseguts al bord, s’empenyen i entren a l’aigua a les mans del tècnic. Progressivament salten ajupits, drets i sense agafar-se, fins a caure dins d’un aro flotant.", v:"Saltar i girar-se per tornar a la paret; saltar i fer bombolles abans de pujar.", k:"Sempre de peus i a una profunditat adequada. «Salta, gira’t i torna.»"},
+    {n:"La rodona", s:["s1"], o:["fam","imm"], m:"Cap.", c:"Agafats de les mans en rotllana, la rodona gira mentre cantem una cançó coneguda. A la paraula clau tothom s’ajup: primer fins a la barbeta, després fins al nas i, al final, tot el cap.", v:"Ajupir-se i bufar; fer la rodona panxa amunt amb els peus al centre.", k:"Cadascú decideix fins on s’ajup; l’èxit és provar-ho."},
+    {n:"Taurons i peixets", s:["s2"], o:["prop","imm"], m:"Gorres de color per als taurons.", c:"Els peixets han de creuar d’un costat a l’altre sense que els toquin els taurons del centre. Qui és tocat es converteix en alga, es queda quiet fent l’estrella i ajuda a atrapar.", v:"Només es pot avançar amb batuda; el refugi és fer el bolet mentre es compta fins a 3.", k:"Delimitar la zona i la profunditat. No estirar ni empènyer."},
+    {n:"Estàtues aquàtiques", s:["s2"], o:["flot"], m:"Música o targetes amb dibuixos.", c:"Es desplacen lliurement i, quan s’atura la música, el tècnic mostra una posició: estrella panxa amunt, bolet, fletxa o cadira (flotació vertical). Qui aguanta la posició fins a 3 suma un punt per al grup.", v:"Posicions per parelles; passar d’una posició a una altra sense tocar el fons.", k:"Punts per al grup, no individuals."},
+    {n:"El bolet i la medusa", s:["s2"], o:["flot","resp"], m:"Cap.", c:"Bolet: agafar aire, abraçar-se els genolls i deixar-se surar fins que l’esquena surt a la superfície. Medusa: deixar braços i cames penjant, relaxats. Comptem junts fins a 5 i tornem a posar-nos drets.", v:"El company comprova que l’esquena sura; passar de bolet a estrella.", k:"Compte fix i curt. Mai competir per aguantar més."},
+    {n:"Torpedos", s:["s2","s3"], o:["prop"], m:"Anelles o marques.", c:"Des de la paret, impuls de peus i lliscament en fletxa, amb les mans una sobre l’altra i les orelles entre els braços. Es marca on s’atura cadascú i, a la ronda següent, cal superar la pròpia marca.", v:"Torpedo panxa amunt; afegir tres batudes; passar per un aro submergit.", k:"Competir amb un mateix, no amb els altres."},
+    {n:"El túnel", s:["s2"], o:["imm","prop"], m:"Aros submergibles o xurros.", c:"Uns companys fan un túnel amb les cames obertes o amb aros a mitja aigua i els altres el travessen lliscant per sota.", v:"Túnel més llarg; túnel que es mou a poc a poc.", k:"Aigua on facin peu i un sol infant dins el túnel alhora."},
+    {n:"Relleus de planxa", s:["s2"], o:["prop","resp"], m:"Planxes.", c:"En equips de tres o quatre, relleus de batuda amb planxa fins a l’altra banda: primer amb el cap fora, després amb la cara a l’aigua respirant endavant i, finalment, respirant de costat.", v:"Transportar un objecte damunt la planxa; batuda d’esquena amb la planxa al pit.", k:"Valorar la batuda correcta, no només arribar primer."},
+    {n:"El mirall", s:["s2","s3"], o:["flot","fam"], m:"Cap.", c:"Per parelles, un fa una acció (girar de panxa avall a panxa amunt, bolet, tombarella o bombolles) i el company la copia. Després canvien de rol.", v:"Mirall a càmera lenta; mirall sota l’aigua amb els ulls oberts.", k:"Proposar accions que el company pugui fer."},
+    {n:"Remolcadors", s:["s2","s3"], o:["flot","seg"], m:"Xurros.", c:"Per parelles: un fa de vaixell, flotant panxa amunt agafat a un extrem del xurro, i l’altre el remolca bategant cap a l’altra banda. Després canvien.", v:"Remolcar nedant d’esquena; tres vaixells encadenats.", k:"El vaixell es manté relaxat: és una primera presa de contacte amb el salvament."},
+    {n:"El dau dels estils", s:["s3"], o:["estil"], m:"Un dau gegant (una capsa folrada).", c:"Cada equip tira el dau: 1 crol, 2 esquena, 3 braça, 4 batuda de papallona amb planxa, 5 estil a triar i 6 el que decideixi l’altre equip. El relleu es fa amb l’estil que surt.", v:"Dau d’exercicis tècnics: crol d’un braç, batuda lateral, patada de braça d’esquena.", k:"Recordar la norma de toc de cada estil."},
+    {n:"Golf de natació", s:["s3"], o:["estil","prop"], m:"Rellotge visible.", c:"Es neden 25 m i se sumen els segons i les braçades: és el resultat de «golf». L’objectiu és rebaixar-lo al següent intent nedant més llarg i relaxat.", v:"Comptar només braçades; mateix temps amb menys braçades.", k:"Cadascú es compara amb ell mateix."},
+    {n:"Pilota a la paret", s:["s3"], o:["prop","estil"], m:"Pilota de waterpolo o tova.", c:"Dos equips intenten tocar la paret contrària amb la pilota. Es pot passar, però per avançar cal nedar empenyent-la amb el cap fora, a crol de waterpolo o a braça.", v:"Passades obligatòries abans de tocar la paret; espai més reduït.", k:"Sense agafar ni enfonsar els companys."},
+    {n:"Nedar vestits", s:["s3"], o:["seg"], m:"Samarreta i pantalons vells, nets i reservats per a la piscina.", c:"Amb roba, cada infant entra de peus, flota panxa amunt un minut, es desplaça a braça o d’esquena fins al bord i en surt sol. Després es comenta com canvien la flotació i el moviment.", v:"Treure’s una peça dins l’aigua; fer-ho per parelles.", k:"L’aire que queda dins la roba ajuda a flotar. Aigua fonda només per a qui ja flota i es desplaça, i un tècnic dins l’aigua."},
+    {n:"Llança, no hi vagis", s:["s2","s3"], o:["seg"], m:"Xurros, cordes, pilotes i planxes.", c:"Un infant fa de nedador en dificultats a prop de la paret, on fa peu. El company l’ha d’ajudar sense entrar a l’aigua: allargant un xurro o llançant una planxa o una corda. Després es comenta per què no s’ha de saltar.", v:"Triar el material que sura més; practicar com es crida per demanar ajuda.", k:"Demanar ajuda i llançar o allargar, mai saltar."},
+    {n:"Sincro en petit", s:["s3"], o:["flot","estil"], m:"Música.", c:"En grups de quatre, creen una coreografia de 30 a 40 segons amb quatre elements obligatoris: una remada, una flotació, un gir i un desplaçament junts. La presenten a la resta del grup.", v:"Afegir una figura vertical; valorar la sincronia entre tots.", k:"Bona ocasió per treballar les remades."},
+    {n:"Relleu d’estils", s:["s3"], o:["estil"], m:"Cap.", c:"Equips de quatre fan el relleu en l’ordre reglamentari: esquena, braça, papallona i crol. Cada nedador ha de fer la sortida i l’arribada correctes del seu estil.", v:"Estils individuals per a nedadors avançats; substituir la papallona per batuda de dofí.", k:"L’equip que espera fa d’àrbitre de les normes de toc."}
+  ];
+  var state = {s:"all", o:"all"};
+  var rows = document.querySelectorAll("#filters .frow");
+  function chip(group, val, text){
+    var b = document.createElement("button");
+    b.type="button"; b.className="fchip"; b.textContent=text; b.id="f-"+group+"-"+val;
+    b.setAttribute("aria-pressed", state[group]===val ? "true" : "false");
+    b.addEventListener("click", function(){ state[group]=val; refresh(); });
+    return b;
+  }
+  rows[0].appendChild(chip("s","all","Totes"));
+  Object.keys(STAGES).forEach(function(k){ rows[0].appendChild(chip("s",k,STAGES[k]+" anys")); });
+  rows[1].appendChild(chip("o","all","Tots"));
+  Object.keys(OBJ).forEach(function(k){ rows[1].appendChild(chip("o",k,OBJ[k])); });
+  function esc(t){ return t.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+  function refresh(){
+    document.querySelectorAll("#filters .fchip").forEach(function(b){
+      var p = b.id.split("-"); b.setAttribute("aria-pressed", state[p[1]]===p[2] ? "true" : "false");
+    });
+    var list = GAMES.filter(function(gm){
+      return (state.s==="all" || gm.s.indexOf(state.s)>-1) && (state.o==="all" || gm.o.indexOf(state.o)>-1);
+    });
+    var html = list.map(function(gm){
+      return '<article class="game" id="joc-' + GAMES.indexOf(gm) + '"><div class="game-tags">' +
+        gm.s.map(function(s){ return '<span class="stg '+s+'">'+STAGES[s]+'</span>'; }).join("") +
+        gm.o.map(function(o){ return '<span class="obj">'+OBJ[o]+'</span>'; }).join("") +
+        '</div><h3>'+esc(gm.n)+'</h3>' +
+        '<p><span class="lbl">Material</span>'+esc(gm.m)+'</p>' +
+        '<p>'+esc(gm.c)+'</p>' +
+        '<p><span class="lbl">Variants</span>'+esc(gm.v)+'</p>' +
+        '<p class="key"><span class="lbl">Clau</span>'+esc(gm.k)+'</p></article>';
+    }).join("");
+    document.getElementById("games").innerHTML = html || '<div class="empty">Cap joc no compleix els dos filtres alhora. Canvia l’edat o l’objectiu.</div>';
+    document.getElementById("count").textContent = list.length===1 ? "Es mostra 1 joc de " + GAMES.length + "." : "Es mostren " + list.length + " jocs de " + GAMES.length + ".";
+  }
+  refresh();
+
+  /* ---------- Resistència i velocitat ---------- */
+  var vel = document.getElementById("aq-vel");
+  if (vel){
+    var fmt = function(n){ return (Math.round(n*100)/100).toFixed(2).replace(/0$/, "").replace(".", ","); };
+    var updVel = function(){
+      var v = vel.value/100, r = v*v;
+      document.getElementById("aq-v").textContent = "×" + fmt(v);
+      document.getElementById("aq-r").textContent = "×" + fmt(r);
+      document.getElementById("aq-bv").style.width = (v/4*100) + "%";
+      document.getElementById("aq-br").style.width = (r/4*100) + "%";
+      vel.setAttribute("aria-valuetext", "Velocitat ×" + fmt(v) + ", resistència ×" + fmt(r));
+    };
+    vel.addEventListener("input", updVel);
+    updVel();
+  }
+
+  /* ================= ESTRUCTURA D'APP ================= */
+  var $ = function(id){ return document.getElementById(id); };
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main > section"));
+  var VIEW_IDS = sections.map(function(s){ return s.id; });
+  var LABEL = {inici:"Inici", competencia:"Competència aquàtica", aigua:"Propietats de l’aigua", etapes:"Etapes, 3–12 anys", estils:"Els quatre estils", jocs:"Banc de jocs", sessio:"Organitzar una sessió", seguretat:"Seguretat", vocabulari:"Vocabulari", fonts:"Fonts"};
+  var STROKE_NAME = {crol:"Crol", esquena:"Esquena", braca:"Braça", papallona:"Papallona"};
+  var behavior = reduce ? "auto" : "smooth";
+  $("tile-jocs").textContent = GAMES.length + " jocs filtrables per edat i per objectiu.";
+
+  /* --- Pestanyes internes de cada estil --- */
+  var SUBS = [["tecnica","Tècnica"],["progressio","Progressió"],["errors","Errors"],["reglament","Reglament"]];
+  var curSub = "tecnica";
+  strokes.forEach(function(id){
+    var panel = $(id), head = panel.querySelector(".panel-head");
+    var groups = {tecnica:[], progressio:[], errors:[], reglament:[]};
+    var kids = Array.prototype.slice.call(panel.children);
+    kids.forEach(function(el){
+      if (el === head) return;
+      var g = "tecnica";
+      if (el.classList.contains("rules")) g = "reglament";
+      else if (el.classList.contains("errors")) g = "errors";
+      else if (el.classList.contains("steps")) g = "progressio";
+      else if (el.matches("h4.sub")){
+        var nx = el.nextElementSibling;
+        if (nx && nx.classList.contains("errors")) g = "errors";
+        else if (nx && nx.classList.contains("steps")) g = "progressio";
+      }
+      groups[g].push(el);
+    });
+    var bar = document.createElement("div");
+    bar.className = "subtabs"; bar.setAttribute("role","tablist"); bar.setAttribute("aria-label","Apartats de " + STROKE_NAME[id]);
+    head.after(bar);
+    var prev = bar;
+    SUBS.forEach(function(s){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "subtab"; b.setAttribute("role","tab"); b.setAttribute("data-sub", s[0]);
+      b.id = "st-" + id + "-" + s[0];
+      var n = s[0]==="errors" ? panel.querySelectorAll(".errors li:not(.head)").length : s[0]==="progressio" ? panel.querySelectorAll(".steps li").length : 0;
+      b.innerHTML = s[1] + (n ? "<small>" + n + "</small>" : "");
+      b.addEventListener("click", function(){ setSub(s[0]); });
+      bar.appendChild(b);
+      var wrap = document.createElement("div");
+      wrap.className = "subpanel"; wrap.setAttribute("data-sub", s[0]); wrap.setAttribute("role","tabpanel"); wrap.setAttribute("aria-labelledby", b.id);
+      groups[s[0]].forEach(function(el){ wrap.appendChild(el); });
+      prev.after(wrap); prev = wrap;
+    });
+  });
+  function setSub(sub){
+    curSub = sub;
+    document.querySelectorAll(".subtab").forEach(function(b){
+      var on = b.getAttribute("data-sub") === sub;
+      b.setAttribute("aria-selected", on ? "true" : "false"); b.tabIndex = on ? 0 : -1;
+    });
+    document.querySelectorAll(".subpanel").forEach(function(p){ p.hidden = p.getAttribute("data-sub") !== sub; });
+  }
+  setSub("tecnica");
+
+  /* --- Apartats dins de Propietats de l'aigua --- */
+  (function(){
+    var sec = $("aigua"), hs = sec.querySelectorAll("h3.aq-h3");
+    var box = document.createElement("div"); box.className = "jump";
+    box.innerHTML = '<span class="label">Apartats</span>';
+    hs.forEach(function(h){
+      var b = document.createElement("button"); b.type = "button"; b.className = "fchip"; b.textContent = h.textContent;
+      b.addEventListener("click", function(){ h.scrollIntoView({behavior:behavior, block:"start"}); });
+      box.appendChild(b);
+    });
+    sec.querySelector(".sec-head").after(box);
+    hs.forEach(function(h){ h.style.scrollMarginTop = "84px"; });
+  })();
+
+  /* --- Anterior / següent --- */
+  sections.forEach(function(s, i){
+    var wraps = s.querySelectorAll(":scope > .wrap"), w = wraps[wraps.length-1], pg = document.createElement("nav");
+    pg.className = "pager"; pg.setAttribute("aria-label","Navegació entre apartats");
+    var h = "";
+    if (i > 0) h += '<a class="pg" href="#' + VIEW_IDS[i-1] + '"><small>Anterior</small><b>' + LABEL[VIEW_IDS[i-1]] + '</b></a>';
+    if (i < sections.length-1) h += '<a class="pg next" href="#' + VIEW_IDS[i+1] + '"><small>' + (i===0 ? "Comença per" : "Següent") + '</small><b>' + LABEL[VIEW_IDS[i+1]] + '</b></a>';
+    pg.innerHTML = h; w.appendChild(pg);
+  });
+
+  /* --- Menú lateral (calaix en mòbil) --- */
+  var side = $("side"), scrim = $("scrim"), menuBtn = $("tb-menu");
+  var mqDrawer = window.matchMedia ? window.matchMedia("(max-width: 999px)") : {matches:false};
+  function syncSide(){ side.inert = !!mqDrawer.matches && !side.classList.contains("open"); }
+  function openDrawer(){ side.classList.add("open"); scrim.hidden = false; menuBtn.setAttribute("aria-expanded","true"); syncSide(); var a = side.querySelector("a"); if (a) a.focus(); }
+  function closeDrawer(){ if (!side.classList.contains("open")) return; side.classList.remove("open"); scrim.hidden = true; menuBtn.setAttribute("aria-expanded","false"); syncSide(); }
+  menuBtn.addEventListener("click", function(){ side.classList.contains("open") ? closeDrawer() : openDrawer(); });
+  scrim.addEventListener("click", closeDrawer);
+  if (mqDrawer.addEventListener) mqDrawer.addEventListener("change", function(){ if (!mqDrawer.matches) closeDrawer(); syncSide(); });
+  syncSide();
+
+  /* --- Vistes (rutes amb #) --- */
+  var curView = null, pending = null;
+  function markNav(key, view){
+    side.querySelectorAll("a").forEach(function(a){
+      if (a.getAttribute("href") === "#" + key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+    document.querySelectorAll(".tabbar a").forEach(function(a){ a.classList.toggle("on", a.getAttribute("data-k") === view); });
+  }
+  function route(){
+    var h = location.hash.slice(1), stroke = null, view = "inici";
+    if (!h) view = "inici";
+    else if (strokes.indexOf(h) > -1){ view = "estils"; stroke = h; }
+    else if (VIEW_IDS.indexOf(h) > -1) view = h;
+    else {
+      var el = document.getElementById(h), sec = el && el.closest("main > section");
+      if (sec){ view = sec.id; if (!pending) pending = {el:el}; }
+    }
+    var changed = view !== curView;
+    sections.forEach(function(s){ s.hidden = s.id !== view; });
+    curView = view;
+    if (stroke) selectStroke(stroke);
+    markNav(stroke || view, view);
+    closeDrawer();
+    if (pending){ var p = pending; pending = null; setTimeout(function(){ reveal(p); }, 30); }
+    else if (stroke && !fromTab){ setTimeout(function(){ $("estils-tabs").scrollIntoView({behavior:"auto", block:"start"}); }, 0); }
+    else if (!fromTab && (changed || !stroke)) window.scrollTo(0, 0);
+    fromTab = false;
+  }
+  function reveal(p){
+    var el = p.el;
+    if (p.game != null){ state.s = "all"; state.o = "all"; refresh(); el = $("joc-" + p.game); }
+    if (!el) return;
+    var sp = el.closest(".subpanel"); if (sp) setSub(sp.getAttribute("data-sub"));
+    el.scrollIntoView({behavior:"auto", block:"center"});
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    setTimeout(function(){ el.classList.remove("flash"); }, 2000);
+  }
+  window.addEventListener("hashchange", route);
+
+  /* --- Índex de cerca --- */
+  function norm(t){ return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’‘]/g, "'"); }
+  function clean(t){ return t.replace(/\s+/g, " ").trim(); }
+  var ITEMS = ".aq-facts li, .principles li, .aq-types li, .aq-list > li, .aq-ben li, .trow:not(.taxis-row), .rules li, .callout, .aq-quote, .prose p, .chips li, .stage, .order li, .cmp tbody tr, .legend li, .phases li, .cols .block, .errors li:not(.head), .steps li, .parts li, .tips li, .sess tbody tr, .safe li, .gloss > div";
+  var INDEX = [];
+  sections.forEach(function(sec){
+    if (sec.id === "inici" || sec.id === "jocs") return;
+    var lastH = "";
+    sec.querySelectorAll("h3, " + ITEMS).forEach(function(el){
+      var isItem = el.matches(ITEMS);
+      if (!isItem){ if (!el.closest(ITEMS) && !el.closest(".tabs")) lastH = clean(el.textContent); return; }
+      if (el.parentElement.closest(ITEMS)) return;
+      var c = el.cloneNode(true);
+      c.querySelectorAll(".stg, .mk-n, .new").forEach(function(x){ x.remove(); });
+      var text = el.matches("tr") ? Array.prototype.map.call(el.cells, function(td){ return clean(td.textContent); }).join(" · ") : clean(c.textContent), tEl = el.matches(".prose p, .aq-quote") ? null : c.querySelector("b, h3, h4, dt, th, .art"), title;
+      if (el.matches("tr")) title = clean(el.cells[0].textContent) + " · " + clean(el.cells[1].textContent);
+      else title = tEl ? clean(tEl.textContent) : "";
+      if (!title || title.length > 90){ title = text.length > 90 ? text.slice(0, 88) + "…" : text; }
+      var panel = el.closest(".panel"), sp = el.closest(".subpanel"), path = LABEL[sec.id];
+      if (panel){ path = STROKE_NAME[panel.id] + " · " + (sp ? sp.previousElementSibling && sp.closest(".panel").querySelector('.subtab[data-sub="' + sp.getAttribute("data-sub") + '"]').firstChild.textContent : "Tècnica"); }
+      else if (lastH && sec.id !== "estils") path += " · " + lastH;
+      INDEX.push({t:title, txt:text, n:norm(title + " " + text), nt:norm(title), path:path, el:el});
+    });
+  });
+  GAMES.forEach(function(gm, i){
+    var ages = gm.s.map(function(s){ return STAGES[s]; }).join(", ") + " anys";
+    var txt = gm.c + " Material: " + gm.m + " Variants: " + gm.v + " Clau: " + gm.k + " " + gm.o.map(function(o){ return OBJ[o]; }).join(" ") + " " + ages;
+    INDEX.push({t:gm.n, txt:gm.c, n:norm(gm.n + " joc " + txt), nt:norm(gm.n), path:"Banc de jocs · " + ages, game:i});
+  });
+
+  function terms(q){ return norm(q).split(/[\s,.;:]+/).filter(function(w){ return w.length > 1; }); }
+  function search(q){
+    var ts = terms(q); if (!ts.length) return [];
+    var out = [];
+    INDEX.forEach(function(it, i){
+      for (var k = 0; k < ts.length; k++) if (it.n.indexOf(ts[k]) < 0) return;
+      var sc = 0;
+      ts.forEach(function(w){ if (it.nt.indexOf(w) > -1) sc += 3; if (it.nt.indexOf(w) === 0) sc += 2; sc += 1; });
+      if (it.game != null) sc += 1;
+      out.push({it:it, sc:sc, i:i});
+    });
+    out.sort(function(a, b){ return b.sc - a.sc || a.i - b.i; });
+    return out.map(function(o){ return o.it; });
+  }
+  function hl(text, ts){
+    var n = norm(text), marks = [];
+    ts.forEach(function(w){ var p = n.indexOf(w); while (p > -1){ marks.push([p, p + w.length]); p = n.indexOf(w, p + w.length); } });
+    if (!marks.length || n.length !== text.length) return esc(text);
+    marks.sort(function(a, b){ return a[0] - b[0]; });
+    var res = "", last = 0;
+    marks.forEach(function(m){ if (m[0] < last) return; res += esc(text.slice(last, m[0])) + "<mark>" + esc(text.slice(m[0], m[1])) + "</mark>"; last = m[1]; });
+    return res + esc(text.slice(last));
+  }
+  function snippet(it, ts){
+    if (it.txt === it.t || it.t.indexOf(it.txt) === 0) return "";
+    var t = it.txt, n = norm(t), p = -1;
+    ts.forEach(function(w){ var q = n.indexOf(w); if (q > -1 && (p < 0 || q < p)) p = q; });
+    var start = p > 60 ? p - 50 : 0, s = t.slice(start, start + 170);
+    return (start ? "…" : "") + s + (start + 170 < t.length ? "…" : "");
+  }
+  var lastResults = {};
+  function render(q, list, max, box){
+    var ts = terms(q), rs = search(q);
+    lastResults[box.id] = rs;
+    if (!ts.length){ box.innerHTML = ""; return rs; }
+    var h = rs.slice(0, max).map(function(it, i){
+      var sn = snippet(it, ts);
+      return '<li><a href="#" data-i="' + i + '"><span class="rp">' + esc(it.path) + '</span><span class="rt">' + hl(it.t, ts) + '</span>' + (sn ? '<span class="rs">' + hl(sn, ts) + '</span>' : "") + '</a></li>';
+    }).join("");
+    if (!rs.length) h = '<li class="rs" style="padding:10px 12px">Cap resultat per a «' + esc(q) + '». Prova amb una altra paraula.</li>';
+    if (list && rs.length > max) h += '<li><button type="button" class="more">Mostra els ' + rs.length + ' resultats</button></li>';
+    box.innerHTML = h;
+    return rs;
+  }
+  function goTo(it){
+    closeSearch();
+    var hash;
+    if (it.game != null){ hash = "jocs"; pending = {game:it.game}; }
+    else { var panel = it.el.closest(".panel"), sec = it.el.closest("main > section"); hash = panel ? panel.id : sec.id; pending = {el:it.el}; }
+    if (location.hash.slice(1) === hash) route(); else location.hash = hash;
+  }
+  function bindResults(box){
+    box.addEventListener("click", function(e){
+      var a = e.target.closest("a[data-i]");
+      if (a){ e.preventDefault(); goTo(lastResults[box.id][+a.getAttribute("data-i")]); return; }
+      if (e.target.closest("button.more")) openSearch($("qh").value);
+    });
+  }
+
+  /* Cerca de la pàgina d'inici */
+  var qh = $("qh"), qhRes = $("qh-res");
+  bindResults(qhRes);
+  qh.addEventListener("input", function(){ render(qh.value, true, 6, qhRes); });
+  qh.addEventListener("keydown", function(e){
+    if (e.key === "Enter"){ var rs = lastResults["qh-res"] || []; if (rs.length){ e.preventDefault(); goTo(rs[0]); } }
+  });
+
+  /* Finestra de cerca */
+  var sov = $("sov"), q = $("q"), qRes = $("q-res"), qCount = $("q-count"), lastFocus = null, sel = -1;
+  var SUGG = ["patada de braça", "flotació", "taurons", "xoc pel fred", "fletxa", "respiració", "peus en punta", "15 m"];
+  bindResults(qRes);
+  function paintSugg(){
+    qCount.textContent = "Escriu una o més paraules. Per exemple:";
+    qRes.innerHTML = '<li class="sugg">' + SUGG.map(function(s){ return '<button type="button" class="fchip" data-s="' + s + '">' + s + '</button>'; }).join("") + '</li>';
+  }
+  qRes.addEventListener("click", function(e){ var b = e.target.closest("[data-s]"); if (b){ q.value = b.getAttribute("data-s"); doSearch(); q.focus(); } });
+  function doSearch(){
+    sel = -1;
+    if (!terms(q.value).length){ paintSugg(); return; }
+    var rs = render(q.value, false, 40, qRes);
+    qCount.textContent = rs.length ? (rs.length === 1 ? "1 resultat" : rs.length + " resultats") + (rs.length > 40 ? ", es mostren els 40 primers." : ".") : "";
+  }
+  function openSearch(text){
+    lastFocus = document.activeElement;
+    sov.hidden = false; document.body.style.overflow = "hidden";
+    q.value = text || ""; doSearch(); q.focus();
+  }
+  function closeSearch(){
+    if (sov.hidden) return;
+    sov.hidden = true; document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  q.addEventListener("input", doSearch);
+  q.addEventListener("keydown", function(e){
+    var links = qRes.querySelectorAll("a[data-i]");
+    if (e.key === "ArrowDown" || e.key === "ArrowUp"){
+      if (!links.length) return;
+      e.preventDefault();
+      sel = e.key === "ArrowDown" ? Math.min(sel + 1, links.length - 1) : Math.max(sel - 1, 0);
+      links.forEach(function(a, i){ a.classList.toggle("on", i === sel); });
+      links[sel].scrollIntoView({block:"nearest"});
+    } else if (e.key === "Enter"){
+      var rs = lastResults["q-res"] || [];
+      if (rs.length){ e.preventDefault(); goTo(rs[Math.max(sel, 0)]); }
+    }
+  });
+  $("sclose").addEventListener("click", closeSearch);
+  sov.addEventListener("click", function(e){ if (e.target === sov) closeSearch(); });
+  $("q-trigger").addEventListener("click", function(){ openSearch(""); });
+  $("tb-search").addEventListener("click", function(){ closeDrawer(); openSearch(""); });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape"){ closeSearch(); closeDrawer(); return; }
+    var t = e.target, typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
+    if (e.key === "/" && !typing && sov.hidden){ e.preventDefault(); openSearch(""); }
+  });
+
+  route();
+})();
+</script>
+
+</body></html>
