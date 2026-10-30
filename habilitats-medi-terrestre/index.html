@@ -1,0 +1,2088 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Habilitats al medi terrestre</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Habilitats motrius bàsiques al medi terrestre: tècnica, progressions, jocs i fonaments per a infants de 3 a 12 anys.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap">
+<style>
+/* Layout: una piscina vista des de dalt. Les seccions avancen com carrers separats per surades; a l'inici, una piscina de quatre carrers, un per estil. */
+:root{
+  --bg:#F1F6F7; --surface:#FFFFFF; --surface-2:#E6EFF2; --ink:#12303F; --muted:#4F6C7B; --line:#C9DAE0;
+  --water:#1F7398; --water-strong:#155A78; --water-soft:#D4E9F1; --on-water:#FFFFFF;
+  --rope:#E0A126; --rope-soft:#F6E5BC; --rope-ink:#33250A;
+  --ok:#23775B; --ok-soft:#DBEEE6; --bad:#B0432C; --bad-soft:#F5E1DB;
+  --hot:#C2562B; --hot-soft:#F7E0D4; --cold:#2F6FB3; --cold-soft:#DCE8F6;
+  --e1:#2E8C78; --e1-soft:#D8EEE8; --e2:#2272A3; --e2-soft:#D6E8F3; --e3:#4A4F9C; --e3-soft:#E1E2F3;
+  --pool:#BFE1EC; --tile:#FFFFFF; --tile-op:.45; --lane-mark:#1C4558; --deck:#E2EBEE;
+  --fig:#1D4458; --fig-far:#86A8B7;
+  --shadow:0 1px 2px rgba(18,48,63,.06), 0 6px 20px rgba(18,48,63,.06);
+  --font-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --font-body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-data:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1A21; --surface:#122631; --surface-2:#18323F; --ink:#E2EDF1; --muted:#9AB3BF; --line:#27424F;
+    --water:#5DB0D4; --water-strong:#8CCAE5; --water-soft:#163B4B; --on-water:#06202B;
+    --rope:#E8B24A; --rope-soft:#3B3017; --rope-ink:#1E1503;
+    --ok:#6CCBA6; --ok-soft:#173A2E; --bad:#EE8F77; --bad-soft:#3A2019;
+    --hot:#F09A73; --hot-soft:#3D2418; --cold:#7FB4EA; --cold-soft:#18304A;
+    --e1:#5EC2AA; --e1-soft:#173C34; --e2:#5DAAD8; --e2-soft:#163447; --e3:#A3A7EC; --e3-soft:#26294B;
+    --pool:#154559; --tile:#FFFFFF; --tile-op:.07; --lane-mark:#06161D; --deck:#18323F;
+    --fig:#D8E9F0; --fig-far:#6D91A2;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1A21; --surface:#122631; --surface-2:#18323F; --ink:#E2EDF1; --muted:#9AB3BF; --line:#27424F;
+  --water:#5DB0D4; --water-strong:#8CCAE5; --water-soft:#163B4B; --on-water:#06202B;
+  --rope:#E8B24A; --rope-soft:#3B3017; --rope-ink:#1E1503;
+  --ok:#6CCBA6; --ok-soft:#173A2E; --bad:#EE8F77; --bad-soft:#3A2019;
+  --hot:#F09A73; --hot-soft:#3D2418; --cold:#7FB4EA; --cold-soft:#18304A;
+  --e1:#5EC2AA; --e1-soft:#173C34; --e2:#5DAAD8; --e2-soft:#163447; --e3:#A3A7EC; --e3-soft:#26294B;
+  --pool:#154559; --tile:#FFFFFF; --tile-op:.07; --lane-mark:#06161D; --deck:#18323F;
+  --fig:#D8E9F0; --fig-far:#6D91A2;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--water)}
+a:hover{color:var(--water-strong)}
+:focus-visible{outline:3px solid var(--rope);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;text-wrap:balance;margin:0;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.label{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.82rem;color:var(--muted)}
+.prose{max-width:68ch}
+.prose p+p{margin-top:.8em}
+.muted{color:var(--muted)}
+.comp-grid>*,.sess-grid>*,.fig-row>*,.cols>*,.hero .wrap>*{min-width:0}
+.src{font-size:.85rem;color:var(--muted);margin-top:.9rem}
+.num{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+
+/* Capçalera */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:58px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:9px}
+.brand svg{flex:none}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;min-width:0;margin-left:auto;padding-block:8px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--font-data);font-weight:600;font-size:.95rem;letter-spacing:.03em;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav a.on{color:var(--ink);background:var(--water-soft)}
+@media (max-width:720px){.top .wrap{flex-wrap:wrap;gap:0;padding-block:6px}.brand{padding-top:4px}.nav{margin-left:0;width:100%;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:40px}}
+
+/* Surada (separador) */
+.rope{height:6px;border-radius:3px;margin:0;border:0;
+  background:
+    linear-gradient(90deg,var(--rope) 0 12%,transparent 12% 88%,var(--rope) 88%),
+    repeating-linear-gradient(90deg,var(--water) 0 14px,var(--surface) 14px 28px);}
+
+/* Inici */
+.hero{padding-block:48px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.4rem);letter-spacing:-.025em;margin-top:.4rem}
+.hero .lede{font-size:1.2rem;margin-top:1.1rem;max-width:34ch}
+.hero .meta{margin-top:1rem;font-size:.95rem;color:var(--muted);max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:1rem;padding:11px 18px;border-radius:999px;text-decoration:none;border:1.5px solid var(--water);color:var(--water);background:transparent}
+.btn.primary{background:var(--water);color:var(--on-water)}
+.btn:hover{background:var(--water-strong);border-color:var(--water-strong);color:var(--on-water)}
+.pool-box{min-width:0}
+.pool{width:100%;height:auto;display:block}
+.pool .lane-hit{fill:var(--water);opacity:0;transition:opacity .2s}
+.pool a:hover .lane-hit,.pool a:focus-visible .lane-hit{opacity:.16}
+.pool a{outline:none}
+.pool a:focus-visible .lane-label{text-decoration:underline}
+.pool .lane-label{font-family:var(--font-display);font-weight:700;font-size:17px;fill:var(--ink)}
+.pool .blk text,.pool .tick{font-family:var(--font-data);font-weight:600;font-size:13px}
+.pool .blk text{fill:var(--ink);text-anchor:middle}
+.pool .tick{fill:var(--muted);text-anchor:middle}
+.pool .glyph path,.pool .glyph line,.pool .glyph polyline{stroke:var(--fig);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.pool .glyph ellipse{fill:var(--fig)}
+.pool .glyph circle{fill:var(--rope)}
+.pool .sw{animation:drift 7s ease-in-out infinite alternate}
+.pool .sw.b{animation-duration:9s;animation-delay:-3s}
+.pool .sw.c{animation-duration:11s;animation-delay:-5s}
+.pool .sw.d{animation-duration:8s;animation-delay:-1s}
+@keyframes drift{from{transform:translateX(-28px)}to{transform:translateX(46px)}}
+@media (prefers-reduced-motion: reduce){.pool .sw{animation:none}}
+.pool-cap{font-size:.88rem;color:var(--muted);margin-top:.7rem}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:28px}.hero{padding-block:32px 40px}}
+
+/* Seccions */
+section{scroll-margin-top:78px}
+.sec{padding-block:64px}
+.sec-head{display:grid;gap:.55rem;margin-bottom:2rem}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.55rem)}
+.sec-head p{max-width:66ch;color:var(--muted);font-size:1.08rem}
+.alt{background:var(--surface)}
+@media (max-width:600px){.sec{padding-block:44px}}
+
+/* Competència */
+.comp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}
+@media (max-width:860px){.comp-grid{grid-template-columns:1fr}}
+.callout{border-radius:var(--radius);background:var(--water-soft);padding:20px 22px;margin-top:1.4rem}
+.callout h3{font-size:1.1rem;margin-bottom:.4rem}
+.comp-groups{display:grid;gap:18px}
+.comp-group h3{font-family:var(--font-data);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:.55rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.95rem}
+.alt .chips li{background:var(--bg)}
+
+/* Etapes */
+.stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:960px){.stages{grid-template-columns:1fr}}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 24px;display:grid;gap:14px;align-content:start;position:relative;overflow:hidden}
+.stage::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:var(--c)}
+.stage.s1{--c:var(--e1)} .stage.s2{--c:var(--e2)} .stage.s3{--c:var(--e3)}
+.stage-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.stage-age{font-family:var(--font-data);font-weight:600;font-size:2.6rem;line-height:1;color:var(--c);font-variant-numeric:tabular-nums}
+.stage-age small{font-size:1rem;margin-left:4px;color:var(--muted)}
+.stage h3{font-size:1.25rem}
+.stage h4{font-family:var(--font-data);font-weight:600;font-size:.86rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:.3rem}
+.stage ul{margin:0;padding-left:1.1rem;display:grid;gap:4px;font-size:.98rem}
+.stage .goal{font-size:1rem}
+.checks{list-style:none;padding:0!important}
+.checks li{position:relative;padding-left:24px}
+.checks li::before{content:"";position:absolute;left:2px;top:.42em;width:12px;height:12px;border-radius:3px;border:2px solid var(--c)}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 26px;margin-top:2.4rem;list-style:none;padding:0}
+@media (max-width:860px){.principles{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.principles{grid-template-columns:1fr}}
+.principles li{border-top:2px solid var(--line);padding-top:12px}
+.principles b{display:block;font-family:var(--font-display);font-size:1.05rem;margin-bottom:.25rem}
+.principles span{font-size:.97rem;color:var(--muted)}
+
+/* Estils */
+.order{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0 0 2rem}
+@media (max-width:700px){.order{grid-template-columns:1fr 1fr}}
+.order li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.order .num{font-size:1.5rem;font-weight:600;color:var(--water);line-height:1}
+.order b{display:block;font-family:var(--font-display);margin-top:4px}
+.order span{font-size:.9rem;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+thead th{font-family:var(--font-display);font-size:1rem;background:var(--surface-2)}
+thead th a{color:var(--ink);text-decoration-color:var(--water);text-underline-offset:3px}
+tbody th{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted);white-space:nowrap}
+.cmp{min-width:760px}
+.cmp td{min-width:150px}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:2.6rem;padding:6px;background:var(--surface-2);border-radius:16px;width:fit-content;max-width:100%}
+.tab{appearance:none;border:0;background:transparent;color:var(--ink);font-family:var(--font-display);font-weight:700;font-size:1.05rem;padding:10px 18px;border-radius:11px;cursor:pointer;display:grid;text-align:left;line-height:1.15}
+.tab small{font-family:var(--font-data);font-weight:500;font-size:.8rem;letter-spacing:.04em;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--surface);box-shadow:var(--shadow)}
+.tab[aria-selected="true"] small{color:var(--water)}
+@media (max-width:560px){.tabs{display:grid;grid-template-columns:1fr 1fr;width:100%}}
+.panel{margin-top:22px;scroll-margin-top:84px}
+.panel-head{display:grid;gap:.5rem;margin-bottom:1.4rem}
+.panel-head h3{font-size:clamp(1.7rem,3.2vw,2.2rem)}
+.tagline{font-family:var(--font-data);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--water);font-size:.92rem}
+.fig-row{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+@media (max-width:900px){.fig-row{grid-template-columns:1fr}}
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px;min-width:0}
+.figure svg{display:block;width:100%;height:auto}
+.figcap{font-size:.85rem;color:var(--muted);padding:6px 6px 2px}
+.fig .limb{fill:none;stroke:var(--fig);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.fig .limb.far{stroke:var(--fig-far)}
+.fig .torso{fill:none;stroke:var(--fig);stroke-width:19;stroke-linecap:round}
+.fig .head{fill:var(--fig)}
+.fig .cap{fill:var(--rope)}
+.fig .wbg{fill:var(--water-soft)}
+.fig .wover{fill:var(--water);opacity:.14}
+.fig .surface{fill:none;stroke:var(--water);stroke-width:2.5}
+.fig .guide{fill:none;stroke:var(--water);stroke-width:2;stroke-dasharray:4 6;opacity:.8}
+.fig .sep{stroke:var(--line);stroke-width:1.5;stroke-dasharray:3 5}
+.mk circle{fill:var(--rope)}
+.mk text{fill:var(--rope-ink);font-family:var(--font-data);font-weight:600;font-size:15px;text-anchor:middle;dominant-baseline:central}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.legend li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start;font-size:.98rem}
+.mk-n{width:24px;height:24px;border-radius:50%;background:var(--rope);color:var(--rope-ink);font-family:var(--font-data);font-weight:600;display:grid;place-items:center;font-size:.9rem;margin-top:1px}
+.kick-caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:4px 6px 2px;font-size:.82rem;color:var(--muted);text-align:center}
+.kick-caps b{display:block;font-family:var(--font-data);color:var(--ink);font-size:.9rem}
+
+.phases{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:ph;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.phases li{padding:14px 16px;border-right:1px solid var(--line);counter-increment:ph;font-size:.93rem}
+.phases li:last-child{border-right:0}
+.phases li b{display:block;font-family:var(--font-display);font-size:1rem;margin-bottom:.25rem}
+.phases li b::before{content:counter(ph);font-family:var(--font-data);color:var(--water);margin-right:8px;font-size:1.05rem}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.phases li{border-right:0;border-bottom:1px solid var(--line)}.phases li:last-child{border-bottom:0}}
+.phase-note{font-size:.85rem;color:var(--muted);margin-top:.5rem}
+
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
+@media (max-width:760px){.cols{grid-template-columns:1fr}}
+.block h4{font-size:1.1rem;margin-bottom:.45rem}
+.block p{font-size:.98rem}
+
+.rules{background:var(--rope-soft);border-radius:var(--radius);padding:18px 20px;margin-top:22px}
+.rules h4{font-size:1.1rem}
+.rules .label{color:var(--ink);opacity:.8}
+.rules ul{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:8px}
+.rules li{display:grid;grid-template-columns:76px 1fr;gap:10px;font-size:.96rem}
+.art{font-family:var(--font-data);font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink);white-space:nowrap}
+.new{display:inline-block;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;background:var(--water);color:var(--on-water);border-radius:4px;padding:0 6px;margin-right:4px}
+@media (max-width:480px){.rules li{grid-template-columns:1fr;gap:0}}
+
+.sub{font-size:1.25rem;margin:34px 0 12px}
+.errors{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.errors li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px;padding:13px 18px;border-bottom:1px solid var(--line)}
+.errors li:last-child{border-bottom:0}
+.errors .what b{display:block;font-weight:700}
+.errors .what span{font-size:.9rem;color:var(--muted)}
+.errors .fix{font-size:.96rem;padding-left:16px;border-left:3px solid var(--ok)}
+.errors .head{background:var(--surface-2);padding-block:8px}
+.errors .head span{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--muted)}
+@media (max-width:640px){.errors li{grid-template-columns:1fr;gap:6px}.errors .head{display:none}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);counter-increment:st;align-items:start}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(st);font-family:var(--font-data);font-weight:600;font-size:1.35rem;color:var(--water);line-height:1.2;text-align:right;font-variant-numeric:tabular-nums}
+.steps .stg{margin-right:8px}
+
+.stg{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-data);font-weight:600;font-size:.82rem;letter-spacing:.03em;padding:1px 9px 1px 7px;border-radius:999px;color:var(--ink);background:var(--c-soft);white-space:nowrap;vertical-align:1px;font-variant-numeric:tabular-nums}
+.stg::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.stg.s1{--c:var(--e1);--c-soft:var(--e1-soft)} .stg.s2{--c:var(--e2);--c-soft:var(--e2-soft)} .stg.s3{--c:var(--e3);--c-soft:var(--e3-soft)}
+
+/* Jocs */
+.filters{display:grid;gap:12px;margin-bottom:22px}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.frow .label{min-width:72px}
+.fchip{appearance:none;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--font-body);font-size:.93rem;padding:6px 13px;border-radius:999px;cursor:pointer}
+.fchip:hover{border-color:var(--water)}
+.fchip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.count{font-size:.92rem;color:var(--muted)}
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.game{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 20px;display:grid;gap:9px;align-content:start}
+.game h3{font-size:1.2rem}
+.game-tags{display:flex;flex-wrap:wrap;gap:6px}
+.obj{font-family:var(--font-data);font-weight:500;font-size:.82rem;letter-spacing:.03em;padding:1px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+.game p{font-size:.95rem}
+.game .lbl{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--muted);margin-right:6px}
+.game .key{border-top:1px dashed var(--line);padding-top:9px}
+.empty{padding:28px;border:1.5px dashed var(--line);border-radius:var(--radius);text-align:center;color:var(--muted)}
+
+/* Sessió */
+.sess-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:30px;align-items:start}
+@media (max-width:900px){.sess-grid{grid-template-columns:minmax(0,1fr)}}
+.parts{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:pt}
+.parts li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;counter-increment:pt}
+.alt .parts li{background:var(--bg)}
+.parts b{font-family:var(--font-display);font-size:1.05rem}
+.parts b::before{content:counter(pt) ".";font-family:var(--font-data);color:var(--water);margin-right:8px}
+.parts p{font-size:.95rem;margin-top:.2rem}
+.tips{margin:22px 0 0;padding-left:1.1rem;display:grid;gap:6px;font-size:.97rem}
+.ex-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-bottom:10px}
+.ex-head h3{font-size:1.25rem}
+.sess td:first-child{white-space:nowrap;font-family:var(--font-data);font-weight:600;font-variant-numeric:tabular-nums;color:var(--water)}
+.sess td:last-child{color:var(--muted);font-size:.9rem}
+.sess{min-width:560px}
+
+/* Seguretat */
+.safe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}
+@media (max-width:900px){.safe{grid-template-columns:1fr 1fr}}
+@media (max-width:580px){.safe{grid-template-columns:1fr}}
+.safe li{border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 20px;background:var(--surface)}
+.alt .safe li{background:var(--bg)}
+.safe h3{font-size:1.1rem;margin-bottom:.35rem}
+.safe p{font-size:.96rem}
+
+/* Vocabulari */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;margin:0}
+@media (max-width:760px){.gloss{grid-template-columns:1fr}}
+.gloss div{padding:12px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.gloss dt{font-family:var(--font-display);font-weight:700;font-size:1.05rem}
+.gloss dt span{font-family:var(--font-data);font-weight:500;font-size:.9rem;color:var(--muted);margin-left:8px;letter-spacing:.02em}
+.gloss dd{margin:.15rem 0 0;font-size:.96rem}
+
+/* Fonts */
+.refs{margin:0;padding-left:1.3rem;display:grid;gap:9px;font-size:.95rem;max-width:90ch}
+.refs li::marker{font-family:var(--font-data);color:var(--muted)}
+.refs a{overflow-wrap:anywhere}
+.refs .note{color:var(--muted)}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+
+/* Propietats de l'aigua */
+.aq-facts{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 30px}
+@media (max-width:860px){.aq-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.aq-facts{grid-template-columns:1fr}}
+.aq-facts li{border-top:2px solid var(--water);padding-top:12px;display:grid;gap:4px;align-content:start}
+.aq-n{font-family:var(--font-data);font-weight:600;font-size:2.1rem;line-height:1;color:var(--water);font-variant-numeric:tabular-nums}
+.aq-facts b{font-family:var(--font-display);font-size:1.05rem}
+.aq-facts li>span:last-child{font-size:.95rem;color:var(--muted)}
+.aq-h3{font-size:clamp(1.45rem,2.8vw,1.85rem);margin:3.2rem 0 1rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.aq-h4{font-size:1.15rem;margin:0 0 .65rem}
+.aq-first{margin-top:0}
+.aq-mt{margin-top:1.8rem}
+.aq-quote{margin:0 0 1.2rem;padding:4px 0 4px 18px;border-left:4px solid var(--water);max-width:64ch}
+.aq-quote p{font-size:1.1rem;font-style:italic}
+.aq-quote cite{display:block;margin-top:.35rem;font-style:normal;font-family:var(--font-data);font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-size:.82rem;color:var(--muted)}
+.aq-fig{max-width:640px;margin:1.4rem 0 0}
+.caps3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.aq-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start;margin-top:1.8rem}
+@media (max-width:900px){.aq-split{grid-template-columns:minmax(0,1fr)}}
+.aq-list{margin:0;padding-left:1.1rem;display:grid;gap:7px;font-size:.98rem}
+.aq-list.pro li::marker{color:var(--ok)}
+.aq-list.con li::marker{color:var(--bad)}
+.aq-legend{margin-top:14px}
+.aq-types{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.aq-types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.aq-types{grid-template-columns:1fr}}
+.aq-types li{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--surface);display:grid;gap:3px;align-content:start;font-size:.93rem}
+.aq-types b{font-family:var(--font-display);font-size:1rem}
+.aq-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin-top:1.2rem}
+@media (max-width:760px){.aq-two{grid-template-columns:1fr}}
+.aq-vel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px 20px;display:grid;gap:12px;align-content:start}
+.aq-vel p{font-size:.95rem}
+.aq-vel input[type="range"]{width:100%;accent-color:var(--water);margin:0}
+.aq-out{display:flex;flex-wrap:wrap;gap:30px}
+.aq-out .num{display:block;font-size:2.2rem;font-weight:600;line-height:1;color:var(--ink)}
+.aq-out small{font-family:var(--font-data);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--muted)}
+.aq-bars{display:grid;gap:8px}
+.aq-bar{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px;align-items:center;font-size:.85rem;color:var(--muted)}
+.aq-bar .trk{display:block;height:14px;border-radius:7px;background:var(--surface-2);overflow:hidden}
+.aq-bar i{display:block;height:100%;border-radius:7px;background:var(--water);transition:width .2s ease}
+.aq-bar.r i{background:var(--hot)}
+@media (prefers-reduced-motion: reduce){.aq-bar i{transition:none}}
+.aq-note{font-size:.85rem;color:var(--muted)}
+.tscale{display:grid;gap:10px;margin-top:1.6rem}
+.trow{display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);gap:18px;align-items:center}
+.tlab b{display:block;font-size:.96rem}
+.tlab span{font-size:.84rem;color:var(--muted)}
+.ttrack{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,var(--cold-soft),var(--surface-2) 55%,var(--hot-soft))}
+.ttrack::after{content:"";position:absolute;top:-5px;bottom:-5px;left:calc((37 - 10) / 32 * 100%);border-left:2px dotted var(--ink);opacity:.45}
+.tbar{position:absolute;top:4px;bottom:4px;border-radius:7px;left:calc((var(--a) - 10) / 32 * 100%);width:calc((var(--b) - var(--a)) / 32 * 100%);background:var(--water)}
+.tbar.cold{background:var(--cold)}
+.tbar.hot{background:var(--hot)}
+.tmax{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--water);border:3px solid var(--surface);left:calc((var(--a) - 10) / 32 * 100%)}
+.tmax::before{content:"";position:absolute;right:100%;top:50%;width:46px;height:4px;margin-top:-2px;background:linear-gradient(90deg,transparent,var(--water))}
+.taxis{position:relative;height:18px}
+.taxis span{position:absolute;left:calc((var(--a) - 10) / 32 * 100%);transform:translateX(-50%);font-family:var(--font-data);font-weight:600;font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:640px){.trow{grid-template-columns:minmax(0,1fr);gap:4px}.taxis-row>div:first-child{display:none}}
+.aq-tc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:1.8rem}
+@media (max-width:760px){.aq-tc{grid-template-columns:1fr}}
+.aq-t{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:var(--radius);padding:18px 20px 20px;display:grid;gap:8px;align-content:start}
+.aq-t.hot{--c:var(--hot)}
+.aq-t.cold{--c:var(--cold)}
+.aq-t h4{font-size:1.25rem}
+.aq-sub{font-family:var(--font-data);font-weight:600;font-size:.98rem;color:var(--c)}
+.aq-t .lbl{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--muted);margin-top:6px}
+.aq-norm li{grid-template-columns:136px minmax(0,1fr)}
+@media (max-width:480px){.aq-norm li{grid-template-columns:1fr}}
+.aq-ben{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.aq-ben{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.aq-ben{grid-template-columns:1fr}}
+.aq-ben li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+.aq-ben h4{font-size:1.12rem}
+.aq-ben p{font-size:.95rem}
+.aq-ben .ev{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:.86rem;color:var(--muted)}
+.aq-ben .ev b{font-family:var(--font-data);font-weight:600;font-size:1.06rem;color:var(--water);font-variant-numeric:tabular-nums}
+.fig .floor{stroke:var(--muted);stroke-width:2}
+.fig .pct{font-family:var(--font-data);font-weight:600;font-size:24px;fill:var(--ink);text-anchor:middle}
+.fig .arl{fill:none;stroke-width:3.5;stroke-linecap:round}
+.fig .arl.up{stroke:var(--water)}
+.fig .arl.dn{stroke:var(--hot)}
+.fig .arh.up{fill:var(--water)}
+.fig .arh.dn{fill:var(--hot)}
+.fig .pt{fill:var(--surface);stroke-width:3}
+.fig .pt.up{stroke:var(--water)}
+.fig .pt.dn{stroke:var(--hot)}
+.fig .rot{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-dasharray:5 5}
+.fig .rot-h{fill:var(--muted)}
+.fig .dim{fill:none;stroke:var(--ink);stroke-width:1.8}
+.fig .dimx{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:3 4;opacity:.6}
+
+/* Botó de tema */
+.theme-btn{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.theme-btn:hover{border-color:var(--water);color:var(--water)}
+.theme-btn span{display:grid}
+.theme-btn svg{width:20px;height:20px;display:block}
+@media (max-width:720px){.theme-btn{order:2;margin-left:auto;width:36px;height:36px}.nav{order:3}}
+
+/* ===== Estructura d'app: vistes, menú lateral, barra inferior i cercador ===== */
+.top .wrap{max-width:1400px}
+main > hr.rope{display:none}
+.shell{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1400px;margin:0 auto}
+main{min-width:0}
+.side{position:sticky;top:calc(58px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 58px - env(safe-area-inset-top,0px));overflow-y:auto;padding:22px 14px 32px max(16px,env(safe-area-inset-left,0px));border-right:1px solid var(--line);display:grid;gap:16px;align-content:start}
+.side a{display:block;padding:7px 12px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:.97rem;line-height:1.3}
+.side a:hover{background:var(--surface-2)}
+.side a[aria-current="page"]{background:var(--water-soft);font-weight:700}
+.side a.side-sub{padding-left:24px;font-size:.93rem}
+.side-home{font-family:var(--font-display);font-weight:700}
+.side a.side-mod{font-family:var(--font-data);font-weight:600;font-size:.9rem;letter-spacing:.03em;color:var(--muted);border-bottom:1px solid var(--line);border-radius:9px 9px 0 0;padding-bottom:10px}
+.side a.side-mod:hover{color:var(--water)}
+.side-g{display:grid;gap:2px}
+.side-h{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;color:var(--muted);padding:0 12px 4px}
+.scrim{position:fixed;inset:0;z-index:35;background:rgba(6,20,27,.45)}
+.q-trigger{flex:1;max-width:440px;margin-left:auto;display:flex;align-items:center;gap:10px;height:40px;padding:0 8px 0 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted);font:inherit;font-size:.95rem;cursor:pointer;text-align:left}
+.q-trigger:hover{border-color:var(--water)}
+.q-trigger span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.q-trigger svg,.hs-field svg,.sbox svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.q-trigger kbd{font-family:var(--font-data);font-size:.8rem;border:1px solid var(--line);border-radius:6px;padding:0 7px;color:var(--muted)}
+.tabbar{display:none}
+@media (max-width:999px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .side{position:fixed;inset:0 auto 0 0;z-index:40;width:min(320px,86vw);max-height:none;background:var(--bg);border-right:1px solid var(--line);padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-105%);transition:transform .22s ease;box-shadow:var(--shadow)}
+  .side.open{transform:none}
+  .q-trigger{display:none}
+  .theme-btn{margin-left:auto}
+  .tabbar{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding:4px max(8px,env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+  .tabbar a,.tabbar button{appearance:none;border:0;background:none;display:grid;justify-items:center;gap:2px;padding:6px 2px;border-radius:10px;color:var(--muted);text-decoration:none;font:inherit;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.03em;cursor:pointer}
+  .tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tabbar .on{color:var(--water)}
+  body{padding-bottom:calc(62px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion: reduce){.side{transition:none}}
+
+/* Inici */
+.hsearch{margin-top:1.6rem;display:grid;gap:8px;max-width:520px}
+.hs-field{display:flex;align-items:center;gap:10px;height:52px;padding:0 16px;border:2px solid var(--water);border-radius:14px;background:var(--surface);color:var(--muted)}
+.hs-field:focus-within{box-shadow:0 0 0 4px var(--water-soft)}
+.hs-field input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1.05rem;outline:none}
+.tiles-h{font-size:1.4rem;margin:8px 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.tiles{grid-template-columns:1fr}}
+.tile{display:grid;gap:5px;align-content:start;padding:16px 18px 18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink);text-decoration:none}
+.tile:hover{border-color:var(--water);box-shadow:var(--shadow)}
+.tile b{font-family:var(--font-display);font-size:1.15rem;line-height:1.2}
+.tile>span:last-child{font-size:.92rem;color:var(--muted)}
+.hero{padding-block:40px 48px}
+.hero > .wrap + .wrap{margin-top:36px}
+.hero .wrap.tiles-wrap{display:block}
+
+/* Resultats de cerca */
+.res{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.res:empty{display:none}
+.res a,.res button.more{display:block;width:100%;text-align:left;padding:10px 12px;border-radius:10px;color:var(--ink);text-decoration:none;border:0;background:none;font:inherit;cursor:pointer}
+.res a:hover,.res a.on{background:var(--surface-2)}
+.rp{display:block;font-family:var(--font-data);font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--water)}
+.rt{display:block;font-weight:700}
+.rs{display:block;font-size:.9rem;color:var(--muted)}
+.res mark{background:var(--rope-soft);color:inherit;border-radius:3px;padding:0 1px}
+.res button.more{color:var(--water);font-weight:700}
+.hsearch .res{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:var(--shadow)}
+.sov{position:fixed;inset:0;z-index:50;background:rgba(6,20,27,.5);display:grid;justify-items:center;align-items:start;padding:calc(8vh + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+.sov-panel{width:min(720px,100%);max-height:80vh;display:flex;flex-direction:column;background:var(--bg);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden}
+.sbox{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);color:var(--muted)}
+.sbox input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1.1rem;outline:none}
+.sclose{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;font:inherit;font-size:.88rem;cursor:pointer}
+.sres-wrap{overflow-y:auto;padding:8px}
+.scount{font-size:.88rem;color:var(--muted);padding:4px 12px 8px}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px}
+@media (max-width:600px){.sov{padding:0}.sov-panel{width:100%;height:100%;max-height:none;border-radius:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}
+.flash{animation:flash 1.8s ease-out}
+@keyframes flash{0%,35%{box-shadow:0 0 0 4px var(--rope)}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion: reduce){.flash{animation:none;outline:3px solid var(--rope);outline-offset:3px}}
+
+/* Pestanyes internes de cada estil */
+.subtabs{display:flex;gap:2px;border-bottom:2px solid var(--line);margin:4px 0 22px;overflow-x:auto;scrollbar-width:none}
+.subtabs::-webkit-scrollbar{display:none}
+.subtab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 14px;font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--muted);cursor:pointer;white-space:nowrap}
+.subtab small{font-family:var(--font-data);font-weight:600;font-size:.82rem;margin-left:6px;color:var(--muted)}
+.subtab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--water)}
+.subpanel > h4.sub{display:none}
+.subpanel > .rules{margin-top:0}
+
+/* Apartats i navegació entre vistes */
+.jump{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-.6rem 0 2rem}
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:3.2rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.pg{display:grid;gap:2px;max-width:48%;padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);text-decoration:none}
+.pg:hover{border-color:var(--water)}
+.pg small{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--muted)}
+.pg b{font-family:var(--font-display)}
+.pg.next{margin-left:auto;text-align:right}
+
+/* ===== Medi terrestre: paleta pròpia (pista d'atletisme) ===== */
+:root{
+  --bg:#F3F6F3; --surface:#FFFFFF; --surface-2:#E6EEE7; --ink:#1C2B22; --muted:#56685C; --line:#CBD9CE;
+  --water:#B04A2C; --water-strong:#86361F; --water-soft:#F6E2DA; --on-water:#FFFFFF;
+  --fig:#213A2C; --fig-far:#93AB9B; --track:#C0573A; --mat:#D8E6F2; --grass:#CFE3C8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1913; --surface:#16241B; --surface-2:#1D2F24; --ink:#E2ECE5; --muted:#9AB0A1; --line:#2A3F31;
+    --water:#F0957A; --water-strong:#F7B7A2; --water-soft:#3B2219; --on-water:#2A1008;
+    --fig:#E3EEE7; --fig-far:#6E8A79; --track:#8E3F2A; --mat:#22364A; --grass:#1F3A26;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1913; --surface:#16241B; --surface-2:#1D2F24; --ink:#E2ECE5; --muted:#9AB0A1; --line:#2A3F31;
+  --water:#F0957A; --water-strong:#F7B7A2; --water-soft:#3B2219; --on-water:#2A1008;
+  --fig:#E3EEE7; --fig-far:#6E8A79; --track:#8E3F2A; --mat:#22364A; --grass:#1F3A26;
+}
+
+/* Figures humanes */
+.fg svg{display:block;width:100%;height:auto}
+.fg .limb{fill:none;stroke:var(--fig);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.fg .limb.far{stroke:var(--fig-far)}
+.fg .torso{fill:none;stroke:var(--fig);stroke-width:12;stroke-linecap:round}
+.fg .head{fill:var(--fig)}
+.fg .ball{fill:var(--rope);stroke:var(--surface);stroke-width:1.5}
+.fg .ground{stroke:var(--muted);stroke-width:2}
+.fg .sep{stroke:var(--line);stroke-width:1.5;stroke-dasharray:3 5}
+.fg .beam{fill:var(--surface-2);stroke:var(--muted);stroke-width:1.5}
+.fg .mat{fill:var(--mat)}
+.fg .trackband{fill:var(--track)}
+.fg .grassband{fill:var(--grass)}
+.fg .laneline{stroke:var(--surface);stroke-width:2;stroke-dasharray:12 10;opacity:.8}
+.fg .mk circle{fill:var(--rope)}
+.fg .mk text{fill:var(--rope-ink);font-family:var(--font-data);font-weight:600;font-size:15px;text-anchor:middle;dominant-baseline:central}
+.fg a{outline:none;cursor:pointer}
+.fg a .hit{fill:var(--water);opacity:0;transition:opacity .2s}
+.fg a:hover .hit,.fg a:focus-visible .hit{opacity:.12}
+
+/* Circuit de l'inici */
+.circuit-box{min-width:0}
+.cchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.cchip{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 6px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);text-decoration:none;font-size:.93rem}
+.cchip:hover{border-color:var(--water)}
+.cchip b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--rope);color:var(--rope-ink);font-family:var(--font-data);font-weight:600;font-size:.85rem}
+
+/* Tires de fases */
+.strip{margin:0}
+.ph4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.ph4{grid-template-columns:1fr}}
+.crit{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.crit li{position:relative;padding-left:28px;font-size:.98rem}
+.crit li::before{content:"";position:absolute;left:2px;top:.3em;width:16px;height:16px;border-radius:4px;border:2px solid var(--water)}
+.crit li::after{content:"";position:absolute;left:7px;top:.42em;width:5px;height:9px;border:solid var(--water);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.tech-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:26px;align-items:start;margin-top:22px}
+@media (max-width:900px){.tech-grid{grid-template-columns:minmax(0,1fr)}}
+.kinds{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.kinds li{border-left:3px solid var(--water);padding:2px 0 2px 12px;font-size:.96rem}
+.kinds b{font-family:var(--font-display)}
+
+/* Estadis de desenvolupament */
+.dev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:860px){.dev{grid-template-columns:1fr}}
+.devc{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--c);border-radius:var(--radius);padding:16px 18px 18px;display:grid;gap:8px;align-content:start}
+.devc.d1{--c:var(--fig-far)} .devc.d2{--c:var(--rope)} .devc.d3{--c:var(--water)}
+.devc header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.devc h4{font-size:1.2rem}
+.devc .deva{font-family:var(--font-data);font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.devc ul{margin:0;padding-left:1.1rem;display:grid;gap:5px;font-size:.95rem}
+.dev-note{font-size:.88rem;color:var(--muted);margin-top:12px;max-width:80ch}
+
+/* Línia de temps (fases de Gallahue) */
+.tl{display:grid;gap:10px;margin-top:10px}
+.tl .trow{grid-template-columns:minmax(0,15rem) minmax(0,1fr)}
+.tl .ttrack{background:var(--surface-2)}
+.tl .ttrack::after{display:none}
+.tl .tbar{left:calc(var(--a) / 16 * 100%);width:calc((var(--b) - var(--a)) / 16 * 100%);background:var(--water)}
+.tl .tbar.soft{background:var(--fig-far)}
+.tl .taxis span{left:calc(var(--a) / 16 * 100%)}
+
+/* Piràmide */
+.pyr{display:grid;justify-items:center;gap:6px;margin:6px 0 0}
+.pyr div{padding:10px 14px;border-radius:8px;text-align:center;font-family:var(--font-display);font-weight:700;color:var(--ink);background:var(--c)}
+.pyr .p1{width:42%;--c:var(--rope-soft)} .pyr .p2{width:64%;--c:var(--water-soft)} .pyr .p3{width:86%;--c:var(--e2-soft)}
+.pyr span{display:block;font-family:var(--font-body);font-weight:400;font-size:.85rem;color:var(--muted)}
+
+/* Espiral de Stodden */
+.spiral{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:10px}
+@media (max-width:700px){.spiral{grid-template-columns:1fr}}
+.spiral > div{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;background:var(--surface)}
+.spiral h4{font-size:1.1rem;margin-bottom:8px}
+.spiral ol{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.spiral li{font-size:.95rem;padding-left:22px;position:relative}
+.spiral li + li::before{content:"↓";position:absolute;left:4px;top:-.85em;font-size:.8rem;color:var(--muted)}
+.spiral .up{border-top:5px solid var(--ok)} .spiral .down{border-top:5px solid var(--bad)}
+
+/* Classificació d'esports */
+.classif{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:stretch}
+.classif .ax{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:.8rem;color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center;padding:6px}
+.classif .ax.v{writing-mode:vertical-rl;transform:rotate(180deg)}
+.classif .cell{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.93rem}
+.classif .cell b{display:block;font-family:var(--font-display);margin-bottom:4px}
+@media (max-width:640px){.classif{grid-template-columns:minmax(0,1fr)}.classif .ax{justify-content:flex-start}.classif .ax.v{writing-mode:horizontal-tb;transform:none}.classif .ax.empty{display:none}}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.vs{grid-template-columns:1fr}}
+.vs > div{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;background:var(--surface)}
+.vs h4{font-size:1.1rem;margin-bottom:6px}
+
+/* Variables de la tasca */
+.vt td:first-child{font-weight:700;white-space:nowrap}
+.vt th:nth-child(2),.vt td:nth-child(2){color:var(--e1)}
+.vt th:nth-child(3),.vt td:nth-child(3){color:var(--water)}
+.vt{min-width:560px}
+
+/* Taula d'èmfasi YPD */
+.ypd{min-width:520px}
+.lv{display:inline-block;font-family:var(--font-data);font-weight:600;font-size:.82rem;letter-spacing:.04em;padding:1px 9px;border-radius:999px}
+.lv.h{background:var(--water);color:var(--on-water)}
+.lv.m{background:var(--water-soft);color:var(--ink)}
+.lv.l{background:var(--surface-2);color:var(--muted)}
+.who td:first-child{white-space:nowrap;font-weight:700}
+.who{min-width:620px}
+.stages.st4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1180px){.stages.st4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.stages.st4{grid-template-columns:minmax(0,1fr)}}
+.stage.s4{--c:var(--water)}
+
+[hidden]{display:none!important}
+
+</style>
+<script>
+(function(){ try { var t = localStorage.getItem("terrestre-tema"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+</script>
+<!--BODY-->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inici">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="var(--water)"/><path d="M4 14h14M4 10h14" stroke="var(--surface)" stroke-width="1.6" stroke-dasharray="3 2"/></svg>
+      Medi terrestre
+    </a>
+    <button type="button" class="q-trigger" id="q-trigger" aria-label="Cerca a la web">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      <span>Cerca habilitats, jocs, errors…</span><kbd>/</kbd>
+    </button>
+    <button type="button" class="theme-btn" id="theme-btn" aria-label="Canvia al tema fosc" title="Canvia al tema fosc">
+      <span class="i-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"/></svg></span>
+      <span class="i-sun" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="shell">
+<aside class="side" id="side" aria-label="Seccions">
+  <a class="side-mod" href="../index.html">← Esports Individuals</a>
+  <a class="side-home" href="#inici">Inici</a>
+  <div class="side-g">
+    <div class="side-h">Fonaments</div>
+    <a href="#salut">Activitat física i salut</a>
+    <a href="#habilitats">Habilitats motrius</a>
+    <a href="#alfabetitzacio">Alfabetització física</a>
+    <a href="#etapes">Etapes de desenvolupament</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">Habilitats bàsiques</div>
+    <a href="#hmb">Visió general</a>
+    <a href="#desplacaments" class="side-sub">Desplaçaments</a>
+    <a href="#salts" class="side-sub">Salts</a>
+    <a href="#girs" class="side-sub">Girs</a>
+    <a href="#llancaments" class="side-sub">Llançaments</a>
+    <a href="#recepcions" class="side-sub">Recepcions</a>
+    <a href="#manipulacions" class="side-sub">Bots i colpejos</a>
+    <a href="#equilibri" class="side-sub">Equilibri</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">Condició i esport</div>
+    <a href="#capacitats">Capacitats físiques</a>
+    <a href="#esports">Esports individuals</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">A la pista</div>
+    <a href="#jocs">Banc de jocs</a>
+    <a href="#sessio">Organitzar una sessió</a>
+    <a href="#seguretat">Seguretat</a>
+  </div>
+  <div class="side-g">
+    <div class="side-h">Consulta</div>
+    <a href="#vocabulari">Vocabulari</a>
+    <a href="#fonts">Fonts</a>
+  </div>
+</aside>
+<main id="main">
+
+<!-- ===================== INICI ===================== -->
+<section id="inici" class="hero">
+  <div class="wrap">
+    <div>
+      <div class="label">Mòdul 5 · Esports individuals · CFGS EAS</div>
+      <h1>Habilitats al medi terrestre</h1>
+      <p class="lede">Habilitats motrius bàsiques, alfabetització física i esports individuals, amb progressions i jocs per ensenyar a infants de 3 a 12 anys.</p>
+      <p class="meta">Basat en els apunts del mòdul i ampliat amb fonts oficials: OMS, manuals d’educació física, models de desenvolupament motor i consensos científics.</p>
+      <div class="hsearch">
+        <label class="label" for="qh">Cerca a la web</label>
+        <div class="hs-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+          <input id="qh" type="search" placeholder="Per exemple: salt de peus junts, tombarella, xarranca" autocomplete="off" spellcheck="false">
+        </div>
+        <ul class="res" id="qh-res" aria-live="polite"></ul>
+      </div>
+    </div>
+    <div class="circuit-box">
+      <div class="figure fg" style="padding:6px"><div data-fig="circuit"></div></div>
+      <div class="cchips">
+        <a class="cchip" href="#desplacaments"><b>1</b>Desplaçaments</a>
+        <a class="cchip" href="#salts"><b>2</b>Salts</a>
+        <a class="cchip" href="#girs"><b>3</b>Girs</a>
+        <a class="cchip" href="#llancaments"><b>4</b>Llançaments</a>
+        <a class="cchip" href="#recepcions"><b>5</b>Recepcions</a>
+        <a class="cchip" href="#manipulacions"><b>6</b>Bots i colpejos</a>
+        <a class="cchip" href="#equilibri"><b>7</b>Equilibri</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap tiles-wrap">
+    <h2 class="tiles-h">Què vols consultar?</h2>
+    <div class="tiles">
+      <a class="tile" href="#hmb"><span class="label">Habilitats bàsiques</span><b>Les set habilitats</b><span>Tècnica, desenvolupament, progressió i errors de cada habilitat motriu bàsica.</span></a>
+      <a class="tile" href="#jocs"><span class="label">A la pista</span><b>Banc de jocs</b><span id="tile-jocs">Jocs filtrables per edat i per habilitat.</span></a>
+      <a class="tile" href="#etapes"><span class="label">Fonaments</span><b>Etapes de desenvolupament</b><span>De l’etapa fonamental a l’especialització, i què prioritzar en cada una.</span></a>
+      <a class="tile" href="#alfabetitzacio"><span class="label">Fonaments</span><b>Alfabetització física</b><span>Motivació, confiança, competència i coneixement per moure’s tota la vida.</span></a>
+      <a class="tile" href="#salut"><span class="label">Fonaments</span><b>Activitat física i salut</b><span>Beneficis i recomanacions de l’OMS per edats.</span></a>
+      <a class="tile" href="#capacitats"><span class="label">Condició i esport</span><b>Capacitats físiques</b><span>Força, velocitat, resistència, flexibilitat i ABC en infants i joves.</span></a>
+      <a class="tile" href="#esports"><span class="label">Condició i esport</span><b>Esports individuals</b><span>Característiques, tècnica, tàctica, normativa i taxonomia.</span></a>
+      <a class="tile" href="#sessio"><span class="label">A la pista</span><b>Organitzar una sessió</b><span>Variables per facilitar o complicar una tasca i una sessió d’exemple.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SALUT ===================== -->
+<section id="salut" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments</div>
+      <h2>Activitat física i salut</h2>
+      <p>La pràctica sistemàtica i continuada d’activitat física té un gran impacte en la salut, i convé començar-la des de ben petits. Les habilitats motrius bàsiques són la base de tots els aprenentatges motrius posteriors.</p>
+    </div>
+
+    <h3 class="aq-h3" style="margin-top:0;border-top:0;padding-top:0">Beneficis en infants i adolescents</h3>
+    <ul class="aq-ben">
+      <li><h4>Cos i condició física</h4><p>Millora de la qualitat muscular i de la força, de la capacitat cardiovascular i pulmonar i de l’habilitat motora.</p><p class="ev">Font: apunts del mòdul; OMS (2020).</p></li>
+      <li><h4>Ossos i composició corporal</h4><p>Augment de la quantitat i la densitat mineral òssia, equilibri energètic adequat i prevenció del sobrepès i l’obesitat.</p><p class="ev">Font: apunts del mòdul; OMS (2020).</p></li>
+      <li><h4>Prevenció</h4><p>Menys risc de lesions musculoesquelètiques i de malalties com la diabetis tipus 2, la hipertensió o les malalties cardiovasculars. Millor sistema immunitari.</p><p class="ev">Font: apunts del mòdul.</p></li>
+      <li><h4>Ment i escola</h4><p>Millora del benestar mental i psicològic i del rendiment cognitiu i acadèmic.</p><p class="ev">L’OMS hi inclou la funció executiva i menys símptomes de depressió (OMS, 2020).</p></li>
+      <li><h4>Un problema real</h4><p>La majoria d’adolescents no arriben al mínim recomanat d’activitat física.</p><p class="ev">El <b>81 %</b> dels adolescents d’11 a 17 anys del món era insuficientment actiu el 2016 (Guthold et al., 2020).</p></li>
+      <li><h4>La qualitat també compta</h4><p>Sovint es busca fer prou quantitat d’activitat i es descuida la qualitat del moviment. Millorar-la en les primeres etapes augmenta la competència motriu i, amb ella, la pràctica.</p><p class="ev">Font: apunts del mòdul.</p></li>
+    </ul>
+
+    <h3 class="aq-h3">Recomanacions de l’OMS per edats</h3>
+    <div class="tbl-wrap">
+      <table class="who">
+        <thead><tr><th scope="col">Edat</th><th scope="col">Activitat física</th><th scope="col">Temps assegut i pantalles</th><th scope="col">Son</th></tr></thead>
+        <tbody>
+          <tr><td>Menys d’1 any</td><td>Diversos cops al dia, sobretot joc interactiu a terra. Si encara no es desplaça, almenys 30 minuts panxa avall al llarg del dia.</td><td>No més d’1 hora seguida en cotxet, trona o motxilla. Pantalles: no recomanades.</td><td>12–17 h, segons l’edat</td></tr>
+          <tr><td>1–2 anys</td><td>Almenys 180 minuts al dia d’activitats variades, de qualsevol intensitat.</td><td>No més d’1 hora seguida subjectat. Pantalles: cap a 1 any; com a màxim 1 hora als 2 anys, i millor menys.</td><td>11–14 h</td></tr>
+          <tr><td>3–4 anys</td><td>Almenys 180 minuts al dia, dels quals almenys 60 d’intensitat moderada o vigorosa.</td><td>No més d’1 hora seguida subjectat. Pantalles: com a màxim 1 hora, i millor menys.</td><td>10–13 h</td></tr>
+          <tr><td>5–17 anys</td><td>Una mitjana de 60 minuts al dia d’activitat moderada o vigorosa, sobretot aeròbica. Almenys 3 dies a la setmana, activitats vigoroses i d’enfortiment muscular i ossi.</td><td>Limitar el temps sedentari, especialment el de pantalles recreatives.</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Fonts: OMS (2019), directrius per a infants menors de 5 anys; OMS (2020), directrius sobre activitat física i comportament sedentari.</p>
+
+    <h3 class="aq-h3">Per què importa la competència motriu</h3>
+    <p class="prose">El model de Stodden et al. (2008) explica que, en els primers anys, l’activitat física fa millorar les habilitats; però a partir de la infància mitjana la relació s’inverteix: la competència motriu, i la percepció que l’infant en té, determinen quanta activitat física farà. Robinson et al. (2015) van revisar l’evidència i en van confirmar les relacions principals.</p>
+    <div class="spiral">
+      <div class="up"><h4>Espiral positiva</h4><ol><li>Bona competència motriu</li><li>Se sent capaç</li><li>Participa més i amb més ganes</li><li>Millor condició física</li><li>Pes saludable i hàbits actius per a tota la vida</li></ol></div>
+      <div class="down"><h4>Espiral negativa</h4><ol><li>Poca competència motriu</li><li>Se sent poc capaç i evita l’activitat</li><li>Participa menys</li><li>Pitjor condició física</li><li>Més risc de sobrepès i de sedentarisme</li></ol></div>
+    </div>
+    <p class="src">Fonts: Stodden et al. (2008); Robinson et al. (2015).</p>
+  </div>
+</section>
+
+<!-- ===================== HABILITATS MOTRIUS ===================== -->
+<section id="habilitats" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments</div>
+      <h2>Habilitats motrius</h2>
+      <p>Una habilitat motriu és un acte que té com a objectiu assolir un patró de moviment. Les bàsiques són la base sobre la qual es construeixen les habilitats esportives.</p>
+    </div>
+
+    <h3 class="aq-h3" style="margin-top:0;border-top:0;padding-top:0">Definicions</h3>
+    <div class="aq-two" style="margin-top:0">
+      <div class="prose">
+        <blockquote class="aq-quote"><p>«Tota aquella acció muscular o moviment del cos requerit per a l’execució amb èxit d’un acte desitjat.»</p><cite>Cratty (1983)</cite></blockquote>
+        <blockquote class="aq-quote"><p>«És la facultat de poder fer alguna cosa eficientment.»</p><cite>Delgado (1988)</cite></blockquote>
+      </div>
+      <div class="prose">
+        <blockquote class="aq-quote"><p>«Famílies d’habilitats àmplies, generals, comunes a molts individus i que serveixen per a l’aprenentatge posterior de noves habilitats més complexes, especialitzades i pròpies d’un entorn cultural concret.»</p><cite>Batalla (2000)</cite></blockquote>
+      </div>
+    </div>
+    <p class="src">Definicions recollides als apunts del mòdul i traduïdes al català.</p>
+
+    <h3 class="aq-h3">Classificacions</h3>
+    <ul class="aq-types">
+      <li><b>Batalla (2000)</b><span>Habituals (vida diària), professionals (àmbit laboral) i d’oci o esportives (lleure i esport).</span></li>
+      <li><b>Sánchez Bañuelos (1992)</b><span>Moviments amb el propi cos i moviments en què l’acció principal és l’ús d’objectes, com els llançaments.</span></li>
+      <li><b>Trigueros (1996)</b><span>Bàsiques (desplaçaments, salts, girs, llançaments i recepcions), genèriques (bot, conducció, colpeig, finta, intercepció) i específiques (gestos tècnics esportius).</span></li>
+      <li><b>Gallahue i Ozmun</b><span>Moviments fonamentals de locomoció, de manipulació i d’estabilitat (equilibri i control corporal).</span></li>
+    </ul>
+    <div class="pyr" aria-label="De les habilitats bàsiques a les específiques" style="margin-top:22px">
+      <div class="p1">Específiques<span>Gestos tècnics: salt de llargada, llançament de pes…</span></div>
+      <div class="p2">Genèriques<span>Bot, conducció, colpeig, finta, intercepció</span></div>
+      <div class="p3">Bàsiques<span>Desplaçaments, salts, girs, llançaments i recepcions</span></div>
+    </div>
+    <p class="src">Fonts: apunts del mòdul (Batalla, Sánchez Bañuelos, Trigueros); Gallahue, Ozmun i Goodway (2012).</p>
+
+    <h3 class="aq-h3">Les quatre famílies del medi terrestre</h3>
+    <ul class="principles aq-first">
+      <li><b>Desplaçaments</b><span>Translació del cos per l’espai. Habituals: marxa i carrera. No habituals: actius horitzontals (quadrupèdies i reptacions), actius verticals (trepes) i passius (transports).</span></li>
+      <li><b>Salts</b><span>Acció d’aixecar tot el cos del terra amb un impuls de les cames. Segons la direcció de la força, vertical o horitzontal.</span></li>
+      <li><b>Girs</b><span>Rotacions del cos al voltant dels eixos longitudinal, transversal o anteroposterior, amb una reorientació posterior a l’espai.</span></li>
+      <li><b>Manipulacions</b><span>Relació amb objectes. Amb les mans: bot, llançament, recepció, colpeig, transport. Amb els peus: colpeig, aturada, conducció. Amb el cap o amb estris: colpeig, aturada, conducció.</span></li>
+      <li><b>Equilibri</b><span>Control de la postura, estàtica o en moviment. Gallahue l’agrupa en les habilitats d’estabilitat i és present en totes les altres.</span></li>
+      <li><b>Al medi aquàtic</b><span>Equilibris, flotació i respiració són pròpies de l’aigua; desplaçaments, salts, girs i manipulacions s’adapten des del medi terrestre (Moreno i Gutiérrez, 1998).</span></li>
+    </ul>
+    <p class="src">Fonts: apunts del mòdul (Batalla, 2000); Gallahue, Ozmun i Goodway (2012).</p>
+
+    <h3 class="aq-h3">Les fases del desenvolupament motor</h3>
+    <p class="prose">Gallahue descriu el desenvolupament motor en fases. Les habilitats fonamentals apareixen entre els 2 i els 7 anys, però només arriben al patró madur si hi ha pràctica, instrucció i ànim: molts adults es queden en l’estadi elemental en habilitats com llançar, atrapar o xutar.</p>
+    <div class="tl" role="group" aria-label="Fases del desenvolupament motor de 0 a 16 anys">
+      <div class="trow"><div class="tlab"><b>Fase reflexa</b><span>Fins a l’any · moviments involuntaris</span></div><div class="ttrack"><span class="tbar soft" style="--a:0;--b:1"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Fase rudimentària</b><span>0–2 anys · primers moviments voluntaris</span></div><div class="ttrack"><span class="tbar soft" style="--a:0;--b:2"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Fase fonamental: inicial</b><span>2–3 anys · primers intents, poc coordinats</span></div><div class="ttrack"><span class="tbar" style="--a:2;--b:3"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Fase fonamental: elemental</b><span>3–5 anys · més control i ritme</span></div><div class="ttrack"><span class="tbar" style="--a:3;--b:5"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Fase fonamental: madur</b><span>5–7 anys · eficient i coordinat, amb pràctica</span></div><div class="ttrack"><span class="tbar" style="--a:5;--b:7"></span></div></div>
+      <div class="trow"><div class="tlab"><b>Fase especialitzada</b><span>7 anys o més · transició, aplicació i ús per a tota la vida</span></div><div class="ttrack"><span class="tbar soft" style="--a:7;--b:16"></span></div></div>
+      <div class="trow taxis-row" aria-hidden="true"><div></div><div class="taxis"><span style="--a:0">0</span><span style="--a:2">2</span><span style="--a:4">4</span><span style="--a:6">6</span><span style="--a:8">8</span><span style="--a:10">10</span><span style="--a:12">12</span><span style="--a:14">14 anys</span></div></div>
+    </div>
+    <p class="src">Fonts: Gallahue, Ozmun i Goodway (2012); edats dels estadis fonamentals segons Gallahue i Donnelly (2007), recollides per World Rugby. Les edats són teòriques i suposen pràctica.</p>
+
+    <h3 class="aq-h3">La base perceptivomotriu</h3>
+    <p class="prose">Per sota de les habilitats hi ha unes capacitats que les fan possibles i que es treballen alhora: l’esquema corporal, la lateralitat, l’equilibri, la coordinació (dinàmica general, oculomanual i oculopèdica) i la percepció de l’espai i del temps.</p>
+    <p class="src">Font: Castañer i Camerino (1991).</p>
+  </div>
+</section>
+
+<!-- ===================== ALFABETITZACIÓ ===================== -->
+<section id="alfabetitzacio" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments</div>
+      <h2>Alfabetització física</h2>
+      <p>Igual que s’aprèn a llegir i a escriure, s’aprèn a moure’s amb competència i ganes. L’alfabetització física és la base per mantenir-se actiu tota la vida.</p>
+    </div>
+    <blockquote class="aq-quote"><p>«L’alfabetització física és la motivació, la confiança, la competència física, el coneixement i la comprensió per valorar l’activitat física i responsabilitzar-se de practicar-la tota la vida.»</p><cite>International Physical Literacy Association (2014), a partir de Whitehead</cite></blockquote>
+
+    <h3 class="aq-h3">Els quatre dominis</h3>
+    <p class="prose">El marc australià d’alfabetització física (Sport Australia, 2019) la desplega en quatre dominis i 30 elements. Ajuda a recordar que no n’hi ha prou amb la tècnica: també cal confiança, saber per què i amb qui es fa.</p>
+    <div class="comp-groups" style="margin-top:14px">
+      <div class="comp-group"><h3>Físic</h3><ul class="chips"><li>Habilitats de moviment</li><li>Moure’s amb material</li><li>Manipulació d’objectes</li><li>Coordinació</li><li>Estabilitat i equilibri</li><li>Flexibilitat</li><li>Agilitat</li><li>Força</li><li>Resistència muscular</li><li>Resistència cardiovascular</li><li>Temps de reacció</li><li>Velocitat</li></ul></div>
+      <div class="comp-group"><h3>Psicològic</h3><ul class="chips"><li>Implicació i gaudi</li><li>Confiança</li><li>Motivació</li><li>Vinculació amb el lloc</li><li>Autopercepció</li><li>Autoregulació emocional</li><li>Autoregulació física</li></ul></div>
+      <div class="comp-group"><h3>Social</h3><ul class="chips"><li>Relacions</li><li>Col·laboració</li><li>Ètica</li><li>Societat i cultura</li></ul></div>
+      <div class="comp-group"><h3>Cognitiu</h3><ul class="chips"><li>Coneixement del contingut</li><li>Seguretat i risc</li><li>Normes</li><li>Raonament</li><li>Estratègia i planificació</li><li>Tàctica</li><li>Consciència perceptiva</li></ul></div>
+    </div>
+    <p class="src">Font: Sport Australia (2019), <i>The Australian Physical Literacy Framework</i>.</p>
+
+    <h3 class="aq-h3">Els ABC del moviment</h3>
+    <ul class="aq-facts">
+      <li><span class="aq-n">A</span><b>Agilitat</b><span>Canviar de direcció i de velocitat de pressa i amb control.</span></li>
+      <li><span class="aq-n">B</span><b>Equilibri</b><span>Mantenir i recuperar el control del cos, quiet o en moviment.</span></li>
+      <li><span class="aq-n">C</span><b>Coordinació</b><span>Encadenar moviments de diferents parts del cos amb precisió.</span></li>
+      <li><span class="aq-n">S</span><b>Velocitat</b><span>Moure’s o reaccionar en el mínim temps.</span></li>
+    </ul>
+    <p class="prose" style="margin-top:16px">Als Estats Units i al Canadà s’anomenen ABC (<i>agility, balance, coordination</i>) i S (<i>speed</i>). Sport for Life recomana treballar-los en quatre entorns: a terra, a l’aigua, sobre neu o gel i a l’aire (gimnàstica, trampolins).</p>
+    <p class="src">Fonts: apunts del mòdul; Sport for Life.</p>
+
+    <h3 class="aq-h3">Fases del desenvolupament esportiu</h3>
+    <div class="aq-split" style="margin-top:0">
+      <div class="pyr" aria-label="Piràmide del desenvolupament esportiu">
+        <div class="p1">Especialització</div>
+        <div class="p2">Iniciació esportiva</div>
+        <div class="p3">Alfabetització</div>
+      </div>
+      <div class="callout" style="margin-top:0"><h3>Un error habitual</h3><p>Planificar les sessions sense tenir en compte les característiques dels esportistes. Una bona base esportiva necessita un desenvolupament llarg que coincideixi amb les etapes de creixement i maduració.</p></div>
+    </div>
+    <p class="src">Font: apunts del mòdul.</p>
+  </div>
+</section>
+
+<!-- ===================== ETAPES ===================== -->
+<section id="etapes" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Fonaments</div>
+      <h2>Etapes de desenvolupament</h2>
+      <p>L’objectiu de cada etapa és prioritzar unes capacitats i habilitats segons l’estat maduratiu. Les edats són orientatives: un infant que madura aviat o tard pot avançar o endarrerir l’etapa.</p>
+    </div>
+    <div class="stages st4">
+      <article class="stage s1"><div class="stage-top"><span class="stage-age">0–4<small>anys</small></span></div><h3>Fonamental</h3><ul><li>Adquirir les habilitats fonamentals: córrer, saltar, llançar…</li><li>Són la base de moviments més complexos.</li><li>El joc és el millor sistema.</li><li>Estil de vida actiu des d’una perspectiva lúdica.</li></ul></article>
+      <article class="stage s2"><div class="stage-top"><span class="stage-age">4–11<small>nois</small></span><span class="stage-age" style="font-size:1.6rem">4–9<small>noies</small></span></div><h3>Iniciació</h3><ul><li>Consolidar i perfeccionar les habilitats fonamentals.</li><li>Iniciar les habilitats bàsiques i específiques dels esports.</li><li>Alfabetització motriu i esquema motor.</li><li>Participar en activitats i esports diferents.</li></ul></article>
+      <article class="stage s3"><div class="stage-top"><span class="stage-age">11–15<small>nois</small></span><span class="stage-age" style="font-size:1.6rem">9–14<small>noies</small></span></div><h3>Formació</h3><ul><li>Gran acceleració de l’aprenentatge de la coordinació.</li><li>Perfeccionar les habilitats tècniques bàsiques.</li><li>Transferir habilitats a situacions esportives i treballar en grup.</li><li>Començar una preparació física més específica.</li></ul></article>
+      <article class="stage s4"><div class="stage-top"><span class="stage-age">15+<small>nois</small></span><span class="stage-age" style="font-size:1.6rem">14+<small>noies</small></span></div><h3>Especialització</h3><ul><li>La maduració es completa cap als 20 anys.</li><li>Consolidar la tècnica i les habilitats específiques.</li><li>Entrenament individualitzat i perioditzat.</li><li>Qui no competeix ha de tenir recursos per seguir actiu.</li></ul></article>
+    </div>
+    <p class="src">Font: apunts del mòdul.</p>
+
+    <h3 class="aq-h3">Què treballar en cada etapa</h3>
+    <div class="tbl-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col"><span class="label">Etapa</span></th><th scope="col">Locomotrius</th><th scope="col">Equilibri</th><th scope="col">Coordinatives</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Fonamental i iniciació</th><td>Rodar, córrer, llançar, trepar, reptar, xutar, saltar, joc lliure.</td><td>Caminar per línies i saltar o caure sobre objectes. Salts continuats.</td><td>Llançar, atrapar, driblar, reptar. Exercicis amb pilota (botar…). Relleus. Habilitats gimnàstiques simples: tombarella, roda.</td></tr>
+          <tr><th scope="row">Formació</th><td>Jocs de cursa, llançaments, salts i relleus.</td><td>Exercicis monopodals i activitats de control postural.</td><td>Exercicis amb pilota, salts sense material a diferents altures, tècnica de cursa, exercicis de reacció.</td></tr>
+          <tr><th scope="row">Especialització</th><td>Girs i rotacions, exercicis amb pilota, salts amb girs i sobre objectes.</td><td>Entrenament propioceptiu específic i equilibris amb variants.</td><td>Girs i voltejos complets, agilitat amb escales, tècnica de cursa complexa, jocs d’alta exigència coordinativa.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose" style="margin-top:14px">Les habilitats motrius bàsiques s’han de treballar sobretot a les etapes fonamental i d’iniciació, millorar-se a la de formació i perfeccionar-se a la d’especialització. La majoria s’haurien de dominar durant la formació, perquè la neuroplasticitat és especialment alta en les dues primeres etapes.</p>
+    <p class="src">Font: apunts del mòdul.</p>
+
+    <h3 class="aq-h3">El model del Canadà: desenvolupament a llarg termini</h3>
+    <div class="tbl-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col"><span class="label">Etapa</span></th><th scope="col">Edat</th><th scope="col">Prioritats</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Inici actiu</th><td>0–6 anys</td><td>180 minuts d’activitat al dia, tres quartes parts en joc lliure. Habilitats de locomoció, manipulació d’objectes i equilibri, a terra, a l’aigua, sobre neu o gel i a l’aire.</td></tr>
+          <tr><th scope="row">FUNdamentals</th><td>Nois 6–9, noies 6–8</td><td>Els ABC del moviment. Tres quartes parts d’activitat física general i una quarta part d’esport específic, amb molt de joc lliure.</td></tr>
+          <tr><th scope="row">Aprendre a entrenar</th><td>Nois 9+, noies 8+, fins a l’estirada</td><td>Tres esports amb el mateix temps. Habilitats tècniques i tàctiques, força amb el pes corporal, escalfament, hidratació i descans.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Font: Sport for Life (Canadà), etapes de desenvolupament a llarg termini.</p>
+
+    <h3 class="aq-h3">Què prioritzar abans i després de la pubertat</h3>
+    <p class="prose">El model de desenvolupament físic juvenil (YPD) de Lloyd i Oliver (2012) proposa l’èmfasi de cada qualitat. Abans de la pubertat les adaptacions són sobretot neurals (control motor i coordinació); a l’adolescència hi ha més canvis estructurals, com l’augment de massa muscular. Les noies comencen l’estirada cap als 10 anys i tenen el pic de creixement cap als 12; els nois, cap als 12 i els 14.</p>
+    <div class="tbl-wrap" style="margin-top:12px">
+      <table class="ypd">
+        <thead><tr><th scope="col">Qualitat</th><th scope="col">Abans de la pubertat</th><th scope="col">Adolescència</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Habilitats fonamentals</th><td><span class="lv h">Alta</span> Focus principal</td><td><span class="lv m">Mitjana</span> Es mantenen</td></tr>
+          <tr><th scope="row">Habilitats específiques</th><td><span class="lv l">Baixa</span></td><td><span class="lv h">Alta</span></td></tr>
+          <tr><th scope="row">Força</th><td><span class="lv h">Alta</span> Sempre prioritària</td><td><span class="lv h">Alta</span></td></tr>
+          <tr><th scope="row">Mobilitat</th><td><span class="lv h">Alta</span> Sobretot entre 5 i 11 anys</td><td><span class="lv l">Baixa</span> Manteniment</td></tr>
+          <tr><th scope="row">Agilitat i velocitat</th><td><span class="lv m">Mitjana</span> Canvis de direcció, tècnica, esprints</td><td><span class="lv h">Alta</span></td></tr>
+          <tr><th scope="row">Potència</th><td><span class="lv m">Mitjana</span></td><td><span class="lv h">Alta</span></td></tr>
+          <tr><th scope="row">Hipertròfia</th><td><span class="lv l">Baixa</span></td><td><span class="lv m">Mitjana</span> Després del pic de creixement</td></tr>
+          <tr><th scope="row">Resistència</th><td><span class="lv l">Baixa</span> A través del joc</td><td><span class="lv m">Mitjana</span> Creixent cap a l’edat adulta</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Font: Lloyd i Oliver (2012), resumit per British Judo. Els apunts del mòdul inclouen la figura de fases sensibles adaptada de Lloyd et al. (2012).</p>
+  </div>
+</section>
+
+<!-- ===================== HMB ===================== -->
+<section id="hmb" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Habilitats bàsiques</div>
+      <h2>Les habilitats motrius bàsiques</h2>
+      <p>Per a cada habilitat trobaràs la tècnica amb un esquema per fases, els estadis de desenvolupament, una progressió per edats i els errors més freqüents amb la seva correcció.</p>
+    </div>
+    <div class="callout" style="margin-top:0;margin-bottom:8px">
+      <h3>Com observar i corregir</h3>
+      <p>Ensenya una o dues claus a la vegada, amb una paraula que les resumeixi («pas», «braços amunt»). Dona una retroalimentació concreta i immediata: què ha sortit bé i què cal canviar. Dominar una habilitat fonamental pot demanar entre 240 i 600 minuts d’instrucció.</p>
+    </div>
+    <p class="src">Font: Department of Education, Victoria, <i>Fundamental Motor Skills: A Manual for Classroom Teachers</i>.</p>
+
+    <div class="tabs" role="tablist" aria-label="Habilitats" id="hmb-tabs">
+      <button class="tab" role="tab" id="tab-desplacaments" data-target="desplacaments" aria-controls="desplacaments">Desplaçaments<small>Locomoció</small></button>
+      <button class="tab" role="tab" id="tab-salts" data-target="salts" aria-controls="salts">Salts<small>Locomoció</small></button>
+      <button class="tab" role="tab" id="tab-girs" data-target="girs" aria-controls="girs">Girs<small>Estabilitat</small></button>
+      <button class="tab" role="tab" id="tab-llancaments" data-target="llancaments" aria-controls="llancaments">Llançaments<small>Manipulació</small></button>
+      <button class="tab" role="tab" id="tab-recepcions" data-target="recepcions" aria-controls="recepcions">Recepcions<small>Manipulació</small></button>
+      <button class="tab" role="tab" id="tab-manipulacions" data-target="manipulacions" aria-controls="manipulacions">Bots i colpejos<small>Manipulació</small></button>
+      <button class="tab" role="tab" id="tab-equilibri" data-target="equilibri" aria-controls="equilibri">Equilibri<small>Estabilitat</small></button>
+    </div>
+
+    <!-- DESPLAÇAMENTS -->
+    <div class="panel" role="tabpanel" id="desplacaments" aria-labelledby="tab-desplacaments">
+      <div class="panel-head"><div class="tagline">Locomoció · translació del cos per l’espai</div><h3>Desplaçaments</h3><p class="prose">Habilitats que traslladen el cos d’un lloc a un altre. La marxa i la carrera són les habituals; les quadrupèdies, les reptacions, les trepes i els transports són no habituals i amplien molt el repertori de l’infant.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="carrera"></div><div class="kick-caps"><span><b>1 · Contacte</b>Peu sota el cos</span><span><b>2 · Amortiguació</b>Genoll flexionat</span><span><b>3 · Impuls</b>Cama de darrere estesa</span><span><b>4 · Vol</b>Cap peu a terra</span></div><figcaption class="figcap">La carrera, vista de costat. Els segments més apagats són els del costat llunyà.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Patró madur de la carrera</h4><ul class="crit"><li>Mirada endavant durant tota la carrera.</li><li>Genoll flexionat en angle recte en la recuperació: el taló puja cap al gluti.</li><li>Braços flexionats pels colzes, en oposició a les cames.</li><li>Contacte amb la part davantera del peu.</li><li>Cos lleugerament inclinat endavant.</li></ul>
+          <h4 class="aq-h4" style="margin-top:18px">Patró madur de l’esquiva</h4><ul class="crit"><li>Mirada en la direcció del desplaçament.</li><li>Canvi de direcció empenyent amb el peu de fora.</li><li>Cos més baix durant el canvi.</li><li>Canvi de direcció en una sola passa, cap als dos costats.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus de desplaçament</h4><ul class="kinds"><li><b>Habituals:</b> marxa i carrera.</li><li><b>Horitzontals no habituals:</b> quadrupèdies (de cara, d’esquena, de costat) i reptacions.</li><li><b>Verticals:</b> trepes a espatlleres, cordes o estructures.</li><li><b>Passius:</b> transports, ser arrossegat o portat.</li><li><b>Altres patrons de locomoció:</b> galop, lliscament lateral, saltirons alternats (<i>skipping</i>) i gambades.</li></ul></div>
+        </div>
+        <p class="src">Fonts: apunts del mòdul; Department of Education, Victoria.</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li>Passes curtes i amples, sense fase de vol clara.</li><li>Recolza tot el peu.</li><li>Braços alts o oberts per mantenir l’equilibri.</li><li>Moviment rígid i irregular.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li>La passa s’allarga i apareix una fase de vol curta.</li><li>Els braços es mouen més però creuen davant del cos.</li><li>Rotació del tronc i de la pelvis.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys, amb pràctica</span></header><ul><li>Fase de vol clara i passa llarga.</li><li>Recuperació alta del taló.</li><li>Braços en oposició, flexionats uns 90°.</li><li>Tronc estable, lleugerament inclinat endavant.</li></ul></article>
+        </div>
+        <p class="dev-note">Edats teòriques segons Gallahue i Donnelly (2007). Descripció dels estadis basada en Gallahue, Ozmun i Goodway (2012).</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Caminar endavant, enrere i de costat, a diferents ritmes, seguint línies o la música.</span></li>
+          <li><span><span class="stg s1">3–5</span>Quadrupèdies i reptacions: passar per sota de bancs, cordes o túnels.</span></li>
+          <li><span><span class="stg s1">3–5</span>Córrer lliurement i aturar-se a un senyal (estàtues).</span></li>
+          <li><span><span class="stg s2">6–8</span>Galop i lliscament lateral, endavant i cap als dos costats.</span></li>
+          <li><span><span class="stg s2">6–8</span>Curses amb canvis de ritme, de direcció i aturades: semàfor, pilla-pilla.</span></li>
+          <li><span><span class="stg s2">6–8</span>Trepar per espatlleres o estructures amb tres punts de suport.</span></li>
+          <li><span><span class="stg s3">9–12</span>Tècnica de cursa: <i>skipping</i>, talons al gluti, braços en oposició.</span></li>
+          <li><span><span class="stg s3">9–12</span>Esquives i canvis de direcció en una passa, entre cons o davant d’un company.</span></li>
+          <li><span><span class="stg s3">9–12</span>Velocitat de reacció a senyals visuals i sonors i relleus amb canvis de testimoni.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Els braços creuen davant del cos</b><span>El tronc gira i es perd energia.</span></div><div class="fix">«Braços de tren»: endavant i enrere, de la butxaca a la barbeta. Practicar-ho primer dempeus.</div></li>
+          <li><div class="what"><b>Recolza el taló primer</b><span>Frena a cada passa.</span></div><div class="fix">Córrer «sense fer soroll», sobre la part davantera del peu. Skipping curt.</div></li>
+          <li><div class="what"><b>Mira a terra</b><span>El cos s’inclina massa i perd la direcció.</span></div><div class="fix">Fixar un punt al final del recorregut. Curses cap a un company que mostra números amb els dits.</div></li>
+          <li><div class="what"><b>Cos assegut o tirat enrere</b><span>Passes curtes i lentes.</span></div><div class="fix">«Alt i lleugerament endavant». Sortides des de caiguda: inclinar-se fins que cal córrer.</div></li>
+          <li><div class="what"><b>Canvi de direcció en moltes passes</b><span>L’esquiva és lenta.</span></div><div class="fix">Baixar el cos i empènyer amb el peu de fora. Esquives entre dos cons a 3 m.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SALTS -->
+    <div class="panel" role="tabpanel" id="salts" aria-labelledby="tab-salts" hidden>
+      <div class="panel-head"><div class="tagline">Locomoció · enlairar tot el cos</div><h3>Salts</h3><p class="prose">Acció d’aixecar tot el cos del terra amb un impuls de les cames. Pot ser vertical o horitzontal, amb batuda d’un o dos peus, i sempre acaba amb una caiguda que cal aprendre a amortir.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="salt"></div><div class="kick-caps"><span><b>1 · Preparació</b>Flexió i braços enrere</span><span><b>2 · Batuda</b>Extensió i braços amunt</span><span><b>3 · Vol</b>Genolls endavant</span><span><b>4 · Caiguda</b>Amortir i equilibrar</span></div><figcaption class="figcap">Salt horitzontal amb els peus junts, vist de costat.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Patró madur del salt</h4><ul class="crit"><li>Flexió prèvia de turmells, genolls i maluc, amb els braços enrere.</li><li>Balanceig enèrgic dels braços endavant i amunt mentre les cames s’estenen.</li><li>Els dos peus surten i cauen alhora (salt a peus junts).</li><li>Contacte amb la part davantera del peu i genolls que es flexionen per amortir.</li><li>Caiguda equilibrada, sense fer més d’una passa.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus de salt</h4><ul class="kinds"><li><b>Per la direcció:</b> vertical o horitzontal.</li><li><b>Per la batuda:</b> d’un peu o de dos peus.</li><li><b>Per la caiguda:</b> al mateix peu (peu coix), a l’altre peu (gambada) o als dos peus.</li><li><b>Fases:</b> preparació o carrera, batuda, vol i caiguda.</li></ul></div>
+        </div>
+        <p class="src">Fonts: apunts del mòdul; Department of Education, Victoria (salt vertical); Wickstrom (1983), recollit per EFDeportes (salt horitzontal).</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li>Poca flexió prèvia.</li><li>Els braços no ajuden o s’obren com un paracaigudes.</li><li>En el salt vertical, el cos se’n va endavant.</li><li>Els peus surten o cauen un després de l’altre.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li>Més flexió prèvia.</li><li>Els braços inicien el balanceig, però no l’acaben.</li><li>Extensió incompleta a la batuda.</li><li>Caiguda poc amortida.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys, amb pràctica</span></header><ul><li>Flexió prèvia marcada i braços que empenyen el salt.</li><li>Extensió completa de turmells, genolls i maluc.</li><li>Peus junts a la sortida i a la caiguda.</li><li>Caiguda amortida i equilibrada.</li></ul></article>
+        </div>
+        <p class="dev-note">Fites habituals: abans dels 2 anys apareixen salts simples; cap als 2 anys, baixar un esglaó amb un peu; cap als 3 anys i mig, tres salts seguits a peu coix (Haywood i Getchell, 2005; Wickstrom, 1983).</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Baixar d’un graó o d’un banc baix saltant amb els peus junts i caure flexionant els genolls.</span></li>
+          <li><span><span class="stg s1">3–5</span>Saltar línies, cordes a terra i cèrcols amb els peus junts («granotes»).</span></li>
+          <li><span><span class="stg s1">3–5</span>Saltar a peu coix sobre el peu preferit, amb ajuda o agafat a la paret.</span></li>
+          <li><span><span class="stg s2">6–8</span>Xarranca: combinar peu coix i peus junts.</span></li>
+          <li><span><span class="stg s2">6–8</span>Saltar obstacles baixos amb batuda d’un peu i de dos peus.</span></li>
+          <li><span><span class="stg s2">6–8</span>Saltar a la corda: primer una corda gran que gira, després la pròpia.</span></li>
+          <li><span><span class="stg s3">9–12</span>Multisalts encadenats: peus junts, peu coix i gambades.</span></li>
+          <li><span><span class="stg s3">9–12</span>Salt de llargada amb carrera curta i batuda d’un peu en una zona ampla.</span></li>
+          <li><span><span class="stg s3">9–12</span>Salts verticals per tocar un objecte alt i salts amb mig gir o gir sencer.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Caiguda rígida</b><span>Cau amb les cames esteses i fa soroll.</span></div><div class="fix">«Caure com un gat»: en silenci, genolls flexionats. Saltar des d’un graó baix sobre una marca.</div></li>
+          <li><div class="what"><b>Els braços no ajuden</b><span>Queden quiets o s’obren.</span></div><div class="fix">Tocar un objecte penjat; «braços enrere, braços amunt» abans del salt.</div></li>
+          <li><div class="what"><b>Batuda amb un peu abans que l’altre</b><span>En el salt a peus junts.</span></div><div class="fix">Saltar amb un mocador entre els turmells o entre línies paral·leles.</div></li>
+          <li><div class="what"><b>El salt vertical se’n va endavant</b><span>Tota la força s’escapa.</span></div><div class="fix">Saltar i caure dins el mateix cèrcol; mirada amunt.</div></li>
+          <li><div class="what"><b>Desequilibri en caure</b><span>Fa diverses passes o cau.</span></div><div class="fix">«Saltar i fer l’estàtua» tres segons en caure.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- GIRS -->
+    <div class="panel" role="tabpanel" id="girs" aria-labelledby="tab-girs" hidden>
+      <div class="panel-head"><div class="tagline">Estabilitat · rotacions sobre els eixos del cos</div><h3>Girs</h3><p class="prose">Rotacions de tot el cos al voltant d’un eix, que obliguen a reorientar-se en acabar. Demanen control de l’esquema corporal i de l’equilibri, i són la base de moltes habilitats gimnàstiques.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="tombarella"></div><div class="kick-caps"><span><b>1 · Posició</b>Ajupit, mans a terra</span><span><b>2 · Barbeta al pit</b>Recolzar la nuca</span><span><b>3 · Rodament</b>Cos agrupat</span><span><b>4 · Sortida</b>Peus a terra, sense mans</span></div><figcaption class="figcap">Tombarella endavant sobre un matalàs, vista de costat.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Claus de la tombarella endavant</h4><ul class="crit"><li>Mans a terra a l’amplada de les espatlles, per davant dels peus.</li><li>Barbeta enganxada al pit: es recolza la nuca i l’esquena, mai el cap.</li><li>Cos agrupat com una pilota durant tot el rodament.</li><li>Impuls de les cames per passar el pes a les mans.</li><li>Sortida de peus, sense recolzar les mans, i braços endavant.</li></ul></div>
+          <div><h4 class="aq-h4">Girs segons l’eix</h4><ul class="kinds"><li><b>Longitudinal</b> (del cap als peus): croqueta, girs en salt, piruetes. Canvi de posició ventral a dorsal.</li><li><b>Transversal</b> (de costat a costat): tombarelles endavant i enrere, la base del viratge de crol.</li><li><b>Anteroposterior</b> (de davant a darrere): roda lateral; en flotació, girs com un plat.</li></ul></div>
+        </div>
+        <p class="src">Fonts: apunts del mòdul (Batalla, 2000); Prat Riba, apunts de medi aquàtic de M5.</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">Primers intents</span></header><ul><li>Gira de costat, com una croqueta, quan intenta anar endavant.</li><li>Recolza el cap i el cos s’obre.</li><li>Necessita ajuda per passar el pes.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">Amb pràctica guiada</span></header><ul><li>Roda endavant però perd l’agrupament a mig gir.</li><li>Es recolza amb les mans per aixecar-se.</li><li>Sortida asseguda.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">Domini</span></header><ul><li>Agrupament continu i rodament suau.</li><li>Sortida directa a peus.</li><li>Encadena el gir amb un salt o un desplaçament.</li></ul></article>
+        </div>
+        <p class="dev-note">Per als girs no hi ha edats de referència tan establertes com per a les habilitats de locomoció i manipulació: depenen molt de l’experiència gimnàstica de l’infant.</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Croquetes sobre un matalàs, amb els braços per sobre del cap i després enganxats al cos.</span></li>
+          <li><span><span class="stg s1">3–5</span>Balancí: agrupat sobre l’esquena, rodar endavant i enrere.</span></li>
+          <li><span><span class="stg s1">3–5</span>Girs dempeus i en salt (mig gir) mirant cap a una paret o un company.</span></li>
+          <li><span><span class="stg s2">6–8</span>Tombarella endavant en un pla inclinat, amb ajuda del tècnic a l’esquena i a la nuca.</span></li>
+          <li><span><span class="stg s2">6–8</span>Tombarella endavant en pla, sense ajuda, acabant de peus.</span></li>
+          <li><span><span class="stg s2">6–8</span>Girs en salt de 180° i 360° caient equilibrat.</span></li>
+          <li><span><span class="stg s3">9–12</span>Roda lateral amb suports successius de mans i peus, primer sobre una línia.</span></li>
+          <li><span><span class="stg s3">9–12</span>Tombarella enrere en pla inclinat, amb ajuda i les mans al costat de les orelles.</span></li>
+          <li><span><span class="stg s3">9–12</span>Encadenaments: carrera, tombarella i salt; equilibri invertit recolzat a la paret, amb ajuda.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Recolza el cap</b><span>Pressió al coll; és perillós.</span></div><div class="fix">Aguantar un mocador o una pilota petita entre la barbeta i el pit. Pla inclinat i ajuda a la nuca.</div></li>
+          <li><div class="what"><b>El cos s’obre a mig gir</b><span>Cau d’esquena, pla.</span></div><div class="fix">Practicar el balancí agrupat; «abraça’t els genolls».</div></li>
+          <li><div class="what"><b>Gira de costat</b><span>Surt torçat del matalàs.</span></div><div class="fix">Mans a la mateixa altura i mirada al melic. Seguir una línia al matalàs.</div></li>
+          <li><div class="what"><b>Acaba assegut</b><span>No arriba a posar-se de peus.</span></div><div class="fix">Més impuls de cames i talons a prop dels glutis. Pla inclinat per guanyar velocitat.</div></li>
+          <li><div class="what"><b>Roda lateral amb el cos doblegat</b><span>Les cames no passen per sobre.</span></div><div class="fix">Començar amb suports de mans sobre un banc baix; mirada a les mans.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- LLANÇAMENTS -->
+    <div class="panel" role="tabpanel" id="llancaments" aria-labelledby="tab-llancaments" hidden>
+      <div class="panel-head"><div class="tagline">Manipulació · projectar un objecte</div><h3>Llançaments</h3><p class="prose">Acció d’impulsar un objecte amb les mans cap a un objectiu, buscant precisió, distància o totes dues coses. El llançament per sobre de l’espatlla és el patró de referència i el que més costa de madurar.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="llancament"></div><div class="kick-caps"><span><b>1 · De costat</b>Braç enrere</span><span><b>2 · Pas contrari</b>Peu oposat endavant</span><span><b>3 · Rotació</b>Maluc i després espatlla</span><span><b>4 · Seguiment</b>Braç creua el cos</span></div><figcaption class="figcap">Llançament per sobre de l’espatlla, vist de costat. El braç que llança és el del primer pla, més marcat.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Patró madur del llançament per sobre de l’espatlla</h4><ul class="crit"><li>Mirada fixa a l’objectiu durant tot el llançament.</li><li>De costat respecte de l’objectiu.</li><li>Braç que llança gairebé estès enrere.</li><li>Pas cap a l’objectiu amb el peu contrari al braç que llança.</li><li>Rotació marcada i successiva: primer el maluc, després l’espatlla.</li><li>El braç continua avall i creua el cos després de llançar.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus de llançament</h4><ul class="kinds"><li><b>Per sobre de l’espatlla</b>, amb una mà: distància i precisió.</li><li><b>Per sota</b>, amb una mà: precisió a prop (bitlles, petanca).</li><li><b>De pit</b>, amb dues mans: passades.</li><li><b>Per sobre del cap</b>, amb dues mans: fora de banda.</li><li><b>Rodant</b> o <b>lateral</b>: objectes pesants o atletisme adaptat.</li></ul></div>
+        </div>
+        <p class="src">Font: Department of Education, Victoria.</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li>De cara a l’objectiu.</li><li>Llança només amb l’avantbraç, «de colze».</li><li>Peus quiets, sense rotació del tronc.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li>Porta el braç enrere i per sobre del cap.</li><li>Fa un pas, però amb el peu del mateix costat.</li><li>Poca rotació i poc seguiment.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys o més, amb pràctica</span></header><ul><li>De costat i pas amb el peu contrari.</li><li>Rotació maluc–espatlla en seqüència.</li><li>Braç estès enrere i seguiment creuat.</li></ul></article>
+        </div>
+        <p class="dev-note">El llançament per sobre de l’espatlla és una de les habilitats en què més adults es queden en l’estadi elemental per falta de pràctica i d’instrucció (Gallahue i Donnelly, 2007).</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Llançar lliurement pilotes toves, saquets i paper arrugat de mides diferents.</span></li>
+          <li><span><span class="stg s1">3–5</span>Llançar per sota i rodant per tombar bitlles o ampolles grans.</span></li>
+          <li><span><span class="stg s1">3–5</span>Llançar dins de capses o cèrcols grans a prop.</span></li>
+          <li><span><span class="stg s2">6–8</span>Llançament per sobre de l’espatlla contra la paret: «de costat, braç enrere, pas i llança».</span></li>
+          <li><span><span class="stg s2">6–8</span>Llançar a dianes a diferents distàncies i altures.</span></li>
+          <li><span><span class="stg s2">6–8</span>Passades de pit i per sobre del cap amb un company.</span></li>
+          <li><span><span class="stg s3">9–12</span>Llançar lluny amb pilotes de pes i mida diferents, mesurant la marca.</span></li>
+          <li><span><span class="stg s3">9–12</span>Llançar a un company en moviment, calculant on serà.</span></li>
+          <li><span><span class="stg s3">9–12</span>Iniciació als llançaments atlètics amb material adaptat: vòrtex, pilota medicinal lleugera.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Llança de cara a l’objectiu</b><span>No hi ha rotació.</span></div><div class="fix">Començar amb l’espatlla que no llança apuntant a la diana. Marques de peus a terra.</div></li>
+          <li><div class="what"><b>Pas amb el peu del mateix costat</b><span>El tronc queda bloquejat.</span></div><div class="fix">Una cinta al peu contrari al braç que llança: «pas amb el peu de la cinta».</div></li>
+          <li><div class="what"><b>Llança només amb el braç</b><span>Poca distància.</span></div><div class="fix">Llançar amb força contra un matalàs; primer el melic mira a la diana, després el pit.</div></li>
+          <li><div class="what"><b>Sense seguiment</b><span>El braç s’atura en deixar anar.</span></div><div class="fix">«Acaba tocant-te la cuixa contrària».</div></li>
+          <li><div class="what"><b>Mira la pilota, no l’objectiu</b><span>Poca precisió.</span></div><div class="fix">Dianes amb números o colors que el company canvia.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RECEPCIONS -->
+    <div class="panel" role="tabpanel" id="recepcions" aria-labelledby="tab-recepcions" hidden>
+      <div class="panel-head"><div class="tagline">Manipulació · atrapar i controlar un objecte</div><h3>Recepcions</h3><p class="prose">Acció d’interceptar i controlar un objecte en moviment. Demana llegir la trajectòria i moure les mans cap a l’objecte, no esperar-lo. És el complement de cada llançament.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="recepcio"></div><div class="kick-caps"><span><b>1 · Preparació</b>Mans al davant</span><span><b>2 · Seguiment</b>Les mans hi van</span><span><b>3 · Contacte</b>Només amb les mans</span><span><b>4 · Amortiguació</b>Colzes es flexionen</span></div><figcaption class="figcap">Recepció amb dues mans d’una pilota que arriba per davant.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Patró madur de la recepció</h4><ul class="crit"><li>Mirada fixa a la pilota durant tota l’acció.</li><li>Posició preparada: colzes flexionats i mans davant del cos.</li><li>Les mans es mouen per anar a buscar la pilota.</li><li>Mans i dits ben col·locats: polzes junts si arriba per sobre de la cintura, dits petits junts si arriba per sota.</li><li>Atrapa i controla la pilota només amb les mans.</li><li>Els colzes es flexionen per amortir la força.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus de recepció</h4><ul class="kinds"><li><b>Amb dues mans</b> o <b>amb una mà</b>.</li><li><b>Per l’altura:</b> per sobre del cap, al pit o per sota de la cintura.</li><li><b>Amb altres parts del cos:</b> aturada amb el peu, la cuixa o el pit.</li><li><b>Interceptació:</b> recepció d’una pilota que no anava dirigida a tu.</li></ul></div>
+        </div>
+        <p class="src">Font: Department of Education, Victoria.</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li>Braços estesos i rígids, o fa un gest d’aplaudiment.</li><li>La pilota rebota o cau entre els braços.</li><li>Aparta la cara o tanca els ulls.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li>Avança els braços cap a la pilota amb més suavitat.</li><li>Encara l’abraça contra el pit.</li><li>Segueix la pilota amb la vista.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys, amb pràctica</span></header><ul><li>Les mans van a buscar la pilota.</li><li>Atrapa només amb les mans.</li><li>Amorteix amb els colzes i es prepara per a la següent acció.</li></ul></article>
+        </div>
+        <p class="dev-note">Exemple descrit per Gallahue i Donnelly (2007) a partir de la recepció d’una pilota; recollit per World Rugby.</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Aturar una pilota gran que arriba rodant per terra.</span></li>
+          <li><span><span class="stg s1">3–5</span>Atrapar globus i mocadors, que cauen a poc a poc.</span></li>
+          <li><span><span class="stg s1">3–5</span>Atrapar una pilota gran que arriba amb un bot.</span></li>
+          <li><span><span class="stg s2">6–8</span>Autollançaments: llançar amunt i atrapar, picant de mans abans.</span></li>
+          <li><span><span class="stg s2">6–8</span>Recepcions d’un company a 2–3 m amb pilota tova, a diferents altures.</span></li>
+          <li><span><span class="stg s2">6–8</span>Atrapar després d’un bot a la paret.</span></li>
+          <li><span><span class="stg s3">9–12</span>Recepcions en moviment i amb canvis de direcció.</span></li>
+          <li><span><span class="stg s3">9–12</span>Recepcions amb una mà i amb pilotes més petites.</span></li>
+          <li><span><span class="stg s3">9–12</span>Interceptacions en jocs de passades (deu passades).</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Tanca els ulls o aparta la cara</b><span>Por de la pilota.</span></div><div class="fix">Pilotes toves, globus i distàncies curtes. Dir en veu alta el color de la pilota quan la toca.</div></li>
+          <li><div class="what"><b>Braços rígids i estesos</b><span>La pilota rebota.</span></div><div class="fix">«Mans de cistella, colzes tous». Atrapar un ou de goma sense que caigui.</div></li>
+          <li><div class="what"><b>L’abraça contra el pit</b><span>Perd el control.</span></div><div class="fix">Atrapar lluny del cos; marcar un punt a les mans on ha de tocar la pilota.</div></li>
+          <li><div class="what"><b>Dits mal col·locats</b><span>Es fa mal o se li escapa.</span></div><div class="fix">Dalt, «polzes junts»; baix, «dits petits junts».</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BOTS I COLPEJOS -->
+    <div class="panel" role="tabpanel" id="manipulacions" aria-labelledby="tab-manipulacions" hidden>
+      <div class="panel-head"><div class="tagline">Manipulació · bot, conducció i colpeig</div><h3>Bots i colpejos</h3><p class="prose">Habilitats genèriques que combinen les bàsiques amb un objecte: botar i conduir una pilota amb les mans o els peus, xutar i colpejar amb la mà o amb un estri. Són el pont cap als esports.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="xut"></div><div class="kick-caps"><span><b>1 · Aproximació</b>Mirada a la pilota</span><span><b>2 · Peu de suport</b>Al costat de la pilota</span><span><b>3 · Contacte</b>Amb l’empenya</span><span><b>4 · Seguiment</b>Cap a l’objectiu</span></div><figcaption class="figcap">Xut amb la cama més propera, vist de costat.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Patró madur del xut</h4><ul class="crit"><li>Mirada a la pilota durant tot el xut.</li><li>Pas endavant amb el peu de suport a prop de la pilota.</li><li>Genoll de la cama que xuta flexionat enrere, almenys 90°.</li><li>Contacte amb la part de dalt del peu (empenya).</li><li>Braç contrari a la cama que xuta endavant i de costat.</li><li>La cama continua cap a l’objectiu després del contacte.</li></ul>
+          <h4 class="aq-h4" style="margin-top:18px">Patró madur del bot</h4><ul class="crit"><li>Mirada endavant, no a la pilota.</li><li>Contacte amb els dits d’una mà, a l’altura del maluc.</li><li>El canell i el colze es flexionen i s’estenen per empènyer la pilota.</li><li>Maluc i genolls lleugerament flexionats.</li><li>La pilota bota davant i al costat del cos.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus</h4><ul class="kinds"><li><b>Bot:</b> amb una mà, alterna, quiet o en moviment.</li><li><b>Conducció:</b> amb el peu, amb la mà a terra o amb un estic.</li><li><b>Colpeig amb la mà o un estri:</b> palmell, pala, raqueta o bat, de dreta o amb dues mans.</li><li><b>Colpeig amb el peu:</b> xut amb la pilota parada o en moviment, passada amb l’interior.</li><li><b>Colpeig amb el cap</b>, amb pilotes molt toves i a partir de la iniciació.</li></ul></div>
+        </div>
+        <p class="src">Fonts: apunts del mòdul; Department of Education, Victoria (xut, bot i colpejos).</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li><b>Xut:</b> sense pas previ, empeny la pilota amb la cama recta.</li><li><b>Bot:</b> pica la pilota amb el palmell; bot alt i irregular.</li><li>Mira constantment la pilota.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li><b>Xut:</b> flexiona el genoll i fa un pas, però amb poc seguiment.</li><li><b>Bot:</b> bot continu però amb les dues mans o a l’altura del pit.</li><li>Poca coordinació amb els braços.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys o més, amb pràctica</span></header><ul><li><b>Xut:</b> peu de suport al costat, flexió marcada, contacte amb l’empenya i seguiment.</li><li><b>Bot:</b> empeny amb els dits, a l’altura del maluc, sense mirar.</li><li>Pot fer-ho en moviment.</li></ul></article>
+        </div>
+        <p class="dev-note">Descripció basada en Gallahue, Ozmun i Goodway (2012) i en els criteris del Department of Education, Victoria.</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Botar i atrapar una pilota gran amb les dues mans.</span></li>
+          <li><span><span class="stg s1">3–5</span>Empènyer una pilota caminant, amb el peu i amb la mà a terra.</span></li>
+          <li><span><span class="stg s1">3–5</span>Colpejar globus amb la mà, el cap i el peu perquè no caiguin.</span></li>
+          <li><span><span class="stg s2">6–8</span>Bot continu amb una mà, després amb la no dominant i després alternant.</span></li>
+          <li><span><span class="stg s2">6–8</span>Xutar una pilota parada contra la paret o entre dos cons.</span></li>
+          <li><span><span class="stg s2">6–8</span>Colpejar amb una pala una pilota que bota abans.</span></li>
+          <li><span><span class="stg s3">9–12</span>Botar en moviment sense mirar, canviant de mà i de direcció.</span></li>
+          <li><span><span class="stg s3">9–12</span>Conduir amb el peu entre cons i passar a un company.</span></li>
+          <li><span><span class="stg s3">9–12</span>Xutar i colpejar pilotes en moviment, cap a objectius petits.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Pica la pilota amb el palmell</b><span>El bot és irregular.</span></div><div class="fix">«Empeny amb els dits». Botar dins un cèrcol a l’altura del maluc.</div></li>
+          <li><div class="what"><b>Mira la pilota en botar</b><span>No veu l’espai ni els companys.</span></div><div class="fix">Botar mentre diu els números que mostra un company.</div></li>
+          <li><div class="what"><b>Xuta amb la punta del peu</b><span>Poca precisió.</span></div><div class="fix">«Cordons a la pilota»; xutar amb el peu en punta i el turmell ferm.</div></li>
+          <li><div class="what"><b>Peu de suport lluny de la pilota</b><span>La pilota surt alta o desviada.</span></div><div class="fix">Marca a terra al costat de la pilota on ha de trepitjar.</div></li>
+          <li><div class="what"><b>No fa seguiment</b><span>El xut perd força.</span></div><div class="fix">«La cama acaba assenyalant la porteria».</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EQUILIBRI -->
+    <div class="panel" role="tabpanel" id="equilibri" aria-labelledby="tab-equilibri" hidden>
+      <div class="panel-head"><div class="tagline">Estabilitat · controlar la postura</div><h3>Equilibri</h3><p class="prose">Capacitat de mantenir i recuperar el control del cos, quiet o en moviment. És present en totes les altres habilitats: no es pot llançar, saltar ni girar bé sense equilibri.</p></div>
+      <div class="subpanel" data-sub="tecnica" data-label="Tècnica">
+        <figure class="figure strip fg"><div data-strip="equilibri"></div><div class="kick-caps"><span><b>1 · Puntetes</b>Base petita</span><span><b>2 · Un peu</b>Monopodal</span><span><b>3 · Balança</b>Tronc horitzontal</span><span><b>4 · Sobre banc</b>Equilibri dinàmic</span></div><figcaption class="figcap">De més fàcil a més difícil: es redueix la base i s’hi afegeix moviment o altura.</figcaption></figure>
+        <div class="tech-grid">
+          <div><h4 class="aq-h4">Claus per a un bon equilibri</h4><ul class="crit"><li>Mirada endavant, a un punt fix.</li><li>Tronc ferm i cos alineat sobre la base de suport.</li><li>Genolls lleugerament flexionats per absorbir desequilibris.</li><li>Braços lliures per compensar.</li><li>Moviments lents i controlats en canviar de postura.</li></ul></div>
+          <div><h4 class="aq-h4">Tipus i factors</h4><ul class="kinds"><li><b>Estàtic:</b> mantenir una postura quiet.</li><li><b>Dinàmic:</b> mantenir el control en moviment.</li><li><b>Reequilibri:</b> recuperar-lo després d’un salt o un gir.</li><li><b>Fa més difícil l’equilibri:</b> menys base de suport, centre de gravetat més alt, superfície estreta o inestable, ulls tancats, moviment del cap.</li></ul></div>
+        </div>
+        <p class="src">Fonts: apunts del mòdul; Gallahue, Ozmun i Goodway (2012).</p>
+      </div>
+      <div class="subpanel" data-sub="desenvolupament" data-label="Desenvolupament">
+        <div class="dev">
+          <article class="devc d1"><header><h4>Inicial</h4><span class="deva">2–3 anys</span></header><ul><li>Base de suport àmplia.</li><li>Braços rígids o enganxats al cos.</li><li>Mira els peus.</li><li>Aguanta molt poc temps sobre un peu.</li></ul></article>
+          <article class="devc d2"><header><h4>Elemental</h4><span class="deva">3–5 anys</span></header><ul><li>Aguanta sobre un peu amb moviments de compensació grans.</li><li>Camina per una línia o un banc ample amb passes curtes.</li></ul></article>
+          <article class="devc d3"><header><h4>Madur</h4><span class="deva">5–7 anys, amb pràctica</span></header><ul><li>Base reduïda amb petits ajustos.</li><li>Mirada endavant.</li><li>Recupera l’equilibri després de salts i girs.</li></ul></article>
+        </div>
+        <p class="dev-note">L’equilibri millora amb la maduració del sistema nerviós i amb la pràctica variada: és una de les capacitats prioritàries a l’etapa fonamental (Sport for Life).</p>
+      </div>
+      <div class="subpanel" data-sub="progressio" data-label="Progressió">
+        <ol class="steps">
+          <li><span><span class="stg s1">3–5</span>Caminar per línies a terra, endavant i enrere.</span></li>
+          <li><span><span class="stg s1">3–5</span>Estàtues amb diferents suports: quatre, tres, dos i un.</span></li>
+          <li><span><span class="stg s1">3–5</span>Caminar sobre un banc ample amb ajuda de la mà.</span></li>
+          <li><span><span class="stg s2">6–8</span>Aguantar sobre un peu, primer el dominant i després l’altre.</span></li>
+          <li><span><span class="stg s2">6–8</span>Caminar sobre un banc estret o una biga baixa portant objectes.</span></li>
+          <li><span><span class="stg s2">6–8</span>Caure equilibrat després de salts i girs.</span></li>
+          <li><span><span class="stg s3">9–12</span>Equilibris monopodals amb ulls tancats o sobre superfícies inestables.</span></li>
+          <li><span><span class="stg s3">9–12</span>Equilibris per parelles i figures d’acrosport bàsic.</span></li>
+          <li><span><span class="stg s3">9–12</span>Equilibri invertit recolzat a la paret, amb ajuda.</span></li>
+        </ol>
+      </div>
+      <div class="subpanel" data-sub="errors" data-label="Errors">
+        <ul class="errors">
+          <li class="head"><span>Què veus</span><span>Com ho corregeixes</span></li>
+          <li><div class="what"><b>Mira els peus</b><span>El cap s’inclina i desequilibra.</span></div><div class="fix">Fixar la mirada en un punt de la paret a l’altura dels ulls.</div></li>
+          <li><div class="what"><b>Cos rígid</b><span>Qualsevol desequilibri el tomba.</span></div><div class="fix">Genolls «tous» i braços lliures; jugar a balancejar-se sense caure.</div></li>
+          <li><div class="what"><b>Va massa de pressa sobre el banc</b><span>Cau a la meitat.</span></div><div class="fix">«Com un equilibrista»: passes lentes, comptant fins a 3 a cada passa.</div></li>
+          <li><div class="what"><b>Només amb el peu dominant</b><span>Desequilibri entre costats.</span></div><div class="fix">Repetir sempre amb tots dos peus; començar pel no dominant.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAPACITATS ===================== -->
+<section id="capacitats" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Condició i esport</div>
+      <h2>Capacitats físiques</h2>
+      <p>Les habilitats es desenvolupen alhora que la coordinació, la força, la resistència, la flexibilitat i la velocitat. Cada etapa prioritza unes capacitats o unes altres segons l’estat maduratiu.</p>
+    </div>
+    <ul class="aq-types">
+      <li><b>Flexibilitat</b><span>Millorar el rang de moviment articular i la capacitat d’elongació i contracció muscular. La finestra més favorable és entre els 5 i els 11 anys.</span></li>
+      <li><b>Resistència</b><span>Millorar la capacitat aeròbica i anaeròbica. Abans de la pubertat, a través del joc i l’esport, no amb entrenaments específics.</span></li>
+      <li><b>Força</b><span>Millorar la força en les seves expressions: màxima, resistència a la força i potència. Prioritària en totes les etapes, adaptada a cadascuna.</span></li>
+      <li><b>Velocitat</b><span>Millorar la rapidesa, l’acceleració i la velocitat màxima: esprints curts, tècnica de cursa i salts.</span></li>
+      <li><b>ABC</b><span>Agilitat, equilibri i coordinació: la base de tots els moviments complexos.</span></li>
+      <li><b>Habilitats</b><span>Motrius (córrer, llançar, saltar, rebre, botar, reptar, rodar) i esportives (les pròpies de cada esport).</span></li>
+    </ul>
+    <p class="src">Fonts: apunts del mòdul; Lloyd i Oliver (2012).</p>
+
+    <h3 class="aq-h3">La força en infants i adolescents</h3>
+    <p class="prose">Un consens internacional avalat per entitats de medicina esportiva i pediatria conclou que l’entrenament de força és segur i beneficiós en infants i adolescents, sempre que el dissenyin i el supervisin professionals qualificats.</p>
+    <ul class="aq-ben" style="margin-top:14px">
+      <li><h4>Beneficis</h4><p>Millora la força, la salut òssia, les habilitats motrius i la confiança, i pot reduir les lesions esportives.</p><p class="ev">Guanys de força del <b>30–40 %</b> en joves no entrenats; fins a un <b>50 %</b> menys de lesions per sobrecàrrega.</p></li>
+      <li><h4>Com començar</h4><p>Primer la tècnica i la competència motriu, i després la càrrega. Es progressa segons l’edat d’entrenament i el domini tècnic, no l’edat cronològica.</p><p class="ev">Al principi, <b>1–2</b> sèries a intensitats baixes o moderades (≤ <b>60 %</b> d’una repetició màxima).</p></li>
+      <li><h4>Mites</h4><p>No hi ha evidència que l’entrenament de força ben fet aturi el creixement.</p><p class="ev">El gaudi i la superació personal han de ser el centre del programa.</p></li>
+    </ul>
+    <p class="src">Font: Lloyd et al. (2014), <i>Position statement on youth resistance training: the 2014 International Consensus</i>.</p>
+  </div>
+</section>
+
+<!-- ===================== ESPORTS INDIVIDUALS ===================== -->
+<section id="esports" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Condició i esport</div>
+      <h2>Esports individuals</h2>
+      <p>«En els esports individuals l’individu actua en solitari i no hi ha cap tipus d’interacció o comunicació amb companys» (Parlebas, 1988).</p>
+    </div>
+
+    <h3 class="aq-h3" style="margin-top:0;border-top:0;padding-top:0">Característiques</h3>
+    <ul class="principles aq-first">
+      <li><b>Comunicació amb un mateix</b><span>Sense companys: l’esportista es coneix, s’autoavalua i busca la superació personal.</span></li>
+      <li><b>Competitivitat individual</b><span>Demana control mental, concentració, estabilitat emocional i acceptar una gran responsabilitat.</span></li>
+      <li><b>Depèn del medi</b><span>En un medi estable la clau és l’execució; en un medi inestable, la percepció i la decisió.</span></li>
+    </ul>
+    <div class="vs" style="margin-top:18px">
+      <div><h4>Medi estable</h4><ul class="aq-list"><li>Mecanisme d’execució complex.</li><li>Mecanismes de percepció i de decisió poc exigents.</li><li>Alt grau d’objectivitat: temps, distància, pes.</li></ul></div>
+      <div><h4>Medi inestable</h4><ul class="aq-list"><li>Alt nivell d’incertesa.</li><li>Importància dels mecanismes de percepció i decisió.</li><li>Factor de risc i d’aventura.</li><li>Gran component de motivació.</li></ul></div>
+    </div>
+
+    <h3 class="aq-h3">Tècnica, tàctica i normativa</h3>
+    <div class="aq-split" style="margin-top:0">
+      <div>
+        <h4 class="aq-h4">Aspectes tècnics</h4>
+        <p class="prose">La tècnica és la fase motora o visible de l’acció, resultat de la percepció i del pensament tàctic, i depèn de les característiques físiques i del nivell d’habilitat de qui l’executa (Sampedro, 1999). Una bona tècnica permet fer la tasca amb el mínim desgast. Els esports individuals es basen en:</p>
+        <ul class="aq-list" style="margin-top:10px"><li>La millora de les qualitats físiques.</li><li>L’adquisició de gestos tècnics automatitzats.</li><li>L’estil: l’adaptació de la tècnica a les característiques pròpies.</li><li>L’estabilitat de la tècnica davant del cansament, la pressió psicològica o els canvis de l’entorn.</li></ul>
+        <p class="prose" style="margin-top:10px">Els factors que la determinen són el material, les normes reguladores i l’espai.</p>
+      </div>
+      <div>
+        <h4 class="aq-h4">Aspectes tàctics</h4>
+        <p class="prose">La tàctica és la combinació intel·ligent de recursos motors per resoldre les situacions que sorgeixen de la competició (Sampedro, 1999). Permet reproduir i avaluar la situació, descobrir les intencions dels adversaris, anticipar-se i decidir millor.</p>
+        <p class="prose" style="margin-top:10px">En els esports individuals també hi ha tendències tàctiques (Sebastiani, 1999), excepte en les curses de velocitat, on no s’interactua amb els adversaris ni cal dosificar l’energia. Exemples: la coreografia i el vestuari en gimnàstica, o triar l’altura inicial en salt d’alçada i de perxa per impressionar els jutges o intimidar els rivals.</p>
+        <h4 class="aq-h4" style="margin-top:16px">Aspectes normatius</h4>
+        <p class="prose">El reglament és un sistema de normes que determina en part la lògica interna de l’esport (Sampedro, 1999). Comunament regula l’espai, el temps, les limitacions tècniques, el pes i la mesura, i el sistema de resultats, objectiu o subjectiu.</p>
+      </div>
+    </div>
+
+    <h3 class="aq-h3">Taxonomia</h3>
+    <p class="prose">Parlebas (1988) classifica les activitats segons la interacció amb els altres i amb el medi. Els esports individuals són <b>psicomotors</b>: l’esportista actua sol, sense companys ni adversaris que intervinguin en la seva acció. El factor que ho determina és la incertesa.</p>
+    <h4 class="aq-h4" style="margin-top:18px">Segons el tipus de medi i el material</h4>
+    <div class="classif">
+      <div class="ax empty"></div><div class="ax">Sense material</div><div class="ax">Amb material</div>
+      <div class="ax v">Medi fix</div>
+      <div class="cell"><b>Fix · sense material</b>Curses de pista, natació en piscina, salts d’alçada, llargada i triple, gimnàstica artística de terra, salts de trampolí.</div>
+      <div class="cell"><b>Fix · amb material</b>Llançaments d’atletisme, salt de perxa, gimnàstica rítmica, tir amb arc, halterofília, ciclisme en pista, patinatge.</div>
+      <div class="ax v">Medi variable</div>
+      <div class="cell"><b>Variable · sense material</b>Cros, escalada lliure, natació en aigües obertes.</div>
+      <div class="cell"><b>Variable · amb material</b>Ciclisme en carretera, BTT, piragüisme d’aigües braves, esquí, orientació, busseig, triatló, vela, windsurf.</div>
+    </div>
+    <div class="vs" style="margin-top:16px">
+      <div><h4>Sense altres esportistes alhora</h4><p class="prose">Salts i llançaments atlètics, salts de trampolí, tir amb arc, salt d’obstacles eqüestre, escalada, paracaigudisme.</p></div>
+      <div><h4>Amb altres esportistes alhora</h4><p class="prose">Sempre que la finalitat sigui l’autosuperació: curses, natació, ciclisme, windsurf.</p></div>
+    </div>
+    <p class="prose" style="margin-top:16px">Altres classificacions, com la d’Ellis (1983), només ordenen els jocs esportius: de blanc i diana, de camp i bat, de pista dividida, de xarxa i paret, i d’invasió. Per això solen deixar al marge esports com la natació, el ciclisme o l’atletisme.</p>
+    <p class="src">Font: presentació del mòdul «Característiques i taxonomia dels esports individuals» (Parlebas, 1988; Sampedro, 1999; Sebastiani, 1999; Ellis, 1983).</p>
+  </div>
+</section>
+
+<!-- ===================== JOCS ===================== -->
+<section id="jocs" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">A la pista</div>
+      <h2>Banc de jocs</h2>
+      <p>Jocs populars i motrius per treballar cada habilitat. Filtra per edat i per habilitat per preparar una sessió. Cada joc indica el material, variants i la clau d’aprenentatge o de seguretat.</p>
+    </div>
+    <div class="filters" id="filters">
+      <div class="frow" role="group" aria-label="Filtra per edat"><span class="label">Edat</span></div>
+      <div class="frow" role="group" aria-label="Filtra per habilitat"><span class="label">Habilitat</span></div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+    <div class="games" id="games"></div>
+    <p class="src">Recull de jocs populars i motrius d’ús habitual a l’educació física. Organitzats segons les habilitats dels apunts del mòdul.</p>
+  </div>
+</section>
+
+<!-- ===================== SESSIÓ ===================== -->
+<section id="sessio" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">A la pista</div>
+      <h2>Organitzar una sessió</h2>
+    </div>
+    <div class="sess-grid">
+      <div>
+        <ol class="parts">
+          <li><b>Escalfament</b><p>Joc conegut amb desplaçaments variats que activi tot el cos i introdueixi l’habilitat del dia.</p></li>
+          <li><b>Part principal</b><p>Dues o tres tasques de l’habilitat, de la global a l’analítica, i un joc que l’apliqui. Organitzar en estacions o petits grups perquè tothom practiqui molt.</p></li>
+          <li><b>Tornada a la calma</b><p>Activitat suau d’equilibri o de respiració, recordar què s’ha après i recollir el material entre tots.</p></li>
+        </ol>
+        <ul class="tips">
+          <li>Explica poc i demostra: una o dues claus per tasca.</li>
+          <li>Molta pràctica i poques esperes: grups petits, molt material.</li>
+          <li>Retroalimentació concreta i positiva.</li>
+          <li>Treballa els dos costats del cos: mà i peu no dominants.</li>
+          <li>Adapta la dificultat amb les variables de la tasca.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="ex-head"><h3>Sessió d’exemple</h3><span class="stg s2">6–8 anys</span><span class="muted">45 min · salts i caigudes</span></div>
+        <div class="tbl-wrap">
+          <table class="sess">
+            <thead><tr><th scope="col">Minuts</th><th scope="col">Activitat</th><th scope="col">Per a què</th></tr></thead>
+            <tbody>
+              <tr><td>0–8</td><td>«Llum verda, llum vermella» amb desplaçaments diferents a cada ronda</td><td>Activació i aturades controlades</td></tr>
+              <tr><td>8–15</td><td>«Granotes i cangurs»: salts de peus junts i a peu coix</td><td>Batuda i caiguda amortida</td></tr>
+              <tr><td>15–28</td><td>Estacions: cèrcols a peu coix, obstacles baixos, baixar d’un banc saltant, xarranca</td><td>Variabilitat de salts</td></tr>
+              <tr><td>28–38</td><td>«El riu de cocodrils» i corda gran que gira</td><td>Aplicar-ho en situació de joc</td></tr>
+              <tr><td>38–45</td><td>Estàtues en equilibri sobre un peu i recollida del material</td><td>Tornada a la calma</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="aq-h3">Variables per facilitar o complicar una tasca</h3>
+    <div class="tbl-wrap">
+      <table class="vt">
+        <thead><tr><th scope="col">Variable</th><th scope="col">Més fàcil</th><th scope="col">Més difícil</th></tr></thead>
+        <tbody>
+          <tr><td>Espai</td><td>Ample, superfície estable, objectiu a prop i gran</td><td>Reduït, superfície estreta o inestable, objectiu lluny i petit</td></tr>
+          <tr><td>Temps</td><td>Sense límit, ritme propi</td><td>Amb límit, a un senyal, a ritme marcat</td></tr>
+          <tr><td>Objecte</td><td>Gran, tou, lleuger, lent (globus)</td><td>Petit, dur, ràpid, de trajectòria variable</td></tr>
+          <tr><td>Cos</td><td>Molts suports, costat dominant, ulls oberts</td><td>Pocs suports, costat no dominant, ulls tancats</td></tr>
+          <tr><td>Companys</td><td>Sol o en cooperació</td><td>Amb oposició o amb diversos companys</td></tr>
+          <tr><td>Situació</td><td>Quiet, tasca tancada</td><td>En moviment, amb decisions i incertesa</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Fonts: principis d’ensenyament del Department of Education, Victoria; apunts del mòdul.</p>
+  </div>
+</section>
+
+<!-- ===================== SEGURETAT ===================== -->
+<section id="seguretat" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">A la pista</div>
+      <h2>Seguretat</h2>
+      <p>La majoria d’accidents es preveuen amb una bona organització: espai revisat, material adequat i normes clares.</p>
+    </div>
+    <ul class="safe">
+      <li><h3>Revisa l’espai i el material</h3><p>Terra sec i sense objectes, porteries i cistelles ancorades, matalassos sense forats entre ells. Retira el material que no es fa servir.</p></li>
+      <li><h3>Ensenya a caure</h3><p>Abans de salts i girs: caure flexionant els genolls, rodar i recolzar les mans. Matalassos i ajuda del tècnic en tombarelles, rodes i equilibris invertits.</p></li>
+      <li><h3>Llançaments ordenats</h3><p>Tots llancen en la mateixa direcció i ningú va a buscar el material fins al senyal. Pilotes toves en recepcions de nivell inicial.</p></li>
+      <li><h3>Calor i sol</h3><p>Evita les hores de màxima insolació, beu aigua sovint encara que no tinguis set i fes servir gorra i protecció solar. Els infants pateixen més la calor.</p></li>
+      <li><h3>Força supervisada</h3><p>L’entrenament de força en infants l’ha de dissenyar i supervisar un professional qualificat, prioritzant la tècnica sobre la càrrega.</p></li>
+      <li><h3>Inclusió i adaptació</h3><p>Ajusta les variables de la tasca perquè tothom tingui èxit i repte. Pregunta per lesions, malalties o necessitats específiques abans de començar.</p></li>
+    </ul>
+    <p class="src">Fonts: Departament de Salut, recomanacions per a la calor (via Nació Digital); Lloyd et al. (2014); Department of Education, Victoria.</p>
+  </div>
+</section>
+
+<!-- ===================== VOCABULARI ===================== -->
+<section id="vocabulari" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Consulta</div>
+      <h2>Vocabulari</h2>
+      <p>Termes en català amb l’equivalent castellà, per llegir bibliografia en les dues llengües.</p>
+    </div>
+    <dl class="gloss">
+      <div><dt>Agilitat <span>agilidad</span></dt><dd>Capacitat de canviar de direcció i de velocitat de pressa i amb control.</dd></div>
+      <div><dt>Alfabetització física <span>alfabetización física</span></dt><dd>Motivació, confiança, competència i coneixement per mantenir-se actiu tota la vida.</dd></div>
+      <div><dt>Batuda <span>batida</span></dt><dd>Moment en què el peu o els peus empenyen el terra per iniciar un salt.</dd></div>
+      <div><dt>Bot <span>bote</span></dt><dd>Acció d’impulsar una pilota contra el terra i recuperar-la de manera continuada.</dd></div>
+      <div><dt>Colpeig <span>golpeo</span></dt><dd>Acció d’impulsar un objecte amb un cop de mà, peu, cap o estri.</dd></div>
+      <div><dt>Conducció <span>conducción</span></dt><dd>Desplaçar-se mantenint el control d’un objecte amb el peu, la mà o un estri.</dd></div>
+      <div><dt>Coordinació oculomanual <span>coordinación óculo-manual</span></dt><dd>Ajustar el moviment de les mans al que es veu. Oculopèdica: amb els peus.</dd></div>
+      <div><dt>Esquema corporal <span>esquema corporal</span></dt><dd>Coneixement i representació del propi cos i de les seves possibilitats.</dd></div>
+      <div><dt>Fase sensible <span>fase sensible</span></dt><dd>Període en què una capacitat respon especialment bé a l’entrenament.</dd></div>
+      <div><dt>Gambada <span>zancada</span></dt><dd>Salt d’un peu a l’altre amb fase de vol, més llarg que una passa de carrera.</dd></div>
+      <div><dt>Lateralitat <span>lateralidad</span></dt><dd>Predomini d’un costat del cos sobre l’altre.</dd></div>
+      <div><dt>Peu coix <span>pata coja</span></dt><dd>Salt sobre un sol peu, caient amb el mateix peu.</dd></div>
+      <div><dt>Propiocepció <span>propiocepción</span></dt><dd>Informació que donen músculs, tendons i articulacions sobre la posició del cos.</dd></div>
+      <div><dt>Psicomotor <span>psicomotor</span></dt><dd>Activitat en què es participa sol, sense interacció amb companys ni adversaris.</dd></div>
+      <div><dt>Quadrupèdia <span>cuadrupedia</span></dt><dd>Desplaçament amb quatre punts de suport: mans i peus o mans i genolls.</dd></div>
+      <div><dt>Recepció <span>recepción</span></dt><dd>Acció d’interceptar i controlar un objecte en moviment.</dd></div>
+      <div><dt>Reptació <span>reptación</span></dt><dd>Desplaçament arrossegant el cos per terra.</dd></div>
+      <div><dt>Roda lateral <span>rueda lateral</span></dt><dd>Gir sobre l’eix anteroposterior amb suports successius de mans i peus.</dd></div>
+      <div><dt>Sociomotor <span>sociomotor</span></dt><dd>Activitat amb interacció de companys, adversaris o tots dos.</dd></div>
+      <div><dt>Tombarella <span>voltereta</span></dt><dd>Gir sobre l’eix transversal, endavant o enrere, amb el cos agrupat.</dd></div>
+      <div><dt>Trepa <span>trepa</span></dt><dd>Desplaçament vertical amb suport de mans i peus.</dd></div>
+      <div><dt>Xut <span>chut, tiro</span></dt><dd>Colpeig d’una pilota amb el peu.</dd></div>
+    </dl>
+    <p class="src">Terminologia de referència: TERMCAT, Diccionari general de l’esport.</p>
+  </div>
+</section>
+
+<!-- ===================== FONTS ===================== -->
+<section id="fonts" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Bibliografia</div>
+      <h2>Fonts</h2>
+    </div>
+    <ol class="refs">
+      <li><i>Les habilitats motrius i l’alfabetització física</i>. Apunts del mòdul 5, CFGS EAS. Institut de l’Esport de Barcelona. Inclou les definicions i classificacions de Cratty (1983), Delgado (1988), Batalla (2000), Sánchez Bañuelos (1992) i Trigueros (1996).</li>
+      <li><i>M05. Esports individuals: característiques i taxonomia</i>. Presentació del mòdul 5, 1r EAS. Inclou Parlebas (1988), Sampedro (1999), Sebastiani (1999) i Ellis (1983).</li>
+      <li>Department of Education, State of Victoria (1996, actualitzat el 2009). <i>Fundamental Motor Skills: A Manual for Classroom Teachers</i>. <a href="https://www.education.vic.gov.au/Documents/school/teachers/teachingresources/social/physed/fmsteacher.pdf" target="_blank" rel="noopener">education.vic.gov.au</a></li>
+      <li>Organització Mundial de la Salut (2019). <i>To grow up healthy, children need to sit less and play more</i>. <a href="https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more" target="_blank" rel="noopener">who.int</a></li>
+      <li>Organització Mundial de la Salut (2020). <i>WHO guidelines on physical activity and sedentary behaviour</i>. <a href="https://www.who.int/publications/i/item/9789240015128" target="_blank" rel="noopener">who.int</a></li>
+      <li>Guthold, R., Stevens, G. A., Riley, L. M. i Bull, F. C. (2020). Global trends in insufficient physical activity among adolescents. <i>The Lancet Child &amp; Adolescent Health, 4</i>(1), 23–35.</li>
+      <li>Gallahue, D. L., Ozmun, J. C. i Goodway, J. D. (2012). <i>Understanding motor development: infants, children, adolescents, adults</i> (7a ed.). McGraw-Hill.</li>
+      <li>Gallahue, D. L. i Donnelly, F. C. (2007). <i>Developmental physical education for all children</i>. Human Kinetics. Estadis recollits per World Rugby: <a href="https://passport.world.rugby/conditioning-for-rugby/introduction-to-conditioning-children/developing-fundamental-movements-for-rugby/stages-of-movement-skill-competence/" target="_blank" rel="noopener">passport.world.rugby</a></li>
+      <li>Stodden, D. F., Goodway, J. D., Langendorfer, S. J. et al. (2008). A developmental perspective on the role of motor skill competence in physical activity: an emergent relationship. <i>Quest, 60</i>(2), 290–306.</li>
+      <li>Robinson, L. E., Stodden, D. F., Barnett, L. M. et al. (2015). Motor competence and its effect on positive developmental trajectories of health. <i>Sports Medicine, 45</i>(9), 1273–1284.</li>
+      <li>International Physical Literacy Association (2014). Definició d’alfabetització física, recollida per Sport for Life. <a href="https://sportforlife.ca/physical-literacy/" target="_blank" rel="noopener">sportforlife.ca</a></li>
+      <li>Sport Australia (2019). <i>The Australian Physical Literacy Framework</i>, versió 2. <a href="https://usaultimate.org/wp-content/uploads/2025/01/35455_Physical-Literacy-Framework_access.pdf" target="_blank" rel="noopener">còpia en PDF</a></li>
+      <li>Sport for Life. <i>Building a solid foundation: the first three stages of long-term development</i>. <a href="https://sportforlife.ca/blog/building-a-solid-foundation-the-first-three-stages-of-long-term-development-in-sport-and-physical-activity/" target="_blank" rel="noopener">sportforlife.ca</a></li>
+      <li>Lloyd, R. S. i Oliver, J. L. (2012). The Youth Physical Development Model: a new approach to long-term athletic development. <i>Strength and Conditioning Journal, 34</i>(3), 61–72. Resum de British Judo: <a href="https://britishjudo.org.uk/wp-content/uploads/2024/10/LTAD-Youth-Physical-Development.pdf" target="_blank" rel="noopener">britishjudo.org.uk</a></li>
+      <li>Lloyd, R. S., Faigenbaum, A. D., Stone, M. H. et al. (2014). Position statement on youth resistance training: the 2014 International Consensus. <i>British Journal of Sports Medicine, 48</i>, 498–505. <a href="https://bjsm.bmj.com/content/48/7/498.long" target="_blank" rel="noopener">bjsm.bmj.com</a></li>
+      <li>Wickstrom, R. L. (1983) i Haywood, K. M. i Getchell, N. (2005), recollits a: <i>Los saltos en la etapa infantil</i>. EFDeportes, 177. <a href="https://efdeportes.com/efd177/los-saltos-en-la-etapa-infantil.htm" target="_blank" rel="noopener">efdeportes.com</a></li>
+      <li>Castañer, M. i Camerino, O. (1991). <i>La educación física en la enseñanza primaria</i>. INDE.</li>
+      <li>Moreno, J. A. i Gutiérrez, M. (1998). <i>Bases metodológicas para el aprendizaje de las actividades acuáticas educativas</i>. INDE.</li>
+      <li>Generalitat de Catalunya. Decret 175/2022, d’ordenació dels ensenyaments de l’educació bàsica. Educació física: competències específiques i criteris d’avaluació. <a href="https://projectes.xtec.cat/nou-curriculum/wp-content/uploads/usu2072/2024/05/Educacio-fisica_-competencies-especifiques-criteris-davaluacio.pdf" target="_blank" rel="noopener">projectes.xtec.cat</a></li>
+      <li>Departament de Salut. Recomanacions davant la calor, recollides per Nació Digital. <a href="https://naciodigital.cat/viure-be/salut/labc-de-la-calor-que-salut-proposa-per-fer-front-a-les-altes-temperatures-a-catalunya.html" target="_blank" rel="noopener">naciodigital.cat</a></li>
+    </ol>
+  </div>
+</section>
+</main>
+</div>
+
+<footer>
+  <div class="wrap"><a href="../index.html">Esports Individuals</a> · Habilitats al medi terrestre · Material docent de suport del mòdul 5 · Revisat el 30 d’octubre de 2026.</div>
+</footer>
+
+<nav class="tabbar" aria-label="Navegació principal">
+  <a href="#inici" data-k="inici"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20a1 1 0 0 1-1 1H15v-6H9v6H4.5a1 1 0 0 1-1-1z"/></svg><span>Inici</span></a>
+  <a href="#hmb" data-k="hmb"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v5M6 11l4-3 4 1 2 4 3 1M11 15l1-6"/></svg><span>Habilitats</span></a>
+  <a href="#jocs" data-k="jocs"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17"/></svg><span>Jocs</span></a>
+  <button type="button" id="tb-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>Cerca</span></button>
+  <button type="button" id="tb-menu" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menú</span></button>
+</nav>
+
+<div class="sov" id="sov" hidden>
+  <div class="sov-panel" role="dialog" aria-modal="true" aria-label="Cerca a la web">
+    <div class="sbox">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      <input id="q" type="search" placeholder="Cerca habilitats, jocs, errors, termes…" autocomplete="off" spellcheck="false" aria-label="Text de la cerca">
+      <button type="button" class="sclose" id="sclose">Tanca</button>
+    </div>
+    <div class="sres-wrap"><p class="scount" id="q-count" aria-live="polite"></p><ul class="res" id="q-res"></ul></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.documentElement.lang = "ca";
+
+  /* ---------- Tema clar / fosc ---------- */
+  var root = document.documentElement, themeBtn = document.getElementById("theme-btn");
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  function curTheme(){
+    var a = root.getAttribute("data-theme");
+    if (a === "dark" || a === "light") return a;
+    return mq && mq.matches ? "dark" : "light";
+  }
+  function paintThemeBtn(){
+    var dark = curTheme() === "dark", label = dark ? "Canvia al tema clar" : "Canvia al tema fosc";
+    themeBtn.setAttribute("aria-label", label);
+    themeBtn.title = label;
+    themeBtn.querySelector(".i-sun").hidden = !dark;
+    themeBtn.querySelector(".i-moon").hidden = dark;
+  }
+  themeBtn.addEventListener("click", function(){
+    var next = curTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("terrestre-tema", next); } catch (e) {}
+    paintThemeBtn();
+  });
+  if (mq && mq.addEventListener) mq.addEventListener("change", paintThemeBtn);
+  if ("MutationObserver" in window) new MutationObserver(paintThemeBtn).observe(root, {attributes:true, attributeFilter:["data-theme"]});
+  paintThemeBtn();
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Figures humanes ---------- */
+  var S = {t:38, n:10, hr:8, ua:18, fa:17, th:23, sh:22, ft:8};
+  var R = Math.PI/180;
+  function pt(o,len,deg){ return {x:o.x+len*Math.cos(deg*R), y:o.y+len*Math.sin(deg*R)}; }
+  function f(n){ return n.toFixed(1); }
+  function path(pts, cls){ return '<path class="'+cls+'" d="M'+pts.map(function(p){return f(p.x)+' '+f(p.y);}).join(' L')+'"/>'; }
+  function chain(o, segs){ var pts=[o], c=o; segs.forEach(function(s){ c=pt(c,s[0],s[1]); pts.push(c); }); return pts; }
+  /* p: t tronc, n coll, aN/aF braç proper/llunyà [braç, avantbraç], lN/lF cama [cuixa, cama, peu], air, ball */
+  function body(p, ox, gy, sc){
+    sc = sc || 1;
+    var hip = {x:0, y:0}, shp = pt(hip, S.t, p.t), na = p.t + (p.n || 0), nk = pt(shp, S.n, na), hc = pt(nk, S.hr, na);
+    function arm(a){ return chain(shp, [[S.ua, a[0]], [S.fa, a[1]]]); }
+    function leg(l){ return chain(hip, [[S.th, l[0]], [S.sh, l[1]], [S.ft, l[2]]]); }
+    var aN = arm(p.aN), aF = arm(p.aF), lN = leg(p.lN), lF = leg(p.lF);
+    var my = hc.y + S.hr - 3;
+    [].concat(aN, aF, lN, lF).forEach(function(q){ if (q.y > my) my = q.y; });
+    var base = my + 3 + (p.air || 0);
+    var o = '<g transform="translate(' + f(ox) + ' ' + f(gy) + ') scale(' + sc + ') translate(0 ' + f(-base) + ')">';
+    o += path(aF, "limb far") + path(lF, "limb far");
+    o += '<path class="torso" d="M0 0 L' + f(shp.x) + ' ' + f(shp.y) + '"/>';
+    o += path([shp, nk], "limb");
+    o += path(lN, "limb");
+    o += '<circle class="head" cx="' + f(hc.x) + '" cy="' + f(hc.y) + '" r="' + S.hr + '"/>';
+    o += path(aN, "limb");
+    if (p.ball){
+      var b = p.ball, c;
+      if (b.at === "h") c = pt(aN[2], 5, p.aN[1]);
+      else if (b.at === "hh") { var m = {x:(aN[2].x + aF[2].x)/2, y:(aN[2].y + aF[2].y)/2}; c = pt(m, 5, p.aN[1]); }
+      else if (b.at === "f") c = {x:lN[3].x + 6, y:lN[3].y - 1};
+      else c = {x:b.x, y: b.g ? base - 6 : b.y};
+      if (b.dx) c = {x:c.x + b.dx, y:c.y + (b.dy || 0)};
+      o += '<circle class="ball" cx="' + f(c.x) + '" cy="' + f(c.y) + '" r="6"/>';
+    }
+    return o + '</g>';
+  }
+
+  var P = {
+    carrera: [
+      {t:-80, n:-5, aN:[118,50], aF:[62,-30], lN:[80,96,8], lF:[115,175,105]},
+      {t:-78, n:-5, aN:[95,10], aF:[88,150], lN:[78,108,2], lF:[100,205,120]},
+      {t:-74, n:-5, aN:[52,-38], aF:[128,72], lN:[118,124,150], lF:[18,98,18]},
+      {t:-75, n:-5, air:10, aN:[60,-30], aF:[122,60], lN:[128,178,118], lF:[38,96,10]}
+    ],
+    salt: [
+      {t:-50, n:-20, aN:[160,172], aF:[156,168], lN:[28,118,2], lF:[32,122,4]},
+      {t:-50, n:-15, aN:[-40,-42], aF:[-36,-38], lN:[128,130,150], lF:[124,126,146]},
+      {t:-58, n:-5, air:28, aN:[-8,8], aF:[-4,12], lN:[-8,72,-8], lF:[-4,76,-4]},
+      {t:-55, n:-10, aN:[12,6], aF:[16,10], lN:[12,114,2], lF:[16,118,4]}
+    ],
+    tombarella: [
+      {t:-28, n:-10, aN:[75,80], aF:[79,84], lN:[10,125,2], lF:[14,128,4]},
+      {t:40, n:100, aN:[120,60], aF:[124,64], lN:[100,95,170], lF:[96,92,170]},
+      {t:148, n:50, aN:[-70,-20], aF:[-66,-16], lN:[-112,66,10], lF:[-108,70,14]},
+      {t:-58, n:-10, aN:[2,-6], aF:[6,-2], lN:[22,116,2], lF:[26,120,4]}
+    ],
+    llancament: [
+      {t:-95, n:5, aN:[172,182], aF:[-6,-10], lN:[98,90,0], lF:[78,90,0], ball:{at:"h"}},
+      {t:-88, n:0, aN:[178,-112], aF:[-14,-18], lN:[112,104,170], lF:[58,86,0], ball:{at:"h"}},
+      {t:-76, n:-5, aN:[-58,-42], aF:[112,88], lN:[124,118,160], lF:[58,92,0], ball:{at:"h", dx:8, dy:-6}},
+      {t:-62, n:-10, aN:[72,108], aF:[150,112], lN:[110,140,170], lF:[62,96,0], ball:{x:62, y:-96}}
+    ],
+    recepcio: [
+      {t:-86, n:0, aN:[70,-30], aF:[74,-26], lN:[82,100,0], lF:[98,84,0], ball:{x:56, y:-40}},
+      {t:-82, n:5, aN:[28,-8], aF:[32,-4], lN:[82,100,0], lF:[98,84,0], ball:{at:"hh", dx:10, dy:-3}},
+      {t:-80, n:8, aN:[10,2], aF:[14,6], lN:[78,104,0], lF:[100,82,0], ball:{at:"hh"}},
+      {t:-76, n:5, aN:[82,-48], aF:[86,-44], lN:[66,116,0], lF:[84,104,0], ball:{at:"hh"}}
+    ],
+    xut: [
+      {t:-80, n:5, aN:[118,50], aF:[62,-30], lN:[80,96,8], lF:[115,175,105], ball:{x:46, g:true}},
+      {t:-86, n:12, aN:[132,80], aF:[-18,-34], lN:[118,208,130], lF:[84,92,0], ball:{x:20, g:true}},
+      {t:-96, n:16, aN:[150,110], aF:[-12,-28], lN:[58,64,24], lF:[90,92,0], ball:{at:"f"}},
+      {t:-104, n:10, aN:[160,120], aF:[-6,-20], lN:[-4,-14,-30], lF:[94,94,10], ball:{x:50, y:-70}}
+    ],
+    equilibri: [
+      {t:-90, n:0, aN:[-68,-78], aF:[-112,-102], lN:[90,90,62], lF:[92,92,64]},
+      {t:-90, n:0, aN:[14,6], aF:[166,174], lN:[90,90,0], lF:[2,92,0]},
+      {t:-6, n:-30, aN:[4,0], aF:[176,180], lN:[88,92,0], lF:[178,180,190]},
+      {t:-88, n:8, aN:[18,8], aF:[162,172], lN:[78,100,0], lF:[108,82,0]}
+    ]
+  };
+
+  function mk(x, y, n){ return '<g class="mk"><circle cx="'+x+'" cy="'+y+'" r="11"/><text x="'+x+'" y="'+(y+.5)+'">'+n+'</text></g>'; }
+  function strip(key){
+    var o = '<svg viewBox="0 0 480 170" role="img" aria-label="Seqüència de quatre fases">';
+    o += '<line class="ground" x1="0" y1="150" x2="480" y2="150"/>';
+    [120,240,360].forEach(function(x){ o += '<line class="sep" x1="'+x+'" y1="8" x2="'+x+'" y2="162"/>'; });
+    P[key].forEach(function(p, i){
+      var cx = 60 + i*120, gy = 150, ox = cx;
+      if (key === "tombarella"){ o += '<rect class="mat" x="'+(cx-54)+'" y="142" width="108" height="8" rx="3"/>'; gy = 142; ox = cx + [-8, -14, 0, 0][i]; }
+      if (key === "equilibri" && i === 3){ o += '<rect class="beam" x="'+(cx-50)+'" y="118" width="100" height="9" rx="2"/><path class="beam" d="M'+(cx-40)+' 127 h8 v23 h-8z M'+(cx+32)+' 127 h8 v23 h-8z"/>'; gy = 118; }
+      if (key === "salt" || key === "carrera" || key === "xut") ox = cx - 6;
+      if (key === "llancament") ox = cx + [8, 0, -10, -14][i];
+      if (key === "recepcio") ox = cx - 14;
+      o += body(p, ox, gy, 1);
+      o += mk(14 + i*120, 18, i+1);
+    });
+    return o + '</svg>';
+  }
+  document.querySelectorAll("[data-strip]").forEach(function(el){ el.innerHTML = strip(el.getAttribute("data-strip")); });
+
+  /* Circuit de l'inici */
+  var CIRC = [
+    {id:"desplacaments", n:"Desplaçaments", p:P.carrera[2]},
+    {id:"salts", n:"Salts", p:P.salt[2]},
+    {id:"girs", n:"Girs", p:P.tombarella[1], mat:true},
+    {id:"llancaments", n:"Llançaments", p:P.llancament[2]},
+    {id:"recepcions", n:"Recepcions", p:P.recepcio[2]},
+    {id:"manipulacions", n:"Bots i colpejos", p:P.xut[2]},
+    {id:"equilibri", n:"Equilibri", p:P.equilibri[2]}
+  ];
+  (function(){
+    var o = '<svg viewBox="0 0 480 360" role="group" aria-label="Circuit de les set habilitats motrius bàsiques">';
+    [[150, 0, 480], [325, 0, 480]].forEach(function(r){
+      o += '<rect class="grassband" x="0" y="'+(r[0]-8)+'" width="480" height="8"/>';
+      o += '<rect class="trackband" x="0" y="'+r[0]+'" width="480" height="28"/>';
+      o += '<line class="laneline" x1="0" y1="'+(r[0]+14)+'" x2="480" y2="'+(r[0]+14)+'"/>';
+    });
+    CIRC.forEach(function(c, i){
+      var row = i < 4 ? 0 : 1, cx = row === 0 ? 60 + i*120 : 120 + (i-4)*120, gy = row === 0 ? 156 : 331, top = row === 0 ? 0 : 178;
+      o += '<a href="#' + c.id + '" aria-label="' + (i+1) + '. ' + c.n + ': obre la fitxa">';
+      o += '<rect class="hit" x="'+(cx-58)+'" y="'+top+'" width="116" height="178" rx="10"/>';
+      if (c.mat) o += '<rect class="mat" x="'+(cx-40)+'" y="'+(gy-7)+'" width="80" height="7" rx="3"/>';
+      o += body(c.p, cx - (c.mat ? 10 : 6), c.mat ? gy - 7 : gy, 0.95);
+      o += mk(cx - 40, top + 22, i+1);
+      o += '</a>';
+    });
+    document.querySelector('[data-fig="circuit"]').innerHTML = o + '</svg>';
+  })();
+
+  /* ---------- Pestanyes de les habilitats ---------- */
+  var SKILLS = ["desplacaments","salts","girs","llancaments","recepcions","manipulacions","equilibri"];
+  var SKILL_NAME = {desplacaments:"Desplaçaments", salts:"Salts", girs:"Girs", llancaments:"Llançaments", recepcions:"Recepcions", manipulacions:"Bots i colpejos", equilibri:"Equilibri"};
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('#hmb-tabs [role="tab"]'));
+  function selectSkill(id, focus){
+    tabs.forEach(function(t){
+      var on = t.getAttribute("data-target") === id;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("data-target")).hidden = !on;
+      if (on && focus) t.focus();
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener("click", function(){ goSkill(t.getAttribute("data-target")); });
+    t.addEventListener("keydown", function(e){
+      var n = null;
+      if (e.key === "ArrowRight") n = (i+1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i-1+tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length-1;
+      if (n !== null){ e.preventDefault(); selectSkill(tabs[n].getAttribute("data-target"), true); goSkill(tabs[n].getAttribute("data-target")); }
+    });
+  });
+  var fromTab = false;
+  function goSkill(id){
+    fromTab = true;
+    if (location.hash.slice(1) === id){ fromTab = false; return; }
+    location.hash = id;
+  }
+
+  /* ---------- Banc de jocs ---------- */
+  var STAGES = {s1:"3–5", s2:"6–8", s3:"9–12"};
+  var OBJ = {des:"Desplaçaments", sal:"Salts", gir:"Girs", lla:"Llançaments", rec:"Recepcions", bot:"Bots i colpejos", equ:"Equilibri"};
+  var GAMES = [
+    {n:"Llum verda, llum vermella", s:["s1","s2"], o:["des"], m:"Cap.", c:"Els infants avancen cap al tècnic quan diu «llum verda» i s’aturen en sec quan diu «llum vermella». Qui es mou després del senyal torna a la sortida.", v:"Canviar el desplaçament a cada ronda: de puntetes, a quatre grapes, de costat o a peu coix. Afegir «llum groga» per anar a poc a poc.", k:"Treballa l’aturada controlada i l’atenció al senyal."},
+    {n:"Un, dos, tres, pica paret", s:["s2"], o:["des","equ"], m:"Una paret o un arbre.", c:"Un infant compta d’esquena a la paret dient «un, dos, tres, pica paret» mentre els altres s’hi acosten. Quan es gira, tothom ha de quedar quiet; qui es mou torna a la sortida. Guanya qui toca la paret primer.", v:"Quedar-se quiet en una postura concreta: sobre un peu, en balança o ajupit.", k:"Frenar i mantenir l’equilibri just després de córrer."},
+    {n:"El mocador", s:["s2","s3"], o:["des"], m:"Un mocador.", c:"Dos equips amb els jugadors numerats, un a cada banda. El tècnic, al mig, aguanta el mocador i diu un número: els dos jugadors amb aquest número corren a agafar-lo i a tornar al seu camp sense que l’altre els toqui.", v:"Dir una operació en lloc del número; sortir asseguts o estirats; anar-hi a peu coix.", k:"Velocitat de reacció, acceleració i fintes."},
+    {n:"Tocar i parar", s:["s1","s2"], o:["des"], m:"Pitralls per als qui paren.", c:"Un o dos infants paren i intenten tocar els altres. Qui és tocat passa a parar.", v:"Qui és tocat es queda quiet fins que un company el salva passant-li per sota les cames; canviar la manera de desplaçar-se.", k:"Delimitar l’espai i tocar sense empènyer."},
+    {n:"Robar cues", s:["s2","s3"], o:["des"], m:"Cintes o mocadors, un per infant.", c:"Cada infant porta una cua penjada de la cintura del pantaló. Dins d’un espai limitat, han de robar tantes cues com puguin sense perdre la pròpia.", v:"Per equips; qui perd la cua continua jugant i pot recuperar-ne una.", k:"Esquives i canvis de direcció. No es pot agafar la roba ni empènyer."},
+    {n:"La cadena", s:["s2","s3"], o:["des"], m:"Cap.", c:"Qui para toca un company i s’agafen de la mà. La cadena creix amb cada infant tocat i només poden tocar els dos extrems.", v:"Quan la cadena arriba a quatre infants, es parteix en dues.", k:"Coordinar el desplaçament amb els companys sense deixar-se anar."},
+    {n:"El riu de cocodrils", s:["s1","s2"], o:["sal","equ"], m:"Cèrcols, cordes i matalassos petits.", c:"Amb cordes i cèrcols es fa un riu ple de pedres i illes. Els infants l’han de creuar saltant sense trepitjar l’aigua, on viuen els cocodrils.", v:"Pedres cada cop més separades; creuar només a peu coix; creuar portant un objecte.", k:"Saltar i caure equilibrat, sense passes de més."},
+    {n:"La xarranca", s:["s2"], o:["sal","equ"], m:"Guix o cinta adhesiva i un saquet o una pedra plana.", c:"Es dibuixa la xarranca a terra. Es llança el saquet a la primera casella i es fa el recorregut a peu coix, amb els dos peus on hi ha dues caselles juntes i saltant la casella del saquet. A la tornada, es recull.", v:"Xarranques en espiral o amb números; canviar de peu a cada ronda.", k:"Combina salts, equilibri i un llançament de precisió."},
+    {n:"El rellotge", s:["s2","s3"], o:["sal"], m:"Una corda llarga i tova.", c:"El tècnic, al centre, fa girar una corda llarga arran de terra. Els infants, en rotllana, la salten quan passa pel seu davant. Qui la toca suma un punt al seu marcador.", v:"Saltar a peu coix; corda una mica més alta; girar més de pressa.", k:"Calcular el moment del salt. Corda baixa i tova."},
+    {n:"Granotes, cangurs i flamencs", s:["s1"], o:["sal"], m:"Cap.", c:"Quan el tècnic diu «granotes», tothom salta ajupit amb els peus junts; amb «cangurs», salts alts i llargs; amb «flamencs», a peu coix.", v:"Afegir animals nous que proposen els infants; seguir un camí marcat a terra.", k:"Diferenciar tipus de salt i caure en silenci."},
+    {n:"Cursa de sacs", s:["s2"], o:["sal"], m:"Sacs o bosses grans resistents.", c:"Curses de relleus saltant amb els peus dins d’un sac fins a un con i tornant.", v:"Recorregut amb girs al voltant dels cons; per parelles amb una cama cadascú dins el mateix sac.", k:"Terreny tou i espai ampli. Abans, practicar com recolzar les mans en caure."},
+    {n:"Croquetes i tombarelles", s:["s1","s2"], o:["gir"], m:"Matalassos i un pla inclinat.", c:"Recorregut de matalassos: croquetes en el primer, balancí en el segon i tombarella endavant pel pla inclinat al final.", v:"Croquetes per parelles agafats de les mans; tombarella acabant amb un salt amunt.", k:"Barbeta al pit a la tombarella i un sol infant per matalàs."},
+    {n:"Les baldufes", s:["s2"], o:["gir","des"], m:"Cap.", c:"Els infants es desplacen lliurement i, a cada senyal, fan l’acció que diu el tècnic: mig gir en salt, gir sencer, croqueta a terra o gir ajupit sobre els peus. Després continuen en la nova direcció.", v:"Girar cap al costat menys habitual; mirar un company abans i després del gir.", k:"Recuperar l’equilibri i l’orientació després del gir."},
+    {n:"Bitlles", s:["s1","s2"], o:["lla"], m:"Bitlles o ampolles de plàstic i pilotes.", c:"Des d’una línia, llançar una pilota rodant per tombar tantes bitlles com es pugui.", v:"Llançar amb la mà no dominant; allunyar la línia; posar les bitlles en fila o en triangle.", k:"Mirada a l’objectiu i pas amb el peu contrari a la mà que llança."},
+    {n:"La diana de colors", s:["s2","s3"], o:["lla"], m:"Dianes a la paret o cèrcols penjats i saquets.", c:"Cada color de la diana té un valor. Els infants llancen saquets per sobre de l’espatlla des de diferents distàncies i sumen punts per al seu equip.", v:"El company diu el color just abans del llançament; un cèrcol penjat que es balanceja.", k:"De costat, braç enrere, pas i llança."},
+    {n:"Neteja la casa", s:["s1","s2","s3"], o:["lla"], m:"Moltes pilotes toves o boles de paper i una línia o un banc al mig.", c:"Dos equips separats per una línia o un banc han de llançar totes les pilotes al camp contrari. Quan s’acaba el temps, guanya l’equip que en té menys al seu camp.", v:"Només llançaments per sobre de l’espatlla; només amb la mà no dominant.", k:"Molts llançaments en poc temps. Mai cap a la cara dels altres."},
+    {n:"Pilota caçadora", s:["s2","s3"], o:["lla","rec"], m:"Una pilota tova.", c:"Dos equips en camps separats intenten tocar els jugadors contraris amb la pilota. Qui és tocat passa darrere del camp contrari i des d’allà també pot llançar. Qui atrapa la pilota sense que caigui no queda eliminat.", v:"Jugar amb dues pilotes; qui fa una recepció recupera un company.", k:"Pilota tova i llançaments per sota de les espatlles."},
+    {n:"Deu passades", s:["s3"], o:["rec","lla"], m:"Una pilota i pitralls.", c:"Dos equips. L’equip que té la pilota ha de fer deu passades seguides sense que l’altre la intercepti. No es pot córrer amb la pilota a les mans.", v:"No es pot tornar la pilota a qui te l’ha passada; passades amb un bot obligatori.", k:"Desmarcar-se, passar i rebre en moviment."},
+    {n:"Que no caigui el globus", s:["s1","s2"], o:["bot","rec"], m:"Globus.", c:"Cada infant o parella ha de mantenir el globus a l’aire tocant-lo amb diferents parts del cos.", v:"Només amb la mà no dominant; amb el cap i els peus; dos globus alhora.", k:"El globus cau a poc a poc i dona temps a l’infant per arribar-hi."},
+    {n:"Llança, pica i atrapa", s:["s2"], o:["rec"], m:"Una pilota de mida mitjana per infant.", c:"Llançar la pilota amunt i atrapar-la després de picar de mans tantes vegades com es pugui.", v:"Tocar-se els genolls, fer una volta o asseure’s abans d’atrapar-la.", k:"Llançament vertical controlat i mans que van a buscar la pilota."},
+    {n:"Segueix el líder botant", s:["s2","s3"], o:["bot","des"], m:"Una pilota per infant.", c:"Per parelles, el líder bota la pilota i es desplaça per l’espai; el company el segueix i fa el mateix.", v:"Canviar de mà, de ritme i d’altura del bot; el líder mostra números amb els dits i l’altre els diu en veu alta.", k:"Botar sense mirar la pilota."},
+    {n:"Porteries de cons", s:["s2","s3"], o:["bot"], m:"Cons i pilotes.", c:"S’escampen porteries de dos cons per l’espai. Cada infant condueix la pilota amb el peu i ha de passar per tantes porteries com pugui en un minut.", v:"Conduir botant amb la mà; per parelles, passant-se la pilota a través de cada porteria.", k:"Tocs suaus i pilota a prop del peu."},
+    {n:"Equilibristes del circ", s:["s1","s2","s3"], o:["equ"], m:"Bancs, bigues baixes i cordes a terra.", c:"Recorregut d’equilibris: caminar per una corda a terra, sobre un banc i per una biga baixa, portant objectes.", v:"Enrere, de costat o amb un saquet al cap; creuar-se amb un company a sobre el banc.", k:"Mirada endavant i un adult a l’abast quan hi ha altura."},
+    {n:"Estàtues de suports", s:["s1","s2"], o:["equ"], m:"Música.", c:"Els infants ballen i, quan para la música, el tècnic diu un número: han de fer una estàtua amb aquell nombre de suports a terra.", v:"Per parelles, sumant els suports dels dos; amb els ulls tancats.", k:"Aguantar la postura fins a 3."},
+    {n:"Circuit d’aventura", s:["s1","s2","s3"], o:["des","sal","gir","equ"], m:"Material de gimnàs: bancs, espatlleres, cèrcols, matalassos.", c:"Recorregut amb estacions: reptar per sota d’un banc, trepar a l’espatllera, saltar de cèrcol en cèrcol, fer una tombarella, caminar sobre un banc i llançar a una diana.", v:"Ordre lliure, cronometrat, en relleus o dissenyat pels mateixos infants.", k:"Un infant per estació i matalassos on hi ha altura."},
+    {n:"Relleus de transport", s:["s2","s3"], o:["des","lla","rec"], m:"Pilotes, cèrcols i cons.", c:"Equips en fila. Cada infant porta un objecte fins al con i torna d’una manera diferent: a quatre grapes, de costat o amb l’objecte entre els genolls. En arribar, l’ha de passar al següent company llançant-lo.", v:"Fer el carretó per parelles; passar l’objecte per sobre del cap de tota la fila.", k:"Molts relleus curts i equips petits perquè ningú esperi gaire."}
+  ];
+  var state = {s:"all", o:"all"};
+  var rows = document.querySelectorAll("#filters .frow");
+  function chip(group, val, text){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "fchip"; b.textContent = text; b.id = "f-" + group + "-" + val;
+    b.setAttribute("aria-pressed", state[group] === val ? "true" : "false");
+    b.addEventListener("click", function(){ state[group] = val; refresh(); });
+    return b;
+  }
+  rows[0].appendChild(chip("s","all","Totes"));
+  Object.keys(STAGES).forEach(function(k){ rows[0].appendChild(chip("s",k,STAGES[k]+" anys")); });
+  rows[1].appendChild(chip("o","all","Totes"));
+  Object.keys(OBJ).forEach(function(k){ rows[1].appendChild(chip("o",k,OBJ[k])); });
+  function esc(t){ return t.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+  function refresh(){
+    document.querySelectorAll("#filters .fchip").forEach(function(b){
+      var p = b.id.split("-"); b.setAttribute("aria-pressed", state[p[1]] === p[2] ? "true" : "false");
+    });
+    var list = GAMES.filter(function(gm){
+      return (state.s === "all" || gm.s.indexOf(state.s) > -1) && (state.o === "all" || gm.o.indexOf(state.o) > -1);
+    });
+    var html = list.map(function(gm){
+      return '<article class="game" id="joc-' + GAMES.indexOf(gm) + '"><div class="game-tags">' +
+        gm.s.map(function(s){ return '<span class="stg '+s+'">'+STAGES[s]+'</span>'; }).join("") +
+        gm.o.map(function(o){ return '<span class="obj">'+OBJ[o]+'</span>'; }).join("") +
+        '</div><h3>'+esc(gm.n)+'</h3>' +
+        '<p><span class="lbl">Material</span>'+esc(gm.m)+'</p>' +
+        '<p>'+esc(gm.c)+'</p>' +
+        '<p><span class="lbl">Variants</span>'+esc(gm.v)+'</p>' +
+        '<p class="key"><span class="lbl">Clau</span>'+esc(gm.k)+'</p></article>';
+    }).join("");
+    document.getElementById("games").innerHTML = html || '<div class="empty">Cap joc no compleix els dos filtres alhora. Canvia l’edat o l’habilitat.</div>';
+    document.getElementById("count").textContent = list.length === 1 ? "Es mostra 1 joc de " + GAMES.length + "." : "Es mostren " + list.length + " jocs de " + GAMES.length + ".";
+  }
+  refresh();
+
+  /* ================= ESTRUCTURA D'APP ================= */
+  var $ = function(id){ return document.getElementById(id); };
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main > section"));
+  var VIEW_IDS = sections.map(function(s){ return s.id; });
+  var LABEL = {inici:"Inici", salut:"Activitat física i salut", habilitats:"Habilitats motrius", alfabetitzacio:"Alfabetització física", etapes:"Etapes de desenvolupament", hmb:"Les habilitats bàsiques", capacitats:"Capacitats físiques", esports:"Esports individuals", jocs:"Banc de jocs", sessio:"Organitzar una sessió", seguretat:"Seguretat", vocabulari:"Vocabulari", fonts:"Fonts"};
+  var behavior = reduce ? "auto" : "smooth";
+  $("tile-jocs").textContent = GAMES.length + " jocs filtrables per edat i per habilitat.";
+
+  /* --- Pestanyes internes de cada habilitat --- */
+  SKILLS.forEach(function(id){
+    var panel = $(id), head = panel.querySelector(".panel-head");
+    var subs = Array.prototype.slice.call(panel.querySelectorAll(":scope > .subpanel"));
+    var bar = document.createElement("div");
+    bar.className = "subtabs"; bar.setAttribute("role","tablist"); bar.setAttribute("aria-label","Apartats de " + SKILL_NAME[id]);
+    head.after(bar);
+    subs.forEach(function(sp){
+      var key = sp.getAttribute("data-sub"), b = document.createElement("button");
+      b.type = "button"; b.className = "subtab"; b.setAttribute("role","tab"); b.setAttribute("data-sub", key);
+      b.id = "st-" + id + "-" + key;
+      var n = key === "errors" ? sp.querySelectorAll(".errors li:not(.head)").length : key === "progressio" ? sp.querySelectorAll(".steps li").length : 0;
+      b.innerHTML = sp.getAttribute("data-label") + (n ? "<small>" + n + "</small>" : "");
+      b.addEventListener("click", function(){ setSub(key); });
+      bar.appendChild(b);
+      sp.setAttribute("role","tabpanel"); sp.setAttribute("aria-labelledby", b.id);
+    });
+  });
+  function setSub(sub){
+    document.querySelectorAll(".subtab").forEach(function(b){
+      var on = b.getAttribute("data-sub") === sub;
+      b.setAttribute("aria-selected", on ? "true" : "false"); b.tabIndex = on ? 0 : -1;
+    });
+    document.querySelectorAll(".subpanel").forEach(function(p){ p.hidden = p.getAttribute("data-sub") !== sub; });
+  }
+  setSub("tecnica");
+
+  /* --- Apartats dins de les vistes llargues --- */
+  sections.forEach(function(sec){
+    var hs = sec.querySelectorAll("h3.aq-h3");
+    if (hs.length < 3) return;
+    var box = document.createElement("div"); box.className = "jump";
+    box.innerHTML = '<span class="label">Apartats</span>';
+    hs.forEach(function(h){
+      var b = document.createElement("button"); b.type = "button"; b.className = "fchip"; b.textContent = h.textContent;
+      b.addEventListener("click", function(){ h.scrollIntoView({behavior:behavior, block:"start"}); });
+      box.appendChild(b);
+      h.style.scrollMarginTop = "84px";
+    });
+    sec.querySelector(".sec-head").after(box);
+  });
+
+  /* --- Anterior / següent --- */
+  sections.forEach(function(s, i){
+    var wraps = s.querySelectorAll(":scope > .wrap"), w = wraps[wraps.length-1], pg = document.createElement("nav");
+    pg.className = "pager"; pg.setAttribute("aria-label","Navegació entre apartats");
+    var h = "";
+    if (i > 0) h += '<a class="pg" href="#' + VIEW_IDS[i-1] + '"><small>Anterior</small><b>' + LABEL[VIEW_IDS[i-1]] + '</b></a>';
+    if (i < sections.length-1) h += '<a class="pg next" href="#' + VIEW_IDS[i+1] + '"><small>' + (i === 0 ? "Comença per" : "Següent") + '</small><b>' + LABEL[VIEW_IDS[i+1]] + '</b></a>';
+    pg.innerHTML = h; w.appendChild(pg);
+  });
+
+  /* --- Menú lateral (calaix en mòbil) --- */
+  var side = $("side"), scrim = $("scrim"), menuBtn = $("tb-menu");
+  var mqDrawer = window.matchMedia ? window.matchMedia("(max-width: 999px)") : {matches:false};
+  function syncSide(){ side.inert = !!mqDrawer.matches && !side.classList.contains("open"); }
+  function openDrawer(){ side.classList.add("open"); scrim.hidden = false; menuBtn.setAttribute("aria-expanded","true"); syncSide(); var a = side.querySelector("a"); if (a) a.focus(); }
+  function closeDrawer(){ if (!side.classList.contains("open")) return; side.classList.remove("open"); scrim.hidden = true; menuBtn.setAttribute("aria-expanded","false"); syncSide(); }
+  menuBtn.addEventListener("click", function(){ side.classList.contains("open") ? closeDrawer() : openDrawer(); });
+  scrim.addEventListener("click", closeDrawer);
+  if (mqDrawer.addEventListener) mqDrawer.addEventListener("change", function(){ if (!mqDrawer.matches) closeDrawer(); syncSide(); });
+  syncSide();
+
+  /* --- Vistes (rutes amb #) --- */
+  var curView = null, pending = null;
+  function markNav(key, view){
+    side.querySelectorAll("a").forEach(function(a){
+      if (a.getAttribute("href") === "#" + key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+    document.querySelectorAll(".tabbar a").forEach(function(a){ a.classList.toggle("on", a.getAttribute("data-k") === view); });
+  }
+  function route(){
+    var h = location.hash.slice(1), skill = null, view = "inici";
+    if (!h) view = "inici";
+    else if (SKILLS.indexOf(h) > -1){ view = "hmb"; skill = h; }
+    else if (VIEW_IDS.indexOf(h) > -1) view = h;
+    else {
+      var el = document.getElementById(h), sec = el && el.closest("main > section");
+      if (sec){ view = sec.id; if (!pending) pending = {el:el}; }
+    }
+    var changed = view !== curView;
+    sections.forEach(function(s){ s.hidden = s.id !== view; });
+    curView = view;
+    if (skill) selectSkill(skill);
+    markNav(skill || view, view);
+    closeDrawer();
+    if (pending){ var p = pending; pending = null; setTimeout(function(){ reveal(p); }, 30); }
+    else if (skill && !fromTab){ setTimeout(function(){ $("hmb-tabs").scrollIntoView({behavior:"auto", block:"start"}); }, 0); }
+    else if (!fromTab && (changed || !skill)) window.scrollTo(0, 0);
+    fromTab = false;
+  }
+  function reveal(p){
+    var el = p.el;
+    if (p.game != null){ state.s = "all"; state.o = "all"; refresh(); el = $("joc-" + p.game); }
+    if (!el) return;
+    var sp = el.closest(".subpanel"); if (sp) setSub(sp.getAttribute("data-sub"));
+    el.scrollIntoView({behavior:"auto", block:"center"});
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    setTimeout(function(){ el.classList.remove("flash"); }, 2000);
+  }
+  window.addEventListener("hashchange", route);
+
+  /* --- Índex de cerca --- */
+  function norm(t){ return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’‘]/g, "'"); }
+  function clean(t){ return t.replace(/\s+/g, " ").trim(); }
+  var ITEMS = ".aq-facts li, .principles li, .aq-types li, .aq-list > li, .aq-ben li, .trow:not(.taxis-row), .callout, .aq-quote, p.prose, .comp-group, .stage, .cmp tbody tr, .who tbody tr, .ypd tbody tr, .vt tbody tr, .crit li, .kinds li, .devc, .spiral > div, .pyr > div, .classif .cell, .vs > div, .errors li:not(.head), .steps li, .parts li, .tips li, .sess tbody tr, .safe li, .gloss > div";
+  var INDEX = [];
+  sections.forEach(function(sec){
+    if (sec.id === "inici" || sec.id === "jocs") return;
+    var lastH = "";
+    sec.querySelectorAll("h3, " + ITEMS).forEach(function(el){
+      var isItem = el.matches(ITEMS);
+      if (!isItem){ if (!el.closest(ITEMS) && !el.closest(".tabs") && !el.closest(".panel")) lastH = clean(el.textContent); return; }
+      if (el.parentElement.closest(ITEMS)) return;
+      var c = el.cloneNode(true);
+      c.querySelectorAll(".stg, .lv").forEach(function(x){ x.textContent = x.textContent + " "; });
+      c.querySelectorAll(".stg").forEach(function(x){ x.remove(); });
+      var text = el.matches("tr") ? Array.prototype.map.call(el.cells, function(td){ return clean(td.textContent); }).join(" · ") : clean(c.textContent);
+      var tEl = el.matches("p.prose, .aq-quote") ? null : c.querySelector("b, h3, h4, dt, th"), title;
+      if (el.matches("tr")) title = clean(el.cells[0].textContent) + " · " + clean(el.cells[1].textContent);
+      else title = tEl ? clean(tEl.textContent) : "";
+      if (!title || title.length > 90){ title = text.length > 90 ? text.slice(0, 88) + "…" : text; }
+      var panel = el.closest(".panel"), sp = el.closest(".subpanel"), path = LABEL[sec.id];
+      if (panel) path = SKILL_NAME[panel.id] + " · " + (sp ? sp.getAttribute("data-label") : "Presentació");
+      else if (lastH) path += " · " + lastH;
+      INDEX.push({t:title, txt:text, n:norm(title + " " + text), nt:norm(title), path:path, el:el});
+    });
+  });
+  GAMES.forEach(function(gm, i){
+    var ages = gm.s.map(function(s){ return STAGES[s]; }).join(", ") + " anys";
+    var txt = gm.c + " Material: " + gm.m + " Variants: " + gm.v + " Clau: " + gm.k + " " + gm.o.map(function(o){ return OBJ[o]; }).join(" ") + " " + ages;
+    INDEX.push({t:gm.n, txt:gm.c, n:norm(gm.n + " joc " + txt), nt:norm(gm.n), path:"Banc de jocs · " + ages, game:i});
+  });
+
+  function terms(q){ return norm(q).split(/[\s,.;:]+/).filter(function(w){ return w.length > 1; }); }
+  function search(q){
+    var ts = terms(q); if (!ts.length) return [];
+    var out = [];
+    INDEX.forEach(function(it, i){
+      for (var k = 0; k < ts.length; k++) if (it.n.indexOf(ts[k]) < 0) return;
+      var sc = 0;
+      ts.forEach(function(w){ if (it.nt.indexOf(w) > -1) sc += 3; if (it.nt.indexOf(w) === 0) sc += 2; sc += 1; });
+      if (it.game != null) sc += 1;
+      out.push({it:it, sc:sc, i:i});
+    });
+    out.sort(function(a, b){ return b.sc - a.sc || a.i - b.i; });
+    return out.map(function(o){ return o.it; });
+  }
+  function hl(text, ts){
+    var n = norm(text), marks = [];
+    ts.forEach(function(w){ var p = n.indexOf(w); while (p > -1){ marks.push([p, p + w.length]); p = n.indexOf(w, p + w.length); } });
+    if (!marks.length || n.length !== text.length) return esc(text);
+    marks.sort(function(a, b){ return a[0] - b[0]; });
+    var res = "", last = 0;
+    marks.forEach(function(m){ if (m[0] < last) return; res += esc(text.slice(last, m[0])) + "<mark>" + esc(text.slice(m[0], m[1])) + "</mark>"; last = m[1]; });
+    return res + esc(text.slice(last));
+  }
+  function snippet(it, ts){
+    if (it.txt === it.t || it.t.indexOf(it.txt) === 0) return "";
+    var t = it.txt, n = norm(t), p = -1;
+    ts.forEach(function(w){ var q = n.indexOf(w); if (q > -1 && (p < 0 || q < p)) p = q; });
+    var start = p > 60 ? p - 50 : 0, s = t.slice(start, start + 170);
+    return (start ? "…" : "") + s + (start + 170 < t.length ? "…" : "");
+  }
+  var lastResults = {};
+  function render(q, list, max, box){
+    var ts = terms(q), rs = search(q);
+    lastResults[box.id] = rs;
+    if (!ts.length){ box.innerHTML = ""; return rs; }
+    var h = rs.slice(0, max).map(function(it, i){
+      var sn = snippet(it, ts);
+      return '<li><a href="#" data-i="' + i + '"><span class="rp">' + esc(it.path) + '</span><span class="rt">' + hl(it.t, ts) + '</span>' + (sn ? '<span class="rs">' + hl(sn, ts) + '</span>' : "") + '</a></li>';
+    }).join("");
+    if (!rs.length) h = '<li class="rs" style="padding:10px 12px">Cap resultat per a «' + esc(q) + '». Prova amb una altra paraula.</li>';
+    if (list && rs.length > max) h += '<li><button type="button" class="more">Mostra els ' + rs.length + ' resultats</button></li>';
+    box.innerHTML = h;
+    return rs;
+  }
+  function goTo(it){
+    closeSearch();
+    var hash;
+    if (it.game != null){ hash = "jocs"; pending = {game:it.game}; }
+    else { var panel = it.el.closest(".panel"), sec = it.el.closest("main > section"); hash = panel ? panel.id : sec.id; pending = {el:it.el}; }
+    if (location.hash.slice(1) === hash) route(); else location.hash = hash;
+  }
+  function bindResults(box){
+    box.addEventListener("click", function(e){
+      var a = e.target.closest("a[data-i]");
+      if (a){ e.preventDefault(); goTo(lastResults[box.id][+a.getAttribute("data-i")]); return; }
+      if (e.target.closest("button.more")) openSearch($("qh").value);
+    });
+  }
+
+  /* Cerca de la pàgina d'inici */
+  var qh = $("qh"), qhRes = $("qh-res");
+  bindResults(qhRes);
+  qh.addEventListener("input", function(){ render(qh.value, true, 6, qhRes); });
+  qh.addEventListener("keydown", function(e){
+    if (e.key === "Enter"){ var rs = lastResults["qh-res"] || []; if (rs.length){ e.preventDefault(); goTo(rs[0]); } }
+  });
+
+  /* Finestra de cerca */
+  var sov = $("sov"), q = $("q"), qRes = $("q-res"), qCount = $("q-count"), lastFocus = null, sel = -1;
+  var SUGG = ["tombarella", "peu coix", "llançament", "OMS", "força", "xarranca", "equilibri", "Parlebas"];
+  bindResults(qRes);
+  function paintSugg(){
+    qCount.textContent = "Escriu una o més paraules. Per exemple:";
+    qRes.innerHTML = '<li class="sugg">' + SUGG.map(function(s){ return '<button type="button" class="fchip" data-s="' + s + '">' + s + '</button>'; }).join("") + '</li>';
+  }
+  qRes.addEventListener("click", function(e){ var b = e.target.closest("[data-s]"); if (b){ q.value = b.getAttribute("data-s"); doSearch(); q.focus(); } });
+  function doSearch(){
+    sel = -1;
+    if (!terms(q.value).length){ paintSugg(); return; }
+    var rs = render(q.value, false, 40, qRes);
+    qCount.textContent = rs.length ? (rs.length === 1 ? "1 resultat" : rs.length + " resultats") + (rs.length > 40 ? ", es mostren els 40 primers." : ".") : "";
+  }
+  function openSearch(text){
+    lastFocus = document.activeElement;
+    sov.hidden = false; document.body.style.overflow = "hidden";
+    q.value = text || ""; doSearch(); q.focus();
+  }
+  function closeSearch(){
+    if (sov.hidden) return;
+    sov.hidden = true; document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  q.addEventListener("input", doSearch);
+  q.addEventListener("keydown", function(e){
+    var links = qRes.querySelectorAll("a[data-i]");
+    if (e.key === "ArrowDown" || e.key === "ArrowUp"){
+      if (!links.length) return;
+      e.preventDefault();
+      sel = e.key === "ArrowDown" ? Math.min(sel + 1, links.length - 1) : Math.max(sel - 1, 0);
+      links.forEach(function(a, i){ a.classList.toggle("on", i === sel); });
+      links[sel].scrollIntoView({block:"nearest"});
+    } else if (e.key === "Enter"){
+      var rs = lastResults["q-res"] || [];
+      if (rs.length){ e.preventDefault(); goTo(rs[Math.max(sel, 0)]); }
+    }
+  });
+  $("sclose").addEventListener("click", closeSearch);
+  sov.addEventListener("click", function(e){ if (e.target === sov) closeSearch(); });
+  $("q-trigger").addEventListener("click", function(){ openSearch(""); });
+  $("tb-search").addEventListener("click", function(){ closeDrawer(); openSearch(""); });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape"){ closeSearch(); closeDrawer(); return; }
+    var t = e.target, typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
+    if (e.key === "/" && !typing && sov.hidden){ e.preventDefault(); openSearch(""); }
+  });
+
+  route();
+})();
+</script>
+
+</body></html>
