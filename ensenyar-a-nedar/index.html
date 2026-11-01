@@ -503,6 +503,110 @@ main{min-width:0}
 .pg small{font-family:var(--font-data);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;color:var(--muted)}
 .pg b{font-family:var(--font-display)}
 .pg.next{margin-left:auto;text-align:right}
+/* Banc de jocs: filtres combinables i esquema de cada joc */
+.jf{display:grid;gap:12px;margin-bottom:22px;padding:16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.alt .jf{background:var(--bg)}
+.jf-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.jf-search{flex:1 1 280px;display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--muted);min-width:0}
+.jf-search:focus-within{border-color:var(--water);box-shadow:0 0 0 3px var(--water-soft)}
+.jf-search svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.jf-search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1rem;outline:none}
+.jf-btn{appearance:none;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:.93rem;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.jf-btn:hover{border-color:var(--water)}
+.jf-btn[aria-expanded="true"]{background:var(--water-soft);border-color:var(--water)}
+.jf-n{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--water);color:var(--on-water);font-family:var(--font-data);font-size:.8rem}
+.jf-extra{display:grid;gap:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.jf .frow .label{min-width:92px}
+.fchip .fc{font-family:var(--font-data);font-size:.8rem;color:var(--muted);margin-left:2px;font-variant-numeric:tabular-nums}
+.fchip[aria-pressed="true"] .fc{color:inherit;opacity:.75}
+.fchip.zero{opacity:.45}
+.jf-bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;padding-top:4px}
+.jf-bar .count{margin:0}
+.jf-acts{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:560px){.jf{padding:12px}.jf .frow .label{min-width:100%}}
+.empty .jf-btn{margin-left:8px}
+
+.game{overflow:hidden}
+.jg-fig{margin:-18px -18px 2px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.jg-fig svg{display:block;width:100%;height:auto}
+.jg-leg{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 14px 9px;font-size:.78rem;line-height:1.3;color:var(--muted);background:var(--surface)}
+.jg-leg span{display:inline-flex;align-items:center;gap:5px}
+.jg-leg svg{width:auto;height:15px;flex:none;overflow:visible}
+.jg-cap{font-size:.86rem;color:var(--muted);margin-top:-2px}
+.jg-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--font-data);font-weight:600;font-size:.88rem;letter-spacing:.03em;color:var(--muted)}
+.jg-meta span{display:inline-flex;align-items:center;gap:6px}
+.jg-int{display:inline-flex;gap:2px}
+.jg-int i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.jg-int i.on{background:var(--water)}
+
+.jg-defs{position:absolute;width:0;height:0;overflow:hidden}
+.jg-ahp{fill:var(--ink);opacity:.8}
+.jg-ahpb{fill:var(--e1)}
+.jg-edge{stroke:var(--muted);stroke-width:2;opacity:.5}
+.jg-bord{fill:var(--muted);font:600 10px var(--font-data);letter-spacing:.14em}
+.jg-court{fill:none;stroke:var(--surface);stroke-width:3}
+.jg-k{fill:var(--fig);stroke:var(--surface);stroke-width:2}
+.jg-k.x{fill:var(--rope)}
+.jg-k.a{fill:var(--e3)}
+.jg-k.b{fill:var(--hot)}
+.jg-k.l{fill:var(--ok)}
+.jg-kt{fill:var(--surface);font:600 9.5px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-k.x+.jg-kt{fill:var(--rope-ink)}
+.jg-tail{fill:none;stroke:var(--hot);stroke-width:2.5;stroke-linecap:round}
+.jg-t{fill:var(--water)}
+.jg-tt{fill:var(--on-water);font:700 11px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-a{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.jg-a.d{stroke-dasharray:5 5}
+.jg-a.b{stroke:var(--e1);stroke-dasharray:2 5;stroke-width:2.4;opacity:1}
+.jg-link{fill:none;stroke:var(--fig);stroke-width:3;opacity:.6}
+.jg-ball{fill:var(--rope);stroke:var(--ink);stroke-width:1}
+.jg-cone{fill:var(--hot);stroke:var(--surface);stroke-width:1}
+.jg-hoop{fill:none;stroke:var(--e2);stroke-width:3}
+.jg-ring{fill:none;stroke:var(--rope);stroke-width:3}
+.jg-board{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.jg-noodle{stroke:var(--e1);stroke-width:7;stroke-linecap:round;opacity:.85}
+.jg-mat{fill:var(--mat,#D8E6F2);stroke:var(--muted);stroke-width:1}
+.jg-wedge{fill:none;stroke:var(--muted);stroke-width:1.5}
+.jg-bench{fill:var(--surface);stroke:var(--muted);stroke-width:1.5}
+.jg-bar{stroke:var(--muted);stroke-width:1.2}
+.jg-rope{fill:none;stroke:var(--rope);stroke-width:3.5;stroke-linecap:round}
+.jg-pin{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.jg-tg1{fill:var(--hot)} .jg-tg2{fill:var(--rope)} .jg-tg3{fill:var(--e1)}
+.jg-bub{fill:none;stroke:var(--ink);stroke-width:1.3;opacity:.55}
+.jg-note{fill:var(--ink);font:700 20px var(--font-body);opacity:.8}
+.jg-pole{stroke:var(--ink);stroke-width:1.6}
+.jg-flag{fill:var(--hot)}
+.jg-dice{fill:var(--surface);stroke:var(--ink);stroke-width:1.3}
+.jg-dot{fill:var(--ink)}
+.jg-string{fill:none;stroke:var(--muted);stroke-width:1}
+.jg-balloon{fill:var(--hot);opacity:.85}
+.jg-clock{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.jg-hand{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round}
+.jg-basket{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-card{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.jg-light{fill:var(--ink)}
+.jg-l1{fill:var(--bad)} .jg-l2{fill:var(--rope)} .jg-l3{fill:var(--ok)}
+.jg-wall{stroke:var(--ink);stroke-width:6;stroke-linecap:round;opacity:.7}
+.jg-wall.a{stroke:var(--e3);opacity:1}
+.jg-wall.b{stroke:var(--hot);opacity:1}
+.jg-zone{fill:var(--ink);opacity:.08}
+.jg-line{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:6 5;opacity:.4}
+.jg-lane{stroke:var(--rope);stroke-width:2.5;stroke-dasharray:7 4}
+.jg-river{fill:var(--pool)}
+.jg-wave{fill:none;stroke:var(--surface);stroke-width:1.5;opacity:.7}
+.jg-tick{stroke:var(--ink);stroke-width:1.5;opacity:.5}
+.jg-lbl{fill:var(--ink);font:600 12px var(--font-data);letter-spacing:.02em}
+.jg-mk circle{fill:var(--rope)}
+.jg-mk text{fill:var(--rope-ink);font:600 11px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-x{stroke:var(--bad);stroke-width:3;stroke-linecap:round}
+.jg-fg{fill:none;stroke:var(--fig);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.jg-fg.thin{stroke-width:2.2}
+.jg-fgh{fill:var(--fig)}
+.jg-knee{fill:none;stroke:var(--surface);stroke-width:1.5;opacity:.7}
+.jg-sack{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-hop{fill:var(--surface);stroke:var(--ink);stroke-width:1.2;opacity:.9}
+.jg-hopn{fill:var(--muted);font:600 10px var(--font-data)}
+
 </style>
 <script>
 (function(){ try { var t = localStorage.getItem("ensenyar-tema"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -1229,11 +1333,7 @@ main{min-width:0}
       <h2>Banc de jocs</h2>
       <p>Jocs clàssics de les activitats aquàtiques educatives, ordenats per edat i per objectiu. Filtra’ls per preparar una sessió. Cada joc indica el material i el punt clau de seguretat o d’aprenentatge.</p>
     </div>
-    <div class="filters" id="filters">
-      <div class="frow" role="group" aria-label="Filtra per edat"><span class="label">Edat</span></div>
-      <div class="frow" role="group" aria-label="Filtra per objectiu"><span class="label">Objectiu</span></div>
-      <p class="count" id="count" aria-live="polite"></p>
-    </div>
+    <div class="jf" id="filters"></div>
     <div class="games" id="games"></div>
     <p class="src">Recull basat en l’aprenentatge aquàtic a través del joc de Moreno Murcia (2001) i en l’enfocament basat en jocs de Swim England. Els jocs de seguretat segueixen les competències de Stallman et al. (2017).</p>
   </div>
@@ -1692,39 +1792,278 @@ main{min-width:0}
     {n:"Sincro en petit", s:["s3"], o:["flot","estil"], m:"Música.", c:"En grups de quatre, creen una coreografia de 30 a 40 segons amb quatre elements obligatoris: una remada, una flotació, un gir i un desplaçament junts. La presenten a la resta del grup.", v:"Afegir una figura vertical; valorar la sincronia entre tots.", k:"Bona ocasió per treballar les remades."},
     {n:"Relleu d’estils", s:["s3"], o:["estil"], m:"Cap.", c:"Equips de quatre fan el relleu en l’ordre reglamentari: esquena, braça, papallona i crol. Cada nedador ha de fer la sortida i l’arribada correctes del seu estil.", v:"Estils individuals per a nedadors avançats; substituir la papallona per batuda de dofí.", k:"L’equip que espera fa d’àrbitre de les normes de toc."}
   ];
-  var state = {s:"all", o:"all"};
-  var rows = document.querySelectorAll("#filters .frow");
-  function chip(group, val, text){
-    var b = document.createElement("button");
-    b.type="button"; b.className="fchip"; b.textContent=text; b.id="f-"+group+"-"+val;
-    b.setAttribute("aria-pressed", state[group]===val ? "true" : "false");
-    b.addEventListener("click", function(){ state[group]=val; refresh(); });
-    return b;
+  /* Dades per filtrar i dibuixar cada joc: g agrupament, i intensitat (1-3), e lloc, d esquema (vista des de dalt; la franja inferior és el bord) */
+  var MEDI = "aigua", OBJ_LABEL = "Objectiu", LLOC_LABEL = "Lloc";
+  var LLOC = {bord:"Des del bord", peu:"On fan peu", fonda:"Aigua fonda"};
+  var LEG_PAGE = {hoop:"Aro"};
+  var META = {
+    "La pluja": {g:"gg", i:1, e:"bord", d:[["row",50,168,270,168,6],["T",160,96],["a","M151 86 Q112 58 96 156","d"],["a","M169 86 Q208 58 224 156","d"],["bub",118,112],["bub",126,124],["bub",200,112],["bub",193,125],["lbl",160,72,"fa ploure"]]},
+    "Fem la sopa": {g:"gg", i:1, e:"peu", d:[["ring",160,74,50,8],["bubs",160,74,32,8],["lbl",160,78,"sopa"],["T",160,170]]},
+    "Bufa la pilota": {g:"ind", i:1, e:"peu", d:[["row",22,32,22,128,4],["ball",40,32],["ball",40,64],["ball",40,96],["ball",40,128],["a","M52 32H292"],["a","M52 64H292"],["a","M52 96H292"],["a","M52 128H292"],["lbl",172,20,"bufant, amb la barbeta arran d’aigua"],["T",160,170]]},
+    "El zoo aquàtic": {g:"gg", i:2, e:"peu", d:[["k",34,40],["k",34,85],["k",34,128],["a","M48 40 l20 -12 l20 12 l20 -12 l20 12 l20 -12 l20 12 l20 -12 l20 12"],["a","M48 85H210"],["a","M48 128 q20 -6 40 0 t40 0 t40 0 t40 0"],["lbl",224,44,"granota","start"],["lbl",224,89,"cranc, de costat","start"],["lbl",224,132,"cocodril","start"],["T",250,170]]},
+    "Pescar tresors": {g:"ind", i:2, e:"peu", d:[["ring2",80,40],["ring2",150,28],["ring2",232,46],["ring2",270,96],["ring2",64,112],["ring2",206,120],["ring2",128,96],["k",110,62],["k",206,84],["k",160,124],["a","M115 70 Q132 118 148 158"],["a","M200 92 Q190 132 172 158"],["basket",160,170,"cofre"]]},
+    "L’estrella de mar": {g:"ind", i:1, e:"peu", lg:{k:"Infant flotant"}, d:[["star",80,70],["T",50,58],["noodle",146,62,184,62],["star",165,70],["star",250,70],["lbl",80,112,"amb ajuda"],["lbl",165,112,"amb xurro"],["lbl",250,112,"sol, fins a 5"]]},
+    "El tren": {g:"pg", i:2, e:"peu", d:[["noodle",44,112,142,86],["link",[[44,112],[142,86]]],["ks",[[44,112],[68,106],[93,99],[118,92],[142,86]]],["a","M156 80 Q222 36 282 72 Q302 108 262 128"],["flag",218,44],["flag",296,112],["lbl",242,30,"estació","start"],["T",160,170]]},
+    "Saltar al riu": {g:"ind", i:1, e:"bord", d:[["row",50,168,270,168,6],["hoop",156,98,15],["T",196,98],["a","M138 158 L152 117"],["a","M144 90 Q104 98 112 146","d"],["lbl",156,70,"salta, gira’t i torna"]]},
+    "La rodona": {g:"gg", i:1, e:"peu", d:[["ring",160,74,48,8],["rot",160,74,63],["lbl",160,78,"s’ajupen"],["T",160,170]]},
+    "Taurons i peixets": {g:"gg", i:3, e:"peu", lg:{k:"Peixets", kx:"Taurons"}, d:[["zone",0,0,46,150,"refugi"],["zone",274,0,46,150,"refugi"],["row",22,34,22,126,4],["a","M36 34 Q160 4 290 34"],["a","M36 80 Q150 60 290 80"],["a","M36 126 Q170 146 290 122"],["k",146,56,"x"],["k",182,104,"x"],["a","M156 62 L170 74","d"]]},
+    "Estàtues aquàtiques": {g:"gg", i:2, e:"peu", d:[["ks",[[60,40],[130,32],[210,46],[270,72],[90,100],[170,90],[240,120],[50,132]]],["a","M68 44 l22 12"],["a","M178 92 l20 -14"],["a","M98 104 l16 16"],["note",300,30],["T",160,170],["card",182,170]]},
+    "El bolet i la medusa": {g:"ind", i:1, e:"peu", lg:{k:"Infant flotant"}, d:[["lbl",80,22,"bolet"],["lbl",230,22,"medusa"],["bolet",70,58],["bolet",92,112],["medusa",214,52],["medusa",252,98],["line",160,10,160,140],["T",160,170]]},
+    "Torpedos": {g:"ind", i:2, e:"peu", d:[["row",18,32,18,128,4],["a","M30 32H150"],["a","M30 64H214"],["a","M30 96H178"],["a","M30 128H240"],["ring2",162,32],["ring2",226,64],["ring2",190,96],["ring2",252,128],["lbl",300,18,"supera la teva marca","end"]]},
+    "El túnel": {g:"pg", i:2, e:"peu", lg:{ka:"Fan el túnel"}, d:[["row",120,60,240,60,4,"a"],["row",120,100,240,100,4,"a"],["k",64,80],["a","M78 80H282"],["lbl",180,36,"túnel"],["T",160,170]]},
+    "Relleus de planxa": {g:"eq", i:3, e:"peu", lg:{k:"Equip C"}, d:[["relay",32,3,"",290,"board"],["relay",76,3,"a",290,"board"],["relay",120,3,"b",290,"board"]]},
+    "El mirall": {g:"par", i:1, e:"peu", lg:{ka:"Model", k:"Mirall"}, d:[["k",66,52,"a"],["k",94,52],["line",80,36,80,68],["a","M60 44 l-8 -12"],["a","M100 44 l8 -12","d"],["k",206,52,"a"],["k",234,52],["line",220,36,220,68],["a","M200 60 l-10 10"],["a","M240 60 l10 10","d"],["k",126,112,"a"],["k",154,112],["line",140,96,140,128],["T",250,170]]},
+    "Remolcadors": {g:"par", i:2, e:"peu", lg:{ka:"Vaixell (flota)", k:"Remolcador"}, d:[["noodle",66,34,104,34],["k",56,34,"a"],["k",114,34],["a","M128 34H290"],["noodle",66,80,104,80],["k",56,80,"a"],["k",114,80],["a","M128 80H290"],["noodle",66,126,104,126],["k",56,126,"a"],["k",114,126],["a","M128 126H290"]]},
+    "El dau dels estils": {g:"eq", i:3, e:"fonda", lg:{k:"Equip C"}, d:[["lanes",[54,98]],["relay",30,3,"",292],["relay",76,3,"a",292],["relay",122,3,"b",292],["dice",40,170],["lbl",58,174,"el dau decideix l’estil","start"]]},
+    "Golf de natació": {g:"ind", i:2, e:"fonda", d:[["lanes",[50,100]],["k",18,25],["k",18,75],["k",18,125],["a","M30 25H302"],["a","M30 75H302"],["a","M30 125H302"],["ticks",30,300,25,7],["ticks",30,300,75,8],["ticks",30,300,125,6],["clock",160,170],["lbl",176,174,"segons + braçades","start"]]},
+    "Pilota a la paret": {g:"eq", i:3, e:"fonda", d:[["wall",4,4,4,146,"a"],["wall",316,4,316,146,"b"],["ks",[[70,40],[60,120],[110,96]],"a"],["k",150,76,"a"],["ks",[[200,44],[236,98],[262,30],[270,128]],"b"],["ball",164,76],["a","M172 76 Q240 70 306 64","b"]]},
+    "Nedar vestits": {g:"ind", i:2, e:"fonda", cap:"1 Entra de peus · 2 Flota panxa amunt · 3 Es desplaça fins al bord · 4 En surt sol", d:[["k",56,168],["a","M60 157 L72 112"],["star",100,80],["a","M122 80 Q200 50 246 118"],["k",254,128],["a","M262 138 L274 160"],["k",282,168],["mk",36,150,"1"],["mk",126,52,"2"],["mk",206,44,"3"],["mk",302,132,"4"]]},
+    "Llança, no hi vagis": {g:"par", i:1, e:"bord", lg:{kx:"Nedador en dificultats", k:"Qui ajuda des del bord"}, d:[["k",100,112,"x"],["noodle",100,158,100,124],["k",100,168],["k",246,90,"x"],["board",250,104],["a","M246 158 Q276 128 254 116","b"],["k",246,168],["a","M176 166 L176 120","d"],["X",176,140],["lbl",176,108,"no saltar"]]},
+    "Sincro en petit": {g:"pg", i:1, e:"fonda", d:[["ks",[[70,50],[100,50],[70,80],[100,80]]],["rot",85,65,32],["a","M60 116H128"],["ring",232,72,26,4,"a"],["rot",232,72,40],["note",300,26]]},
+    "Relleu d’estils": {g:"eq", i:3, e:"fonda", cap:"Ordre del relleu: esquena, braça, papallona i crol.", d:[["lanes",[76]],["relay",38,4,"a",296,null,["E","B","P","C"]],["relay",114,4,"b",296,null,["E","B","P","C"]]]}
+  };
+  var AGR = {ind:"Individual", par:"Parelles", pg:"Petits grups", eq:"Equips", gg:"Gran grup"};
+  var INT = {"1":"Calmat", "2":"Moderat", "3":"Intens"};
+  GAMES.forEach(function(gm){
+    var md = META[gm.n] || {};
+    gm.g = md.g || "gg"; gm.i = md.i || 2; gm.e = md.e || ""; gm.d = md.d || []; gm.lg = md.lg || {}; gm.cap = md.cap || "";
+    gm.mat = /^cap\b|opcional/i.test(gm.m) ? "sense" : "amb";
+  });
+
+  /* ---------- Esquemes dels jocs: vista des de dalt, 320 × 190 ---------- */
+  function jgR(n){ return Math.round(n * 10) / 10; }
+  function jgPt(cx, cy, r, deg){ var a = deg * Math.PI / 180; return jgR(cx + r * Math.cos(a)) + " " + jgR(cy + r * Math.sin(a)); }
+  function jgArc(cx, cy, r, a1, a2){ return "M" + jgPt(cx, cy, r, a1) + " A" + r + " " + r + " 0 " + (a2 - a1 > 180 ? 1 : 0) + " 1 " + jgPt(cx, cy, r, a2); }
+  function jgArrow(d, s){ return '<path class="jg-a' + (s ? " " + s : "") + '" d="' + d + '" marker-end="url(#' + (s === "b" ? "jg-ahb" : "jg-ah") + ')"/>'; }
+  function jgTxt(x, y, t, cls, anchor){ return '<text class="' + cls + '" x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : "") + '>' + t + '</text>'; }
+  var JG = {
+    k: function(a, u){
+      var x = a[0], y = a[1], t = a[2] || ""; u["k" + t] = 1;
+      return (t === "c" ? '<path class="jg-tail" d="M' + x + " " + (y + 6) + ' q5 6 0 11 t0 9"/>' : "") +
+        '<circle class="jg-k' + (t ? " " + t : "") + '" cx="' + x + '" cy="' + y + '" r="7"/>' +
+        (a[3] ? jgTxt(x, y + 0.5, a[3], "jg-kt") : "");
+    },
+    row: function(a, u){
+      var s = "", n = a[4];
+      for (var i = 0; i < n; i++){ var f = n === 1 ? 0 : i / (n - 1); s += JG.k([jgR(a[0] + (a[2] - a[0]) * f), jgR(a[1] + (a[3] - a[1]) * f), a[5], a[6] && a[6][i]], u); }
+      return s;
+    },
+    ring: function(a, u){
+      var s = "";
+      for (var i = 0; i < a[3]; i++){ var p = jgPt(a[0], a[1], a[2], -90 + i * 360 / a[3]).split(" "); s += JG.k([+p[0], +p[1], a[4]], u); }
+      return s;
+    },
+    ks: function(a, u){ return a[0].map(function(p){ return JG.k([p[0], p[1], a[1]], u); }).join(""); },
+    T: function(a, u){ u.T = 1; return '<rect class="jg-t" x="' + (a[0] - 9) + '" y="' + (a[1] - 9) + '" width="18" height="18" rx="4"/>' + jgTxt(a[0], a[1] + 0.5, "T", "jg-tt"); },
+    a: function(a, u){ u["a" + (a[1] || "")] = 1; return jgArrow(a[0], a[1]); },
+    rot: function(a, u){ u.a = 1; return jgArrow(jgArc(a[0], a[1], a[2], -70, 20)) + jgArrow(jgArc(a[0], a[1], a[2], 110, 200)); },
+    spin: function(a, u){ u.a = 1; return jgArrow(jgArc(a[0], a[1], 14, 150, 420)); },
+    link: function(a){ return '<polyline class="jg-link" points="' + a[0].map(function(p){ return p.join(","); }).join(" ") + '"/>'; },
+    ball: function(a, u){ u.ball = 1; return '<circle class="jg-ball" cx="' + a[0] + '" cy="' + a[1] + '" r="4.5"/>'; },
+    cone: function(a, u){ u.cone = 1; return '<path class="jg-cone" d="M' + a[0] + " " + (a[1] - 7) + "l6 12h-12z" + '"/>'; },
+    hoop: function(a, u){ u.hoop = 1; return '<circle class="jg-hoop" cx="' + a[0] + '" cy="' + a[1] + '" r="' + (a[2] || 12) + '"/>'; },
+    ring2: function(a, u){ u.ring2 = 1; return '<circle class="jg-ring" cx="' + a[0] + '" cy="' + a[1] + '" r="5"/>'; },
+    board: function(a, u){ u.board = 1; return '<rect class="jg-board" x="' + (a[0] - 6) + '" y="' + (a[1] - 9) + '" width="12" height="18" rx="3"/>'; },
+    noodle: function(a, u){ u.noodle = 1; return '<line class="jg-noodle" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    mat: function(a, u){ u.mat = 1; return '<rect class="jg-mat" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="3"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : ""); },
+    wedge: function(a, u){ u.mat = 1; return JG.mat(a, u) + '<path class="jg-wedge" d="M' + (a[0] + 4) + " " + (a[1] + a[3] / 2) + "h" + (a[2] - 8) + '"/>' + '<path class="jg-wedge" d="M' + (a[0] + a[2] - 12) + " " + (a[1] + a[3] / 2 - 5) + "l6 5l-6 5" + '"/>'; },
+    bench: function(a, u){ u.bench = 1; return '<rect class="jg-bench" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="2"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : ""); },
+    bars: function(a, u){
+      u.bars = 1; var s = '<rect class="jg-bench" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '"/>';
+      for (var x = a[0] + 8; x < a[0] + a[2]; x += 8) s += '<line class="jg-bar" x1="' + x + '" y1="' + a[1] + '" x2="' + x + '" y2="' + (a[1] + a[3]) + '"/>';
+      return s + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : "");
+    },
+    rope: function(a, u){ u.rope = 1; return '<path class="jg-rope" d="' + a[0] + '"/>'; },
+    pin: function(a, u){ u.pin = 1; return '<circle class="jg-pin" cx="' + a[0] + '" cy="' + a[1] + '" r="4"/>'; },
+    target: function(a, u){ u.target = 1; var r = a[2] || 18; return '<circle class="jg-tg1" cx="' + a[0] + '" cy="' + a[1] + '" r="' + r + '"/><circle class="jg-tg2" cx="' + a[0] + '" cy="' + a[1] + '" r="' + jgR(r * .64) + '"/><circle class="jg-tg3" cx="' + a[0] + '" cy="' + a[1] + '" r="' + jgR(r * .3) + '"/>'; },
+    bub: function(a){ return '<circle class="jg-bub" cx="' + a[0] + '" cy="' + a[1] + '" r="2.6"/>'; },
+    bubs: function(a){
+      var s = "";
+      for (var i = 0; i < a[3]; i++){ var g = -90 + i * 360 / a[3]; [[0, 0], [7, 9], [13, -6]].forEach(function(o){ var p = jgPt(a[0], a[1], a[2] - o[0], g + o[1]).split(" "); s += JG.bub([p[0], p[1]]); }); }
+      return s;
+    },
+    note: function(a, u){ u.note = 1; return jgTxt(a[0], a[1], "♪", "jg-note", "middle"); },
+    flag: function(a, u){ u.flag = 1; return '<path class="jg-pole" d="M' + a[0] + " " + (a[1] + 10) + "v-20" + '"/><path class="jg-flag" d="M' + a[0] + " " + (a[1] - 10) + "l12 4l-12 4z" + '"/>'; },
+    dice: function(a, u){ u.dice = 1; return '<rect class="jg-dice" x="' + (a[0] - 9) + '" y="' + (a[1] - 9) + '" width="18" height="18" rx="3"/>' + [[-4, -4], [0, 0], [4, 4]].map(function(o){ return '<circle class="jg-dot" cx="' + (a[0] + o[0]) + '" cy="' + (a[1] + o[1]) + '" r="1.6"/>'; }).join(""); },
+    balloon: function(a, u){ u.balloon = 1; return '<path class="jg-string" d="M' + (a[0] + 3) + " " + (a[1] - 6) + "q4 -8 6 -12" + '"/><ellipse class="jg-balloon" cx="' + (a[0] + 10) + '" cy="' + (a[1] - 24) + '" rx="7" ry="8.5"/>'; },
+    clock: function(a, u){ u.clock = 1; return '<circle class="jg-clock" cx="' + a[0] + '" cy="' + a[1] + '" r="9"/><path class="jg-hand" d="M' + a[0] + " " + (a[1] - 6) + "V" + a[1] + "h4" + '"/>'; },
+    basket: function(a, u){ u.basket = 1; return '<rect class="jg-basket" x="' + (a[0] - 16) + '" y="' + (a[1] - 8) + '" width="32" height="16" rx="3"/>' + (a[2] ? jgTxt(a[0] + 22, a[1] + 4, a[2], "jg-lbl") : ""); },
+    card: function(a){ return '<rect class="jg-card" x="' + (a[0] - 7) + '" y="' + (a[1] - 9) + '" width="14" height="18" rx="2"/>'; },
+    light: function(a){ return '<rect class="jg-light" x="' + (a[0] - 6) + '" y="' + (a[1] - 15) + '" width="12" height="30" rx="4"/><circle class="jg-l1" cx="' + a[0] + '" cy="' + (a[1] - 8) + '" r="3"/><circle class="jg-l2" cx="' + a[0] + '" cy="' + a[1] + '" r="3"/><circle class="jg-l3" cx="' + a[0] + '" cy="' + (a[1] + 8) + '" r="3"/>'; },
+    wall: function(a){ return '<line class="jg-wall' + (a[4] ? " " + a[4] : "") + '" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    zone: function(a){ return '<rect class="jg-zone" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + 14, a[4], "jg-lbl", "middle") : ""); },
+    line: function(a){ return '<line class="jg-line" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    lanes: function(a){ return a[0].map(function(y){ return '<line class="jg-lane" x1="0" y1="' + y + '" x2="320" y2="' + y + '"/>'; }).join(""); },
+    river: function(a){ return '<rect class="jg-river" x="8" y="' + a[0] + '" width="304" height="' + a[1] + '"/><path class="jg-wave" d="M20 ' + (a[0] + a[1] / 2) + " q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" + '"/>'; },
+    ticks: function(a){ var s = "", st = (a[1] - a[0]) / (a[3] + 1); for (var i = 1; i <= a[3]; i++) s += '<path class="jg-tick" d="M' + jgR(a[0] + st * i) + " " + (a[2] - 6) + "v12" + '"/>'; return s; },
+    lbl: function(a){ return jgTxt(a[0], a[1], a[2], "jg-lbl", a[3] || "middle"); },
+    mk: function(a){ return '<g class="jg-mk"><circle cx="' + a[0] + '" cy="' + a[1] + '" r="8"/>' + jgTxt(a[0], a[1] + 0.5, a[2], "") + "</g>"; },
+    X: function(a){ return '<path class="jg-x" d="M' + (a[0] - 6) + " " + (a[1] - 6) + "l12 12m0 -12l-12 12" + '"/>'; },
+    star: function(a, u){ u.k = 1; var x = a[0], y = a[1]; return '<path class="jg-fg" d="M' + (x - 15) + " " + (y - 15) + "L" + x + " " + (y - 5) + "L" + (x + 15) + " " + (y - 15) + "M" + x + " " + (y - 8) + "V" + (y + 7) + "M" + (x - 12) + " " + (y + 19) + "L" + x + " " + (y + 7) + "L" + (x + 12) + " " + (y + 19) + '"/><circle class="jg-fgh" cx="' + x + '" cy="' + (y - 14) + '" r="6"/>'; },
+    bolet: function(a, u){ u.k = 1; return '<circle class="jg-fgh" cx="' + a[0] + '" cy="' + a[1] + '" r="12"/><path class="jg-knee" d="' + jgArc(a[0], a[1], 6, 200, 340) + '"/>'; },
+    medusa: function(a, u){ u.k = 1; var x = a[0], y = a[1]; return '<path class="jg-fg thin" d="M' + (x - 6) + " " + (y + 4) + "q-4 10 0 18M" + (x - 2) + " " + (y + 6) + "q3 9 0 18M" + (x + 2) + " " + (y + 6) + "q-3 9 0 18M" + (x + 6) + " " + (y + 4) + "q4 10 0 18" + '"/><circle class="jg-fgh" cx="' + x + '" cy="' + y + '" r="8"/>'; },
+    relay: function(a, u){
+      var y = a[0], n = a[1], t = a[2], x1 = a[3], obj = a[4], labels = a[5], s = "", fx = 16 + (n - 1) * 17;
+      for (var i = 0; i < n; i++) s += JG.k([16 + i * 17, y, t, labels && labels[n - 1 - i]], u);
+      var sx = fx + 12;
+      if (obj){ s += JG[obj]([fx + 16, y], u); sx = fx + 26; }
+      return s + JG.a(["M" + sx + " " + (y - 4) + "H" + x1], u) + JG.a(["M" + x1 + " " + (y + 5) + "H" + (sx + 2), "d"], u);
+    },
+    relayv: function(a, u){
+      var x = a[0], n = a[1], t = a[2], y1 = a[3], obj = a[4], s = "", fy = 176 - (n - 1) * 17;
+      if (obj === "sack"){ u.sack = 1; s += '<rect class="jg-sack" x="' + (x - 11) + '" y="' + (fy - 11) + '" width="22" height="22" rx="7"/>'; }
+      for (var i = 0; i < n; i++) s += JG.k([x, 176 - i * 17, t], u);
+      if (obj === "ball") s += JG.ball([x + 11, fy - 6], u);
+      return s + JG.cone([x, y1 - 6], u) + JG.a(["M" + (x - 5) + " " + (fy - 13) + "V" + (y1 + 6)], u) + JG.a(["M" + (x + 5) + " " + (y1 + 6) + "V" + (fy - 13), "d"], u);
+    },
+    hop: function(a){
+      var x = a[0], y = a[1], s = 21, rows = [[0], [0], [-1, 1], [0], [-1, 1], [0]], n = 0, out = "";
+      rows.forEach(function(r, j){
+        var top = y - (j + 1) * s;
+        r.forEach(function(c){ n++; var bx = c === 0 ? x - s / 2 : c < 0 ? x - s : x; out += '<rect class="jg-hop" x="' + jgR(bx) + '" y="' + top + '" width="' + s + '" height="' + s + '"/>' + jgTxt(jgR(bx + s / 2), top + s / 2 + 4, n, "jg-hopn", "middle"); });
+      });
+      var ty = y - rows.length * s;
+      return out + '<path class="jg-hop" d="M' + (x - s) + " " + ty + "a" + s + " " + s + " 0 0 1 " + (2 * s) + ' 0z"/>' + jgTxt(x, ty - 5, "cel", "jg-hopn", "middle");
+    }
+  };
+  function bgFor(medi){
+    if (medi === "aigua") return '<rect width="320" height="190" fill="var(--deck)"/><rect width="320" height="150" fill="var(--pool)"/><path d="M0 150H320" class="jg-edge"/>' + jgTxt(312, 180, "BORD", "jg-bord", "end");
+    return '<rect width="320" height="190" fill="var(--surface-2)"/><rect class="jg-court" x="8" y="8" width="304" height="174" rx="4"/>';
   }
-  rows[0].appendChild(chip("s","all","Totes"));
-  Object.keys(STAGES).forEach(function(k){ rows[0].appendChild(chip("s",k,STAGES[k]+" anys")); });
-  rows[1].appendChild(chip("o","all","Tots"));
-  Object.keys(OBJ).forEach(function(k){ rows[1].appendChild(chip("o",k,OBJ[k])); });
-  function esc(t){ return t.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
-  function refresh(){
-    document.querySelectorAll("#filters .fchip").forEach(function(b){
-      var p = b.id.split("-"); b.setAttribute("aria-pressed", state[p[1]]===p[2] ? "true" : "false");
-    });
-    var list = GAMES.filter(function(gm){
-      return (state.s==="all" || gm.s.indexOf(state.s)>-1) && (state.o==="all" || gm.o.indexOf(state.o)>-1);
-    });
-    var html = list.map(function(gm){
-      return '<article class="game" id="joc-' + GAMES.indexOf(gm) + '"><div class="game-tags">' +
-        gm.s.map(function(s){ return '<span class="stg '+s+'">'+STAGES[s]+'</span>'; }).join("") +
-        gm.o.map(function(o){ return '<span class="obj">'+OBJ[o]+'</span>'; }).join("") +
-        '</div><h3>'+esc(gm.n)+'</h3>' +
-        '<p><span class="lbl">Material</span>'+esc(gm.m)+'</p>' +
-        '<p>'+esc(gm.c)+'</p>' +
-        '<p><span class="lbl">Variants</span>'+esc(gm.v)+'</p>' +
-        '<p class="key"><span class="lbl">Clau</span>'+esc(gm.k)+'</p></article>';
+  function drawGame(gm){
+    var u = {}, body = gm.d.map(function(op){ var f = JG[op[0]]; return f ? f(op.slice(1), u) : ""; }).join("");
+    var svg = '<svg viewBox="0 0 320 190" role="img" aria-label="Esquema del joc ' + esc(gm.n) + ', vist des de dalt">' + bgFor(MEDI) + body + "</svg>";
+    return {svg:svg, used:u};
+  }
+  var SW = {
+    k:["-8 -8 16 16", function(u){ return JG.k([0, 0], u); }],
+    kx:["-8 -8 16 16", function(u){ return JG.k([0, 0, "x"], u); }],
+    ka:["-8 -8 16 16", function(u){ return JG.k([0, 0, "a"], u); }],
+    kb:["-8 -8 16 16", function(u){ return JG.k([0, 0, "b"], u); }],
+    kl:["-8 -8 16 16", function(u){ return JG.k([0, 0, "l"], u); }],
+    kc:["-8 -8 16 24", function(u){ return JG.k([0, 0, "c"], u); }],
+    T:["-10 -10 20 20", function(u){ return JG.T([0, 0], u); }],
+    a:["0 -6 22 12", function(){ return jgArrow("M2 0H15"); }],
+    ad:["0 -6 22 12", function(){ return jgArrow("M2 0H15", "d"); }],
+    ab:["0 -6 22 12", function(){ return jgArrow("M2 0H15", "b"); }],
+    ball:["-7 -7 14 14", function(u){ return JG.ball([0, 0], u); }],
+    cone:["-8 -8 16 16", function(u){ return JG.cone([0, 1], u); }],
+    hoop:["-10 -10 20 20", function(u){ return JG.hoop([0, 0, 7], u); }],
+    ring2:["-8 -8 16 16", function(u){ return JG.ring2([0, 0], u); }],
+    board:["-8 -10 16 20", function(u){ return JG.board([0, 0], u); }],
+    noodle:["-14 -6 28 12", function(u){ return JG.noodle([-10, 0, 10, 0], u); }],
+    mat:["-11 -8 22 16", function(u){ return JG.mat([-9, -6, 18, 12], u); }],
+    bench:["-11 -6 22 12", function(u){ return JG.bench([-10, -4, 20, 8], u); }],
+    bars:["-11 -8 22 16", function(u){ return JG.bars([-10, -7, 20, 14], u); }],
+    rope:["-12 -6 24 12", function(u){ return JG.rope(["M-10 0q5 -5 10 0t10 0"], u); }],
+    pin:["-7 -7 14 14", function(u){ return JG.pin([0, 0], u); }],
+    target:["-10 -10 20 20", function(u){ return JG.target([0, 0, 9], u); }],
+    flag:["-6 -12 20 24", function(u){ return JG.flag([0, 0], u); }],
+    balloon:["-2 -36 24 34", function(u){ return JG.balloon([0, 0], u); }],
+    dice:["-10 -10 20 20", function(u){ return JG.dice([0, 0], u); }],
+    clock:["-10 -10 20 20", function(u){ return JG.clock([0, 0], u); }],
+    sack:["-12 -12 24 24", function(u){ return '<rect class="jg-sack" x="-11" y="-11" width="22" height="22" rx="7"/>'; }],
+    note:["-10 -16 20 20", function(u){ return JG.note([0, 0], u); }]
+  };
+  var LEG = {k:"Infant", kx:"Qui para", ka:"Equip A", kb:"Equip B", kl:"Guia", kc:"Infant amb cua", T:"Tècnic", a:"Desplaçament", ad:"Tornada", ab:"Pilota o objecte", ball:"Pilota", cone:"Con", hoop:"Cèrcol", ring2:"Anella o marca", board:"Planxa", noodle:"Xurro", mat:"Matalàs", bench:"Banc", bars:"Espatllera", rope:"Corda", pin:"Bitlla", target:"Diana", flag:"Mocador o estació", balloon:"Globus", dice:"Dau", clock:"Rellotge", sack:"Sac", note:"Música"};
+  Object.keys(LEG_PAGE).forEach(function(k){ LEG[k] = LEG_PAGE[k]; });
+  function legend(gm, used){
+    return Object.keys(SW).filter(function(k){ return used[k]; }).map(function(k){
+      var s = SW[k];
+      return '<span><svg viewBox="' + s[0] + '" aria-hidden="true">' + s[1]({}) + "</svg>" + esc(gm.lg[k] || LEG[k]) + "</span>";
     }).join("");
-    document.getElementById("games").innerHTML = html || '<div class="empty">Cap joc no compleix els dos filtres alhora. Canvia l’edat o l’objectiu.</div>';
-    document.getElementById("count").textContent = list.length===1 ? "Es mostra 1 joc de " + GAMES.length + "." : "Es mostren " + list.length + " jocs de " + GAMES.length + ".";
+  }
+  document.body.insertAdjacentHTML("beforeend", '<svg class="jg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>' +
+    '<marker id="jg-ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="jg-ahp" d="M0 0L10 5L0 10z"/></marker>' +
+    '<marker id="jg-ahb" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="jg-ahpb" d="M0 0L10 5L0 10z"/></marker></defs></svg>');
+
+  /* ---------- Filtres ---------- */
+  function jnorm(t){ return String(t).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’']/g, " "); }
+  GAMES.forEach(function(gm){ gm._n = jnorm([gm.n, gm.m, gm.c, gm.v, gm.k].join(" ")); });
+  var FG = [
+    {k:"s", lab:"Edat", opts:STAGES, fmt:function(v){ return STAGES[v] + " anys"; }, get:function(gm){ return gm.s; }},
+    {k:"o", lab:OBJ_LABEL, opts:OBJ, get:function(gm){ return gm.o; }},
+    {k:"g", lab:"Agrupament", opts:AGR, get:function(gm){ return [gm.g]; }, x:1},
+    {k:"i", lab:"Intensitat", opts:INT, get:function(gm){ return [String(gm.i)]; }, x:1},
+    {k:"e", lab:LLOC_LABEL, opts:LLOC, get:function(gm){ return [gm.e]; }, x:1},
+    {k:"m", lab:"Material", opts:{sense:"Sense material", amb:"Amb material"}, get:function(gm){ return [gm.mat]; }, x:1}
+  ];
+  var state = {q:""};
+  FG.forEach(function(f){ state[f.k] = []; });
+  var fbox = document.getElementById("filters");
+  fbox.innerHTML =
+    '<div class="jf-top"><label class="jf-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>' +
+    '<input id="jf-q" type="search" placeholder="Cerca per nom, material o paraula…" autocomplete="off" spellcheck="false" aria-label="Cerca dins del banc de jocs"></label>' +
+    '<button type="button" class="jf-btn" id="jf-more" aria-expanded="false" aria-controls="jf-extra">Més filtres <span class="jf-n" id="jf-n" hidden></span></button></div>' +
+    FG.filter(function(f){ return !f.x; }).map(frow).join("") +
+    '<div class="jf-extra" id="jf-extra" hidden>' + FG.filter(function(f){ return f.x; }).map(frow).join("") + "</div>" +
+    '<div class="jf-bar"><p class="count" id="count" aria-live="polite"></p><div class="jf-acts">' +
+    '<button type="button" class="jf-btn" id="jf-rand">Un joc a l’atzar</button><button type="button" class="jf-btn" id="jf-clear" hidden>Neteja els filtres</button></div></div>';
+  function frow(f){
+    return '<div class="frow" role="group" aria-label="Filtra per ' + f.lab.toLowerCase() + '"><span class="label">' + f.lab + "</span>" +
+      Object.keys(f.opts).map(function(v){
+        return '<button type="button" class="fchip" data-g="' + f.k + '" data-v="' + v + '" aria-pressed="false">' + (f.fmt ? f.fmt(v) : f.opts[v]) + ' <span class="fc"></span></button>';
+      }).join("") + "</div>";
+  }
+  function passes(gm, skip){
+    if (state.q){ var ws = jnorm(state.q).split(/\s+/); for (var i = 0; i < ws.length; i++) if (ws[i] && gm._n.indexOf(ws[i]) < 0) return false; }
+    for (var j = 0; j < FG.length; j++){
+      var f = FG[j], sel = state[f.k];
+      if (f.k === skip || !sel.length) continue;
+      if (!f.get(gm).some(function(v){ return sel.indexOf(v) > -1; })) return false;
+    }
+    return true;
+  }
+  function nActive(extraOnly){ return FG.reduce(function(n, f){ return n + (extraOnly && !f.x ? 0 : state[f.k].length); }, 0) + (!extraOnly && state.q ? 1 : 0); }
+  fbox.addEventListener("click", function(e){
+    var b = e.target.closest(".fchip");
+    if (b){ var sel = state[b.getAttribute("data-g")], v = b.getAttribute("data-v"), i = sel.indexOf(v); if (i > -1) sel.splice(i, 1); else sel.push(v); refresh(); }
+  });
+  var qIn = document.getElementById("jf-q");
+  qIn.addEventListener("input", function(){ state.q = qIn.value.trim(); refresh(); });
+  var moreBtn = document.getElementById("jf-more"), extra = document.getElementById("jf-extra");
+  moreBtn.addEventListener("click", function(){ var open = extra.hidden; extra.hidden = !open; moreBtn.setAttribute("aria-expanded", open ? "true" : "false"); });
+  function clearFilters(){ state.q = ""; qIn.value = ""; FG.forEach(function(f){ state[f.k] = []; }); refresh(); }
+  document.getElementById("jf-clear").addEventListener("click", clearFilters);
+  document.getElementById("jf-rand").addEventListener("click", function(){
+    var cards = document.querySelectorAll("#games .game"); if (!cards.length) return;
+    var el = cards[Math.floor(Math.random() * cards.length)];
+    el.scrollIntoView({behavior:reduce ? "auto" : "smooth", block:"center"});
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  });
+  var dots = function(n){ return '<span class="jg-int" aria-label="Intensitat ' + INT[n].toLowerCase() + '">' + [1, 2, 3].map(function(i){ return "<i" + (i <= n ? ' class="on"' : "") + "></i>"; }).join("") + "</span>"; };
+  var DRAWN = GAMES.map(drawGame);
+  function card(gm){
+    var i = GAMES.indexOf(gm), dg = DRAWN[i];
+    return '<article class="game" id="joc-' + i + '">' +
+      '<figure class="jg-fig">' + dg.svg + '<figcaption class="jg-leg">' + legend(gm, dg.used) + "</figcaption></figure>" +
+      (gm.cap ? '<p class="jg-cap">' + esc(gm.cap) + "</p>" : "") +
+      '<div class="game-tags">' +
+      gm.s.map(function(s){ return '<span class="stg ' + s + '">' + STAGES[s] + "</span>"; }).join("") +
+      gm.o.map(function(o){ return '<span class="obj">' + OBJ[o] + "</span>"; }).join("") +
+      "</div><h3>" + esc(gm.n) + "</h3>" +
+      '<p class="jg-meta"><span>' + AGR[gm.g] + "</span><span>" + dots(gm.i) + INT[gm.i] + "</span>" + (gm.e ? "<span>" + LLOC[gm.e] + "</span>" : "") + "</p>" +
+      '<p><span class="lbl">Material</span>' + esc(gm.m) + "</p>" +
+      "<p>" + esc(gm.c) + "</p>" +
+      '<p><span class="lbl">Variants</span>' + esc(gm.v) + "</p>" +
+      '<p class="key"><span class="lbl">Clau</span>' + esc(gm.k) + "</p></article>";
+  }
+  function esc(t){ return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); }
+  function refresh(){
+    fbox.querySelectorAll(".fchip").forEach(function(b){
+      var g = b.getAttribute("data-g"), v = b.getAttribute("data-v"), f = FG.filter(function(x){ return x.k === g; })[0];
+      var on = state[g].indexOf(v) > -1, n = GAMES.filter(function(gm){ return passes(gm, g) && f.get(gm).indexOf(v) > -1; }).length;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.querySelector(".fc").textContent = n;
+      b.classList.toggle("zero", !n && !on);
+    });
+    var list = GAMES.filter(function(gm){ return passes(gm); });
+    document.getElementById("games").innerHTML = list.map(card).join("") ||
+      '<div class="empty">Cap joc no compleix tots els filtres alhora. <button type="button" class="jf-btn" onclick="document.getElementById(\'jf-clear\').click()">Neteja els filtres</button></div>';
+    var na = nActive(false), nx = nActive(true), jn = document.getElementById("jf-n");
+    jn.hidden = !nx; jn.textContent = nx;
+    document.getElementById("jf-clear").hidden = !na;
+    document.getElementById("count").textContent = (list.length === 1 ? "Es mostra 1 joc de " : "Es mostren " + list.length + " jocs de ") + GAMES.length + (na ? " · " + na + (na === 1 ? " filtre actiu" : " filtres actius") : "") + ".";
   }
   refresh();
 
@@ -1751,7 +2090,7 @@ main{min-width:0}
   var LABEL = {inici:"Inici", competencia:"Competència aquàtica", aigua:"Propietats de l’aigua", etapes:"Etapes, 3–12 anys", estils:"Els quatre estils", jocs:"Banc de jocs", sessio:"Organitzar una sessió", seguretat:"Seguretat", vocabulari:"Vocabulari", fonts:"Fonts"};
   var STROKE_NAME = {crol:"Crol", esquena:"Esquena", braca:"Braça", papallona:"Papallona"};
   var behavior = reduce ? "auto" : "smooth";
-  $("tile-jocs").textContent = GAMES.length + " jocs filtrables per edat i per objectiu.";
+  $("tile-jocs").textContent = GAMES.length + " jocs amb esquema, filtrables per edat, objectiu, agrupament, intensitat i material.";
 
   /* --- Pestanyes internes de cada estil --- */
   var SUBS = [["tecnica","Tècnica"],["progressio","Progressió"],["errors","Errors"],["reglament","Reglament"]];
@@ -1866,7 +2205,7 @@ main{min-width:0}
   }
   function reveal(p){
     var el = p.el;
-    if (p.game != null){ state.s = "all"; state.o = "all"; refresh(); el = $("joc-" + p.game); }
+    if (p.game != null){ clearFilters(); el = $("joc-" + p.game); }
     if (!el) return;
     var sp = el.closest(".subpanel"); if (sp) setSub(sp.getAttribute("data-sub"));
     el.scrollIntoView({behavior:"auto", block:"center"});
