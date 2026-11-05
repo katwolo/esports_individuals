@@ -821,6 +821,121 @@ main{min-width:0}
 .trk-detail .det{max-width:470px;margin:0 auto}
 .det-notes{margin:8px 0 0;padding-left:1.1rem;font-size:.9rem;color:var(--muted);display:grid;gap:3px}
 
+/* Banc de jocs: filtres combinables i esquema de cada joc */
+.jf{display:grid;gap:12px;margin-bottom:22px;padding:16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.alt .jf{background:var(--bg)}
+.jf-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.jf-search{flex:1 1 280px;display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--muted);min-width:0}
+.jf-search:focus-within{border-color:var(--water);box-shadow:0 0 0 3px var(--water-soft)}
+.jf-search svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.jf-search input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:1rem;outline:none}
+.jf-btn{appearance:none;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;font-size:.93rem;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.jf-btn:hover{border-color:var(--water)}
+.jf-btn[aria-expanded="true"]{background:var(--water-soft);border-color:var(--water)}
+.jf-n{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--water);color:var(--on-water);font-family:var(--font-data);font-size:.8rem}
+.jf-extra{display:grid;gap:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.jf .frow .label{min-width:92px}
+.fchip .fc{font-family:var(--font-data);font-size:.8rem;color:var(--muted);margin-left:2px;font-variant-numeric:tabular-nums}
+.fchip[aria-pressed="true"] .fc{color:inherit;opacity:.75}
+.fchip.zero{opacity:.45}
+.jf-bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;padding-top:4px}
+.jf-bar .count{margin:0}
+.jf-acts{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:560px){.jf{padding:12px}.jf .frow .label{min-width:100%}}
+.empty .jf-btn{margin-left:8px}
+
+.game{overflow:hidden}
+.jg-fig{margin:-18px -18px 2px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.jg-fig svg{display:block;width:100%;height:auto}
+.jg-leg{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 14px 9px;font-size:.78rem;line-height:1.3;color:var(--muted);background:var(--surface)}
+.jg-leg span{display:inline-flex;align-items:center;gap:5px}
+.jg-leg svg{width:auto;height:15px;flex:none;overflow:visible}
+.jg-cap{font-size:.86rem;color:var(--muted);margin-top:-2px}
+.jg-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--font-data);font-weight:600;font-size:.88rem;letter-spacing:.03em;color:var(--muted)}
+.jg-meta span{display:inline-flex;align-items:center;gap:6px}
+.jg-int{display:inline-flex;gap:2px}
+.jg-int i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.jg-int i.on{background:var(--water)}
+
+.jg-defs{position:absolute;width:0;height:0;overflow:hidden}
+.jg-ahp{fill:var(--ink);opacity:.8}
+.jg-ahpb{fill:var(--e1)}
+.jg-edge{stroke:var(--muted);stroke-width:2;opacity:.5}
+.jg-bord{fill:var(--muted);font:600 10px var(--font-data);letter-spacing:.14em}
+.jg-court{fill:none;stroke:var(--surface);stroke-width:3}
+.jg-k{fill:var(--fig);stroke:var(--surface);stroke-width:2}
+.jg-k.x{fill:var(--rope)}
+.jg-k.a{fill:var(--e3)}
+.jg-k.b{fill:var(--hot)}
+.jg-k.l{fill:var(--ok)}
+.jg-kt{fill:var(--surface);font:600 9.5px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-k.x+.jg-kt{fill:var(--rope-ink)}
+.jg-tail{fill:none;stroke:var(--hot);stroke-width:2.5;stroke-linecap:round}
+.jg-t{fill:var(--water)}
+.jg-tt{fill:var(--on-water);font:700 11px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-a{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.jg-a.d{stroke-dasharray:5 5}
+.jg-a.b{stroke:var(--e1);stroke-dasharray:2 5;stroke-width:2.4;opacity:1}
+.jg-link{fill:none;stroke:var(--fig);stroke-width:3;opacity:.6}
+.jg-ball{fill:var(--rope);stroke:var(--ink);stroke-width:1}
+.jg-cone{fill:var(--hot);stroke:var(--surface);stroke-width:1}
+.jg-hoop{fill:none;stroke:var(--e2);stroke-width:3}
+.jg-ring{fill:none;stroke:var(--rope);stroke-width:3}
+.jg-board{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.jg-noodle{stroke:var(--e1);stroke-width:7;stroke-linecap:round;opacity:.85}
+.jg-mat{fill:var(--mat,#D8E6F2);stroke:var(--muted);stroke-width:1}
+.jg-wedge{fill:none;stroke:var(--muted);stroke-width:1.5}
+.jg-bench{fill:var(--surface);stroke:var(--muted);stroke-width:1.5}
+.jg-bar{stroke:var(--muted);stroke-width:1.2}
+.jg-rope{fill:none;stroke:var(--rope);stroke-width:3.5;stroke-linecap:round}
+.jg-pin{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.jg-tg1{fill:var(--hot)} .jg-tg2{fill:var(--rope)} .jg-tg3{fill:var(--e1)}
+.jg-bub{fill:none;stroke:var(--ink);stroke-width:1.3;opacity:.55}
+.jg-note{fill:var(--ink);font:700 20px var(--font-body);opacity:.8}
+.jg-pole{stroke:var(--ink);stroke-width:1.6}
+.jg-flag{fill:var(--hot)}
+.jg-dice{fill:var(--surface);stroke:var(--ink);stroke-width:1.3}
+.jg-dot{fill:var(--ink)}
+.jg-string{fill:none;stroke:var(--muted);stroke-width:1}
+.jg-balloon{fill:var(--hot);opacity:.85}
+.jg-clock{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.jg-hand{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round}
+.jg-basket{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-card{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.jg-light{fill:var(--ink)}
+.jg-l1{fill:var(--bad)} .jg-l2{fill:var(--rope)} .jg-l3{fill:var(--ok)}
+.jg-wall{stroke:var(--ink);stroke-width:6;stroke-linecap:round;opacity:.7}
+.jg-wall.a{stroke:var(--e3);opacity:1}
+.jg-wall.b{stroke:var(--hot);opacity:1}
+.jg-zone{fill:var(--ink);opacity:.08}
+.jg-line{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:6 5;opacity:.4}
+.jg-lane{stroke:var(--rope);stroke-width:2.5;stroke-dasharray:7 4}
+.jg-river{fill:var(--pool)}
+.jg-wave{fill:none;stroke:var(--surface);stroke-width:1.5;opacity:.7}
+.jg-tick{stroke:var(--ink);stroke-width:1.5;opacity:.5}
+.jg-lbl{fill:var(--ink);font:600 12px var(--font-data);letter-spacing:.02em}
+.jg-mk circle{fill:var(--rope)}
+.jg-mk text{fill:var(--rope-ink);font:600 11px var(--font-data);text-anchor:middle;dominant-baseline:central}
+.jg-x{stroke:var(--bad);stroke-width:3;stroke-linecap:round}
+.jg-fg{fill:none;stroke:var(--fig);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.jg-fg.thin{stroke-width:2.2}
+.jg-fgh{fill:var(--fig)}
+.jg-knee{fill:none;stroke:var(--surface);stroke-width:1.5;opacity:.7}
+.jg-sack{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-hop{fill:var(--surface);stroke:var(--ink);stroke-width:1.2;opacity:.9}
+.jg-hopn{fill:var(--muted);font:600 10px var(--font-data)}
+.jg-track{fill:var(--track,#C0573A);opacity:.85}
+.jg-tlane{stroke:var(--surface);stroke-width:1.5;opacity:.8}
+.jg-hurdle{stroke:var(--rope);stroke-width:5;stroke-linecap:round}
+.jg-baton{stroke:var(--e2);stroke-width:4.5;stroke-linecap:round}
+.jg-sand{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-hbar{stroke:var(--rope);stroke-width:3.5}
+.jg-stand{fill:var(--ink)}
+.jg-jav{stroke:var(--e3);stroke-width:3.5;stroke-linecap:round}
+.jg-ladder{fill:none;stroke:var(--ink);stroke-width:1.4;opacity:.7}
+.jg-pike{stroke:var(--e1);stroke-width:3.5;stroke-linecap:round}
+.jg-mball{fill:var(--ink);stroke:var(--surface);stroke-width:1.5}
+
 </style>
 <script>
 (function(){ try { var t = localStorage.getItem("atletisme-tema"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -1691,15 +1806,11 @@ main{min-width:0}
     <div class="sec-head">
       <div class="label">A la pista</div>
       <h2>Banc de jocs</h2>
-      <p>Jocs per ensenyar cada grup de proves. Filtra per edat i per grup per preparar una sessió. Molts estan inspirats en el programa Kids’ Athletics de World Athletics.</p>
+      <p>Jocs per ensenyar cada grup de proves. Filtra’ls per edat, grup de proves, agrupament, intensitat, espai i material per preparar una sessió. Molts estan inspirats en el programa Kids’ Athletics de World Athletics.</p>
     </div>
-    <div class="filters" id="filters">
-      <div class="frow" role="group" aria-label="Filtra per edat"><span class="label">Edat</span></div>
-      <div class="frow" role="group" aria-label="Filtra per grup de proves"><span class="label">Grup</span></div>
-      <p class="count" id="count" aria-live="polite"></p>
-    </div>
+    <div class="jf" id="filters"></div>
     <div class="games" id="games"></div>
-    <p class="src">Recull de jocs d’iniciació a l’atletisme. Fonts: World Athletics, Kids’ Athletics; IAAF, <i>Run! Jump! Throw!</i></p>
+    <p class="src">Recull de jocs d’iniciació a l’atletisme. Fonts: World Athletics, Kids’ Athletics; IAAF, <i>Run! Jump! Throw!</i> Ampliat amb jocs predeportius d’atletisme recollits a EFDeportes i a educacionfisicaenprimaria.es.</p>
   </div>
 </section>
 
@@ -2768,41 +2879,347 @@ D.pes = wrap(o, 14, "Cercle, contenidor i sector de pes", ["No es pot trepitjar 
     {n:"Empenta agenollada", s:["s2","s3"], o:["lla"], m:"Pilota medicinal lleugera (1 kg).", c:"Agenollats darrere d’una línia, els infants empenyen la pilota des del pit amb les dues mans tan lluny com poden.", v:"Des de dempeus; amb una mà des de l’espatlla.", k:"Prova de Kids’ Athletics. Iniciació a l’empenta del pes."},
     {n:"Llançament rotatori", s:["s3"], o:["lla"], m:"Anelles de goma o pneumàtics petits.", c:"De costat a la zona de llançament, els infants giren el tronc i llancen l’anella amb el braç estirat. Es mesura on cau.", v:"Mig gir abans de llançar; amb l’altra mà.", k:"Iniciació al disc i al martell. Zona de llançament buida."},
     {n:"Bitlles de pes", s:["s2"], o:["lla"], m:"Pilotes de goma o saquets i bitlles.", c:"Els infants empenyen la pilota des de l’espatlla per tombar bitlles situades a diferents distàncies.", v:"Bitlles més lluny; empènyer des de la posició de força.", k:"La pilota surt del coll, no es llança."},
-    {n:"Mini decatló per equips", s:["s3"], o:["vel","res","sal","lla"], m:"Material de les proves triades.", c:"Cada equip fa quatre proves adaptades (per exemple, 30 m, salt de granota, empenta agenollada i cursa de 4 minuts). Cada marca es converteix en punts amb una taula senzilla i se sumen.", v:"Cada infant fa tres proves de les quatre; taula de punts inventada pels mateixos alumnes.", k:"Iniciació a les proves combinades i al càlcul de punts."}
+    {n:"Mini decatló per equips", s:["s3"], o:["vel","res","sal","lla"], m:"Material de les proves triades.", c:"Cada equip fa quatre proves adaptades (per exemple, 30 m, salt de granota, empenta agenollada i cursa de 4 minuts). Cada marca es converteix en punts amb una taula senzilla i se sumen.", v:"Cada infant fa tres proves de les quatre; taula de punts inventada pels mateixos alumnes.", k:"Iniciació a les proves combinades i al càlcul de punts."},
+    {n:"Blancs i negres", s:["s2","s3"], o:["vel"], m:"Cons per marcar dues línies de refugi.", c:"Dos equips s’asseuen o s’estiren d’esquena l’un a l’altre al mig de la pista, a un metre de distància. El tècnic diu «blancs» o «negres»: l’equip anomenat fuig cap al seu refugi i l’altre el persegueix per tocar-lo abans que hi arribi.", v:"Sortir des de posicions diferents; dir paraules que comencen igual (blancs, blaus) per enganyar.", k:"Reacció i acceleració en pocs metres. Refugis a 10–15 m, sense parets a prop."},
+    {n:"Cursa amb handicap", s:["s3"], o:["vel","res"], m:"Cons per a les sortides i cronòmetre.", c:"Cada infant surt des d’una línia diferent segons el seu temps en una cursa anterior: els més ràpids, més enrere. L’objectiu és que tothom arribi gairebé alhora a la meta.", v:"Fer-ho per equips; que siguin els infants qui calculin on surt cadascú.", k:"Tothom té opcions de guanyar i ha d’esforçar-se fins al final."},
+    {n:"L’ombra", s:["s1","s2"], o:["vel"], m:"Cap.", c:"Per parelles, un fa de guia i corre canviant de ritme i de direcció; el company, l’ombra, el segueix a un metre i copia tot el que fa: accelerar, frenar, canviar de direcció o fer skipping.", v:"L’ombra al costat en lloc de darrere; incloure salts i girs.", k:"Canvis de ritme i atenció al company. Canviar de rol cada minut."},
+    {n:"Relleu en estrella", s:["s2","s3"], o:["rel","vel"], m:"Un testimoni per equip i cons.", c:"Quatre equips en fila formen els braços d’una creu, de cara al centre. A la senyal, l’últim de cada fila fa una volta corrent per fora de la creu i, en tornar al seu lloc, dona el testimoni al de davant, que el passa fins a l’últim i surt a fer la volta.", v:"Volta en sentit contrari; volta saltant a peu coix el primer tram.", k:"Passar el testimoni de mà a mà sense llançar-lo."},
+    {n:"Relleu pendular", s:["s2"], o:["rel"], m:"Un testimoni per equip i cons.", c:"Cada equip es divideix en dues meitats, l’una davant de l’altra a 20 m. El primer corre i dona el testimoni al de la fila de davant, que torna a fer el mateix recorregut. Acaba quan tothom ha tornat al seu lloc d’inici.", v:"Recorregut amb una tanca baixa; recorregut de marxa.", k:"El receptor espera darrere la línia amb la mà estirada."},
+    {n:"Testimoni en rotllana", s:["s1","s2"], o:["rel"], m:"Un o dos testimonis per grup.", c:"En rotllana, mirant tots cap a la mateixa banda, els infants es passen el testimoni de la mà dreta a l’esquerra del company del davant, al ritme d’una cançó, mentre caminen o troten.", v:"Dos testimonis que es persegueixen; canviar el sentit; fer-ho corrent.", k:"Mà receptora oberta i quieta enrere; mirada endavant."},
+    {n:"Cros de pinces", s:["s2","s3"], o:["res"], m:"Cons, pinces d’estendre de colors i un rellotge.", c:"S’amaguen pinces de colors en diferents punts d’un circuit gran. Per parelles o equips, han de córrer sense aturar-se i portar al seu racó tantes pinces del seu color com puguin en 6–8 minuts.", v:"Cada pinça té un valor; només es pot portar una pinça per viatge.", k:"Ritme constant i parlar sense ofegar-se: és el test de la parla."},
+    {n:"Marxa del cambrer", s:["s2","s3"], o:["res"], m:"Plats de plàstic i pilotes de tennis o saquets.", c:"Els infants fan relleus caminant de marxa amb un plat a la mà i una pilota a sobre, sense que caigui. Si s’alcen o corren, la pilota rodola.", v:"Plat a cada mà; recorregut amb corbes.", k:"Marxa sense fase de vol: sempre un peu a terra i el moviment fluid."},
+    {n:"Cèrcols de ritme", s:["s3"], o:["tan"], m:"Cèrcols i tanques baixes o d’escuma.", c:"Entre tanques baixes es col·loquen tres cèrcols a terra per marcar les passes. Els infants corren trepitjant dins dels cèrcols i passen la tanca sempre amb la mateixa cama d’atac.", v:"Treure un cèrcol a cada ronda; separar més les tanques.", k:"Ritme de tres passes entre tanques. Tanques que cedeixin si es toquen."},
+    {n:"Comba de 30 segons", s:["s2","s3"], o:["sal","res"], m:"Una corda de saltar per infant.", c:"Cada infant salta a corda durant 30 segons mentre un company compta els salts. Després canvien. Se sumen els salts de tot l’equip.", v:"A peu coix; corda per parelles; salts alterns com si corregués.", k:"Prova de Kids’ Athletics. Salts baixos sobre les puntes dels peus."},
+    {n:"Salt de precisió", s:["s2","s3"], o:["sal"], m:"Cinta o guix per marcar zones de batuda i de caiguda.", c:"Després d’una carrera curta, cal batre dins d’una zona marcada i caure dins d’una altra zona de punts. Com més petita la zona encertada, més punts per a l’equip.", v:"Canviar la distància entre zones; batre amb la cama menys hàbil.", k:"Prova de Kids’ Athletics: precisió de la batuda abans que distància."},
+    {n:"Salt amb carrera curta", s:["s2","s3"], o:["sal"], m:"Sorral o matalàs, i marques de distància.", c:"Amb una carrera de 5 a 7 passes, els infants salten cap al sorral. A la zona de caiguda hi ha franges amb punts; cada infant fa dos salts i se suma el millor.", v:"Batre des d’una zona ampla en lloc d’una línia; caure amb els dos peus junts.", k:"Batuda amb un peu, genoll de la cama lliure amunt i caiguda amb els dos peus."},
+    {n:"El blanc mòbil", s:["s1","s2"], o:["sal"], m:"Cèrcols.", c:"Un company mou un cèrcol per terra i el deixa en un lloc diferent a cada salt. L’infant que salta ha de caure dins del cèrcol amb els dos peus i quedar-se quiet.", v:"Salt a peu coix; dos cèrcols i triar-ne un.", k:"Ajustar la força del salt a la distància i caure equilibrat."},
+    {n:"Salts des del calaix", s:["s1","s2"], o:["sal"], m:"Un calaix baix o un banc i cèrcols o marques a terra.", c:"Els infants salten des d’un calaix baix cap a cèrcols o marques a terra, caient amb els peus junts i els genolls flexionats.", v:"Caure i tornar a saltar de seguida; caure dins d’un cèrcol de color concret.", k:"Altura baixa i caiguda amortida, en silenci."},
+    {n:"Rebots de cangur", s:["s1","s2"], o:["sal"], m:"Piques o cordes a terra.", c:"Una sèrie de piques o cordes a terra separades un pas. Els infants les salten seguides amb els peus junts, com cangurs, sense aturar-se entre salt i salt.", v:"A peu coix; de costat; separar més les piques.", k:"Rebot ràpid i elàstic: poc temps de contacte a terra."},
+    {n:"Diana per sobre de la corda", s:["s2","s3"], o:["lla"], m:"Una corda alta entre dos suports, cèrcols o zones de punts i pilotes petites.", c:"Des d’una zona de llançament, els infants llancen per sobre d’una corda alta i intenten encertar zones de punts del darrere. Si passa la corda però no encerta cap zona, també suma un punt.", v:"Canviar l’altura de la corda; llançar amb l’altra mà.", k:"Prova de Kids’ Athletics: llançament alt i precís."},
+    {n:"Llançament enrere", s:["s3"], o:["lla"], m:"Pilotes medicinals lleugeres (1 kg).", c:"D’esquena a la zona de llançament, amb la pilota a les mans, els infants flexionen les cames i llancen la pilota per sobre del cap tan lluny com poden, estirant tot el cos.", v:"Des de genolls; amb una pilota més lleugera i a una diana.", k:"La força ve de les cames. Zona de caiguda buida i un sol llançador alhora."},
+    {n:"Plats voladors", s:["s2","s3"], o:["lla"], m:"Discs voladors o plats d’escuma i cèrcols.", c:"De costat a la línia, els infants llancen el disc amb un gir del tronc cap a cèrcols escampats a diferents distàncies, que valen punts diferents.", v:"Llançar amb mig gir previ; competició per equips.", k:"Iniciació al disc: braç estirat i el disc surt per l’índex."},
+    {n:"Empenta a la paret", s:["s2"], o:["lla"], m:"Pilotes de goma o medicinals lleugeres i una paret.", c:"Per parelles, davant d’una paret, un infant empeny la pilota des del coll contra la paret i el company la recull al rebot. Es compten les empentes bones en 30 segons.", v:"Allunyar-se de la paret; empènyer amb l’altra mà.", k:"La pilota surt del coll i el colze queda darrere la pilota."},
+    {n:"Circuit d’estacions atlètiques", s:["s3"], o:["vel","sal","lla","tan"], m:"Tanques baixes, sorral o matalàs, pilotes medicinals i cons.", c:"Quatre estacions: esprint de 20 m, salt de llargada amb carrera curta, empenta de pilota medicinal i tram de tanques baixes. Els equips roten cada 4 minuts i anoten les seves marques.", v:"Afegir una estació de marxa; que els infants facin de jutges.", k:"Pràctica variada de les tres famílies de proves. Un adult a l’estació de llançament."}
   ];
-  var state = {s:"all", o:"all"};
-  var rows = document.querySelectorAll("#filters .frow");
-  function chip(group, val, text){
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "fchip"; b.textContent = text; b.id = "f-" + group + "-" + val;
-    b.setAttribute("aria-pressed", state[group] === val ? "true" : "false");
-    b.addEventListener("click", function(){ state[group] = val; refresh(); });
-    return b;
+  /* Dades per filtrar i dibuixar cada joc: g agrupament, i intensitat (1-3), e espai, d esquema (vista des de dalt) */
+  var MEDI = "terra", OBJ_LABEL = "Grup de proves", LLOC_LABEL = "Espai";
+  var LLOC = {obert:"Pista o pati", gim:"Pavelló", sorral:"Amb sorral"};
+  var LEG_PAGE = {ring2:"Anella de goma"};
+  var META = {
+    "Carreres de colors": {g:"gg", i:3, e:"obert", d:[["cone",40,30],["cone",280,30],["cone",40,160],["cone",280,160],["ks",[[150,88],[170,96],[160,108],[146,104],[176,84]]],["a","M146 82 L56 38"],["a","M178 98 L266 152"],["T",160,170],["lbl",186,174,"«vermell!»","start"]]},
+    "Sortides boges": {g:"par", i:3, e:"obert", d:[["line",40,20,40,170],["line",280,20,280,170],["k",40,40],["k",40,70],["star",48,108],["bolet",40,150],["a","M52 40H270"],["a","M52 70H270"],["a","M66 108H270"],["a","M56 150H270"],["lbl",160,26,"sortides des de posicions diferents"]]},
+    "Persecució per parelles": {g:"par", i:3, e:"obert", lg:{kl:"Líder", kx:"Perseguidor", rope:"Cinta"}, d:[["line",290,20,290,170],["k",80,60,"l"],["k",54,60,"x"],["rope","M60 60H74"],["a","M92 60H280"],["a","M44 70 Q160 90 276 72","d"],["k",80,130,"l"],["k",54,130,"x"],["rope","M60 130H74"],["a","M92 130H280"],["lbl",290,184,"20 m","middle"]]},
+    "Llum verda, llum vermella": {g:"gg", i:2, e:"obert", d:[["line",20,176,300,176],["row",40,164,280,164,7],["T",160,26],["a","M40 152V70"],["a","M120 152V90"],["a","M200 152V64"],["a","M280 152V96"]]},
+    "Cursa de 8 minuts": {g:"eq", i:2, e:"obert", d:[["cone",40,30],["cone",280,30],["cone",280,160],["cone",40,160],["a","M56 26H266"],["a","M290 44V146"],["a","M266 168H56"],["a","M30 146V46"],["ks",[[120,26],[290,96],[200,168]],"a"],["ks",[[180,26],[30,100]],"b"],["basket",160,96,"gomes"]]},
+    "Corre i camina": {g:"gg", i:2, e:"obert", lg:{rope:"Circuit"}, d:[["rope","M40 40H280V150H40Z"],["ks",[[90,40],[200,40],[280,96],[160,150],[40,110]]],["a","M100 40H150"],["a","M210 40H260"],["a","M280 106V140"],["a","M150 150H100","d"],["a","M40 100V60","d"],["T",160,96],["lbl",178,100,"1, 2 o 3 xiulets","start"]]},
+    "Rellotge de ritme": {g:"gg", i:2, e:"obert", d:[["track",20,150,4],["cone",30,95],["cone",130,95],["cone",230,95],["k",60,58],["a","M72 58H120"],["k",160,132],["a","M172 132H220"],["clock",292,30],["lbl",180,72,"arribar al con just al xiulet"]]},
+    "Marxa sobre la línia": {g:"gg", i:2, e:"obert", d:[["line",20,60,300,60],["line",20,130,300,130],["k",50,60],["a","M62 60H200"],["k",80,130],["a","M92 130H230"],["k",260,96,"a"],["lbl",260,118,"jutge"],["lbl",160,40,"taló primer, genoll estirat"]]},
+    "Relleu de llançadora amb tanques": {g:"eq", i:3, e:"obert", d:[["track",56,84,2],["hurdle",110,77],["hurdle",160,77],["hurdle",210,77],["row",20,77,20,77,1,"a"],["row",300,119,300,119,1,"a"],["ks",[[20,40],[36,40]],"a"],["ks",[[300,156],[284,156]],"a"],["a","M32 77H284"],["a","M288 119H36","d"],["ring2",28,86]]},
+    "Fórmula 1": {g:"eq", i:3, e:"obert", cap:"1 Tanques baixes · 2 Tombarella al matalàs · 3 Eslàlom entre cons · 4 Tram llis fins al relleu", d:[["hurdle",80,40],["hurdle",120,40],["hurdle",160,40],["mat",210,26,60,30],["cone",270,96],["cone",240,120],["cone",270,144],["row",30,160,70,160,3,"a"],["baton",88,160],["a","M40 148 Q30 60 60 40"],["a","M180 40H204"],["a","M276 60 Q300 80 280 96"],["a","M262 100 Q230 108 250 124 Q290 136 262 152"],["a","M240 162H100"],["mk",80,22,"1"],["mk",240,18,"2"],["mk",300,110,"3"],["mk",170,176,"4"]]},
+    "Relleus de testimoni": {g:"eq", i:3, e:"obert", d:[["relayv",90,4,"a",30,null],["relayv",160,4,"b",30,null],["relayv",230,4,"",30,null],["baton",100,125],["baton",170,125],["baton",240,125]]},
+    "Testimoni a cegues": {g:"par", i:3, e:"obert", cap:"El receptor surt quan el company trepitja la marca i rep el testimoni corrent, sense mirar enrere, dins la zona de canvi.", d:[["track",60,70,2],["zone",170,60,90,70,"zona de canvi"],["k",60,95,"a"],["baton",72,95],["k",180,95,"b"],["a","M84 95H170"],["a","M192 95H290"],["ring2",130,95],["lbl",130,148,"marca"]]},
+    "Escala de ritme": {g:"eq", i:2, e:"obert", d:[["ladder",80,60,180,8],["ladder",80,130,180,8],["k",50,60,"a"],["k",50,130,"b"],["a","M62 60 l14 0"],["a","M62 130 l14 0"],["a","M270 60H300"],["a","M270 130H300"],["clock",160,96]]},
+    "Riu de piques": {g:"gg", i:2, e:"obert", d:[["track",50,90,2],["pike",100,72],["pike",170,72],["pike",240,72],["pike",100,118],["pike",170,118],["pike",240,118],["k",40,72],["k",40,118],["a","M52 72 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0 q8 -8 16 0"],["a","M52 118H290"],["lbl",135,40,"sempre les mateixes passes"]]},
+    "Salta el riu": {g:"ind", i:2, e:"obert", d:[["rope","M20 80 L300 60"],["rope","M20 110 L300 140"],["k",60,160],["a","M60 150 Q62 100 64 70"],["k",240,170],["a","M240 160 Q246 104 250 50"],["lbl",40,96,"estret","start"],["lbl",300,104,"ample","end"]]},
+    "Salt creuat a peu coix": {g:"ind", i:2, e:"obert", d:[["line",160,40,160,150],["line",100,95,220,95],["k",132,68],["a","M140 72 Q170 50 186 66"],["a","M188 80 Q196 104 188 118"],["a","M176 124 Q150 140 136 122"],["clock",270,40],["lbl",270,64,"15 s"]]},
+    "Salt de granota": {g:"ind", i:2, e:"obert", d:[["line",60,20,60,170],["k",50,60],["a","M60 60 q30 -26 60 0"],["k",128,60],["k",50,130],["a","M60 130 q36 -30 72 0"],["k",140,130],["line",200,20,200,170],["line",240,20,240,170],["lbl",200,184,"2 m","middle"],["lbl",240,184,"2,5 m","middle"]]},
+    "Salta la goma": {g:"pg", i:2, e:"obert", d:[["hbar",150,50,150,140],["mat",162,40,70,110],["k",60,160],["a","M60 150 Q70 110 120 96 Q140 92 168 96"],["row",30,170,30,130,3],["lbl",150,30,"goma"]]},
+    "Tres salts de colors": {g:"ind", i:2, e:"obert", d:[["hoop",130,95,14],["hoop",180,95,14],["hoop",230,95,14],["k",60,95],["a","M72 95 q24 -24 50 -2"],["a","M138 92 q18 -18 34 0"],["a","M188 92 q18 -18 34 0"],["lbl",130,126,"mateix peu"],["lbl",180,126,"l’altre"],["lbl",230,126,"dos peus"]]},
+    "Salt de llargada amb perxa": {g:"ind", i:2, e:"sorral", lg:{jav:"Pal"}, d:[["river",70,40],["sand",200,50,100,90],["k",60,160],["a","M64 150 Q80 100 104 92"],["jav",104,92,140,96],["a","M120 86 Q170 50 224 88"],["lbl",160,64,"riu"]]},
+    "Neteja el camp": {g:"eq", i:3, e:"obert", lg:{hbar:"Corda alta"}, d:[["hbar",160,14,160,176],["ks",[[50,50],[100,110],[60,150],[120,40]],"a"],["ks",[[210,60],[270,40],[230,130],[280,150]],"b"],["ball",80,80],["ball",130,150],["ball",200,100],["ball",256,96],["ball",40,110],["a","M108 104 Q160 30 210 80","b"],["a","M226 124 Q160 80 104 140","b"],["lbl",160,190,"corda alta","middle"]]},
+    "Javelina a la diana": {g:"pg", i:1, e:"obert", d:[["line",40,20,40,170],["hoop",130,50,14],["hoop",190,110,14],["hoop",250,60,14],["hoop",280,140,14],["lbl",130,54,"1"],["lbl",190,114,"2"],["lbl",250,64,"3"],["lbl",280,144,"4"],["k",26,60],["jav",36,58,52,52],["a","M54 52 Q150 20 246 56","b"],["k",26,130],["a","M38 128 Q120 90 186 108","b"]]},
+    "Empenta agenollada": {g:"ind", i:2, e:"obert", d:[["line",50,20,50,170],["k",38,60],["mball",52,60],["a","M60 60 Q120 34 180 60","b"],["k",38,130],["mball",52,130],["a","M60 130 Q110 106 158 130","b"],["line",120,150,120,170],["line",180,150,180,170],["lbl",120,184,"3 m","middle"],["lbl",180,184,"5 m","middle"]]},
+    "Llançament rotatori": {g:"ind", i:2, e:"obert", d:[["line",60,20,60,170],["k",44,95],["spin",44,95],["ring2",62,92],["a","M68 92 Q150 40 240 70","b"],["ring2",246,72],["zone",100,10,212,172,"zona buida"]]},
+    "Bitlles de pes": {g:"pg", i:1, e:"obert", d:[["pin",200,40],["pin",212,52],["pin",188,52],["pin",250,110],["pin",262,122],["pin",238,122],["line",60,20,60,170],["k",44,60],["ball",58,58],["a","M64 58 Q130 36 192 48","b"],["k",44,130],["ball",58,128],["a","M64 128 Q160 100 240 116","b"]]},
+    "Blancs i negres": {g:"eq", i:3, e:"obert", d:[["zone",8,8,304,30,"refugi dels blancs"],["zone",8,152,304,30,"refugi dels negres"],["row",60,86,260,86,5,"a"],["row",60,104,260,104,5,"b"],["a","M100 80V46"],["a","M100 110V72","d"],["a","M220 80V46"],["T",292,95],["lbl",280,124,"«blancs!»","end"]]},
+    "Cursa amb handicap": {g:"gg", i:3, e:"obert", d:[["track",20,150,5],["line",290,20,290,170],["k",30,35],["k",60,65],["k",90,95],["k",120,125],["k",150,155],["a","M42 35H284"],["a","M72 65H284"],["a","M102 95H284"],["a","M132 125H284"],["a","M162 155H284"],["lbl",290,14,"meta","middle"]]},
+    "L’ombra": {g:"par", i:2, e:"obert", lg:{kl:"Guia", k:"Ombra"}, d:[["k",120,60,"l"],["k",96,72],["a","M132 56 Q200 20 250 70 Q270 110 220 130"],["a","M92 84 Q100 120 140 136","d"],["k",150,150,"l"],["k",126,160]]},
+    "Relleu en estrella": {g:"eq", i:3, e:"obert", lg:{kl:"Equip C", k:"Equip D"}, d:[["row",160,24,160,72,3,"a"],["row",160,118,160,166,3,"b"],["row",62,95,110,95,3,"l"],["row",210,95,258,95,3,""],["a","M172 22 Q300 20 296 95 Q296 180 172 172"],["baton",172,72],["lbl",160,95,"centre"]]},
+    "Relleu pendular": {g:"eq", i:3, e:"obert", d:[["row",30,95,64,95,3,"a"],["row",256,95,290,95,3,"a"],["baton",74,95],["a","M78 88H246"],["a","M246 104H78","d"],["line",72,40,72,150],["line",248,40,248,150],["lbl",160,74,"20 m"]]},
+    "Testimoni en rotllana": {g:"gg", i:1, e:"obert", d:[["ring",160,95,58,8],["baton",201,54],["rot",160,95,74],["note",296,26]]},
+    "Cros de pinces": {g:"pg", i:2, e:"obert", d:[["cone",40,30],["cone",280,30],["cone",280,160],["cone",40,160],["cone",160,40],["cone",150,150],["ring2",160,52],["ring2",150,138],["ring2",270,95],["ring2",50,95],["basket",160,96,"racó"],["k",100,60,"a"],["a","M108 66 Q140 90 146 92"],["k",230,140,"b"],["a","M222 134 Q190 110 182 100"],["clock",296,180]]},
+    "Marxa del cambrer": {g:"eq", i:2, e:"obert", d:[["relayv",100,4,"a",30,"ball"],["relayv",220,4,"b",30,"ball"],["lbl",160,96,"sempre un peu a terra"]]},
+    "Cèrcols de ritme": {g:"ind", i:2, e:"obert", d:[["track",70,50,1],["hurdle",90,95],["hoop",130,95,8],["hoop",160,95,8],["hoop",190,95,8],["hurdle",230,95],["k",40,95],["a","M52 95 q16 -14 32 0 q14 -12 30 0 q14 -12 30 0 q14 -12 30 0 q16 -14 34 0"],["lbl",160,58,"tres passes entre tanques"]]},
+    "Comba de 30 segons": {g:"par", i:2, e:"obert", lg:{rope:"Corda de saltar", ka:"Qui compta"}, d:[["k",80,80],["rope","M66 80 a14 18 0 1 0 28 0"],["k",80,130,"a"],["lbl",80,152,"compta"],["k",220,80],["rope","M206 80 a14 18 0 1 0 28 0"],["k",220,130,"a"],["lbl",220,152,"compta"],["clock",290,30],["lbl",290,54,"30 s"]]},
+    "Salt de precisió": {g:"ind", i:2, e:"obert", d:[["zone",120,70,24,50,"batuda"],["zone",200,60,24,70,""],["zone",232,60,24,70,""],["lbl",212,56,"3"],["lbl",244,56,"1"],["k",40,95],["a","M52 95H122"],["a","M140 92 Q176 60 210 92"]]},
+    "Salt amb carrera curta": {g:"ind", i:2, e:"sorral", d:[["sand",180,40,120,110],["line",200,40,200,150],["line",230,40,230,150],["line",260,40,260,150],["lbl",215,170,"1"],["lbl",245,170,"2"],["lbl",280,170,"3"],["line",170,40,170,150],["k",60,95],["a","M72 95H166"],["a","M172 92 Q210 60 248 92"],["lbl",110,80,"5–7 passes"]]},
+    "El blanc mòbil": {g:"par", i:1, e:"obert", d:[["k",80,95],["hoop",160,70,16],["a","M92 92 Q120 60 150 70"],["k",200,120,"a"],["a","M192 112 Q180 92 172 80","d"],["hoop",220,60,16],["lbl",230,148,"mou el cèrcol"]]},
+    "Salts des del calaix": {g:"ind", i:1, e:"gim", d:[["bench",40,70,40,50],["k",60,95],["hoop",130,70,14],["hoop",150,120,14],["hoop",200,95,14],["a","M72 92 Q100 60 124 70"],["row",20,160,60,160,3],["lbl",60,60,"calaix","middle"]]},
+    "Rebots de cangur": {g:"gg", i:2, e:"obert", d:[["pike",100,70],["pike",130,70],["pike",160,70],["pike",190,70],["pike",220,70],["pike",100,130],["pike",130,130],["pike",160,130],["pike",190,130],["pike",220,130],["k",60,70],["k",60,130],["a","M70 70 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0"],["a","M70 130 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0 q15 -16 30 0"]]},
+    "Diana per sobre de la corda": {g:"eq", i:1, e:"obert", lg:{hbar:"Corda alta"}, d:[["zone",20,60,40,70,"zona"],["k",40,95],["hbar",120,20,120,170],["zone",200,40,40,40,""],["zone",210,110,50,50,""],["lbl",220,64,"3"],["lbl",235,140,"2"],["a","M50 90 Q120 10 220 60","b"],["lbl",120,186,"corda alta","middle"]]},
+    "Llançament enrere": {g:"ind", i:2, e:"obert", d:[["line",60,20,60,170],["k",44,95],["mball",44,82],["a","M44 74 Q130 10 220 80","b"],["mball",224,84],["zone",100,10,212,172,"zona buida"],["lbl",44,120,"d’esquena"]]},
+    "Plats voladors": {g:"pg", i:1, e:"obert", d:[["line",50,20,50,170],["k",36,95],["spin",36,95],["hoop",150,50,14],["hoop",200,120,14],["hoop",260,70,14],["lbl",150,54,"1"],["lbl",200,124,"2"],["lbl",260,74,"3"],["a","M48 90 Q150 20 252 66","b"]]},
+    "Empenta a la paret": {g:"par", i:1, e:"obert", d:[["wall",300,20,300,170],["k",200,60],["mball",214,60],["a","M220 56H292","b"],["a","M292 66 Q260 90 236 84","d"],["k",240,90,"a"],["k",200,140],["mball",214,140],["a","M220 136H292","b"],["k",240,160,"a"],["clock",60,40],["lbl",60,64,"30 s"]]},
+    "Circuit d’estacions atlètiques": {g:"eq", i:2, e:"obert", cap:"1 Esprint · 2 Salt amb carrera curta · 3 Empenta de pilota medicinal · 4 Tanques baixes. Els equips roten cada 4 minuts.", d:[["line",160,10,160,180],["line",10,95,310,95],["cone",30,30],["cone",130,30],["a","M40 30H120"],["mk",20,14,"1"],["sand",230,20,70,50],["a","M180 45H226"],["mk",176,14,"2"],["mball",40,140],["a","M48 140 Q90 110 130 140","b"],["mk",20,110,"3"],["hurdle",210,140],["hurdle",250,140],["a","M180 140H290"],["mk",176,110,"4"],["rot",160,95,30]]},
+    "Mini decatló per equips": {g:"eq", i:2, e:"obert", lg:{rope:"Circuit"}, cap:"Quatre proves adaptades; cada marca es converteix en punts i se sumen per equip.", d:[["line",160,10,160,180],["line",10,95,310,95],["cone",30,40],["cone",130,40],["a","M40 40H120"],["lbl",80,24,"30 m"],["k",190,50],["a","M200 50 q24 -24 48 0"],["lbl",240,24,"salt de granota"],["k",30,140],["mball",44,140],["a","M50 140 Q90 112 130 140","b"],["lbl",80,170,"empenta"],["rope","M190 120H290V170H190Z"],["a","M200 120H270"],["lbl",240,150,"4 minuts"]]}
+  };
+  var AGR = {ind:"Individual", par:"Parelles", pg:"Petits grups", eq:"Equips", gg:"Gran grup"};
+  var INT = {"1":"Calmat", "2":"Moderat", "3":"Intens"};
+  GAMES.forEach(function(gm){
+    var md = META[gm.n] || {};
+    gm.g = md.g || "gg"; gm.i = md.i || 2; gm.e = md.e || ""; gm.d = md.d || []; gm.lg = md.lg || {}; gm.cap = md.cap || "";
+    gm.mat = /^cap\b|opcional/i.test(gm.m) ? "sense" : "amb";
+  });
+
+  /* ---------- Esquemes dels jocs: vista des de dalt, 320 × 190 ---------- */
+  function jgR(n){ return Math.round(n * 10) / 10; }
+  function jgPt(cx, cy, r, deg){ var a = deg * Math.PI / 180; return jgR(cx + r * Math.cos(a)) + " " + jgR(cy + r * Math.sin(a)); }
+  function jgArc(cx, cy, r, a1, a2){ return "M" + jgPt(cx, cy, r, a1) + " A" + r + " " + r + " 0 " + (a2 - a1 > 180 ? 1 : 0) + " 1 " + jgPt(cx, cy, r, a2); }
+  function jgArrow(d, s){ return '<path class="jg-a' + (s ? " " + s : "") + '" d="' + d + '" marker-end="url(#' + (s === "b" ? "jg-ahb" : "jg-ah") + ')"/>'; }
+  function jgTxt(x, y, t, cls, anchor){ return '<text class="' + cls + '" x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : "") + '>' + t + '</text>'; }
+  var JG = {
+    k: function(a, u){
+      var x = a[0], y = a[1], t = a[2] || ""; u["k" + t] = 1;
+      return (t === "c" ? '<path class="jg-tail" d="M' + x + " " + (y + 6) + ' q5 6 0 11 t0 9"/>' : "") +
+        '<circle class="jg-k' + (t ? " " + t : "") + '" cx="' + x + '" cy="' + y + '" r="7"/>' +
+        (a[3] ? jgTxt(x, y + 0.5, a[3], "jg-kt") : "");
+    },
+    row: function(a, u){
+      var s = "", n = a[4];
+      for (var i = 0; i < n; i++){ var f = n === 1 ? 0 : i / (n - 1); s += JG.k([jgR(a[0] + (a[2] - a[0]) * f), jgR(a[1] + (a[3] - a[1]) * f), a[5], a[6] && a[6][i]], u); }
+      return s;
+    },
+    ring: function(a, u){
+      var s = "";
+      for (var i = 0; i < a[3]; i++){ var p = jgPt(a[0], a[1], a[2], -90 + i * 360 / a[3]).split(" "); s += JG.k([+p[0], +p[1], a[4]], u); }
+      return s;
+    },
+    ks: function(a, u){ return a[0].map(function(p){ return JG.k([p[0], p[1], a[1]], u); }).join(""); },
+    T: function(a, u){ u.T = 1; return '<rect class="jg-t" x="' + (a[0] - 9) + '" y="' + (a[1] - 9) + '" width="18" height="18" rx="4"/>' + jgTxt(a[0], a[1] + 0.5, "T", "jg-tt"); },
+    a: function(a, u){ u["a" + (a[1] || "")] = 1; return jgArrow(a[0], a[1]); },
+    rot: function(a, u){ u.a = 1; return jgArrow(jgArc(a[0], a[1], a[2], -70, 20)) + jgArrow(jgArc(a[0], a[1], a[2], 110, 200)); },
+    spin: function(a, u){ u.a = 1; return jgArrow(jgArc(a[0], a[1], 14, 150, 420)); },
+    link: function(a){ return '<polyline class="jg-link" points="' + a[0].map(function(p){ return p.join(","); }).join(" ") + '"/>'; },
+    ball: function(a, u){ u.ball = 1; return '<circle class="jg-ball" cx="' + a[0] + '" cy="' + a[1] + '" r="4.5"/>'; },
+    cone: function(a, u){ u.cone = 1; return '<path class="jg-cone" d="M' + a[0] + " " + (a[1] - 7) + "l6 12h-12z" + '"/>'; },
+    hoop: function(a, u){ u.hoop = 1; return '<circle class="jg-hoop" cx="' + a[0] + '" cy="' + a[1] + '" r="' + (a[2] || 12) + '"/>'; },
+    ring2: function(a, u){ u.ring2 = 1; return '<circle class="jg-ring" cx="' + a[0] + '" cy="' + a[1] + '" r="5"/>'; },
+    board: function(a, u){ u.board = 1; return '<rect class="jg-board" x="' + (a[0] - 6) + '" y="' + (a[1] - 9) + '" width="12" height="18" rx="3"/>'; },
+    noodle: function(a, u){ u.noodle = 1; return '<line class="jg-noodle" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    mat: function(a, u){ u.mat = 1; return '<rect class="jg-mat" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="3"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : ""); },
+    wedge: function(a, u){ u.mat = 1; return JG.mat(a, u) + '<path class="jg-wedge" d="M' + (a[0] + 4) + " " + (a[1] + a[3] / 2) + "h" + (a[2] - 8) + '"/>' + '<path class="jg-wedge" d="M' + (a[0] + a[2] - 12) + " " + (a[1] + a[3] / 2 - 5) + "l6 5l-6 5" + '"/>'; },
+    bench: function(a, u){ u.bench = 1; return '<rect class="jg-bench" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="2"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : ""); },
+    bars: function(a, u){
+      u.bars = 1; var s = '<rect class="jg-bench" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '"/>';
+      for (var x = a[0] + 8; x < a[0] + a[2]; x += 8) s += '<line class="jg-bar" x1="' + x + '" y1="' + a[1] + '" x2="' + x + '" y2="' + (a[1] + a[3]) + '"/>';
+      return s + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] + 13, a[4], "jg-lbl", "middle") : "");
+    },
+    rope: function(a, u){ u.rope = 1; return '<path class="jg-rope" d="' + a[0] + '"/>'; },
+    pin: function(a, u){ u.pin = 1; return '<circle class="jg-pin" cx="' + a[0] + '" cy="' + a[1] + '" r="4"/>'; },
+    target: function(a, u){ u.target = 1; var r = a[2] || 18; return '<circle class="jg-tg1" cx="' + a[0] + '" cy="' + a[1] + '" r="' + r + '"/><circle class="jg-tg2" cx="' + a[0] + '" cy="' + a[1] + '" r="' + jgR(r * .64) + '"/><circle class="jg-tg3" cx="' + a[0] + '" cy="' + a[1] + '" r="' + jgR(r * .3) + '"/>'; },
+    bub: function(a){ return '<circle class="jg-bub" cx="' + a[0] + '" cy="' + a[1] + '" r="2.6"/>'; },
+    bubs: function(a){
+      var s = "";
+      for (var i = 0; i < a[3]; i++){ var g = -90 + i * 360 / a[3]; [[0, 0], [7, 9], [13, -6]].forEach(function(o){ var p = jgPt(a[0], a[1], a[2] - o[0], g + o[1]).split(" "); s += JG.bub([p[0], p[1]]); }); }
+      return s;
+    },
+    note: function(a, u){ u.note = 1; return jgTxt(a[0], a[1], "♪", "jg-note", "middle"); },
+    flag: function(a, u){ u.flag = 1; return '<path class="jg-pole" d="M' + a[0] + " " + (a[1] + 10) + "v-20" + '"/><path class="jg-flag" d="M' + a[0] + " " + (a[1] - 10) + "l12 4l-12 4z" + '"/>'; },
+    dice: function(a, u){ u.dice = 1; return '<rect class="jg-dice" x="' + (a[0] - 9) + '" y="' + (a[1] - 9) + '" width="18" height="18" rx="3"/>' + [[-4, -4], [0, 0], [4, 4]].map(function(o){ return '<circle class="jg-dot" cx="' + (a[0] + o[0]) + '" cy="' + (a[1] + o[1]) + '" r="1.6"/>'; }).join(""); },
+    balloon: function(a, u){ u.balloon = 1; return '<path class="jg-string" d="M' + (a[0] + 3) + " " + (a[1] - 6) + "q4 -8 6 -12" + '"/><ellipse class="jg-balloon" cx="' + (a[0] + 10) + '" cy="' + (a[1] - 24) + '" rx="7" ry="8.5"/>'; },
+    clock: function(a, u){ u.clock = 1; return '<circle class="jg-clock" cx="' + a[0] + '" cy="' + a[1] + '" r="9"/><path class="jg-hand" d="M' + a[0] + " " + (a[1] - 6) + "V" + a[1] + "h4" + '"/>'; },
+    basket: function(a, u){ u.basket = 1; return '<rect class="jg-basket" x="' + (a[0] - 16) + '" y="' + (a[1] - 8) + '" width="32" height="16" rx="3"/>' + (a[2] ? jgTxt(a[0] + 22, a[1] + 4, a[2], "jg-lbl") : ""); },
+    card: function(a){ return '<rect class="jg-card" x="' + (a[0] - 7) + '" y="' + (a[1] - 9) + '" width="14" height="18" rx="2"/>'; },
+    light: function(a){ return '<rect class="jg-light" x="' + (a[0] - 6) + '" y="' + (a[1] - 15) + '" width="12" height="30" rx="4"/><circle class="jg-l1" cx="' + a[0] + '" cy="' + (a[1] - 8) + '" r="3"/><circle class="jg-l2" cx="' + a[0] + '" cy="' + a[1] + '" r="3"/><circle class="jg-l3" cx="' + a[0] + '" cy="' + (a[1] + 8) + '" r="3"/>'; },
+    wall: function(a){ return '<line class="jg-wall' + (a[4] ? " " + a[4] : "") + '" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    zone: function(a){ return '<rect class="jg-zone" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + 14, a[4], "jg-lbl", "middle") : ""); },
+    line: function(a){ return '<line class="jg-line" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    lanes: function(a){ return a[0].map(function(y){ return '<line class="jg-lane" x1="0" y1="' + y + '" x2="320" y2="' + y + '"/>'; }).join(""); },
+    river: function(a){ return '<rect class="jg-river" x="8" y="' + a[0] + '" width="304" height="' + a[1] + '"/><path class="jg-wave" d="M20 ' + (a[0] + a[1] / 2) + " q10 -6 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" + '"/>'; },
+    ticks: function(a){ var s = "", st = (a[1] - a[0]) / (a[3] + 1); for (var i = 1; i <= a[3]; i++) s += '<path class="jg-tick" d="M' + jgR(a[0] + st * i) + " " + (a[2] - 6) + "v12" + '"/>'; return s; },
+    lbl: function(a){ return jgTxt(a[0], a[1], a[2], "jg-lbl", a[3] || "middle"); },
+    mk: function(a){ return '<g class="jg-mk"><circle cx="' + a[0] + '" cy="' + a[1] + '" r="8"/>' + jgTxt(a[0], a[1] + 0.5, a[2], "") + "</g>"; },
+    X: function(a){ return '<path class="jg-x" d="M' + (a[0] - 6) + " " + (a[1] - 6) + "l12 12m0 -12l-12 12" + '"/>'; },
+    star: function(a, u){ u.k = 1; var x = a[0], y = a[1]; return '<path class="jg-fg" d="M' + (x - 15) + " " + (y - 15) + "L" + x + " " + (y - 5) + "L" + (x + 15) + " " + (y - 15) + "M" + x + " " + (y - 8) + "V" + (y + 7) + "M" + (x - 12) + " " + (y + 19) + "L" + x + " " + (y + 7) + "L" + (x + 12) + " " + (y + 19) + '"/><circle class="jg-fgh" cx="' + x + '" cy="' + (y - 14) + '" r="6"/>'; },
+    bolet: function(a, u){ u.k = 1; return '<circle class="jg-fgh" cx="' + a[0] + '" cy="' + a[1] + '" r="12"/><path class="jg-knee" d="' + jgArc(a[0], a[1], 6, 200, 340) + '"/>'; },
+    medusa: function(a, u){ u.k = 1; var x = a[0], y = a[1]; return '<path class="jg-fg thin" d="M' + (x - 6) + " " + (y + 4) + "q-4 10 0 18M" + (x - 2) + " " + (y + 6) + "q3 9 0 18M" + (x + 2) + " " + (y + 6) + "q-3 9 0 18M" + (x + 6) + " " + (y + 4) + "q4 10 0 18" + '"/><circle class="jg-fgh" cx="' + x + '" cy="' + y + '" r="8"/>'; },
+    relay: function(a, u){
+      var y = a[0], n = a[1], t = a[2], x1 = a[3], obj = a[4], labels = a[5], s = "", fx = 16 + (n - 1) * 17;
+      for (var i = 0; i < n; i++) s += JG.k([16 + i * 17, y, t, labels && labels[n - 1 - i]], u);
+      var sx = fx + 12;
+      if (obj){ s += JG[obj]([fx + 16, y], u); sx = fx + 26; }
+      return s + JG.a(["M" + sx + " " + (y - 4) + "H" + x1], u) + JG.a(["M" + x1 + " " + (y + 5) + "H" + (sx + 2), "d"], u);
+    },
+    relayv: function(a, u){
+      var x = a[0], n = a[1], t = a[2], y1 = a[3], obj = a[4], s = "", fy = 176 - (n - 1) * 17;
+      if (obj === "sack"){ u.sack = 1; s += '<rect class="jg-sack" x="' + (x - 11) + '" y="' + (fy - 11) + '" width="22" height="22" rx="7"/>'; }
+      for (var i = 0; i < n; i++) s += JG.k([x, 176 - i * 17, t], u);
+      if (obj === "ball") s += JG.ball([x + 11, fy - 6], u);
+      return s + JG.cone([x, y1 - 6], u) + JG.a(["M" + (x - 5) + " " + (fy - 13) + "V" + (y1 + 6)], u) + JG.a(["M" + (x + 5) + " " + (y1 + 6) + "V" + (fy - 13), "d"], u);
+    },
+    track: function(a){
+      var s = '<rect class="jg-track" x="0" y="' + a[0] + '" width="320" height="' + a[1] + '"/>', n = a[2] || 1;
+      for (var i = 0; i <= n; i++) s += '<line class="jg-tlane" x1="0" y1="' + jgR(a[0] + a[1] * i / n) + '" x2="320" y2="' + jgR(a[0] + a[1] * i / n) + '"/>';
+      return s;
+    },
+    hurdle: function(a, u){ u.hurdle = 1; return '<line class="jg-hurdle" x1="' + a[0] + '" y1="' + (a[1] - 10) + '" x2="' + a[0] + '" y2="' + (a[1] + 10) + '"/>'; },
+    baton: function(a, u){ u.baton = 1; return '<line class="jg-baton" x1="' + (a[0] - 6) + '" y1="' + a[1] + '" x2="' + (a[0] + 6) + '" y2="' + a[1] + '"/>'; },
+    sand: function(a, u){ u.sand = 1; return '<rect class="jg-sand" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="3"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] / 2 + 4, a[4], "jg-lbl", "middle") : ""); },
+    hbar: function(a, u){ u.hbar = 1; return '<line class="jg-hbar" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/><circle class="jg-stand" cx="' + a[0] + '" cy="' + a[1] + '" r="3.5"/><circle class="jg-stand" cx="' + a[2] + '" cy="' + a[3] + '" r="3.5"/>'; },
+    jav: function(a, u){ u.jav = 1; return '<line class="jg-jav" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    ladder: function(a, u){
+      u.ladder = 1; var s = '<rect class="jg-ladder" x="' + a[0] + '" y="' + (a[1] - 11) + '" width="' + a[2] + '" height="22"/>';
+      for (var i = 1; i < a[3]; i++){ var x = jgR(a[0] + a[2] * i / a[3]); s += '<line class="jg-ladder" x1="' + x + '" y1="' + (a[1] - 11) + '" x2="' + x + '" y2="' + (a[1] + 11) + '"/>'; }
+      return s;
+    },
+    pike: function(a, u){ u.pike = 1; return '<line class="jg-pike" x1="' + a[0] + '" y1="' + (a[1] - 10) + '" x2="' + a[0] + '" y2="' + (a[1] + 10) + '"/>'; },
+    mball: function(a, u){ u.mball = 1; return '<circle class="jg-mball" cx="' + a[0] + '" cy="' + a[1] + '" r="6"/>'; },
+    hop: function(a){
+      var x = a[0], y = a[1], s = 21, rows = [[0], [0], [-1, 1], [0], [-1, 1], [0]], n = 0, out = "";
+      rows.forEach(function(r, j){
+        var top = y - (j + 1) * s;
+        r.forEach(function(c){ n++; var bx = c === 0 ? x - s / 2 : c < 0 ? x - s : x; out += '<rect class="jg-hop" x="' + jgR(bx) + '" y="' + top + '" width="' + s + '" height="' + s + '"/>' + jgTxt(jgR(bx + s / 2), top + s / 2 + 4, n, "jg-hopn", "middle"); });
+      });
+      var ty = y - rows.length * s;
+      return out + '<path class="jg-hop" d="M' + (x - s) + " " + ty + "a" + s + " " + s + " 0 0 1 " + (2 * s) + ' 0z"/>' + jgTxt(x, ty - 5, "cel", "jg-hopn", "middle");
+    }
+  };
+  function bgFor(medi){
+    if (medi === "aigua") return '<rect width="320" height="190" fill="var(--deck)"/><rect width="320" height="150" fill="var(--pool)"/><path d="M0 150H320" class="jg-edge"/>' + jgTxt(312, 180, "BORD", "jg-bord", "end");
+    return '<rect width="320" height="190" fill="var(--surface-2)"/><rect class="jg-court" x="8" y="8" width="304" height="174" rx="4"/>';
   }
-  rows[0].appendChild(chip("s","all","Totes"));
-  Object.keys(STAGES).forEach(function(k){ rows[0].appendChild(chip("s",k,STAGES[k]+" anys")); });
-  rows[1].appendChild(chip("o","all","Tots"));
-  Object.keys(OBJ).forEach(function(k){ rows[1].appendChild(chip("o",k,OBJ[k])); });
-  function esc(t){ return t.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
-  function refresh(){
-    document.querySelectorAll("#filters .fchip").forEach(function(b){
-      var p = b.id.split("-"); b.setAttribute("aria-pressed", state[p[1]] === p[2] ? "true" : "false");
-    });
-    var list = GAMES.filter(function(gm){
-      return (state.s === "all" || gm.s.indexOf(state.s) > -1) && (state.o === "all" || gm.o.indexOf(state.o) > -1);
-    });
-    var html = list.map(function(gm){
-      return '<article class="game" id="joc-' + GAMES.indexOf(gm) + '"><div class="game-tags">' +
-        gm.s.map(function(s){ return '<span class="stg '+s+'">'+STAGES[s]+'</span>'; }).join("") +
-        gm.o.map(function(o){ return '<span class="obj">'+OBJ[o]+'</span>'; }).join("") +
-        '</div><h3>'+esc(gm.n)+'</h3>' +
-        '<p><span class="lbl">Material</span>'+esc(gm.m)+'</p>' +
-        '<p>'+esc(gm.c)+'</p>' +
-        '<p><span class="lbl">Variants</span>'+esc(gm.v)+'</p>' +
-        '<p class="key"><span class="lbl">Clau</span>'+esc(gm.k)+'</p></article>';
+  function drawGame(gm){
+    var u = {}, body = gm.d.map(function(op){ var f = JG[op[0]]; return f ? f(op.slice(1), u) : ""; }).join("");
+    var svg = '<svg viewBox="0 0 320 190" role="img" aria-label="Esquema del joc ' + esc(gm.n) + ', vist des de dalt">' + bgFor(MEDI) + body + "</svg>";
+    return {svg:svg, used:u};
+  }
+  var SW = {
+    k:["-8 -8 16 16", function(u){ return JG.k([0, 0], u); }],
+    kx:["-8 -8 16 16", function(u){ return JG.k([0, 0, "x"], u); }],
+    ka:["-8 -8 16 16", function(u){ return JG.k([0, 0, "a"], u); }],
+    kb:["-8 -8 16 16", function(u){ return JG.k([0, 0, "b"], u); }],
+    kl:["-8 -8 16 16", function(u){ return JG.k([0, 0, "l"], u); }],
+    kc:["-8 -8 16 24", function(u){ return JG.k([0, 0, "c"], u); }],
+    T:["-10 -10 20 20", function(u){ return JG.T([0, 0], u); }],
+    a:["0 -6 22 12", function(){ return jgArrow("M2 0H15"); }],
+    ad:["0 -6 22 12", function(){ return jgArrow("M2 0H15", "d"); }],
+    ab:["0 -6 22 12", function(){ return jgArrow("M2 0H15", "b"); }],
+    ball:["-7 -7 14 14", function(u){ return JG.ball([0, 0], u); }],
+    cone:["-8 -8 16 16", function(u){ return JG.cone([0, 1], u); }],
+    hoop:["-10 -10 20 20", function(u){ return JG.hoop([0, 0, 7], u); }],
+    ring2:["-8 -8 16 16", function(u){ return JG.ring2([0, 0], u); }],
+    board:["-8 -10 16 20", function(u){ return JG.board([0, 0], u); }],
+    noodle:["-14 -6 28 12", function(u){ return JG.noodle([-10, 0, 10, 0], u); }],
+    mat:["-11 -8 22 16", function(u){ return JG.mat([-9, -6, 18, 12], u); }],
+    bench:["-11 -6 22 12", function(u){ return JG.bench([-10, -4, 20, 8], u); }],
+    bars:["-11 -8 22 16", function(u){ return JG.bars([-10, -7, 20, 14], u); }],
+    rope:["-12 -6 24 12", function(u){ return JG.rope(["M-10 0q5 -5 10 0t10 0"], u); }],
+    pin:["-7 -7 14 14", function(u){ return JG.pin([0, 0], u); }],
+    target:["-10 -10 20 20", function(u){ return JG.target([0, 0, 9], u); }],
+    flag:["-6 -12 20 24", function(u){ return JG.flag([0, 0], u); }],
+    balloon:["-2 -36 24 34", function(u){ return JG.balloon([0, 0], u); }],
+    dice:["-10 -10 20 20", function(u){ return JG.dice([0, 0], u); }],
+    clock:["-10 -10 20 20", function(u){ return JG.clock([0, 0], u); }],
+    sack:["-12 -12 24 24", function(u){ return '<rect class="jg-sack" x="-11" y="-11" width="22" height="22" rx="7"/>'; }],
+    note:["-10 -16 20 20", function(u){ return JG.note([0, 0], u); }],
+    hurdle:["-8 -12 16 24", function(u){ return JG.hurdle([0, 0], u); }],
+    baton:["-9 -6 18 12", function(u){ return JG.baton([0, 0], u); }],
+    sand:["-11 -8 22 16", function(u){ return JG.sand([-10, -7, 20, 14], u); }],
+    hbar:["-13 -6 26 12", function(u){ return JG.hbar([-10, 0, 10, 0], u); }],
+    jav:["-13 -6 26 12", function(u){ return JG.jav([-10, 4, 10, -4], u); }],
+    ladder:["-13 -12 26 24", function(u){ return JG.ladder([-12, 0, 24, 3], u); }],
+    pike:["-8 -12 16 24", function(u){ return JG.pike([0, 0], u); }],
+    mball:["-8 -8 16 16", function(u){ return JG.mball([0, 0], u); }]
+  };
+  var LEG = {k:"Infant", kx:"Qui para", ka:"Equip A", kb:"Equip B", kl:"Guia", kc:"Infant amb cua", T:"Tècnic", a:"Desplaçament", ad:"Tornada", ab:"Pilota o objecte", ball:"Pilota", cone:"Con", hoop:"Cèrcol", ring2:"Anella o marca", board:"Planxa", noodle:"Xurro", mat:"Matalàs", bench:"Banc", bars:"Espatllera", rope:"Corda", pin:"Bitlla", target:"Diana", flag:"Mocador o estació", balloon:"Globus", dice:"Dau", clock:"Rellotge", sack:"Sac", note:"Música", hurdle:"Tanca", baton:"Testimoni", sand:"Sorral", hbar:"Goma o llistó", jav:"Javelina d’escuma", ladder:"Escala d’agilitat", pike:"Pica a terra", mball:"Pilota medicinal"};
+  Object.keys(LEG_PAGE).forEach(function(k){ LEG[k] = LEG_PAGE[k]; });
+  function legend(gm, used){
+    return Object.keys(SW).filter(function(k){ return used[k]; }).map(function(k){
+      var s = SW[k];
+      return '<span><svg viewBox="' + s[0] + '" aria-hidden="true">' + s[1]({}) + "</svg>" + esc(gm.lg[k] || LEG[k]) + "</span>";
     }).join("");
-    document.getElementById("games").innerHTML = html || '<div class="empty">Cap joc no compleix els dos filtres alhora. Canvia l’edat o el grup.</div>';
-    document.getElementById("count").textContent = list.length === 1 ? "Es mostra 1 joc de " + GAMES.length + "." : "Es mostren " + list.length + " jocs de " + GAMES.length + ".";
+  }
+  document.body.insertAdjacentHTML("beforeend", '<svg class="jg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>' +
+    '<marker id="jg-ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="jg-ahp" d="M0 0L10 5L0 10z"/></marker>' +
+    '<marker id="jg-ahb" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="jg-ahpb" d="M0 0L10 5L0 10z"/></marker></defs></svg>');
+
+  /* ---------- Filtres ---------- */
+  function jnorm(t){ return String(t).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’']/g, " "); }
+  GAMES.forEach(function(gm){ gm._n = jnorm([gm.n, gm.m, gm.c, gm.v, gm.k].join(" ")); });
+  var FG = [
+    {k:"s", lab:"Edat", opts:STAGES, fmt:function(v){ return STAGES[v] + " anys"; }, get:function(gm){ return gm.s; }},
+    {k:"o", lab:OBJ_LABEL, opts:OBJ, get:function(gm){ return gm.o; }},
+    {k:"g", lab:"Agrupament", opts:AGR, get:function(gm){ return [gm.g]; }, x:1},
+    {k:"i", lab:"Intensitat", opts:INT, get:function(gm){ return [String(gm.i)]; }, x:1},
+    {k:"e", lab:LLOC_LABEL, opts:LLOC, get:function(gm){ return [gm.e]; }, x:1},
+    {k:"m", lab:"Material", opts:{sense:"Sense material", amb:"Amb material"}, get:function(gm){ return [gm.mat]; }, x:1}
+  ];
+  var state = {q:""};
+  FG.forEach(function(f){ state[f.k] = []; });
+  var fbox = document.getElementById("filters");
+  fbox.innerHTML =
+    '<div class="jf-top"><label class="jf-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>' +
+    '<input id="jf-q" type="search" placeholder="Cerca per nom, material o paraula…" autocomplete="off" spellcheck="false" aria-label="Cerca dins del banc de jocs"></label>' +
+    '<button type="button" class="jf-btn" id="jf-more" aria-expanded="false" aria-controls="jf-extra">Més filtres <span class="jf-n" id="jf-n" hidden></span></button></div>' +
+    FG.filter(function(f){ return !f.x; }).map(frow).join("") +
+    '<div class="jf-extra" id="jf-extra" hidden>' + FG.filter(function(f){ return f.x; }).map(frow).join("") + "</div>" +
+    '<div class="jf-bar"><p class="count" id="count" aria-live="polite"></p><div class="jf-acts">' +
+    '<button type="button" class="jf-btn" id="jf-rand">Un joc a l’atzar</button><button type="button" class="jf-btn" id="jf-clear" hidden>Neteja els filtres</button></div></div>';
+  function frow(f){
+    return '<div class="frow" role="group" aria-label="Filtra per ' + f.lab.toLowerCase() + '"><span class="label">' + f.lab + "</span>" +
+      Object.keys(f.opts).map(function(v){
+        return '<button type="button" class="fchip" data-g="' + f.k + '" data-v="' + v + '" aria-pressed="false">' + (f.fmt ? f.fmt(v) : f.opts[v]) + ' <span class="fc"></span></button>';
+      }).join("") + "</div>";
+  }
+  function passes(gm, skip){
+    if (state.q){ var ws = jnorm(state.q).split(/\s+/); for (var i = 0; i < ws.length; i++) if (ws[i] && gm._n.indexOf(ws[i]) < 0) return false; }
+    for (var j = 0; j < FG.length; j++){
+      var f = FG[j], sel = state[f.k];
+      if (f.k === skip || !sel.length) continue;
+      if (!f.get(gm).some(function(v){ return sel.indexOf(v) > -1; })) return false;
+    }
+    return true;
+  }
+  function nActive(extraOnly){ return FG.reduce(function(n, f){ return n + (extraOnly && !f.x ? 0 : state[f.k].length); }, 0) + (!extraOnly && state.q ? 1 : 0); }
+  fbox.addEventListener("click", function(e){
+    var b = e.target.closest(".fchip");
+    if (b){ var sel = state[b.getAttribute("data-g")], v = b.getAttribute("data-v"), i = sel.indexOf(v); if (i > -1) sel.splice(i, 1); else sel.push(v); refresh(); }
+  });
+  var qIn = document.getElementById("jf-q");
+  qIn.addEventListener("input", function(){ state.q = qIn.value.trim(); refresh(); });
+  var moreBtn = document.getElementById("jf-more"), jfExtra = document.getElementById("jf-extra");
+  moreBtn.addEventListener("click", function(){ var open = jfExtra.hidden; jfExtra.hidden = !open; moreBtn.setAttribute("aria-expanded", open ? "true" : "false"); });
+  function clearFilters(){ state.q = ""; qIn.value = ""; FG.forEach(function(f){ state[f.k] = []; }); refresh(); }
+  document.getElementById("jf-clear").addEventListener("click", clearFilters);
+  document.getElementById("jf-rand").addEventListener("click", function(){
+    var cards = document.querySelectorAll("#games .game"); if (!cards.length) return;
+    var el = cards[Math.floor(Math.random() * cards.length)];
+    el.scrollIntoView({behavior:reduce ? "auto" : "smooth", block:"center"});
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  });
+  var dots = function(n){ return '<span class="jg-int" aria-label="Intensitat ' + INT[n].toLowerCase() + '">' + [1, 2, 3].map(function(i){ return "<i" + (i <= n ? ' class="on"' : "") + "></i>"; }).join("") + "</span>"; };
+  var DRAWN = GAMES.map(drawGame);
+  function card(gm){
+    var i = GAMES.indexOf(gm), dg = DRAWN[i];
+    return '<article class="game" id="joc-' + i + '">' +
+      '<figure class="jg-fig">' + dg.svg + '<figcaption class="jg-leg">' + legend(gm, dg.used) + "</figcaption></figure>" +
+      (gm.cap ? '<p class="jg-cap">' + esc(gm.cap) + "</p>" : "") +
+      '<div class="game-tags">' +
+      gm.s.map(function(s){ return '<span class="stg ' + s + '">' + STAGES[s] + "</span>"; }).join("") +
+      gm.o.map(function(o){ return '<span class="obj">' + OBJ[o] + "</span>"; }).join("") +
+      "</div><h3>" + esc(gm.n) + "</h3>" +
+      '<p class="jg-meta"><span>' + AGR[gm.g] + "</span><span>" + dots(gm.i) + INT[gm.i] + "</span>" + (gm.e ? "<span>" + LLOC[gm.e] + "</span>" : "") + "</p>" +
+      '<p><span class="lbl">Material</span>' + esc(gm.m) + "</p>" +
+      "<p>" + esc(gm.c) + "</p>" +
+      '<p><span class="lbl">Variants</span>' + esc(gm.v) + "</p>" +
+      '<p class="key"><span class="lbl">Clau</span>' + esc(gm.k) + "</p></article>";
+  }
+  function esc(t){ return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); }
+  function refresh(){
+    fbox.querySelectorAll(".fchip").forEach(function(b){
+      var g = b.getAttribute("data-g"), v = b.getAttribute("data-v"), f = FG.filter(function(x){ return x.k === g; })[0];
+      var on = state[g].indexOf(v) > -1, n = GAMES.filter(function(gm){ return passes(gm, g) && f.get(gm).indexOf(v) > -1; }).length;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.querySelector(".fc").textContent = n;
+      b.classList.toggle("zero", !n && !on);
+    });
+    var list = GAMES.filter(function(gm){ return passes(gm); });
+    document.getElementById("games").innerHTML = list.map(card).join("") ||
+      '<div class="empty">Cap joc no compleix tots els filtres alhora. <button type="button" class="jf-btn" onclick="document.getElementById(\'jf-clear\').click()">Neteja els filtres</button></div>';
+    var na = nActive(false), nx = nActive(true), jn = document.getElementById("jf-n");
+    jn.hidden = !nx; jn.textContent = nx;
+    document.getElementById("jf-clear").hidden = !na;
+    document.getElementById("count").textContent = (list.length === 1 ? "Es mostra 1 joc de " : "Es mostren " + list.length + " jocs de ") + GAMES.length + (na ? " · " + na + (na === 1 ? " filtre actiu" : " filtres actius") : "") + ".";
   }
   refresh();
 
@@ -2812,7 +3229,7 @@ D.pes = wrap(o, 14, "Cercle, contenidor i sector de pes", ["No es pot trepitjar 
   var VIEW_IDS = sections.map(function(s){ return s.id; });
   var LABEL = {inici:"Inici", classificacio:"Classificació de les proves", pista:"La pista interactiva", proves:"Tècnica de cada prova", combinades:"Proves combinades", infants:"Atletisme per a infants", jocs:"Banc de jocs", sessio:"Organitzar una sessió", seguretat:"Seguretat", vocabulari:"Vocabulari", fonts:"Fonts"};
   var behavior = reduce ? "auto" : "smooth";
-  $("tile-jocs").textContent = GAMES.length + " jocs filtrables per edat i per grup de proves.";
+  $("tile-jocs").textContent = GAMES.length + " jocs amb esquema, filtrables per edat, grup de proves, agrupament, intensitat i material.";
 
   /* --- Pestanyes internes de cada prova --- */
   EVENTS.forEach(function(id){
@@ -2907,7 +3324,7 @@ D.pes = wrap(o, 14, "Cercle, contenidor i sector de pes", ["No es pot trepitjar 
   }
   function reveal(p){
     var el = p.el;
-    if (p.game != null){ state.s = "all"; state.o = "all"; refresh(); el = $("joc-" + p.game); }
+    if (p.game != null){ clearFilters(); el = $("joc-" + p.game); }
     if (!el) return;
     var sp = el.closest(".subpanel"); if (sp) setSub(sp.getAttribute("data-sub"));
     el.scrollIntoView({behavior:"auto", block:"center"});
