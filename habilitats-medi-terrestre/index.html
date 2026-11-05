@@ -736,6 +736,17 @@ main{min-width:0}
 .jg-sack{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
 .jg-hop{fill:var(--surface);stroke:var(--ink);stroke-width:1.2;opacity:.9}
 .jg-hopn{fill:var(--muted);font:600 10px var(--font-data)}
+.jg-track{fill:var(--track,#C0573A);opacity:.85}
+.jg-tlane{stroke:var(--surface);stroke-width:1.5;opacity:.8}
+.jg-hurdle{stroke:var(--rope);stroke-width:5;stroke-linecap:round}
+.jg-baton{stroke:var(--e2);stroke-width:4.5;stroke-linecap:round}
+.jg-sand{fill:var(--rope-soft);stroke:var(--rope);stroke-width:1.5}
+.jg-hbar{stroke:var(--rope);stroke-width:3.5}
+.jg-stand{fill:var(--ink)}
+.jg-jav{stroke:var(--e3);stroke-width:3.5;stroke-linecap:round}
+.jg-ladder{fill:none;stroke:var(--ink);stroke-width:1.4;opacity:.7}
+.jg-pike{stroke:var(--e1);stroke-width:3.5;stroke-linecap:round}
+.jg-mball{fill:var(--ink);stroke:var(--surface);stroke-width:1.5}
 
 </style>
 <script>
@@ -2057,6 +2068,23 @@ main{min-width:0}
       if (obj === "ball") s += JG.ball([x + 11, fy - 6], u);
       return s + JG.cone([x, y1 - 6], u) + JG.a(["M" + (x - 5) + " " + (fy - 13) + "V" + (y1 + 6)], u) + JG.a(["M" + (x + 5) + " " + (y1 + 6) + "V" + (fy - 13), "d"], u);
     },
+    track: function(a){
+      var s = '<rect class="jg-track" x="0" y="' + a[0] + '" width="320" height="' + a[1] + '"/>', n = a[2] || 1;
+      for (var i = 0; i <= n; i++) s += '<line class="jg-tlane" x1="0" y1="' + jgR(a[0] + a[1] * i / n) + '" x2="320" y2="' + jgR(a[0] + a[1] * i / n) + '"/>';
+      return s;
+    },
+    hurdle: function(a, u){ u.hurdle = 1; return '<line class="jg-hurdle" x1="' + a[0] + '" y1="' + (a[1] - 10) + '" x2="' + a[0] + '" y2="' + (a[1] + 10) + '"/>'; },
+    baton: function(a, u){ u.baton = 1; return '<line class="jg-baton" x1="' + (a[0] - 6) + '" y1="' + a[1] + '" x2="' + (a[0] + 6) + '" y2="' + a[1] + '"/>'; },
+    sand: function(a, u){ u.sand = 1; return '<rect class="jg-sand" x="' + a[0] + '" y="' + a[1] + '" width="' + a[2] + '" height="' + a[3] + '" rx="3"/>' + (a[4] ? jgTxt(a[0] + a[2] / 2, a[1] + a[3] / 2 + 4, a[4], "jg-lbl", "middle") : ""); },
+    hbar: function(a, u){ u.hbar = 1; return '<line class="jg-hbar" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/><circle class="jg-stand" cx="' + a[0] + '" cy="' + a[1] + '" r="3.5"/><circle class="jg-stand" cx="' + a[2] + '" cy="' + a[3] + '" r="3.5"/>'; },
+    jav: function(a, u){ u.jav = 1; return '<line class="jg-jav" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + a[2] + '" y2="' + a[3] + '"/>'; },
+    ladder: function(a, u){
+      u.ladder = 1; var s = '<rect class="jg-ladder" x="' + a[0] + '" y="' + (a[1] - 11) + '" width="' + a[2] + '" height="22"/>';
+      for (var i = 1; i < a[3]; i++){ var x = jgR(a[0] + a[2] * i / a[3]); s += '<line class="jg-ladder" x1="' + x + '" y1="' + (a[1] - 11) + '" x2="' + x + '" y2="' + (a[1] + 11) + '"/>'; }
+      return s;
+    },
+    pike: function(a, u){ u.pike = 1; return '<line class="jg-pike" x1="' + a[0] + '" y1="' + (a[1] - 10) + '" x2="' + a[0] + '" y2="' + (a[1] + 10) + '"/>'; },
+    mball: function(a, u){ u.mball = 1; return '<circle class="jg-mball" cx="' + a[0] + '" cy="' + a[1] + '" r="6"/>'; },
     hop: function(a){
       var x = a[0], y = a[1], s = 21, rows = [[0], [0], [-1, 1], [0], [-1, 1], [0]], n = 0, out = "";
       rows.forEach(function(r, j){
@@ -2104,9 +2132,17 @@ main{min-width:0}
     dice:["-10 -10 20 20", function(u){ return JG.dice([0, 0], u); }],
     clock:["-10 -10 20 20", function(u){ return JG.clock([0, 0], u); }],
     sack:["-12 -12 24 24", function(u){ return '<rect class="jg-sack" x="-11" y="-11" width="22" height="22" rx="7"/>'; }],
-    note:["-10 -16 20 20", function(u){ return JG.note([0, 0], u); }]
+    note:["-10 -16 20 20", function(u){ return JG.note([0, 0], u); }],
+    hurdle:["-8 -12 16 24", function(u){ return JG.hurdle([0, 0], u); }],
+    baton:["-9 -6 18 12", function(u){ return JG.baton([0, 0], u); }],
+    sand:["-11 -8 22 16", function(u){ return JG.sand([-10, -7, 20, 14], u); }],
+    hbar:["-13 -6 26 12", function(u){ return JG.hbar([-10, 0, 10, 0], u); }],
+    jav:["-13 -6 26 12", function(u){ return JG.jav([-10, 4, 10, -4], u); }],
+    ladder:["-13 -12 26 24", function(u){ return JG.ladder([-12, 0, 24, 3], u); }],
+    pike:["-8 -12 16 24", function(u){ return JG.pike([0, 0], u); }],
+    mball:["-8 -8 16 16", function(u){ return JG.mball([0, 0], u); }]
   };
-  var LEG = {k:"Infant", kx:"Qui para", ka:"Equip A", kb:"Equip B", kl:"Guia", kc:"Infant amb cua", T:"Tècnic", a:"Desplaçament", ad:"Tornada", ab:"Pilota o objecte", ball:"Pilota", cone:"Con", hoop:"Cèrcol", ring2:"Anella o marca", board:"Planxa", noodle:"Xurro", mat:"Matalàs", bench:"Banc", bars:"Espatllera", rope:"Corda", pin:"Bitlla", target:"Diana", flag:"Mocador o estació", balloon:"Globus", dice:"Dau", clock:"Rellotge", sack:"Sac", note:"Música"};
+  var LEG = {k:"Infant", kx:"Qui para", ka:"Equip A", kb:"Equip B", kl:"Guia", kc:"Infant amb cua", T:"Tècnic", a:"Desplaçament", ad:"Tornada", ab:"Pilota o objecte", ball:"Pilota", cone:"Con", hoop:"Cèrcol", ring2:"Anella o marca", board:"Planxa", noodle:"Xurro", mat:"Matalàs", bench:"Banc", bars:"Espatllera", rope:"Corda", pin:"Bitlla", target:"Diana", flag:"Mocador o estació", balloon:"Globus", dice:"Dau", clock:"Rellotge", sack:"Sac", note:"Música", hurdle:"Tanca", baton:"Testimoni", sand:"Sorral", hbar:"Goma o llistó", jav:"Javelina d’escuma", ladder:"Escala d’agilitat", pike:"Pica a terra", mball:"Pilota medicinal"};
   Object.keys(LEG_PAGE).forEach(function(k){ LEG[k] = LEG_PAGE[k]; });
   function legend(gm, used){
     return Object.keys(SW).filter(function(k){ return used[k]; }).map(function(k){
