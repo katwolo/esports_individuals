@@ -8,6 +8,7 @@ Materials del mòdul d'Esports Individuals del CFGS d'Ensenyament i Animació So
 index.html                             Portada del mòdul (entrada a tots els materials)
 ensenyar-a-nedar/index.html            Ensenyar a nedar: tècnica dels quatre estils, etapes, jocs i seguretat
 habilitats-medi-terrestre/index.html   Habilitats al medi terrestre: habilitats motrius bàsiques, esports individuals i jocs
+ensenyar-atletisme/index.html          Ensenyar atletisme: proves, tècnica per fases, reglament, pista interactiva i jocs
 fitxer-de-jocs/index.html              Fitxer de jocs: calaix A (aigua) i calaix T (terra)
 ```
 
